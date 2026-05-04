@@ -8,7 +8,7 @@ data/
   families/
     <family_id>.json                          # { family_id, shared, variants[] } — startup-loaded summaries
     ...
-  actuators/
+  curves/
     families/
       <family_id>.json                        # family-level detail (curves shared by all variants) — lazy-loaded
     <variant_id>.json                         # variant-level detail (curves overriding family) — lazy-loaded
@@ -114,7 +114,7 @@ These can appear in `shared` or in any variant.
 
 Two optional files per variant, both lazy-loaded only when an actuator is pinned:
 
-### Family-level — `data/actuators/families/<family_id>.json`
+### Family-level — `data/curves/families/<family_id>.json`
 
 Curves shared by every variant in the family. The motor (rotor-side) torque-speed curve is a good fit, since variants in a family typically share the same stator.
 
@@ -133,7 +133,7 @@ Curves shared by every variant in the family. The motor (rotor-side) torque-spee
 }
 ```
 
-### Variant-level — `data/actuators/<variant_id>.json`
+### Variant-level — `data/curves/<variant_id>.json`
 
 Curves that differ per variant. The output torque-speed curve depends on gear ratio, so it lives here.
 
@@ -160,7 +160,7 @@ Both files are optional. If neither exists, the curve panel shows "no curve data
 
 1. Pick or create a family in `data/families/`. If new, add the filename to `data/index.json`.
 2. Move shared specs into `shared`; put only what differs in the `variants[]` entry.
-3. (Optional) Add `data/actuators/families/<family_id>.json` for family-shared curves.
-4. (Optional) Add `data/actuators/<variant_id>.json` for variant-specific curves.
+3. (Optional) Add `data/curves/families/<family_id>.json` for family-shared curves.
+4. (Optional) Add `data/curves/<variant_id>.json` for variant-specific curves.
 5. Reload locally (`python3 -m http.server 8000`) and verify.
 6. Open a pull request.

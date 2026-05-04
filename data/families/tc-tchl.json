@@ -1,0 +1,744 @@
+{
+  "family_id": "tc-tchl",
+  "family_name": "同川精密 TCHL",
+  "shared": {
+    "manufacturer": "同川精密",
+    "electrical": {
+      "voltage_v": 48,
+      "motor_topology": "radial flux"
+    },
+    "mechanical": {
+      "repeatability_deg": 0.00278,
+      "output_encoder_bits": 17,
+      "motor_encoder_bits": 17,
+      "ip_rating": "IP54"
+    },
+    "transmission": {
+      "type": "harmonic",
+      "backdrivable": false,
+      "backlash_arcsec": 60
+    }
+  },
+  "variants": [
+    {
+      "id": "tc-tchl-131-101-48",
+      "model": "TCHL-32-101-FL-DC48-X05-HISE-TH2",
+      "base_id": "TC-TCHL-131-101-48",
+      "electrical": {
+        "rated_power_w": 1000
+      },
+      "mechanical": {
+        "rated_torque_nm": 169,
+        "peak_torque_nm": 799,
+        "instant_peak_torque_nm": 799,
+        "start_stop_peak_torque_nm": 411,
+        "avg_load_max_torque_nm": 267,
+        "rated_speed_rad_s": 3.11,
+        "max_speed_rad_s": 4.147,
+        "weight_kg": 3.3,
+        "outer_diameter_mm": 131,
+        "hollow_shaft_diameter_mm": 22,
+        "bending_moment_nm": 210,
+        "weight_kg_max": 3.6,
+        "torque_density_nm_per_kg": 242.12
+      },
+      "transmission": {
+        "ratio": 101
+      },
+      "options": {
+        "bus_types": [
+          "CANFD",
+          "EC"
+        ],
+        "brake_options": [
+          false,
+          true
+        ],
+        "dual_encoder_options": [
+          true
+        ],
+        "force_sensor_options": [
+          true
+        ],
+        "length_mm_min": 103.5,
+        "length_mm_max": 103.5,
+        "inertia_g_cm2": 60950000.0,
+        "variant_count": 4
+      },
+      "datasheet_url": "datasheets/15_同川精密_机器人关节模组_20250921 .pdf"
+    },
+    {
+      "id": "tc-tchl-131-121-48",
+      "model": "TCHL-32-121-FL-DC48-X05-HISE-TH2",
+      "base_id": "TC-TCHL-131-121-48",
+      "mechanical": {
+        "rated_torque_nm": 169,
+        "peak_torque_nm": 847,
+        "instant_peak_torque_nm": 847,
+        "start_stop_peak_torque_nm": 436,
+        "avg_load_max_torque_nm": 267,
+        "rated_speed_rad_s": 2.587,
+        "max_speed_rad_s": 3.456,
+        "weight_kg": 3.3,
+        "outer_diameter_mm": 131,
+        "hollow_shaft_diameter_mm": 22,
+        "bending_moment_nm": 210,
+        "weight_kg_max": 3.6,
+        "torque_density_nm_per_kg": 256.67
+      },
+      "transmission": {
+        "ratio": 121
+      },
+      "options": {
+        "bus_types": [
+          "CANFD",
+          "EC"
+        ],
+        "brake_options": [
+          false,
+          true
+        ],
+        "dual_encoder_options": [
+          true
+        ],
+        "force_sensor_options": [
+          true
+        ],
+        "length_mm_min": 103.5,
+        "length_mm_max": 103.5,
+        "inertia_g_cm2": 87480000.0,
+        "variant_count": 4
+      },
+      "datasheet_url": "datasheets/15_同川精密_机器人关节模组_20250921 .pdf"
+    },
+    {
+      "id": "tc-tchl-131-81-48",
+      "model": "TCHL-32-81-FL-DC48-X05-HISE-TH2",
+      "base_id": "TC-TCHL-131-81-48",
+      "mechanical": {
+        "rated_torque_nm": 145,
+        "peak_torque_nm": 701,
+        "instant_peak_torque_nm": 701,
+        "start_stop_peak_torque_nm": 375,
+        "avg_load_max_torque_nm": 206,
+        "rated_speed_rad_s": 3.875,
+        "max_speed_rad_s": 5.163,
+        "weight_kg": 3.3,
+        "outer_diameter_mm": 131,
+        "hollow_shaft_diameter_mm": 22,
+        "bending_moment_nm": 210,
+        "weight_kg_max": 3.6,
+        "torque_density_nm_per_kg": 212.42
+      },
+      "transmission": {
+        "ratio": 81
+      },
+      "options": {
+        "bus_types": [
+          "CANFD",
+          "EC"
+        ],
+        "brake_options": [
+          false,
+          true
+        ],
+        "dual_encoder_options": [
+          true
+        ],
+        "force_sensor_options": [
+          true
+        ],
+        "length_mm_min": 103.5,
+        "length_mm_max": 103.5,
+        "inertia_g_cm2": 39200000.0,
+        "variant_count": 4
+      },
+      "datasheet_url": "datasheets/15_同川精密_机器人关节模组_20250921 .pdf"
+    },
+    {
+      "id": "tc-tchl-52-100-48",
+      "model": "TCHL-11-100-FL-DC48-X05-HISE",
+      "base_id": "TC-TCHL-52-100-48",
+      "electrical": {
+        "rated_power_w": 30
+      },
+      "mechanical": {
+        "rated_torque_nm": 5.3,
+        "peak_torque_nm": 25,
+        "instant_peak_torque_nm": 25,
+        "start_stop_peak_torque_nm": 19,
+        "avg_load_max_torque_nm": 7.7,
+        "rated_speed_rad_s": 3.142,
+        "max_speed_rad_s": 5.236,
+        "weight_kg": 0.37,
+        "outer_diameter_mm": 52,
+        "hollow_shaft_diameter_mm": 8,
+        "bending_moment_nm": 25,
+        "torque_density_nm_per_kg": 67.57
+      },
+      "transmission": {
+        "ratio": 100
+      },
+      "options": {
+        "bus_types": [
+          "CANFD",
+          "EC"
+        ],
+        "brake_options": [
+          false
+        ],
+        "dual_encoder_options": [
+          true
+        ],
+        "force_sensor_options": [
+          true
+        ],
+        "length_mm_min": 57,
+        "length_mm_max": 57,
+        "inertia_g_cm2": 480000.0,
+        "variant_count": 2
+      },
+      "datasheet_url": "datasheets/15_同川精密_机器人关节模组_20250921 .pdf"
+    },
+    {
+      "id": "tc-tchl-65-101-48",
+      "model": "TCHL-14-101-FL-DC48-X05-HISE-TM2",
+      "base_id": "TC-TCHL-65-101-48",
+      "electrical": {
+        "rated_power_w": 40
+      },
+      "mechanical": {
+        "rated_torque_nm": 6.5,
+        "peak_torque_nm": 36,
+        "instant_peak_torque_nm": 36,
+        "start_stop_peak_torque_nm": 24,
+        "avg_load_max_torque_nm": 9.5,
+        "rated_speed_rad_s": 3.11,
+        "max_speed_rad_s": 4.147,
+        "weight_kg": 0.45,
+        "outer_diameter_mm": 65,
+        "hollow_shaft_diameter_mm": 10,
+        "bending_moment_nm": 30,
+        "weight_kg_max": 0.55,
+        "torque_density_nm_per_kg": 80.0
+      },
+      "transmission": {
+        "ratio": 101
+      },
+      "options": {
+        "bus_types": [
+          "CANFD",
+          "EC"
+        ],
+        "brake_options": [
+          false,
+          true
+        ],
+        "dual_encoder_options": [
+          true
+        ],
+        "force_sensor_options": [
+          true
+        ],
+        "length_mm_min": 55,
+        "length_mm_max": 67,
+        "inertia_g_cm2": 1030000.0,
+        "variant_count": 4
+      },
+      "datasheet_url": "datasheets/15_同川精密_机器人关节模组_20250921 .pdf"
+    },
+    {
+      "id": "tc-tchl-65-51-48",
+      "model": "TCHL-14-51-FL-DC48-X05-HISE-TM2",
+      "base_id": "TC-TCHL-65-51-48",
+      "mechanical": {
+        "rated_torque_nm": 4.5,
+        "peak_torque_nm": 19,
+        "instant_peak_torque_nm": 19,
+        "start_stop_peak_torque_nm": 15,
+        "avg_load_max_torque_nm": 6,
+        "rated_speed_rad_s": 6.158,
+        "max_speed_rad_s": 8.21,
+        "weight_kg": 0.45,
+        "outer_diameter_mm": 65,
+        "hollow_shaft_diameter_mm": 10,
+        "bending_moment_nm": 30,
+        "weight_kg_max": 0.55,
+        "torque_density_nm_per_kg": 42.22
+      },
+      "transmission": {
+        "ratio": 51
+      },
+      "options": {
+        "bus_types": [
+          "CANFD",
+          "EC"
+        ],
+        "brake_options": [
+          false,
+          true
+        ],
+        "dual_encoder_options": [
+          true
+        ],
+        "force_sensor_options": [
+          true
+        ],
+        "length_mm_min": 55,
+        "length_mm_max": 67,
+        "inertia_g_cm2": 260000.0,
+        "variant_count": 4
+      },
+      "datasheet_url": "datasheets/15_同川精密_机器人关节模组_20250921 .pdf"
+    },
+    {
+      "id": "tc-tchl-65-81-48",
+      "model": "TCHL-14-81-FL-DC48-X05-HISE-TM2",
+      "base_id": "TC-TCHL-65-81-48",
+      "mechanical": {
+        "rated_torque_nm": 6.5,
+        "peak_torque_nm": 30,
+        "instant_peak_torque_nm": 30,
+        "start_stop_peak_torque_nm": 19,
+        "avg_load_max_torque_nm": 8,
+        "rated_speed_rad_s": 3.875,
+        "max_speed_rad_s": 5.163,
+        "weight_kg": 0.45,
+        "outer_diameter_mm": 65,
+        "hollow_shaft_diameter_mm": 10,
+        "bending_moment_nm": 30,
+        "weight_kg_max": 0.55,
+        "torque_density_nm_per_kg": 66.67
+      },
+      "transmission": {
+        "ratio": 81
+      },
+      "options": {
+        "bus_types": [
+          "CANFD",
+          "EC"
+        ],
+        "brake_options": [
+          false,
+          true
+        ],
+        "dual_encoder_options": [
+          true
+        ],
+        "force_sensor_options": [
+          true
+        ],
+        "length_mm_min": 55,
+        "length_mm_max": 67,
+        "inertia_g_cm2": 660000.0,
+        "variant_count": 4
+      },
+      "datasheet_url": "datasheets/15_同川精密_机器人关节模组_20250921 .pdf"
+    },
+    {
+      "id": "tc-tchl-77-101-48",
+      "model": "TCHL-17-101-FL-DC48-X05-HISE-TH2",
+      "base_id": "TC-TCHL-77-101-48",
+      "electrical": {
+        "rated_power_w": 157
+      },
+      "mechanical": {
+        "rated_torque_nm": 29,
+        "peak_torque_nm": 136,
+        "instant_peak_torque_nm": 136,
+        "start_stop_peak_torque_nm": 67,
+        "avg_load_max_torque_nm": 48,
+        "rated_speed_rad_s": 3.11,
+        "max_speed_rad_s": 4.147,
+        "weight_kg": 0.93,
+        "outer_diameter_mm": 77,
+        "hollow_shaft_diameter_mm": 12,
+        "bending_moment_nm": 93,
+        "weight_kg_max": 1.05,
+        "torque_density_nm_per_kg": 146.24
+      },
+      "transmission": {
+        "ratio": 101
+      },
+      "options": {
+        "bus_types": [
+          "CANFD",
+          "EC"
+        ],
+        "brake_options": [
+          false,
+          true
+        ],
+        "dual_encoder_options": [
+          true
+        ],
+        "force_sensor_options": [
+          true
+        ],
+        "length_mm_min": 76,
+        "length_mm_max": 86.5,
+        "inertia_g_cm2": 4550000.0,
+        "variant_count": 4
+      },
+      "datasheet_url": "datasheets/15_同川精密_机器人关节模组_20250921 .pdf"
+    },
+    {
+      "id": "tc-tchl-77-51-48",
+      "model": "TCHL-17-51-FL-DC48-X05-HISE-TH2",
+      "base_id": "TC-TCHL-77-51-48",
+      "mechanical": {
+        "rated_torque_nm": 20,
+        "peak_torque_nm": 86,
+        "instant_peak_torque_nm": 86,
+        "start_stop_peak_torque_nm": 42,
+        "avg_load_max_torque_nm": 32,
+        "rated_speed_rad_s": 6.158,
+        "max_speed_rad_s": 8.21,
+        "weight_kg": 0.93,
+        "outer_diameter_mm": 77,
+        "hollow_shaft_diameter_mm": 12,
+        "bending_moment_nm": 93,
+        "weight_kg_max": 1.05,
+        "torque_density_nm_per_kg": 92.47
+      },
+      "transmission": {
+        "ratio": 51
+      },
+      "options": {
+        "bus_types": [
+          "CANFD",
+          "EC"
+        ],
+        "brake_options": [
+          false,
+          true
+        ],
+        "dual_encoder_options": [
+          true
+        ],
+        "force_sensor_options": [
+          true
+        ],
+        "length_mm_min": 76,
+        "length_mm_max": 86.5,
+        "inertia_g_cm2": 1160000.0,
+        "variant_count": 4
+      },
+      "datasheet_url": "datasheets/15_同川精密_机器人关节模组_20250921 .pdf"
+    },
+    {
+      "id": "tc-tchl-77-81-48",
+      "model": "TCHL-17-81-FL-DC48-X05-HISE-TH2",
+      "base_id": "TC-TCHL-77-81-48",
+      "mechanical": {
+        "rated_torque_nm": 28,
+        "peak_torque_nm": 107,
+        "instant_peak_torque_nm": 107,
+        "start_stop_peak_torque_nm": 53,
+        "avg_load_max_torque_nm": 33,
+        "rated_speed_rad_s": 3.875,
+        "max_speed_rad_s": 5.163,
+        "weight_kg": 0.93,
+        "outer_diameter_mm": 77,
+        "hollow_shaft_diameter_mm": 12,
+        "bending_moment_nm": 93,
+        "weight_kg_max": 1.05,
+        "torque_density_nm_per_kg": 115.05
+      },
+      "transmission": {
+        "ratio": 81
+      },
+      "options": {
+        "bus_types": [
+          "CANFD",
+          "EC"
+        ],
+        "brake_options": [
+          false,
+          true
+        ],
+        "dual_encoder_options": [
+          true
+        ],
+        "force_sensor_options": [
+          true
+        ],
+        "length_mm_min": 76,
+        "length_mm_max": 86.5,
+        "inertia_g_cm2": 2925000.0,
+        "variant_count": 4
+      },
+      "datasheet_url": "datasheets/15_同川精密_机器人关节模组_20250921 .pdf"
+    },
+    {
+      "id": "tc-tchl-87-101-48",
+      "model": "TCHL-20-101-FL-DC48-X05-HISE-TH2",
+      "base_id": "TC-TCHL-87-101-48",
+      "electrical": {
+        "rated_power_w": 220
+      },
+      "mechanical": {
+        "rated_torque_nm": 49,
+        "peak_torque_nm": 181,
+        "instant_peak_torque_nm": 181,
+        "start_stop_peak_torque_nm": 102,
+        "avg_load_max_torque_nm": 61,
+        "rated_speed_rad_s": 3.11,
+        "max_speed_rad_s": 4.147,
+        "weight_kg": 1.28,
+        "outer_diameter_mm": 87,
+        "hollow_shaft_diameter_mm": 12,
+        "bending_moment_nm": 120,
+        "weight_kg_max": 1.45,
+        "torque_density_nm_per_kg": 141.41
+      },
+      "transmission": {
+        "ratio": 101
+      },
+      "options": {
+        "bus_types": [
+          "CANFD",
+          "EC"
+        ],
+        "brake_options": [
+          false,
+          true
+        ],
+        "dual_encoder_options": [
+          true
+        ],
+        "force_sensor_options": [
+          true
+        ],
+        "length_mm_min": 77.5,
+        "length_mm_max": 90,
+        "inertia_g_cm2": 7250000.0,
+        "variant_count": 4
+      },
+      "datasheet_url": "datasheets/15_同川精密_机器人关节模组_20250921 .pdf"
+    },
+    {
+      "id": "tc-tchl-87-51-48",
+      "model": "TCHL-20-51-FL-DC48-X05-HISE-TH2",
+      "base_id": "TC-TCHL-87-51-48",
+      "mechanical": {
+        "rated_torque_nm": 31,
+        "peak_torque_nm": 105,
+        "instant_peak_torque_nm": 105,
+        "start_stop_peak_torque_nm": 69,
+        "avg_load_max_torque_nm": 35,
+        "rated_speed_rad_s": 6.158,
+        "max_speed_rad_s": 8.21,
+        "weight_kg": 1.28,
+        "outer_diameter_mm": 87,
+        "hollow_shaft_diameter_mm": 12,
+        "bending_moment_nm": 120,
+        "weight_kg_max": 1.45,
+        "torque_density_nm_per_kg": 82.03
+      },
+      "transmission": {
+        "ratio": 51
+      },
+      "options": {
+        "bus_types": [
+          "CANFD",
+          "EC"
+        ],
+        "brake_options": [
+          false,
+          true
+        ],
+        "dual_encoder_options": [
+          true
+        ],
+        "force_sensor_options": [
+          true
+        ],
+        "length_mm_min": 77.5,
+        "length_mm_max": 90,
+        "inertia_g_cm2": 1845000.0,
+        "variant_count": 4
+      },
+      "datasheet_url": "datasheets/15_同川精密_机器人关节模组_20250921 .pdf"
+    },
+    {
+      "id": "tc-tchl-87-81-48",
+      "model": "TCHL-20-81-FL-DC48-X05-HISE-TH2",
+      "base_id": "TC-TCHL-87-81-48",
+      "mechanical": {
+        "rated_torque_nm": 42,
+        "peak_torque_nm": 157,
+        "instant_peak_torque_nm": 157,
+        "start_stop_peak_torque_nm": 91,
+        "avg_load_max_torque_nm": 56,
+        "rated_speed_rad_s": 3.875,
+        "max_speed_rad_s": 5.163,
+        "weight_kg": 1.28,
+        "outer_diameter_mm": 87,
+        "hollow_shaft_diameter_mm": 12,
+        "bending_moment_nm": 120,
+        "weight_kg_max": 1.45,
+        "torque_density_nm_per_kg": 122.66
+      },
+      "transmission": {
+        "ratio": 81
+      },
+      "options": {
+        "bus_types": [
+          "CANFD",
+          "EC"
+        ],
+        "brake_options": [
+          false,
+          true
+        ],
+        "dual_encoder_options": [
+          true
+        ],
+        "force_sensor_options": [
+          true
+        ],
+        "length_mm_min": 77.5,
+        "length_mm_max": 90,
+        "inertia_g_cm2": 4660000.0,
+        "variant_count": 4
+      },
+      "datasheet_url": "datasheets/15_同川精密_机器人关节模组_20250921 .pdf"
+    },
+    {
+      "id": "tc-tchl-99-101-48",
+      "model": "TCHL-25-101-FL-DC48-X05-HISE-TH2",
+      "base_id": "TC-TCHL-99-101-48",
+      "electrical": {
+        "rated_power_w": 440
+      },
+      "mechanical": {
+        "rated_torque_nm": 83,
+        "peak_torque_nm": 351,
+        "instant_peak_torque_nm": 351,
+        "start_stop_peak_torque_nm": 194,
+        "avg_load_max_torque_nm": 133,
+        "rated_speed_rad_s": 3.11,
+        "max_speed_rad_s": 4.147,
+        "weight_kg": 1.85,
+        "outer_diameter_mm": 99,
+        "hollow_shaft_diameter_mm": 15,
+        "bending_moment_nm": 150,
+        "weight_kg_max": 2.1,
+        "torque_density_nm_per_kg": 189.73
+      },
+      "transmission": {
+        "ratio": 101
+      },
+      "options": {
+        "bus_types": [
+          "CANFD",
+          "EC"
+        ],
+        "brake_options": [
+          false,
+          true
+        ],
+        "dual_encoder_options": [
+          true
+        ],
+        "force_sensor_options": [
+          true
+        ],
+        "length_mm_min": 87,
+        "length_mm_max": 99,
+        "inertia_g_cm2": 19500000.0,
+        "variant_count": 4
+      },
+      "datasheet_url": "datasheets/15_同川精密_机器人关节模组_20250921 .pdf"
+    },
+    {
+      "id": "tc-tchl-99-121-48",
+      "model": "TCHL-25-121-FL-DC48-X05-HISE-TH2",
+      "base_id": "TC-TCHL-99-121-48",
+      "mechanical": {
+        "rated_torque_nm": 83,
+        "peak_torque_nm": 375,
+        "instant_peak_torque_nm": 375,
+        "start_stop_peak_torque_nm": 206,
+        "avg_load_max_torque_nm": 133,
+        "rated_speed_rad_s": 2.587,
+        "max_speed_rad_s": 3.456,
+        "weight_kg": 1.85,
+        "outer_diameter_mm": 99,
+        "hollow_shaft_diameter_mm": 15,
+        "bending_moment_nm": 150,
+        "weight_kg_max": 2.1,
+        "torque_density_nm_per_kg": 202.7
+      },
+      "transmission": {
+        "ratio": 121
+      },
+      "options": {
+        "bus_types": [
+          "CANFD",
+          "EC"
+        ],
+        "brake_options": [
+          false,
+          true
+        ],
+        "dual_encoder_options": [
+          true
+        ],
+        "force_sensor_options": [
+          true
+        ],
+        "length_mm_min": 87,
+        "length_mm_max": 99,
+        "inertia_g_cm2": 27990000.0,
+        "variant_count": 4
+      },
+      "datasheet_url": "datasheets/15_同川精密_机器人关节模组_20250921 .pdf"
+    },
+    {
+      "id": "tc-tchl-99-81-48",
+      "model": "TCHL-25-81-FL-DC48-X05-HISE-TH2",
+      "base_id": "TC-TCHL-99-81-48",
+      "mechanical": {
+        "rated_torque_nm": 78,
+        "peak_torque_nm": 283,
+        "instant_peak_torque_nm": 283,
+        "start_stop_peak_torque_nm": 169,
+        "avg_load_max_torque_nm": 107,
+        "rated_speed_rad_s": 3.875,
+        "max_speed_rad_s": 5.163,
+        "weight_kg": 1.85,
+        "outer_diameter_mm": 99,
+        "hollow_shaft_diameter_mm": 15,
+        "bending_moment_nm": 150,
+        "weight_kg_max": 2.1,
+        "torque_density_nm_per_kg": 152.97
+      },
+      "transmission": {
+        "ratio": 81
+      },
+      "options": {
+        "bus_types": [
+          "CANFD",
+          "EC"
+        ],
+        "brake_options": [
+          false,
+          true
+        ],
+        "dual_encoder_options": [
+          true
+        ],
+        "force_sensor_options": [
+          true
+        ],
+        "length_mm_min": 87,
+        "length_mm_max": 99,
+        "inertia_g_cm2": 12540000.0,
+        "variant_count": 4
+      },
+      "datasheet_url": "datasheets/15_同川精密_机器人关节模组_20250921 .pdf"
+    }
+  ]
+}

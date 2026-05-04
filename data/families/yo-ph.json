@@ -1,0 +1,590 @@
+{
+  "family_id": "yo-ph",
+  "family_name": "意优 PH",
+  "shared": {
+    "manufacturer": "意优",
+    "electrical": {
+      "voltage_v": 48,
+      "motor_topology": "radial flux"
+    },
+    "mechanical": {
+      "output_encoder_bits": 19,
+      "motor_encoder_bits": 19
+    },
+    "transmission": {
+      "type": "harmonic",
+      "backdrivable": false,
+      "backlash_arcsec": 15
+    }
+  },
+  "variants": [
+    {
+      "id": "yo-ph-110-101-48",
+      "model": "PH25-101",
+      "base_id": "YO-PH-110-101-48",
+      "electrical": {
+        "rated_power_w": 270
+      },
+      "mechanical": {
+        "rated_torque_nm": 84,
+        "peak_torque_nm": 351,
+        "instant_peak_torque_nm": 351,
+        "start_stop_peak_torque_nm": 194,
+        "avg_load_max_torque_nm": 133,
+        "rated_speed_rad_s": 2.304,
+        "weight_kg": 2.6,
+        "outer_diameter_mm": 110,
+        "hollow_shaft_diameter_mm": 13,
+        "weight_kg_max": 2.78,
+        "torque_density_nm_per_kg": 135.0
+      },
+      "transmission": {
+        "ratio": 101
+      },
+      "options": {
+        "bus_types": [
+          "EC"
+        ],
+        "brake_options": [
+          false,
+          true
+        ],
+        "dual_encoder_options": [
+          true
+        ],
+        "force_sensor_options": [
+          false
+        ],
+        "variant_count": 2
+      },
+      "datasheet_url": "datasheets/19_意优_PH谐波模组.docx"
+    },
+    {
+      "id": "yo-ph-110-121-48",
+      "model": "PH25-121",
+      "base_id": "YO-PH-110-121-48",
+      "electrical": {
+        "rated_power_w": 270
+      },
+      "mechanical": {
+        "rated_torque_nm": 84,
+        "peak_torque_nm": 376,
+        "instant_peak_torque_nm": 376,
+        "start_stop_peak_torque_nm": 207,
+        "avg_load_max_torque_nm": 133,
+        "rated_speed_rad_s": 1.885,
+        "weight_kg": 2.6,
+        "outer_diameter_mm": 110,
+        "hollow_shaft_diameter_mm": 13,
+        "weight_kg_max": 2.78,
+        "torque_density_nm_per_kg": 144.62
+      },
+      "transmission": {
+        "ratio": 121
+      },
+      "options": {
+        "bus_types": [
+          "EC"
+        ],
+        "brake_options": [
+          false,
+          true
+        ],
+        "dual_encoder_options": [
+          true
+        ],
+        "force_sensor_options": [
+          false
+        ],
+        "variant_count": 2
+      },
+      "datasheet_url": "datasheets/19_意优_PH谐波模组.docx"
+    },
+    {
+      "id": "yo-ph-110-81-48",
+      "model": "PH25-81",
+      "base_id": "YO-PH-110-81-48",
+      "electrical": {
+        "rated_power_w": 270
+      },
+      "mechanical": {
+        "rated_torque_nm": 78,
+        "peak_torque_nm": 315,
+        "instant_peak_torque_nm": 315,
+        "start_stop_peak_torque_nm": 169,
+        "avg_load_max_torque_nm": 107,
+        "rated_speed_rad_s": 2.723,
+        "weight_kg": 2.6,
+        "outer_diameter_mm": 110,
+        "hollow_shaft_diameter_mm": 13,
+        "weight_kg_max": 2.78,
+        "torque_density_nm_per_kg": 121.15
+      },
+      "transmission": {
+        "ratio": 81
+      },
+      "options": {
+        "bus_types": [
+          "EC"
+        ],
+        "brake_options": [
+          false,
+          true
+        ],
+        "dual_encoder_options": [
+          true
+        ],
+        "force_sensor_options": [
+          false
+        ],
+        "variant_count": 2
+      },
+      "datasheet_url": "datasheets/19_意优_PH谐波模组.docx"
+    },
+    {
+      "id": "yo-ph-40-101-48",
+      "model": "PH08-101",
+      "base_id": "YO-PH-40-101-48",
+      "electrical": {
+        "rated_power_w": 35
+      },
+      "mechanical": {
+        "rated_torque_nm": 2.4,
+        "peak_torque_nm": 9,
+        "instant_peak_torque_nm": 9,
+        "start_stop_peak_torque_nm": 4.8,
+        "avg_load_max_torque_nm": 3.3,
+        "rated_speed_rad_s": 3.142,
+        "weight_kg": 0.186,
+        "outer_diameter_mm": 40,
+        "hollow_shaft_diameter_mm": 4.4,
+        "torque_density_nm_per_kg": 48.39
+      },
+      "transmission": {
+        "ratio": 101
+      },
+      "options": {
+        "bus_types": [
+          "EC"
+        ],
+        "brake_options": [
+          false
+        ],
+        "dual_encoder_options": [
+          true
+        ],
+        "force_sensor_options": [
+          false
+        ]
+      },
+      "datasheet_url": "datasheets/19_意优_PH谐波模组.docx"
+    },
+    {
+      "id": "yo-ph-40-51-48",
+      "model": "PH08-51",
+      "base_id": "YO-PH-40-51-48",
+      "electrical": {
+        "rated_power_w": 38
+      },
+      "mechanical": {
+        "rated_torque_nm": 1.8,
+        "peak_torque_nm": 6.6,
+        "instant_peak_torque_nm": 6.6,
+        "start_stop_peak_torque_nm": 3.3,
+        "avg_load_max_torque_nm": 2.3,
+        "rated_speed_rad_s": 6.283,
+        "weight_kg": 0.186,
+        "outer_diameter_mm": 40,
+        "hollow_shaft_diameter_mm": 4.4,
+        "torque_density_nm_per_kg": 35.48
+      },
+      "transmission": {
+        "ratio": 51
+      },
+      "options": {
+        "bus_types": [
+          "EC"
+        ],
+        "brake_options": [
+          false
+        ],
+        "dual_encoder_options": [
+          true
+        ],
+        "force_sensor_options": [
+          false
+        ]
+      },
+      "datasheet_url": "datasheets/19_意优_PH谐波模组.docx"
+    },
+    {
+      "id": "yo-ph-52-101-48",
+      "model": "PH11-101",
+      "base_id": "YO-PH-52-101-48",
+      "electrical": {
+        "rated_power_w": 50
+      },
+      "mechanical": {
+        "rated_torque_nm": 5,
+        "peak_torque_nm": 25,
+        "instant_peak_torque_nm": 25,
+        "start_stop_peak_torque_nm": 11,
+        "avg_load_max_torque_nm": 8.8,
+        "rated_speed_rad_s": 3.142,
+        "weight_kg": 0.4,
+        "outer_diameter_mm": 52,
+        "hollow_shaft_diameter_mm": 6,
+        "weight_kg_max": 0.455,
+        "torque_density_nm_per_kg": 62.5
+      },
+      "transmission": {
+        "ratio": 101
+      },
+      "options": {
+        "bus_types": [
+          "EC"
+        ],
+        "brake_options": [
+          false,
+          true
+        ],
+        "dual_encoder_options": [
+          true
+        ],
+        "force_sensor_options": [
+          false
+        ],
+        "variant_count": 2
+      },
+      "datasheet_url": "datasheets/19_意优_PH谐波模组.docx"
+    },
+    {
+      "id": "yo-ph-52-51-48",
+      "model": "PH11-51",
+      "base_id": "YO-PH-52-51-48",
+      "electrical": {
+        "rated_power_w": 50
+      },
+      "mechanical": {
+        "rated_torque_nm": 3.5,
+        "peak_torque_nm": 17,
+        "instant_peak_torque_nm": 17,
+        "start_stop_peak_torque_nm": 8.3,
+        "avg_load_max_torque_nm": 5.5,
+        "rated_speed_rad_s": 6.283,
+        "weight_kg": 0.4,
+        "outer_diameter_mm": 52,
+        "hollow_shaft_diameter_mm": 6,
+        "weight_kg_max": 0.455,
+        "torque_density_nm_per_kg": 42.5
+      },
+      "transmission": {
+        "ratio": 51
+      },
+      "options": {
+        "bus_types": [
+          "EC"
+        ],
+        "brake_options": [
+          false,
+          true
+        ],
+        "dual_encoder_options": [
+          true
+        ],
+        "force_sensor_options": [
+          false
+        ],
+        "variant_count": 2
+      },
+      "datasheet_url": "datasheets/19_意优_PH谐波模组.docx"
+    },
+    {
+      "id": "yo-ph-70-101-48",
+      "model": "PH14-101",
+      "base_id": "YO-PH-70-101-48",
+      "electrical": {
+        "rated_power_w": 80
+      },
+      "mechanical": {
+        "rated_torque_nm": 9.6,
+        "peak_torque_nm": 66,
+        "instant_peak_torque_nm": 66,
+        "start_stop_peak_torque_nm": 34,
+        "avg_load_max_torque_nm": 13.5,
+        "rated_speed_rad_s": 3.142,
+        "weight_kg": 0.906,
+        "outer_diameter_mm": 70,
+        "hollow_shaft_diameter_mm": 10.8,
+        "weight_kg_max": 0.99,
+        "torque_density_nm_per_kg": 72.85
+      },
+      "transmission": {
+        "ratio": 101
+      },
+      "options": {
+        "bus_types": [
+          "EC"
+        ],
+        "brake_options": [
+          false,
+          true
+        ],
+        "dual_encoder_options": [
+          true
+        ],
+        "force_sensor_options": [
+          false
+        ],
+        "variant_count": 2
+      },
+      "datasheet_url": "datasheets/19_意优_PH谐波模组.docx"
+    },
+    {
+      "id": "yo-ph-70-51-48",
+      "model": "PH14-51",
+      "base_id": "YO-PH-70-51-48",
+      "electrical": {
+        "rated_power_w": 80
+      },
+      "mechanical": {
+        "rated_torque_nm": 6.6,
+        "peak_torque_nm": 43,
+        "instant_peak_torque_nm": 43,
+        "start_stop_peak_torque_nm": 23,
+        "avg_load_max_torque_nm": 8.6,
+        "rated_speed_rad_s": 6.283,
+        "weight_kg": 0.906,
+        "outer_diameter_mm": 70,
+        "hollow_shaft_diameter_mm": 10.8,
+        "weight_kg_max": 0.99,
+        "torque_density_nm_per_kg": 47.46
+      },
+      "transmission": {
+        "ratio": 51
+      },
+      "options": {
+        "bus_types": [
+          "EC"
+        ],
+        "brake_options": [
+          false,
+          true
+        ],
+        "dual_encoder_options": [
+          true
+        ],
+        "force_sensor_options": [
+          false
+        ],
+        "variant_count": 2
+      },
+      "datasheet_url": "datasheets/19_意优_PH谐波模组.docx"
+    },
+    {
+      "id": "yo-ph-80-101-48",
+      "model": "PH17-101",
+      "base_id": "YO-PH-80-101-48",
+      "electrical": {
+        "rated_power_w": 170
+      },
+      "mechanical": {
+        "rated_torque_nm": 30,
+        "peak_torque_nm": 134,
+        "instant_peak_torque_nm": 134,
+        "start_stop_peak_torque_nm": 66,
+        "avg_load_max_torque_nm": 49,
+        "rated_speed_rad_s": 3.142,
+        "weight_kg": 1.09,
+        "outer_diameter_mm": 80,
+        "hollow_shaft_diameter_mm": 10.8,
+        "weight_kg_max": 1.178,
+        "torque_density_nm_per_kg": 122.94
+      },
+      "transmission": {
+        "ratio": 101
+      },
+      "options": {
+        "bus_types": [
+          "EC"
+        ],
+        "brake_options": [
+          false,
+          true
+        ],
+        "dual_encoder_options": [
+          true
+        ],
+        "force_sensor_options": [
+          false
+        ],
+        "variant_count": 2
+      },
+      "datasheet_url": "datasheets/19_意优_PH谐波模组.docx"
+    },
+    {
+      "id": "yo-ph-80-51-48",
+      "model": "PH17-51",
+      "base_id": "YO-PH-80-51-48",
+      "electrical": {
+        "rated_power_w": 170
+      },
+      "mechanical": {
+        "rated_torque_nm": 19.8,
+        "peak_torque_nm": 86,
+        "instant_peak_torque_nm": 86,
+        "start_stop_peak_torque_nm": 42,
+        "avg_load_max_torque_nm": 32,
+        "rated_speed_rad_s": 6.283,
+        "weight_kg": 1.09,
+        "outer_diameter_mm": 80,
+        "hollow_shaft_diameter_mm": 10.8,
+        "weight_kg_max": 1.178,
+        "torque_density_nm_per_kg": 78.9
+      },
+      "transmission": {
+        "ratio": 51
+      },
+      "options": {
+        "bus_types": [
+          "EC"
+        ],
+        "brake_options": [
+          false,
+          true
+        ],
+        "dual_encoder_options": [
+          true
+        ],
+        "force_sensor_options": [
+          false
+        ],
+        "variant_count": 2
+      },
+      "datasheet_url": "datasheets/19_意优_PH谐波模组.docx"
+    },
+    {
+      "id": "yo-ph-90-101-48",
+      "model": "PH20-101",
+      "base_id": "YO-PH-90-101-48",
+      "electrical": {
+        "rated_power_w": 210
+      },
+      "mechanical": {
+        "rated_torque_nm": 50,
+        "peak_torque_nm": 182,
+        "instant_peak_torque_nm": 182,
+        "start_stop_peak_torque_nm": 102,
+        "avg_load_max_torque_nm": 61,
+        "rated_speed_rad_s": 2.304,
+        "weight_kg": 1.606,
+        "outer_diameter_mm": 90,
+        "hollow_shaft_diameter_mm": 13,
+        "weight_kg_max": 1.79,
+        "torque_density_nm_per_kg": 113.33
+      },
+      "transmission": {
+        "ratio": 101
+      },
+      "options": {
+        "bus_types": [
+          "EC"
+        ],
+        "brake_options": [
+          false,
+          true
+        ],
+        "dual_encoder_options": [
+          true
+        ],
+        "force_sensor_options": [
+          false
+        ],
+        "variant_count": 2
+      },
+      "datasheet_url": "datasheets/19_意优_PH谐波模组.docx"
+    },
+    {
+      "id": "yo-ph-90-121-48",
+      "model": "PH20-121",
+      "base_id": "YO-PH-90-121-48",
+      "electrical": {
+        "rated_power_w": 210
+      },
+      "mechanical": {
+        "rated_torque_nm": 50,
+        "peak_torque_nm": 182,
+        "instant_peak_torque_nm": 182,
+        "start_stop_peak_torque_nm": 108,
+        "avg_load_max_torque_nm": 61,
+        "rated_speed_rad_s": 1.885,
+        "weight_kg": 1.606,
+        "outer_diameter_mm": 90,
+        "hollow_shaft_diameter_mm": 13,
+        "weight_kg_max": 1.79,
+        "torque_density_nm_per_kg": 113.33
+      },
+      "transmission": {
+        "ratio": 121
+      },
+      "options": {
+        "bus_types": [
+          "EC"
+        ],
+        "brake_options": [
+          false,
+          true
+        ],
+        "dual_encoder_options": [
+          true
+        ],
+        "force_sensor_options": [
+          false
+        ],
+        "variant_count": 2
+      },
+      "datasheet_url": "datasheets/19_意优_PH谐波模组.docx"
+    },
+    {
+      "id": "yo-ph-90-81-48",
+      "model": "PH20-81",
+      "base_id": "YO-PH-90-81-48",
+      "electrical": {
+        "rated_power_w": 210
+      },
+      "mechanical": {
+        "rated_torque_nm": 42,
+        "peak_torque_nm": 158,
+        "instant_peak_torque_nm": 158,
+        "start_stop_peak_torque_nm": 91,
+        "avg_load_max_torque_nm": 58,
+        "rated_speed_rad_s": 2.723,
+        "weight_kg": 1.606,
+        "outer_diameter_mm": 90,
+        "hollow_shaft_diameter_mm": 13,
+        "weight_kg_max": 1.79,
+        "torque_density_nm_per_kg": 98.38
+      },
+      "transmission": {
+        "ratio": 81
+      },
+      "options": {
+        "bus_types": [
+          "EC"
+        ],
+        "brake_options": [
+          false,
+          true
+        ],
+        "dual_encoder_options": [
+          true
+        ],
+        "force_sensor_options": [
+          false
+        ],
+        "variant_count": 2
+      },
+      "datasheet_url": "datasheets/19_意优_PH谐波模组.docx"
+    }
+  ]
+}

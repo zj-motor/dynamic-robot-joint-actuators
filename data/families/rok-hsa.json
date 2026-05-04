@@ -1,0 +1,279 @@
+{
+  "family_id": "rok-hsa",
+  "family_name": "珞石 HSA",
+  "shared": {
+    "manufacturer": "珞石",
+    "electrical": {
+      "voltage_v": 48,
+      "motor_topology": "radial flux"
+    },
+    "mechanical": {
+      "output_encoder_bits": 18,
+      "motor_encoder_bits": 18
+    },
+    "transmission": {
+      "type": "harmonic",
+      "backdrivable": false
+    }
+  },
+  "variants": [
+    {
+      "id": "rok-hsa-110-100-48",
+      "model": "HSA-25",
+      "base_id": "ROK-HSA-110-100-48",
+      "electrical": {
+        "rated_power_w": 600
+      },
+      "mechanical": {
+        "rated_torque_nm": 140,
+        "peak_torque_nm": 630,
+        "instant_peak_torque_nm": 630,
+        "start_stop_peak_torque_nm": 204,
+        "avg_load_max_torque_nm": 140,
+        "rated_speed_rad_s": 3.142,
+        "max_speed_rad_s": 6.283,
+        "weight_kg": 2.95,
+        "outer_diameter_mm": 110,
+        "hollow_shaft_diameter_mm": 15,
+        "torque_density_nm_per_kg": 213.56
+      },
+      "transmission": {
+        "ratio": 100
+      },
+      "options": {
+        "bus_types": [
+          "EC"
+        ],
+        "brake_options": [
+          false,
+          true
+        ],
+        "dual_encoder_options": [
+          true
+        ],
+        "force_sensor_options": [
+          false
+        ],
+        "length_mm_min": 115,
+        "length_mm_max": 115,
+        "variant_count": 2
+      },
+      "datasheet_url": "datasheets/11_珞石_HSA力控关节.pdf"
+    },
+    {
+      "id": "rok-hsa-142-120-48",
+      "model": "HSA-32",
+      "base_id": "ROK-HSA-142-120-48",
+      "electrical": {
+        "rated_power_w": 950
+      },
+      "mechanical": {
+        "rated_torque_nm": 281,
+        "peak_torque_nm": 1440,
+        "instant_peak_torque_nm": 1440,
+        "start_stop_peak_torque_nm": 459,
+        "avg_load_max_torque_nm": 281,
+        "rated_speed_rad_s": 2.094,
+        "max_speed_rad_s": 5.236,
+        "weight_kg": 6,
+        "outer_diameter_mm": 142,
+        "hollow_shaft_diameter_mm": 21,
+        "torque_density_nm_per_kg": 240.0
+      },
+      "transmission": {
+        "ratio": 120
+      },
+      "options": {
+        "bus_types": [
+          "EC"
+        ],
+        "brake_options": [
+          false,
+          true
+        ],
+        "dual_encoder_options": [
+          true
+        ],
+        "force_sensor_options": [
+          false
+        ],
+        "length_mm_min": 135,
+        "length_mm_max": 135,
+        "variant_count": 2
+      },
+      "datasheet_url": "datasheets/11_珞石_HSA力控关节.pdf"
+    },
+    {
+      "id": "rok-hsa-52-100-48",
+      "model": "HSA-11",
+      "base_id": "ROK-HSA-52-100-48",
+      "electrical": {
+        "rated_power_w": 40
+      },
+      "mechanical": {
+        "rated_torque_nm": 8.9,
+        "peak_torque_nm": 36,
+        "instant_peak_torque_nm": 36,
+        "start_stop_peak_torque_nm": 11,
+        "avg_load_max_torque_nm": 8.9,
+        "rated_speed_rad_s": 3.142,
+        "max_speed_rad_s": 6.283,
+        "weight_kg": 0.45,
+        "outer_diameter_mm": 52,
+        "hollow_shaft_diameter_mm": 6,
+        "torque_density_nm_per_kg": 80.0
+      },
+      "transmission": {
+        "ratio": 100
+      },
+      "options": {
+        "bus_types": [
+          "EC"
+        ],
+        "brake_options": [
+          false,
+          true
+        ],
+        "dual_encoder_options": [
+          true
+        ],
+        "force_sensor_options": [
+          false
+        ],
+        "length_mm_min": 68,
+        "length_mm_max": 68,
+        "variant_count": 2
+      },
+      "datasheet_url": "datasheets/11_珞石_HSA力控关节.pdf"
+    },
+    {
+      "id": "rok-hsa-60-100-48",
+      "model": "HSA-14",
+      "base_id": "ROK-HSA-60-100-48",
+      "electrical": {
+        "rated_power_w": 120
+      },
+      "mechanical": {
+        "rated_torque_nm": 7.7,
+        "peak_torque_nm": 75,
+        "instant_peak_torque_nm": 75,
+        "start_stop_peak_torque_nm": 19,
+        "avg_load_max_torque_nm": 7.7,
+        "rated_speed_rad_s": 3.142,
+        "max_speed_rad_s": 6.283,
+        "weight_kg": 0.6,
+        "outer_diameter_mm": 60,
+        "hollow_shaft_diameter_mm": 9,
+        "torque_density_nm_per_kg": 125.0
+      },
+      "transmission": {
+        "ratio": 100
+      },
+      "options": {
+        "bus_types": [
+          "EC"
+        ],
+        "brake_options": [
+          false,
+          true
+        ],
+        "dual_encoder_options": [
+          true
+        ],
+        "force_sensor_options": [
+          false
+        ],
+        "length_mm_min": 74,
+        "length_mm_max": 74,
+        "variant_count": 2
+      },
+      "datasheet_url": "datasheets/11_珞石_HSA力控关节.pdf"
+    },
+    {
+      "id": "rok-hsa-72-100-48",
+      "model": "HSA-17",
+      "base_id": "ROK-HSA-72-100-48",
+      "electrical": {
+        "rated_power_w": 160
+      },
+      "mechanical": {
+        "rated_torque_nm": 51,
+        "peak_torque_nm": 210,
+        "instant_peak_torque_nm": 210,
+        "start_stop_peak_torque_nm": 70,
+        "avg_load_max_torque_nm": 51,
+        "rated_speed_rad_s": 3.142,
+        "max_speed_rad_s": 6.283,
+        "weight_kg": 1.1,
+        "outer_diameter_mm": 72,
+        "hollow_shaft_diameter_mm": 10,
+        "torque_density_nm_per_kg": 190.91
+      },
+      "transmission": {
+        "ratio": 100
+      },
+      "options": {
+        "bus_types": [
+          "EC"
+        ],
+        "brake_options": [
+          false,
+          true
+        ],
+        "dual_encoder_options": [
+          true
+        ],
+        "force_sensor_options": [
+          false
+        ],
+        "length_mm_min": 98,
+        "length_mm_max": 98,
+        "variant_count": 2
+      },
+      "datasheet_url": "datasheets/11_珞石_HSA力控关节.pdf"
+    },
+    {
+      "id": "rok-hsa-82-120-48",
+      "model": "HSA-20",
+      "base_id": "ROK-HSA-82-120-48",
+      "electrical": {
+        "rated_power_w": 250
+      },
+      "mechanical": {
+        "rated_torque_nm": 64,
+        "peak_torque_nm": 330,
+        "instant_peak_torque_nm": 330,
+        "start_stop_peak_torque_nm": 113,
+        "avg_load_max_torque_nm": 64,
+        "rated_speed_rad_s": 3.142,
+        "max_speed_rad_s": 5.236,
+        "weight_kg": 1.7,
+        "outer_diameter_mm": 82,
+        "hollow_shaft_diameter_mm": 13,
+        "torque_density_nm_per_kg": 194.12
+      },
+      "transmission": {
+        "ratio": 120
+      },
+      "options": {
+        "bus_types": [
+          "EC"
+        ],
+        "brake_options": [
+          false,
+          true
+        ],
+        "dual_encoder_options": [
+          true
+        ],
+        "force_sensor_options": [
+          false
+        ],
+        "length_mm_min": 107,
+        "length_mm_max": 107,
+        "variant_count": 2
+      },
+      "datasheet_url": "datasheets/11_珞石_HSA力控关节.pdf"
+    }
+  ]
+}

@@ -37,8 +37,8 @@ js/charts.js                        Plotly renderers: scatter, radar, curves, ta
 js/compare.js                       pin/unpin, diff table, CSV export
 data/index.json                     manifest of family files
 data/families/<family>.json         family { shared, variants[] } — startup-loaded
-data/actuators/families/<f>.json    family-level detail (curves) — lazy-loaded
-data/actuators/<variant>.json       variant-level detail (curves) — lazy-loaded
+data/curves/families/<f>.json       family-level detail (curves) — lazy-loaded
+data/curves/<variant>.json          variant-level detail (curves) — lazy-loaded
 data/schema.md                      dataset schema reference
 ```
 
@@ -55,8 +55,8 @@ At load time the loader deep-merges `shared` ← `variant` for the summary, and 
 
 1. Pick or create a family file in [`data/families/`](data/families/). If creating a new one, add its filename to [`data/index.json`](data/index.json).
 2. Put manufacturer-wide specs (motor topology, voltage, transmission type) in `shared`; put only what differs (ratio, peak torque, weight) in the `variants[]` entry.
-3. (Optional) Add `data/actuators/families/<family_id>.json` with curves shared by every variant in the family.
-4. (Optional) Add `data/actuators/<variant_id>.json` with curves specific to that variant.
+3. (Optional) Add `data/curves/families/<family_id>.json` with curves shared by every variant in the family.
+4. (Optional) Add `data/curves/<variant_id>.json` with curves specific to that variant.
 5. Reload the site and verify the new entry appears in the scatter / table.
 6. Open a pull request.
 

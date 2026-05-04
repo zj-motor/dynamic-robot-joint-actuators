@@ -1,0 +1,209 @@
+{
+  "family_id": "tk-mjb",
+  "family_name": "泰科 MJB",
+  "shared": {
+    "manufacturer": "泰科",
+    "electrical": {
+      "voltage_v": 48,
+      "motor_topology": "radial flux"
+    },
+    "mechanical": {
+      "absolute_accuracy_deg": 0.0833,
+      "repeatability_deg": 0.0167,
+      "output_encoder_bits": 17,
+      "motor_encoder_bits": 14.966,
+      "ip_rating": "IP40"
+    },
+    "transmission": {
+      "type": "harmonic",
+      "backdrivable": false,
+      "backlash_arcsec": 20
+    }
+  },
+  "variants": [
+    {
+      "id": "tk-mjb-110-120-48",
+      "model": "MJB25",
+      "base_id": "TK-MJB-110-120-48",
+      "electrical": {
+        "peak_current_a": 25.8,
+        "continuous_current_a": 10.5,
+        "rated_power_w": 500
+      },
+      "mechanical": {
+        "rated_torque_nm": 133,
+        "peak_torque_nm": 376,
+        "instant_peak_torque_nm": 376,
+        "start_stop_peak_torque_nm": 207,
+        "avg_load_max_torque_nm": 133,
+        "rated_speed_rad_s": 2.566,
+        "max_speed_rad_s": 3.047,
+        "weight_kg": 2.3,
+        "outer_diameter_mm": 110,
+        "hollow_shaft_diameter_mm": 9.8,
+        "bending_moment_nm": 80,
+        "torque_density_nm_per_kg": 163.48
+      },
+      "transmission": {
+        "ratio": 120
+      },
+      "options": {
+        "bus_types": [
+          "EC"
+        ],
+        "brake_options": [
+          true
+        ],
+        "dual_encoder_options": [
+          true
+        ],
+        "force_sensor_options": [
+          false,
+          true
+        ],
+        "length_mm_min": 107.6,
+        "length_mm_max": 107.6,
+        "variant_count": 2
+      },
+      "datasheet_url": "datasheets/14_泰科_MJBX系列关节模组参数表_20251024.xlsx"
+    },
+    {
+      "id": "tk-mjb-70-100-48",
+      "model": "MJB14",
+      "base_id": "TK-MJB-70-100-48",
+      "electrical": {
+        "peak_current_a": 11.6,
+        "continuous_current_a": 3.8,
+        "rated_power_w": 100
+      },
+      "mechanical": {
+        "rated_torque_nm": 13.5,
+        "peak_torque_nm": 66,
+        "instant_peak_torque_nm": 66,
+        "start_stop_peak_torque_nm": 34,
+        "avg_load_max_torque_nm": 13.5,
+        "rated_speed_rad_s": 3.665,
+        "max_speed_rad_s": 8.378,
+        "weight_kg": 0.84,
+        "outer_diameter_mm": 70,
+        "hollow_shaft_diameter_mm": 7,
+        "bending_moment_nm": 20,
+        "torque_density_nm_per_kg": 78.57
+      },
+      "transmission": {
+        "ratio": 100
+      },
+      "options": {
+        "bus_types": [
+          "EC"
+        ],
+        "brake_options": [
+          true
+        ],
+        "dual_encoder_options": [
+          true
+        ],
+        "force_sensor_options": [
+          false,
+          true
+        ],
+        "length_mm_min": 88,
+        "length_mm_max": 88,
+        "variant_count": 2
+      },
+      "datasheet_url": "datasheets/14_泰科_MJBX系列关节模组参数表_20251024.xlsx"
+    },
+    {
+      "id": "tk-mjb-80-120-48",
+      "model": "MJB17",
+      "base_id": "TK-MJB-80-120-48",
+      "electrical": {
+        "peak_current_a": 14.5,
+        "continuous_current_a": 5,
+        "rated_power_w": 180
+      },
+      "mechanical": {
+        "rated_torque_nm": 49,
+        "peak_torque_nm": 107,
+        "instant_peak_torque_nm": 107,
+        "start_stop_peak_torque_nm": 66,
+        "avg_load_max_torque_nm": 49,
+        "rated_speed_rad_s": 3.037,
+        "max_speed_rad_s": 6.074,
+        "weight_kg": 1.2,
+        "outer_diameter_mm": 80,
+        "hollow_shaft_diameter_mm": 7,
+        "bending_moment_nm": 30,
+        "torque_density_nm_per_kg": 89.17
+      },
+      "transmission": {
+        "ratio": 120
+      },
+      "options": {
+        "bus_types": [
+          "EC"
+        ],
+        "brake_options": [
+          true
+        ],
+        "dual_encoder_options": [
+          true
+        ],
+        "force_sensor_options": [
+          false,
+          true
+        ],
+        "length_mm_min": 99.3,
+        "length_mm_max": 99.3,
+        "variant_count": 2
+      },
+      "datasheet_url": "datasheets/14_泰科_MJBX系列关节模组参数表_20251024.xlsx"
+    },
+    {
+      "id": "tk-mjb-90-120-48",
+      "model": "MJB20",
+      "base_id": "TK-MJB-90-120-48",
+      "electrical": {
+        "peak_current_a": 15,
+        "continuous_current_a": 8,
+        "rated_power_w": 250
+      },
+      "mechanical": {
+        "rated_torque_nm": 80,
+        "peak_torque_nm": 182,
+        "instant_peak_torque_nm": 182,
+        "start_stop_peak_torque_nm": 108,
+        "avg_load_max_torque_nm": 80,
+        "rated_speed_rad_s": 3.665,
+        "max_speed_rad_s": 5.236,
+        "weight_kg": 1.5,
+        "outer_diameter_mm": 90,
+        "hollow_shaft_diameter_mm": 7,
+        "bending_moment_nm": 42,
+        "torque_density_nm_per_kg": 121.33
+      },
+      "transmission": {
+        "ratio": 120
+      },
+      "options": {
+        "bus_types": [
+          "EC"
+        ],
+        "brake_options": [
+          true
+        ],
+        "dual_encoder_options": [
+          true
+        ],
+        "force_sensor_options": [
+          false,
+          true
+        ],
+        "length_mm_min": 92.8,
+        "length_mm_max": 92.8,
+        "variant_count": 2
+      },
+      "datasheet_url": "datasheets/14_泰科_MJBX系列关节模组参数表_20251024.xlsx"
+    }
+  ]
+}

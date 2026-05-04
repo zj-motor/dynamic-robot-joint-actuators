@@ -6,8 +6,8 @@
 //      The loader deep-merges `shared` into each variant to produce flat
 //      summary entries — each entry knows its `family_id`.
 //   3. Detail (curves + extras) lives in two optional layers:
-//        data/actuators/families/<family_id>.json   — shared by variants
-//        data/actuators/<id>.json                   — variant-specific
+//        data/curves/families/<family_id>.json   — shared by variants
+//        data/curves/<id>.json                   — variant-specific
 //      loadDetail() fetches both, deep-merges family ← variant (variant wins),
 //      then merges with the already-loaded summary so the result is complete.
 //
@@ -66,7 +66,7 @@ export function loadDetail(id) {
   if (detailPending.has(id)) return detailPending.get(id);
 
   const entry = entriesById.get(id) || null;
-  const variantP = fetchOrNull(`data/actuators/${encodeURIComponent(id)}.json`);
+  const variantP = fetchOrNull(`data/curves/${encodeURIComponent(id)}.json`);
   const familyP = entry && entry.family_id
     ? loadFamilyDetail(entry.family_id)
     : Promise.resolve(null);
@@ -93,7 +93,7 @@ export function loadDetail(id) {
 function loadFamilyDetail(familyId) {
   if (familyDetailCache.has(familyId)) return Promise.resolve(familyDetailCache.get(familyId));
   if (familyDetailPending.has(familyId)) return familyDetailPending.get(familyId);
-  const p = fetchOrNull(`data/actuators/families/${encodeURIComponent(familyId)}.json`)
+  const p = fetchOrNull(`data/curves/families/${encodeURIComponent(familyId)}.json`)
     .then((d) => { familyDetailCache.set(familyId, d); familyDetailPending.delete(familyId); return d; });
   familyDetailPending.set(familyId, p);
   return p;

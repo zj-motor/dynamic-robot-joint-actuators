@@ -1,0 +1,26 @@
+{
+  "id": "tsino-rjm-17-100-48",
+  "curves": {
+    "efficiency_speed": [
+      {
+        "speed_rad_s": 0.314,
+        "efficiency_pct": 70.0
+      },
+      {
+        "speed_rad_s": 0.628,
+        "efficiency_pct": 85.0
+      },
+      {
+        "speed_rad_s": 0.942,
+        "efficiency_pct": 88.0
+      },
+      {
+        "speed_rad_s": 1.257,
+        "efficiency_pct": 80.0
+      }
+    ]
+  },
+  "notes": {
+    "efficiency_speed": "假设"
+  }
+}
