@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Joint Actuator Explorer — Compare Legged-Robot Actuators</title>
+    <meta name="description" content="Interactive comparison of legged-robot joint actuators by torque, weight, speed, and transmission." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="https://cdn.plot.ly/plotly-2.35.2.min.js" charset="utf-8"></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="brand" href="./">
+          <span class="brand__mark" aria-hidden="true"></span>
+          <span class="brand__name">Joint Actuator Explorer</span>
+        </a>
+        <nav class="site-nav">
+          <a href="#explorer">Explorer</a>
+          <a href="#about">About</a>
+          <a href="https://github.com/motognere/legged-robot-joint-actuators" target="_blank" rel="noopener">Data on GitHub</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <p class="eyebrow">Open dataset</p>
+          <h1 class="hero__title">
+            Compare legged-robot joint actuators by <span class="accent">torque, weight, and speed</span>.
+          </h1>
+          <p class="hero__sub">
+            A curated, continuously maintained database of quasi-direct-drive,
+            harmonic, cycloidal, and planetary actuators powering today's
+            quadrupeds and humanoids. Filter, plot, and pin candidates
+            side-by-side.
+          </p>
+          <form class="hero__search" onsubmit="return false;">
+            <input
+              id="search-input"
+              type="search"
+              placeholder="Search manufacturer or model… (e.g. AK80, Unitree, harmonic)"
+              autocomplete="off"
+            />
+          </form>
+        </div>
+        <aside class="hero__stats" aria-label="Dataset stats">
+          <div class="stat">
+            <div class="stat__value" id="stat-actuators">—</div>
+            <div class="stat__label">Actuators</div>
+          </div>
+          <div class="stat">
+            <div class="stat__value" id="stat-manufacturers">—</div>
+            <div class="stat__label">Manufacturers</div>
+          </div>
+          <div class="stat">
+            <div class="stat__value" id="stat-max-torque">—</div>
+            <div class="stat__label">Peak torque, max (Nm)</div>
+          </div>
+          <div class="stat">
+            <div class="stat__value" id="stat-max-density">—</div>
+            <div class="stat__label">Torque density, max (Nm/kg)</div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <main id="explorer" class="explorer container">
+      <aside class="filters" aria-label="Filters">
+        <div class="filters__head">
+          <h2>Filters</h2>
+          <button id="filters-reset" class="link" type="button">Reset</button>
+        </div>
+
+        <section class="filter-group" data-group="manufacturer">
+          <h3>Manufacturer</h3>
+          <div class="filter-group__body" id="filter-manufacturer"></div>
+        </section>
+
+        <section class="filter-group" data-group="transmission">
+          <h3>Transmission</h3>
+          <div class="filter-group__body" id="filter-transmission"></div>
+        </section>
+
+        <section class="filter-group" data-group="joint">
+          <h3>Target joint</h3>
+          <div class="filter-group__body" id="filter-joint"></div>
+        </section>
+
+        <section class="filter-group">
+          <h3>Peak torque (Nm)</h3>
+          <div class="range" id="range-torque"></div>
+        </section>
+
+        <section class="filter-group">
+          <h3>Weight (kg)</h3>
+          <div class="range" id="range-weight"></div>
+        </section>
+
+        <section class="filter-group">
+          <h3>Torque density (Nm/kg)</h3>
+          <div class="range" id="range-density"></div>
+        </section>
+      </aside>
+
+      <section class="viz">
+        <div class="viz__head">
+          <div class="tabs" role="tablist">
+            <button class="tab is-active" role="tab" data-view="scatter">Scatter</button>
+            <button class="tab" role="tab" data-view="radar">Radar</button>
+            <button class="tab" role="tab" data-view="table">Table</button>
+          </div>
+          <div class="viz__meta">
+            <span id="result-count">0</span> actuators
+          </div>
+        </div>
+
+        <div class="viz__body">
+          <div class="view view--scatter is-active" data-view="scatter">
+            <div id="chart-scatter" class="plot"></div>
+            <p class="viz__note">
+              Click a marker to pin an actuator into the comparison drawer.
+              Marker size ∝ torque density.
+            </p>
+          </div>
+
+          <div class="view view--radar" data-view="radar">
+            <div id="chart-radar" class="plot"></div>
+            <p class="viz__note">
+              Showing pinned actuators. Pin 2–4 from the scatter or table to
+              compare normalized profiles.
+            </p>
+          </div>
+
+          <div class="view view--table" data-view="table">
+            <div class="table-wrap">
+              <table class="spec-table" id="spec-table">
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th data-sort="manufacturer">Manufacturer</th>
+                    <th data-sort="model">Model</th>
+                    <th data-sort="peak_torque_nm" class="num">Peak τ (Nm)</th>
+                    <th data-sort="rated_torque_nm" class="num">Rated τ (Nm)</th>
+                    <th data-sort="max_speed_rad_s" class="num">Max ω (rad/s)</th>
+                    <th data-sort="weight_kg" class="num">Weight (kg)</th>
+                    <th data-sort="torque_density_nm_per_kg" class="num">τ density (Nm/kg)</th>
+                    <th data-sort="transmission_type">Transmission</th>
+                    <th data-sort="ratio" class="num">Ratio</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <aside id="compare-drawer" class="drawer" aria-label="Compare drawer" hidden>
+      <header class="drawer__head">
+        <div>
+          <h2>Compare</h2>
+          <p class="drawer__sub"><span id="pin-count">0</span> of 4 pinned</p>
+        </div>
+        <div class="drawer__actions">
+          <button id="export-csv" class="btn btn--ghost" type="button">Export CSV</button>
+          <button id="clear-pins" class="btn btn--ghost" type="button">Clear</button>
+          <button id="toggle-drawer" class="btn btn--icon" type="button" aria-label="Collapse">▾</button>
+        </div>
+      </header>
+      <div class="drawer__body">
+        <div class="table-wrap">
+          <table class="compare-table" id="compare-table"></table>
+        </div>
+      </div>
+    </aside>
+
+    <section id="about" class="about">
+      <div class="container about__inner">
+        <h2>About this dataset</h2>
+        <p>
+          The Joint Actuator Explorer is an open, continuously maintained
+          collection of specifications for actuators used in legged robots —
+          quadrupeds, bipeds, and humanoids. Entries are sourced from
+          manufacturer datasheets and published research. Contributions are
+          welcome on GitHub: edit
+          <code>data/actuators.json</code> following the schema in
+          <code>data/schema.md</code> and open a pull request.
+        </p>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <span>© <span id="year"></span> Joint Actuator Explorer · Open data</span>
+        <span>
+          Inspired by the
+          <a href="https://www.batemo.com/products/batemo-cell-explorer" target="_blank" rel="noopener">Batemo Cell Explorer</a>
+        </span>
+      </div>
+    </footer>
+
+    <script type="module" src="js/app.js"></script>
+  </body>
+</html>

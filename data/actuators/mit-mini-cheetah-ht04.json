@@ -1,0 +1,51 @@
+{
+  "id": "mit-mini-cheetah-ht04",
+  "manufacturer": "MIT / T-Motor",
+  "model": "HT-04 (Mini Cheetah)",
+  "year": 2019,
+  "datasheet_url": "https://dspace.mit.edu/handle/1721.1/118671",
+  "price_usd": 580,
+  "mechanical": {
+    "peak_torque_nm": 35,
+    "rated_torque_nm": 13,
+    "max_speed_rad_s": 41.9,
+    "weight_kg": 0.72,
+    "torque_density_nm_per_kg": 48.6
+  },
+  "electrical": {
+    "voltage_v": 24,
+    "peak_current_a": 60,
+    "continuous_current_a": 24,
+    "motor_topology": "BLDC outrunner",
+    "kv": 100
+  },
+  "transmission": {
+    "type": "planetary",
+    "ratio": 6,
+    "backdrivable": true,
+    "efficiency_pct": 92
+  },
+  "application": {
+    "target_joints": ["hip", "knee"],
+    "used_in_robots": ["MIT Mini Cheetah"],
+    "notes": "Quasi-direct-drive reference design from MIT Biomimetic Robotics Lab."
+  },
+  "curves": {
+    "torque_speed": [
+      { "speed_rad_s": 0,    "torque_nm": 35.0 },
+      { "speed_rad_s": 5,    "torque_nm": 35.0 },
+      { "speed_rad_s": 10,   "torque_nm": 34.0 },
+      { "speed_rad_s": 15,   "torque_nm": 32.0 },
+      { "speed_rad_s": 20,   "torque_nm": 28.5 },
+      { "speed_rad_s": 25,   "torque_nm": 24.0 },
+      { "speed_rad_s": 30,   "torque_nm": 18.5 },
+      { "speed_rad_s": 35,   "torque_nm": 11.0 },
+      { "speed_rad_s": 41.9, "torque_nm": 0.0 }
+    ],
+    "efficiency_map": [
+      { "speed_rad_s": 10, "torque_nm": 8,  "efficiency_pct": 90 },
+      { "speed_rad_s": 20, "torque_nm": 13, "efficiency_pct": 93 },
+      { "speed_rad_s": 30, "torque_nm": 18, "efficiency_pct": 89 }
+    ]
+  }
+}
