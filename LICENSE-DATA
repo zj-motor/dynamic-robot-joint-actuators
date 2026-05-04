@@ -1,4 +1,4 @@
-Joint Actuator Explorer dataset
+Dynamic Robot Joint Actuator Comparison dataset
 Copyright (c) 2026 motognere and contributors
 
 This dataset (the contents of `data/` in this repository) is licensed under
@@ -28,7 +28,7 @@ Notices:
   publicity, privacy, or moral rights may limit how you use the material.
 
 Attribution example:
-  "Joint Actuator Explorer dataset, by motognere and contributors,
+  "Dynamic Robot Joint Actuator Comparison dataset, by motognere and contributors,
    https://github.com/motognere/legged-robot-joint-actuators
    Licensed under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)"
 
