@@ -28,24 +28,37 @@ npx serve .
 ## File layout
 
 ```
-index.html              hero, nav, explorer, compare drawer
-css/styles.css          design tokens & layout
-js/app.js               bootstrap (fetch data, wire UI)
-js/data.js              load index + lazy-load detail files
-js/filters.js           sidebar filter state and apply pipeline
-js/charts.js            Plotly renderers: scatter, radar, curves, table
-js/compare.js           pin/unpin, diff table, CSV export
-data/index.json         summary entries (loaded at startup)
-data/actuators/*.json   detail entries with curves (lazy-loaded)
-data/schema.md          dataset schema reference
+index.html                          hero, nav, explorer, compare drawer
+css/styles.css                      design tokens & layout
+js/app.js                           bootstrap (fetch data, wire UI)
+js/data.js                          manifest + family loader, lazy-load detail
+js/filters.js                       sidebar filter state and apply pipeline
+js/charts.js                        Plotly renderers: scatter, radar, curves, table
+js/compare.js                       pin/unpin, diff table, CSV export
+data/index.json                     manifest of family files
+data/families/<family>.json         family { shared, variants[] } — startup-loaded
+data/actuators/families/<f>.json    family-level detail (curves) — lazy-loaded
+data/actuators/<variant>.json       variant-level detail (curves) — lazy-loaded
+data/schema.md                      dataset schema reference
 ```
+
+## Inheritance model
+
+The dataset uses **family-based inheritance**: a family file declares `shared` specs once; each `variant` inside overrides only what differs (gear ratio, peak torque, weight, kv, …). Curves can live at either layer:
+
+- **Family-level** for things common to every descendant — e.g., motor (rotor-side) torque-speed curves shared across an entire product line.
+- **Variant-level** for things that depend on the variant — e.g., output torque-speed curves that change with gear ratio.
+
+At load time the loader deep-merges `shared` ← `variant` for the summary, and family-detail ← variant-detail for curves. See [`data/schema.md`](data/schema.md) for the full specification.
 
 ## Adding an actuator
 
-1. Append a summary object to [`data/index.json`](data/index.json) following the schema in [`data/schema.md`](data/schema.md).
-2. Optionally create `data/actuators/<id>.json` with the same fields plus a `curves` block (torque-speed points, efficiency map). The detail file enables the curve chart in the compare drawer.
-3. Reload the site and verify the new entry shows up in the scatter / table.
-4. Open a pull request.
+1. Pick or create a family file in [`data/families/`](data/families/). If creating a new one, add its filename to [`data/index.json`](data/index.json).
+2. Put manufacturer-wide specs (motor topology, voltage, transmission type) in `shared`; put only what differs (ratio, peak torque, weight) in the `variants[]` entry.
+3. (Optional) Add `data/actuators/families/<family_id>.json` with curves shared by every variant in the family.
+4. (Optional) Add `data/actuators/<variant_id>.json` with curves specific to that variant.
+5. Reload the site and verify the new entry appears in the scatter / table.
+6. Open a pull request.
 
 ## Deploying to GitHub Pages
 

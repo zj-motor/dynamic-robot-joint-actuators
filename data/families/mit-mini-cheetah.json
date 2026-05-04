@@ -1,0 +1,43 @@
+{
+  "family_id": "mit-mini-cheetah",
+  "family_name": "MIT Mini Cheetah HT-04",
+  "shared": {
+    "manufacturer": "MIT / T-Motor",
+    "electrical": {
+      "voltage_v": 24,
+      "motor_topology": "BLDC outrunner",
+      "kv": 100,
+      "peak_current_a": 60,
+      "continuous_current_a": 24
+    },
+    "transmission": {
+      "type": "planetary",
+      "backdrivable": true,
+      "efficiency_pct": 92
+    },
+    "application": {
+      "target_joints": ["hip", "knee"],
+      "used_in_robots": ["MIT Mini Cheetah"]
+    }
+  },
+  "variants": [
+    {
+      "id": "mit-mini-cheetah-ht04",
+      "model": "HT-04 (Mini Cheetah)",
+      "year": 2019,
+      "datasheet_url": "https://dspace.mit.edu/handle/1721.1/118671",
+      "price_usd": 580,
+      "mechanical": {
+        "peak_torque_nm": 35,
+        "rated_torque_nm": 13,
+        "max_speed_rad_s": 41.9,
+        "weight_kg": 0.72,
+        "torque_density_nm_per_kg": 48.6
+      },
+      "transmission": { "ratio": 6 },
+      "application": {
+        "notes": "Quasi-direct-drive reference design from MIT Biomimetic Robotics Lab."
+      }
+    }
+  ]
+}

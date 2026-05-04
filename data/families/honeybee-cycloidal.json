@@ -1,0 +1,41 @@
+{
+  "family_id": "honeybee-cycloidal",
+  "family_name": "HoneyBee cycloidal (concept)",
+  "shared": {
+    "manufacturer": "HoneyBee Robotics (concept)",
+    "electrical": {
+      "voltage_v": 48,
+      "motor_topology": "axial flux"
+    },
+    "transmission": {
+      "type": "cycloidal",
+      "backdrivable": true,
+      "efficiency_pct": 88
+    }
+  },
+  "variants": [
+    {
+      "id": "honeybee-cycloidal-prototype",
+      "model": "Cycloidal Hip Prototype",
+      "year": 2024,
+      "mechanical": {
+        "peak_torque_nm": 140,
+        "rated_torque_nm": 45,
+        "max_speed_rad_s": 9.4,
+        "weight_kg": 1.55,
+        "torque_density_nm_per_kg": 90.3
+      },
+      "electrical": {
+        "kv": 50,
+        "peak_current_a": 50,
+        "continuous_current_a": 18
+      },
+      "transmission": { "ratio": 11 },
+      "application": {
+        "target_joints": ["hip"],
+        "used_in_robots": ["research humanoid"],
+        "notes": "Synthetic concept entry; replace with measured data."
+      }
+    }
+  ]
+}

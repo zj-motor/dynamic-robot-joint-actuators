@@ -1,0 +1,73 @@
+{
+  "family_id": "cubemars-ak80",
+  "family_name": "CubeMars AK80",
+
+  "shared": {
+    "manufacturer": "CubeMars",
+    "electrical": {
+      "voltage_v": 24,
+      "motor_topology": "BLDC outrunner",
+      "peak_current_a": 30,
+      "continuous_current_a": 12
+    },
+    "transmission": {
+      "type": "planetary",
+      "efficiency_pct": 92
+    },
+    "application": {
+      "target_joints": ["hip", "knee"]
+    }
+  },
+
+  "variants": [
+    {
+      "id": "cubemars-ak80-9-v3",
+      "model": "AK80-9 V3.0",
+      "year": 2023,
+      "datasheet_url": "https://www.cubemars.com/product/ak80-9-v3-0-robotic-actuator.html",
+      "price_usd": 399,
+      "mechanical": {
+        "peak_torque_nm": 22,
+        "rated_torque_nm": 9,
+        "max_speed_rad_s": 38.2,
+        "weight_kg": 0.485,
+        "torque_density_nm_per_kg": 45.4
+      },
+      "electrical": { "kv": 100 },
+      "transmission": {
+        "ratio": 9,
+        "backdrivable": true
+      },
+      "application": {
+        "target_joints": ["hip", "knee", "arm"],
+        "used_in_robots": ["Mini Cheetah clones", "research quadrupeds"],
+        "notes": "Popular QDD actuator for research; integrated FOC driver and dual encoders."
+      }
+    },
+    {
+      "id": "cubemars-ak80-64",
+      "model": "AK80-64",
+      "year": 2022,
+      "datasheet_url": "https://www.cubemars.com/product/ak80-64-kv80-robotic-actuator.html",
+      "price_usd": 599,
+      "mechanical": {
+        "peak_torque_nm": 120,
+        "rated_torque_nm": 48,
+        "max_speed_rad_s": 8.4,
+        "weight_kg": 1.42,
+        "torque_density_nm_per_kg": 84.5
+      },
+      "electrical": { "kv": 80 },
+      "transmission": {
+        "ratio": 64,
+        "backdrivable": false,
+        "efficiency_pct": 85
+      },
+      "application": {
+        "target_joints": ["hip", "shoulder"],
+        "used_in_robots": ["humanoid arm research", "exoskeletons"],
+        "notes": "High-torque variant for static/holding loads; not backdrivable."
+      }
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "family_id": "myactuator-rmd-x8",
+  "family_name": "MyActuator RMD-X8",
+  "shared": {
+    "manufacturer": "MyActuator",
+    "electrical": {
+      "voltage_v": 48,
+      "motor_topology": "BLDC outrunner"
+    },
+    "transmission": {
+      "type": "planetary",
+      "backdrivable": true,
+      "efficiency_pct": 90
+    }
+  },
+  "variants": [
+    {
+      "id": "myactuator-rmd-x8-pro",
+      "model": "RMD-X8 Pro",
+      "year": 2023,
+      "datasheet_url": "https://www.myactuator.com/product-page/rmd-x8-pro",
+      "price_usd": 339,
+      "mechanical": {
+        "peak_torque_nm": 96,
+        "rated_torque_nm": 32,
+        "max_speed_rad_s": 7.85,
+        "weight_kg": 0.96,
+        "torque_density_nm_per_kg": 100
+      },
+      "electrical": {
+        "kv": 60,
+        "peak_current_a": 40,
+        "continuous_current_a": 12
+      },
+      "transmission": { "ratio": 9 },
+      "application": {
+        "target_joints": ["hip", "knee", "shoulder"],
+        "used_in_robots": ["humanoid research", "quadruped research"],
+        "notes": "High torque density at moderate cost."
+      }
+    }
+  ]
+}

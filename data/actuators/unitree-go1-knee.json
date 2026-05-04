@@ -1,35 +1,5 @@
 {
   "id": "unitree-go1-knee",
-  "manufacturer": "Unitree",
-  "model": "Go1 knee motor",
-  "year": 2021,
-  "datasheet_url": "https://www.unitree.com/go1/",
-  "price_usd": null,
-  "mechanical": {
-    "peak_torque_nm": 23.7,
-    "rated_torque_nm": 8,
-    "max_speed_rad_s": 30,
-    "weight_kg": 0.605,
-    "torque_density_nm_per_kg": 39.2
-  },
-  "electrical": {
-    "voltage_v": 24,
-    "peak_current_a": null,
-    "continuous_current_a": null,
-    "motor_topology": "BLDC outrunner",
-    "kv": null
-  },
-  "transmission": {
-    "type": "planetary",
-    "ratio": 6.33,
-    "backdrivable": true,
-    "efficiency_pct": null
-  },
-  "application": {
-    "target_joints": ["knee", "hip"],
-    "used_in_robots": ["Unitree Go1"],
-    "notes": "12 of these power the Go1 quadruped."
-  },
   "curves": {
     "torque_speed": [
       { "speed_rad_s": 0,  "torque_nm": 23.7 },

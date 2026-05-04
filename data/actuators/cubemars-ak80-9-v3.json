@@ -1,35 +1,6 @@
 {
   "id": "cubemars-ak80-9-v3",
-  "manufacturer": "CubeMars",
-  "model": "AK80-9 V3.0",
-  "year": 2023,
-  "datasheet_url": "https://www.cubemars.com/product/ak80-9-v3-0-robotic-actuator.html",
-  "price_usd": 399,
-  "mechanical": {
-    "peak_torque_nm": 22,
-    "rated_torque_nm": 9,
-    "max_speed_rad_s": 38.2,
-    "weight_kg": 0.485,
-    "torque_density_nm_per_kg": 45.4
-  },
-  "electrical": {
-    "voltage_v": 24,
-    "peak_current_a": 30,
-    "continuous_current_a": 12,
-    "motor_topology": "BLDC outrunner",
-    "kv": 100
-  },
-  "transmission": {
-    "type": "planetary",
-    "ratio": 9,
-    "backdrivable": true,
-    "efficiency_pct": 92
-  },
-  "application": {
-    "target_joints": ["hip", "knee", "arm"],
-    "used_in_robots": ["Mini Cheetah clones", "research quadrupeds"],
-    "notes": "Popular QDD actuator for research; integrated FOC driver and dual encoders."
-  },
+  "_comment": "Variant-specific detail. The output torque-speed curve depends on gear ratio (9:1 here) so it lives at the variant level and overrides any family default.",
   "curves": {
     "torque_speed": [
       { "speed_rad_s": 0,    "torque_nm": 22.0 },
@@ -41,12 +12,6 @@
       { "speed_rad_s": 30,   "torque_nm": 10.0 },
       { "speed_rad_s": 35,   "torque_nm": 5.5 },
       { "speed_rad_s": 38.2, "torque_nm": 0.0 }
-    ],
-    "efficiency_map": [
-      { "speed_rad_s": 10, "torque_nm": 5,  "efficiency_pct": 88 },
-      { "speed_rad_s": 20, "torque_nm": 10, "efficiency_pct": 92 },
-      { "speed_rad_s": 25, "torque_nm": 15, "efficiency_pct": 90 },
-      { "speed_rad_s": 30, "torque_nm": 18, "efficiency_pct": 86 }
     ]
   }
 }
