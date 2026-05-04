@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Joint Actuator Explorer — Compare Legged-Robot Actuators</title>
-    <meta name="description" content="Interactive comparison of legged-robot joint actuators by torque, weight, speed, and transmission." />
+    <title>Dynamic Robot Joint Actuator Comparison Site</title>
+    <meta name="description" content="Interactive comparison of dynamic robot joint actuators — quadrupeds, humanoids, manipulators, and exoskeletons — by torque, weight, speed, and transmission." />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -21,7 +21,7 @@
       <div class="container site-header__inner">
         <a class="brand" href="./">
           <span class="brand__mark" aria-hidden="true"></span>
-          <span class="brand__name">Joint Actuator Explorer</span>
+          <span class="brand__name">Dynamic Robot Joint Actuator Comparison</span>
         </a>
         <nav class="site-nav">
           <a href="#explorer">Explorer</a>
@@ -36,13 +36,13 @@
         <div class="hero__copy">
           <p class="eyebrow">Open dataset</p>
           <h1 class="hero__title">
-            Compare legged-robot joint actuators by <span class="accent">torque, weight, and speed</span>.
+            Compare dynamic robot joint actuators by <span class="accent">torque, weight, and speed</span>.
           </h1>
           <p class="hero__sub">
             A curated, continuously maintained database of quasi-direct-drive,
             harmonic, cycloidal, and planetary actuators powering today's
-            quadrupeds and humanoids. Filter, plot, and pin candidates
-            side-by-side.
+            quadrupeds, humanoids, manipulators, and exoskeletons.
+            Filter, plot, and pin candidates side-by-side.
           </p>
           <form class="hero__search" onsubmit="return false;">
             <input
@@ -189,20 +189,20 @@
       <div class="container about__inner">
         <h2>About this dataset</h2>
         <p>
-          The Joint Actuator Explorer is an open, continuously maintained
-          collection of specifications for actuators used in legged robots —
-          quadrupeds, bipeds, and humanoids. Entries are sourced from
-          manufacturer datasheets and published research. Contributions are
-          welcome on GitHub: edit
-          <code>data/actuators.json</code> following the schema in
-          <code>data/schema.md</code> and open a pull request.
+          The Dynamic Robot Joint Actuator Comparison Site is an open,
+          continuously maintained collection of specifications for actuators
+          used in dynamic robots — quadrupeds, bipeds, humanoids, manipulators,
+          and exoskeletons. Entries are sourced from manufacturer datasheets
+          and published research. Contributions are welcome on GitHub: add a
+          family file under <code>data/families/</code> following the schema
+          in <code>data/schema.md</code> and open a pull request.
         </p>
       </div>
     </section>
 
     <footer class="site-footer">
       <div class="container site-footer__inner">
-        <span>© <span id="year"></span> Joint Actuator Explorer · Open data</span>
+        <span>© <span id="year"></span> Dynamic Robot Joint Actuator Comparison · Open data</span>
         <span>
           Inspired by the
           <a href="https://www.batemo.com/products/batemo-cell-explorer" target="_blank" rel="noopener">Batemo Cell Explorer</a>

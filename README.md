@@ -1,6 +1,6 @@
-# Joint Actuator Explorer
+# Dynamic Robot Joint Actuator Comparison Site
 
-Open, interactive comparison of legged-robot joint actuators — quadrupeds, bipeds, and humanoids. Filter by manufacturer, transmission type, target joint, and performance ranges; pin actuators side by side; export comparisons as CSV.
+Open, interactive comparison of dynamic robot joint actuators — quadrupeds, bipeds, humanoids, manipulators, and exoskeletons. Filter by manufacturer, transmission type, target joint, and performance ranges; pin actuators side by side; export comparisons as CSV.
 
 Inspired by the visual style of the [Batemo Cell Explorer](https://www.batemo.com/products/batemo-cell-explorer).
 
