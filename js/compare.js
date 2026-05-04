@@ -2,36 +2,39 @@
 
 import { loadDetail } from "./data.js";
 import { renderCurves } from "./charts.js";
+import { t } from "./i18n.js";
 
 const STORAGE_KEY = "jae.pinned";
 const MAX_PINS = 4;
 
+// Row layout. Labels and section headers are translation keys; resolved at
+// render time so language changes refresh without a reload.
 const ROWS = [
-  { section: "Identity",      key: "manufacturer",              label: "Manufacturer" },
-  { key: "model",                                               label: "Model" },
-  { key: "year",                                                label: "Year" },
+  { section: "compare.section.identity", key: "manufacturer",  labelKey: "compare.row.manufacturer" },
+  { key: "model",                                              labelKey: "compare.row.model" },
+  { key: "year",                                               labelKey: "compare.row.year" },
 
-  { section: "Mechanical",    key: "peak_torque_nm",            label: "Peak torque (Nm)",       num: true,  best: "max" },
-  { key: "rated_torque_nm",                                     label: "Rated torque (Nm)",     num: true,  best: "max" },
-  { key: "max_speed_rad_s",                                     label: "Max speed (rad/s)",     num: true,  best: "max" },
-  { key: "weight_kg",                                           label: "Weight (kg)",           num: true,  best: "min", digits: 3 },
-  { key: "torque_density_nm_per_kg",                            label: "Torque density (Nm/kg)",num: true,  best: "max" },
+  { section: "compare.section.mechanical", key: "peak_torque_nm",            labelKey: "compare.row.peak_torque",  num: true,  best: "max" },
+  { key: "rated_torque_nm",                                                  labelKey: "compare.row.rated_torque", num: true,  best: "max" },
+  { key: "max_speed_rad_s",                                                  labelKey: "compare.row.max_speed",    num: true,  best: "max" },
+  { key: "weight_kg",                                                        labelKey: "compare.row.weight",       num: true,  best: "min", digits: 3 },
+  { key: "torque_density_nm_per_kg",                                         labelKey: "compare.row.density",      num: true,  best: "max" },
 
-  { section: "Electrical",    key: "voltage_v",                 label: "Voltage (V)",           num: true },
-  { key: "peak_current_a",                                      label: "Peak current (A)",      num: true },
-  { key: "continuous_current_a",                                label: "Continuous current (A)",num: true },
-  { key: "motor_topology",                                      label: "Motor topology" },
-  { key: "kv",                                                  label: "Kv (rpm/V)",            num: true },
+  { section: "compare.section.electrical", key: "voltage_v",                 labelKey: "compare.row.voltage",            num: true },
+  { key: "peak_current_a",                                                   labelKey: "compare.row.peak_current",       num: true },
+  { key: "continuous_current_a",                                             labelKey: "compare.row.continuous_current", num: true },
+  { key: "motor_topology",                                                   labelKey: "compare.row.motor_topology" },
+  { key: "kv",                                                               labelKey: "compare.row.kv",                 num: true },
 
-  { section: "Transmission",  key: "transmission_type",         label: "Type" },
-  { key: "ratio",                                               label: "Gear ratio",            num: true },
-  { key: "backdrivable",                                        label: "Backdrivable",          fmt: bool },
-  { key: "efficiency_pct",                                      label: "Efficiency (%)",        num: true,  best: "max" },
+  { section: "compare.section.transmission", key: "transmission_type",       labelKey: "compare.row.tx_type" },
+  { key: "ratio",                                                            labelKey: "compare.row.ratio",       num: true },
+  { key: "backdrivable",                                                     labelKey: "compare.row.backdrivable", fmt: bool },
+  { key: "efficiency_pct",                                                   labelKey: "compare.row.efficiency",  num: true,  best: "max" },
 
-  { section: "Application",   key: "target_joints",             label: "Target joints",         fmt: list },
-  { key: "used_in_robots",                                      label: "Used in robots",        fmt: list },
-  { key: "price_usd",                                           label: "Price (USD)",           num: true,  best: "min" },
-  { key: "datasheet_url",                                       label: "Datasheet",             fmt: link },
+  { section: "compare.section.application", key: "target_joints",            labelKey: "compare.row.target_joints",   fmt: list },
+  { key: "used_in_robots",                                                   labelKey: "compare.row.used_in_robots",  fmt: list },
+  { key: "price_usd",                                                        labelKey: "compare.row.price",           num: true,  best: "min" },
+  { key: "datasheet_url",                                                    labelKey: "compare.row.datasheet",       fmt: link },
 ];
 
 export function createCompareController(getAllData) {
@@ -116,19 +119,20 @@ export function createCompareController(getAllData) {
   }
 
   function buildTableHTML(items) {
-    let html = "<thead><tr><th>Spec</th>";
+    const unpin = escape(t("compare.unpin"));
+    let html = `<thead><tr><th>${escape(t("compare.spec"))}</th>`;
     for (const it of items) {
-      html += `<th>${escape(it.manufacturer)} <span style="color:#64748b;font-weight:400;">${escape(it.model)}</span> <button class="col-remove" data-id="${escape(it.id)}" title="Unpin">×</button></th>`;
+      html += `<th>${escape(it.manufacturer)} <span style="color:#64748b;font-weight:400;">${escape(it.model)}</span> <button class="col-remove" data-id="${escape(it.id)}" title="${unpin}">×</button></th>`;
     }
     html += "</tr></thead><tbody>";
 
     for (const row of ROWS) {
       if (row.section) {
-        html += `<tr class="meta-row"><th colspan="${items.length + 1}">${row.section}</th></tr>`;
+        html += `<tr class="meta-row"><th colspan="${items.length + 1}">${escape(t(row.section))}</th></tr>`;
       }
       const values = items.map((it) => it[row.key]);
       const winners = row.num && row.best ? bestIndices(values, row.best) : new Set();
-      html += `<tr><th>${row.label}</th>`;
+      html += `<tr><th>${escape(t(row.labelKey))}</th>`;
       values.forEach((v, i) => {
         let display;
         if (row.fmt) display = row.fmt(v);
@@ -159,17 +163,17 @@ export function createCompareController(getAllData) {
     const items = state.pinned.map((id) => all.find((d) => d.id === id)).filter(Boolean);
     if (!items.length) return;
 
-    const header = ["Spec", ...items.map((it) => `${it.manufacturer} ${it.model}`)];
+    const header = [t("compare.spec"), ...items.map((it) => `${it.manufacturer} ${it.model}`)];
     const lines = [header.map(csvCell).join(",")];
     for (const row of ROWS) {
       if (row.section) continue;
       const values = items.map((it) => {
         const v = it[row.key];
         if (Array.isArray(v)) return v.join("; ");
-        if (typeof v === "boolean") return v ? "yes" : "no";
+        if (typeof v === "boolean") return v ? t("compare.bool.yes") : t("compare.bool.no");
         return v == null ? "" : String(v);
       });
-      lines.push([row.label, ...values].map(csvCell).join(","));
+      lines.push([t(row.labelKey), ...values].map(csvCell).join(","));
     }
     const blob = new Blob([lines.join("\n")], { type: "text/csv;charset=utf-8" });
     const url = URL.createObjectURL(blob);
@@ -212,11 +216,11 @@ function formatNum(v, digits) {
   const d = digits ?? (Math.abs(v) >= 100 ? 0 : Math.abs(v) >= 10 ? 1 : 2);
   return v.toFixed(d);
 }
-function bool(v) { if (v == null) return "—"; return v ? "yes" : "no"; }
+function bool(v) { if (v == null) return "—"; return v ? t("compare.bool.yes") : t("compare.bool.no"); }
 function list(v) { return Array.isArray(v) && v.length ? v.map(escape).join(", ") : "—"; }
 function link(v) {
   if (!v) return "—";
-  return `<a href="${escape(v)}" target="_blank" rel="noopener">link</a>`;
+  return `<a href="${escape(v)}" target="_blank" rel="noopener">${escape(t("compare.row.datasheet_link"))}</a>`;
 }
 function escape(s) {
   if (s == null) return "—";

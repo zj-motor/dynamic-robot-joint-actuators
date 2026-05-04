@@ -27,7 +27,7 @@
   --c-warn:         #b45309;
 
   /* Type */
-  --f-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --f-sans: 'Inter', 'Noto Sans SC', system-ui, -apple-system, 'Segoe UI', Roboto, 'PingFang SC', 'Microsoft YaHei', sans-serif;
   --f-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
 
   /* Layout */
@@ -99,6 +99,11 @@ input, select, button { font-size: 14px; }
   opacity: 0.85;
 }
 .brand__name { font-size: 15px; }
+.site-header__right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
 .site-nav {
   display: flex;
   gap: 28px;
@@ -109,6 +114,33 @@ input, select, button { font-size: 14px; }
   font-weight: 500;
 }
 .site-nav a:hover { color: var(--c-primary); text-decoration: none; }
+
+/* Language toggle */
+.lang-toggle {
+  display: inline-flex;
+  background: var(--c-bg-tint);
+  border-radius: var(--radius-sm);
+  padding: 3px;
+  gap: 2px;
+}
+.lang-toggle button {
+  background: transparent;
+  border: 0;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--c-text-muted);
+  border-radius: 4px;
+  cursor: pointer;
+  min-width: 32px;
+  transition: background 120ms, color 120ms;
+}
+.lang-toggle button:hover { color: var(--c-text); }
+.lang-toggle button.is-active {
+  background: white;
+  color: var(--c-primary);
+  box-shadow: var(--shadow-sm);
+}
 
 /* ---------- Hero ---------- */
 .hero {
@@ -624,7 +656,9 @@ input, select, button { font-size: 14px; }
   .filter-group__body { max-height: none; }
 }
 @media (max-width: 600px) {
-  .site-nav { gap: 16px; font-size: 13px; }
+  .site-header__right { gap: 12px; }
+  .site-nav { gap: 14px; font-size: 13px; }
+  .lang-toggle button { padding: 3px 8px; font-size: 11px; min-width: 28px; }
   .hero { padding: 40px 0 32px; }
   .stat__value { font-size: 20px; }
   .plot { height: 380px; }
