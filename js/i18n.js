@@ -1,7 +1,55 @@
 // i18n.js — translation dictionary + DOM application + change-event bus
+//
+// Includes:
+//   - UI string translations (en / zh)
+//   - MANUFACTURERS map (Chinese canonical -> English brand name) with a
+//     manufacturerDisplay() helper used by every component that renders a
+//     manufacturer name. The underlying data field stays Chinese so filter
+//     keys, hash-sync, and CSV export keep a stable identifier.
+//   - GLOSSARY strings for the performance-parameter definitions section.
 
 const STORAGE_KEY = "jae.lang";
 const SUPPORTED = ["en", "zh"];
+
+// ---------- manufacturer name map ----------
+//
+// Chinese name (as stored in data/families/*.json) -> English brand name.
+// Sources verified via official manufacturer sites where available; for
+// makers without an established English brand presence, the entry is a
+// transliteration or descriptive name and contributors are welcome to
+// refine it via PR.
+const MANUFACTURERS = {
+  "脉塔":       "MyActuator",
+  "钛虎":       "Tihu Robotics",
+  "高擎":       "High Torque Robotics",
+  "伟达立":     "Weidali Robotics",
+  "达妙":       "DAMIAO",
+  "雷赛":       "Leadshine",
+  "同川精密":   "Tongchuan Precision",
+  "埃斯顿酷卓": "Estun Codroid",
+  "智动力":     "Zhidongli",
+  "曦诺未来":   "Xinuo Future",
+  "泉智博":     "Quanzhibo Robotics",
+  "泰科":       "Taike",
+  "禾川":       "HCFA",
+  "中大力德":   "Zhongda Lide",
+  "动易":       "Dongyi",
+  "因克斯":     "INX Robotics",
+  "巨蟹智能":   "Juxie Intelligent",
+  "意优":       "Eyou Robotics",
+  "清能德创":   "Tsino Dynatron",
+  "灵足时代":   "Robstride Dynamics",
+  "珞石":       "Rokae",
+  "璇珑动力":   "Astralldynamics",
+};
+
+export function manufacturerDisplay(name) {
+  if (!name) return name;
+  if (currentLang === "zh") return name;
+  return MANUFACTURERS[name] || name;
+}
+
+// ---------- main translation dictionary ----------
 
 const TRANSLATIONS = {
   en: {
@@ -11,6 +59,7 @@ const TRANSLATIONS = {
 
     "nav.explorer": "Explorer",
     "nav.about": "About",
+    "nav.glossary": "Parameter glossary",
     "nav.github": "Data on GitHub",
 
     "brand": "Dynamic Robot Joint Actuator Comparison",
@@ -105,6 +154,45 @@ const TRANSLATIONS = {
     "about.body_pre": "The Dynamic Robot Joint Actuator Comparison Site is an open, continuously maintained collection of specifications for actuators used in dynamic robots — quadrupeds, bipeds, humanoids, manipulators, and exoskeletons. Entries are sourced from manufacturer datasheets and published research. Contributions are welcome on GitHub: add a family file under ",
     "about.body_mid": " following the schema in ",
     "about.body_post": " and open a pull request.",
+    "about.contact_title": "Contribute or contact",
+    "about.contact_body": "Spotted incorrect specs or have an updated datasheet? Three ways to help:",
+    "about.contact_pr": "Open a pull request on the GitHub repository to fix or extend the data — see the contribution guide in the repo README.",
+    "about.contact_issue": "File an issue on GitHub if you can point at the source but don't want to edit the JSON yourself.",
+    "about.contact_email_pre": "Email the maintainer directly at ",
+    "about.contact_email_post": " — datasheets, scans, or measured curves all welcome.",
+
+    "glossary.title": "Performance parameter definitions",
+    "glossary.intro": "Quick reference for every spec column in the dataset, with the conventions used here. Where a manufacturer's datasheet uses a different definition, the entry's notes field calls it out.",
+    "glossary.voltage.term": "Voltage",
+    "glossary.voltage.desc": "DC bus voltage on the input side.",
+    "glossary.peak_current.term": "Peak current",
+    "glossary.peak_current.desc": "Peak phase current on the AC side, also the current limit set in the controller firmware. Typically corresponds to peak start/stop torque ÷ gear ratio.",
+    "glossary.continuous_current.term": "Continuous current",
+    "glossary.continuous_current.desc": "Maximum continuous AC-side current — the motor's rated current — corresponding to rated torque ÷ gear ratio. The motor reaches thermal equilibrium at this current at rated speed × gear ratio, but manufacturers rarely publish the resulting temperature rise.",
+    "glossary.rated_speed.term": "Rated speed",
+    "glossary.rated_speed.desc": "Maximum joint output speed at rated DC voltage and rated current (or rated torque). This is the speed at the rated-torque operating point — the true \"rated working point\". Motor-side rated speed = output rated speed × gear ratio.",
+    "glossary.half_torque_speed.term": "Max speed at ½ rated torque",
+    "glossary.half_torque_speed.desc": "Some manufacturers redefine \"rated speed\" as the maximum speed under half rated torque, which moves the value away from the true rated operating point. This column records that value separately. If a datasheet explicitly says \"with ½ rated torque\" or similar, put it here; the rated-speed column then corresponds to the true rated-torque condition (or unknown if not given).",
+    "glossary.max_speed.term": "Maximum speed",
+    "glossary.max_speed.desc": "The highest speed the joint can reach under mechanical or electrical limits, also the speed limit enforced by the controller firmware.",
+    "glossary.rated_torque.term": "Rated torque",
+    "glossary.rated_torque.desc": "Allowable continuous load torque around the rated speed (some manufacturers cite this at 2000 rpm).",
+    "glossary.avg_load_torque.term": "Average load max torque",
+    "glossary.avg_load_torque.desc": "Average load torque under varying torque/speed conditions. Larger than rated torque.",
+    "glossary.start_stop_torque.term": "Start/stop peak torque",
+    "glossary.start_stop_torque.desc": "Maximum torque allowed during start and stop transients due to load inertia. Larger than the average-load max torque.",
+    "glossary.instantaneous_max_torque.term": "Instantaneous permissible max torque",
+    "glossary.instantaneous_max_torque.desc": "External instantaneous shock torque tolerated under any condition. Exceeding it can permanently damage the gearbox. Larger than start/stop peak torque.",
+    "glossary.torque_at_max_speed.term": "Output torque at maximum speed",
+    "glossary.torque_at_max_speed.desc": "Output torque the joint can sustain at its maximum speed.",
+    "glossary.rated_input_power.term": "Rated input power",
+    "glossary.rated_input_power.desc": "DC-side input electrical power as published in the datasheet. Typically larger than rated output power (= rated torque × rated speed × 2π/60); the gap is motor + gearbox loss.",
+    "glossary.peak_power.term": "Peak power",
+    "glossary.peak_power.desc": "Manufacturer-supplied; usually the maximum output power along the cold-state torque-speed envelope, treated as a transient capability indicator. Cannot be derived from peak torque alone since the speed at peak torque is unknown.",
+    "glossary.encoder.term": "Motor-side encoder",
+    "glossary.encoder.desc": "If incremental rather than single-turn absolute, the resolution is converted to bit-precision as log₂(lines × 4) — hence the fractional values you may see.",
+    "glossary.torque_constant.term": "Torque constant",
+    "glossary.torque_constant.desc": "Motor rated torque divided by RMS continuous current (not the peak current; not the peak torque, since the motor may saturate; not the module-level rated torque, because of gearbox loss).",
 
     "footer.opendata": "Open data",
     "footer.inspired": "Inspired by the",
@@ -121,6 +209,7 @@ const TRANSLATIONS = {
 
     "nav.explorer": "浏览",
     "nav.about": "关于",
+    "nav.glossary": "参数定义",
     "nav.github": "GitHub 数据",
 
     "brand": "动态机器人关节执行器对比",
@@ -215,6 +304,45 @@ const TRANSLATIONS = {
     "about.body_pre": "动态机器人关节执行器对比是一个开放的、持续维护的执行器规格集合，涵盖动态机器人 — 四足、双足、人形、机械臂和外骨骼。条目来源于制造商数据手册和已发表研究。欢迎在 GitHub 上贡献：在 ",
     "about.body_mid": " 下添加家族文件，遵循 ",
     "about.body_post": " 中的模式，然后提交 pull request。",
+    "about.contact_title": "贡献或联系",
+    "about.contact_body": "发现规格错误或有更新的数据手册？三种方式可以帮助：",
+    "about.contact_pr": "在 GitHub 仓库提交 pull request 修订或扩充数据 — 详见仓库 README 中的贡献说明。",
+    "about.contact_issue": "如果你能指出来源但不想直接编辑 JSON，可以在 GitHub 提交 issue。",
+    "about.contact_email_pre": "也可以直接发邮件给维护者：",
+    "about.contact_email_post": " — 欢迎提交数据手册、扫描件或实测曲线。",
+
+    "glossary.title": "性能参数定义",
+    "glossary.intro": "数据集中各项规格字段的快速参考，以及本站采用的口径约定。当某厂家数据手册采用不同定义时，会在该条目的 notes 字段中注明。",
+    "glossary.voltage.term": "电压",
+    "glossary.voltage.desc": "直流侧的 DC 电压。",
+    "glossary.peak_current.term": "最大电流",
+    "glossary.peak_current.desc": "交流侧的电机电流峰值，也是电控软件的电流限值，通常与（启停峰值转矩 / 减速比）对应。",
+    "glossary.continuous_current.term": "连续电流",
+    "glossary.continuous_current.desc": "交流侧的电机可以连续运行的电流峰值，即电机的额定电流，与（额定转矩 / 减速比）对应。通常在（额定转速 × 减速比）下电机在此电流下可达到热平衡，但电机温升厂家通常不会给出。",
+    "glossary.rated_speed.term": "额定转速",
+    "glossary.rated_speed.desc": "在直流电压和额定电流（或额定转矩）条件下，关节模组能够达到的最大转速；该转速应为额定转矩工况下的转速（即真正的「额定工作点」）。电机侧的额定转速为（输出端额定转速 × 减速比）。",
+    "glossary.half_torque_speed.term": "1/2 额定转矩对应的最大转速",
+    "glossary.half_torque_speed.desc": "部分厂家将关节模组的「额定转速」定义为负载转矩为 1/2 额定转矩时的最大转速，使该值偏离真正的额定工作点。本表用此列单独记录该口径下的转速。若厂家 datasheet 明示「带 1/2 额定扭矩」或类似表述，应将其值放入本列；原「额定转速」列对应额定转矩工况，若厂家未给出，则置为 unknown。",
+    "glossary.max_speed.term": "最高转速",
+    "glossary.max_speed.desc": "在机械约束或电气约束下，关节所能达到的最高转速，电控软件的转速限值。",
+    "glossary.rated_torque.term": "额定转矩",
+    "glossary.rated_torque.desc": "表示输入转速为额定转速附近以内（或有的厂家标注 2000 r/min）的容许连续负载转矩。",
+    "glossary.avg_load_torque.term": "平均负载最大转矩",
+    "glossary.avg_load_torque.desc": "转矩转速变化时，计算的负载转矩平均值，大于额定转矩。",
+    "glossary.start_stop_torque.term": "启停峰值转矩",
+    "glossary.start_stop_torque.desc": "起动停止时，由于负载转动惯量作用，允许发生的最大转矩，大于平均负载最大转矩。",
+    "glossary.instantaneous_max_torque.term": "瞬间容许最大转矩",
+    "glossary.instantaneous_max_torque.desc": "任何情况下的外部瞬间冲击转矩，可能导致减速机永久损伤，大于启停峰值转矩。",
+    "glossary.torque_at_max_speed.term": "最高转速下输出转矩",
+    "glossary.torque_at_max_speed.desc": "关节在最高转速下的输出转矩。",
+    "glossary.rated_input_power.term": "额定输入功率",
+    "glossary.rated_input_power.desc": "直流侧的 DC 输入电功率，由厂家 datasheet 给出。其值通常大于额定输出功率（额定输出功率 = 额定转矩 × 额定转速 × 2π/60），差额为电机和减速器的损耗。",
+    "glossary.peak_power.term": "峰值功率",
+    "glossary.peak_power.desc": "由厂家给出，通常是冷态下关节转矩转速外特性曲线下输出功率的最大值，仅作为瞬时输出能力的指标。由于不知道峰值转矩对应的转速，因此无法计算得出。",
+    "glossary.encoder.term": "电机端编码器",
+    "glossary.encoder.desc": "如果不是单圈绝对值，而是增量式编码器，则按 log₂(线数 × 4) 转换为位数精度，因此会看到小数。",
+    "glossary.torque_constant.term": "扭矩常数",
+    "glossary.torque_constant.desc": "电机的额定转矩除以连续电流的 RMS 值，注意这里不是电流幅值，而是 RMS 值。这里不用电机的峰值转矩和最大电流，因为电机有可能电磁饱和。这里也不能使用模组的额定转矩和连续电流计算，因为有减速机损耗。",
 
     "footer.opendata": "开放数据",
     "footer.inspired": "灵感来自",
