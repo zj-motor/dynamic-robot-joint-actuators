@@ -1,5 +1,7 @@
 // filters.js — sidebar filter state, rendering, and apply pipeline
 
+import { manufacturerDisplay } from "./i18n.js";
+
 const RANGE_FIELDS = {
   torque: { key: "peak_torque_nm",          label: "Nm",    container: "range-torque" },
   weight: { key: "weight_kg",               label: "kg",    container: "range-weight" },
@@ -9,7 +11,7 @@ const RANGE_FIELDS = {
 export function createFilterState() {
   return {
     search: "",
-    manufacturer: new Set(), // empty Set = all
+    manufacturer: new Set(),
     transmission: new Set(),
     joint: new Set(),
     ranges: {
@@ -24,7 +26,8 @@ export function applyFilters(data, state) {
   const q = (state.search || "").trim().toLowerCase();
   return data.filter((d) => {
     if (q) {
-      const hay = `${d.manufacturer ?? ""} ${d.model ?? ""} ${d.transmission_type ?? ""} ${(d.used_in_robots || []).join(" ")}`.toLowerCase();
+      const mEn = manufacturerDisplay(d.manufacturer) || "";
+      const hay = `${d.manufacturer ?? ""} ${mEn} ${d.model ?? ""} ${d.transmission_type ?? ""} ${(d.used_in_robots || []).join(" ")}`.toLowerCase();
       if (!hay.includes(q)) return false;
     }
     if (state.manufacturer.size && !state.manufacturer.has(d.manufacturer)) return false;
@@ -43,15 +46,13 @@ export function applyFilters(data, state) {
   });
 }
 
-// ---------------------------------------------------------------------------
-// Rendering
-
 export function renderFilterSidebar(data, state, onChange) {
   renderCheckboxGroup(
     "filter-manufacturer",
     countBy(data, "manufacturer"),
     state.manufacturer,
     onChange,
+    manufacturerDisplay,
   );
   renderCheckboxGroup(
     "filter-transmission",
@@ -94,7 +95,7 @@ export function renderFilterSidebar(data, state, onChange) {
   };
 }
 
-function renderCheckboxGroup(containerId, counts, selectedSet, onChange) {
+function renderCheckboxGroup(containerId, counts, selectedSet, onChange, displayFn) {
   const el = document.getElementById(containerId);
   if (!el) return;
   el.innerHTML = "";
@@ -111,7 +112,7 @@ function renderCheckboxGroup(containerId, counts, selectedSet, onChange) {
       onChange();
     };
     const text = document.createElement("span");
-    text.textContent = value || "(unspecified)";
+    text.textContent = (displayFn ? displayFn(value) : value) || "(unspecified)";
     const c = document.createElement("span");
     c.className = "count";
     c.textContent = count;

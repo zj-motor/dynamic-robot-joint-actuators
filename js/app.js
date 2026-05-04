@@ -30,13 +30,15 @@ init();
 async function init() {
   document.getElementById("year").textContent = new Date().getFullYear();
 
-  // i18n: mount the toggle, apply translations to static markup, and re-render
-  // dynamic content whenever the user switches languages.
+  // i18n: mount the toggle, apply translations to static markup, render the
+  // glossary, and re-render dynamic content on every language change.
   const toggleSlot = document.getElementById("lang-toggle-slot");
   if (toggleSlot) mountToggle(toggleSlot);
   applyToDOM();
+  renderGlossary();
   onLangChange(() => {
     applyToDOM();
+    renderGlossary();
     rerender();
     if (compare) compare.render();
   });
@@ -177,4 +179,46 @@ function showLoadError(msg) {
     `<div style="padding:48px;text-align:center;color:#64748b;">` +
     `<p style="font-size:15px;margin:0 0 8px;">${t("load.error")}</p>` +
     `<code style="font-size:12px;">${msg}</code></div>`;
+}
+
+// ---------- Glossary ----------
+//
+// Driven from a list of i18n key prefixes; each prefix has matching
+// `${prefix}.term` and `${prefix}.desc` strings in both languages.
+const GLOSSARY_KEYS = [
+  "voltage",
+  "peak_current",
+  "continuous_current",
+  "rated_speed",
+  "half_torque_speed",
+  "max_speed",
+  "rated_torque",
+  "avg_load_torque",
+  "start_stop_torque",
+  "instantaneous_max_torque",
+  "torque_at_max_speed",
+  "rated_input_power",
+  "peak_power",
+  "encoder",
+  "torque_constant",
+];
+
+function renderGlossary() {
+  const el = document.getElementById("glossary-grid");
+  if (!el) return;
+  el.innerHTML = GLOSSARY_KEYS.map((key) => {
+    const term = escapeHtml(t(`glossary.${key}.term`));
+    const desc = escapeHtml(t(`glossary.${key}.desc`));
+    return `<div class="glossary__item">
+      <dt class="glossary__term">${term}</dt>
+      <dd class="glossary__desc">${desc}</dd>
+    </div>`;
+  }).join("");
+}
+
+function escapeHtml(s) {
+  if (s == null) return "";
+  return String(s).replace(/[&<>"']/g, (c) =>
+    ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]),
+  );
 }

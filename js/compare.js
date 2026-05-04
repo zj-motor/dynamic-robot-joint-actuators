@@ -2,13 +2,11 @@
 
 import { loadDetail } from "./data.js";
 import { renderCurves } from "./charts.js";
-import { t } from "./i18n.js";
+import { t, manufacturerDisplay } from "./i18n.js";
 
 const STORAGE_KEY = "jae.pinned";
 const MAX_PINS = 4;
 
-// Row layout. Labels and section headers are translation keys; resolved at
-// render time so language changes refresh without a reload.
 const ROWS = [
   { section: "compare.section.identity", key: "manufacturer",  labelKey: "compare.row.manufacturer" },
   { key: "model",                                              labelKey: "compare.row.model" },
@@ -40,18 +38,16 @@ const ROWS = [
 export function createCompareController(getAllData) {
   const state = {
     pinned: loadPins(),
-    detailsById: new Map(), // id -> detail (null if not yet loaded or 404)
+    detailsById: new Map(),
   };
   let listeners = [];
   const drawer = document.getElementById("compare-drawer");
 
-  // Subscribers
   function emit() {
     for (const fn of listeners) fn(getPins());
   }
   function subscribe(fn) { listeners.push(fn); }
 
-  // Pin management
   function getPins() { return [...state.pinned]; }
   function isPinned(id) { return state.pinned.includes(id); }
   function toggle(id) {
@@ -87,7 +83,6 @@ export function createCompareController(getAllData) {
     });
   }
 
-  // Rendering
   function render() {
     const all = getAllData();
     const items = state.pinned.map((id) => all.find((d) => d.id === id)).filter(Boolean);
@@ -101,12 +96,10 @@ export function createCompareController(getAllData) {
 
     const table = document.getElementById("compare-table");
     table.innerHTML = buildTableHTML(items);
-    // Wire remove buttons
     table.querySelectorAll(".col-remove").forEach((btn) => {
       btn.onclick = () => toggle(btn.dataset.id);
     });
 
-    // Curves chart
     let curveEl = document.getElementById("curve-chart");
     if (!curveEl) {
       curveEl = document.createElement("div");
@@ -122,7 +115,7 @@ export function createCompareController(getAllData) {
     const unpin = escape(t("compare.unpin"));
     let html = `<thead><tr><th>${escape(t("compare.spec"))}</th>`;
     for (const it of items) {
-      html += `<th>${escape(it.manufacturer)} <span style="color:#64748b;font-weight:400;">${escape(it.model)}</span> <button class="col-remove" data-id="${escape(it.id)}" title="${unpin}">×</button></th>`;
+      html += `<th>${escape(manufacturerDisplay(it.manufacturer))} <span style="color:#64748b;font-weight:400;">${escape(it.model)}</span> <button class="col-remove" data-id="${escape(it.id)}" title="${unpin}">×</button></th>`;
     }
     html += "</tr></thead><tbody>";
 
@@ -137,6 +130,7 @@ export function createCompareController(getAllData) {
         let display;
         if (row.fmt) display = row.fmt(v);
         else if (row.num) display = formatNum(v, row.digits);
+        else if (row.key === "manufacturer") display = v == null || v === "" ? "—" : escape(manufacturerDisplay(String(v)));
         else display = v == null || v === "" ? "—" : escape(String(v));
         const cls = winners.has(i) ? " class=\"col-best\"" : "";
         html += `<td${cls}>${display}</td>`;
@@ -157,13 +151,12 @@ export function createCompareController(getAllData) {
     return out;
   }
 
-  // CSV export
   function exportCSV() {
     const all = getAllData();
     const items = state.pinned.map((id) => all.find((d) => d.id === id)).filter(Boolean);
     if (!items.length) return;
 
-    const header = [t("compare.spec"), ...items.map((it) => `${it.manufacturer} ${it.model}`)];
+    const header = [t("compare.spec"), ...items.map((it) => `${manufacturerDisplay(it.manufacturer)} ${it.model}`)];
     const lines = [header.map(csvCell).join(",")];
     for (const row of ROWS) {
       if (row.section) continue;
@@ -171,6 +164,7 @@ export function createCompareController(getAllData) {
         const v = it[row.key];
         if (Array.isArray(v)) return v.join("; ");
         if (typeof v === "boolean") return v ? t("compare.bool.yes") : t("compare.bool.no");
+        if (row.key === "manufacturer") return v == null ? "" : manufacturerDisplay(String(v));
         return v == null ? "" : String(v);
       });
       lines.push([t(row.labelKey), ...values].map(csvCell).join(","));
@@ -186,7 +180,6 @@ export function createCompareController(getAllData) {
     URL.revokeObjectURL(url);
   }
 
-  // Wire drawer buttons
   document.getElementById("clear-pins").onclick = clear;
   document.getElementById("export-csv").onclick = exportCSV;
   document.getElementById("toggle-drawer").onclick = () => {
@@ -195,7 +188,6 @@ export function createCompareController(getAllData) {
     btn.textContent = drawer.classList.contains("is-collapsed") ? "▴" : "▾";
   };
 
-  // Hydrate any pre-existing pins (from localStorage)
   for (const id of state.pinned) hydrateDetail(id);
 
   return { toggle, clear, getPins, isPinned, render, subscribe };
@@ -210,7 +202,6 @@ function loadPins() {
   } catch { return []; }
 }
 
-// ---------- formatting helpers ----------
 function formatNum(v, digits) {
   if (v == null || !Number.isFinite(v)) return "—";
   const d = digits ?? (Math.abs(v) >= 100 ? 0 : Math.abs(v) >= 10 ? 1 : 2);
