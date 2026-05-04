@@ -1,0 +1,39 @@
+{
+  "id": "cubemars-ak80-6",
+  "curves": {
+    "torque_speed": [
+      {
+        "speed_rad_s": 0.0,
+        "torque_nm": 12.0
+      },
+      {
+        "speed_rad_s": 7.0,
+        "torque_nm": 11.76
+      },
+      {
+        "speed_rad_s": 14.0,
+        "torque_nm": 11.51
+      },
+      {
+        "speed_rad_s": 21.0,
+        "torque_nm": 9.52
+      },
+      {
+        "speed_rad_s": 28.0,
+        "torque_nm": 6.36
+      },
+      {
+        "speed_rad_s": 35.0,
+        "torque_nm": 3.61
+      },
+      {
+        "speed_rad_s": 42.0,
+        "torque_nm": 1.37
+      },
+      {
+        "speed_rad_s": 49.0,
+        "torque_nm": 0.0
+      }
+    ]
+  }
+}

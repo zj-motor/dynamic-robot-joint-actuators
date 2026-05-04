@@ -1,0 +1,159 @@
+{
+  "family_id": "damiao-dm",
+  "family_name": "DAMIAO DM series",
+  "shared": {
+    "manufacturer": "DAMIAO",
+    "electrical": {
+      "voltage_v": 24,
+      "motor_topology": "BLDC outrunner"
+    },
+    "transmission": {
+      "type": "planetary",
+      "backdrivable": true,
+      "efficiency_pct": 90
+    }
+  },
+  "variants": [
+    {
+      "id": "damiao-dm4310",
+      "model": "DM4310",
+      "year": 2022,
+      "datasheet_url": "https://www.damiaocn.com",
+      "price_usd": 119,
+      "mechanical": {
+        "peak_torque_nm": 7,
+        "rated_torque_nm": 2.5,
+        "max_speed_rad_s": 31.4,
+        "weight_kg": 0.13,
+        "torque_density_nm_per_kg": 53.8
+      },
+      "electrical": {
+        "kv": 80,
+        "peak_current_a": 15,
+        "continuous_current_a": 4
+      },
+      "transmission": {
+        "ratio": 10
+      },
+      "application": {
+        "target_joints": [
+          "finger",
+          "wrist"
+        ],
+        "notes": "Very lightweight; for distal joints and grippers."
+      }
+    },
+    {
+      "id": "damiao-dm4340",
+      "model": "DM4340",
+      "year": 2022,
+      "datasheet_url": "https://www.damiaocn.com",
+      "price_usd": 149,
+      "mechanical": {
+        "peak_torque_nm": 12,
+        "rated_torque_nm": 4,
+        "max_speed_rad_s": 21,
+        "weight_kg": 0.22,
+        "torque_density_nm_per_kg": 54.5
+      },
+      "electrical": {
+        "kv": 80,
+        "peak_current_a": 17,
+        "continuous_current_a": 5
+      },
+      "transmission": {
+        "ratio": 14.6
+      },
+      "application": {
+        "target_joints": [
+          "wrist"
+        ]
+      }
+    },
+    {
+      "id": "damiao-dm6006",
+      "model": "DM6006",
+      "year": 2022,
+      "datasheet_url": "https://www.damiaocn.com",
+      "price_usd": 169,
+      "mechanical": {
+        "peak_torque_nm": 12,
+        "rated_torque_nm": 4,
+        "max_speed_rad_s": 31,
+        "weight_kg": 0.33,
+        "torque_density_nm_per_kg": 36.4
+      },
+      "electrical": {
+        "kv": 100,
+        "peak_current_a": 24,
+        "continuous_current_a": 8
+      },
+      "transmission": {
+        "ratio": 6
+      },
+      "application": {
+        "target_joints": [
+          "ankle",
+          "elbow"
+        ]
+      }
+    },
+    {
+      "id": "damiao-dm8009",
+      "model": "DM8009",
+      "year": 2023,
+      "datasheet_url": "https://www.damiaocn.com",
+      "price_usd": 269,
+      "mechanical": {
+        "peak_torque_nm": 35,
+        "rated_torque_nm": 10,
+        "max_speed_rad_s": 25,
+        "weight_kg": 0.65,
+        "torque_density_nm_per_kg": 53.8
+      },
+      "electrical": {
+        "kv": 100,
+        "peak_current_a": 35,
+        "continuous_current_a": 11
+      },
+      "transmission": {
+        "ratio": 9
+      },
+      "application": {
+        "target_joints": [
+          "hip",
+          "knee"
+        ]
+      }
+    },
+    {
+      "id": "damiao-dm10010",
+      "model": "DM10010",
+      "year": 2023,
+      "datasheet_url": "https://www.damiaocn.com",
+      "price_usd": 389,
+      "mechanical": {
+        "peak_torque_nm": 80,
+        "rated_torque_nm": 25,
+        "max_speed_rad_s": 18,
+        "weight_kg": 1.0,
+        "torque_density_nm_per_kg": 80.0
+      },
+      "electrical": {
+        "voltage_v": 48,
+        "kv": 80,
+        "peak_current_a": 50,
+        "continuous_current_a": 16
+      },
+      "transmission": {
+        "ratio": 10
+      },
+      "application": {
+        "target_joints": [
+          "hip",
+          "knee"
+        ]
+      }
+    }
+  ]
+}

@@ -16,8 +16,13 @@
       "efficiency_pct": 92
     },
     "application": {
-      "target_joints": ["hip", "knee"],
-      "used_in_robots": ["MIT Mini Cheetah"]
+      "target_joints": [
+        "hip",
+        "knee"
+      ],
+      "used_in_robots": [
+        "MIT Mini Cheetah"
+      ]
     }
   },
   "variants": [
@@ -34,7 +39,9 @@
         "weight_kg": 0.72,
         "torque_density_nm_per_kg": 48.6
       },
-      "transmission": { "ratio": 6 },
+      "transmission": {
+        "ratio": 6
+      },
       "application": {
         "notes": "Quasi-direct-drive reference design from MIT Biomimetic Robotics Lab."
       }

@@ -1,0 +1,167 @@
+{
+  "family_id": "robstride-rs",
+  "family_name": "Robstride RS series",
+  "shared": {
+    "manufacturer": "Robstride",
+    "electrical": {
+      "voltage_v": 24,
+      "motor_topology": "BLDC outrunner"
+    },
+    "transmission": {
+      "type": "planetary",
+      "backdrivable": true,
+      "efficiency_pct": 91
+    }
+  },
+  "variants": [
+    {
+      "id": "robstride-rs00",
+      "model": "RS-00",
+      "year": 2023,
+      "datasheet_url": "https://robstride.com",
+      "price_usd": 149,
+      "mechanical": {
+        "peak_torque_nm": 5,
+        "rated_torque_nm": 1.5,
+        "max_speed_rad_s": 50,
+        "weight_kg": 0.18,
+        "torque_density_nm_per_kg": 27.8
+      },
+      "electrical": {
+        "kv": 100,
+        "peak_current_a": 15,
+        "continuous_current_a": 5
+      },
+      "transmission": {
+        "ratio": 7.75
+      },
+      "application": {
+        "target_joints": [
+          "finger",
+          "wrist"
+        ],
+        "notes": "Compact actuator for distal joints."
+      }
+    },
+    {
+      "id": "robstride-rs01",
+      "model": "RS-01",
+      "year": 2023,
+      "datasheet_url": "https://robstride.com",
+      "price_usd": 199,
+      "mechanical": {
+        "peak_torque_nm": 12,
+        "rated_torque_nm": 4,
+        "max_speed_rad_s": 44,
+        "weight_kg": 0.32,
+        "torque_density_nm_per_kg": 37.5
+      },
+      "electrical": {
+        "kv": 100,
+        "peak_current_a": 23,
+        "continuous_current_a": 7
+      },
+      "transmission": {
+        "ratio": 6.25
+      },
+      "application": {
+        "target_joints": [
+          "wrist",
+          "ankle"
+        ]
+      }
+    },
+    {
+      "id": "robstride-rs02",
+      "model": "RS-02",
+      "year": 2023,
+      "datasheet_url": "https://robstride.com",
+      "price_usd": 249,
+      "mechanical": {
+        "peak_torque_nm": 17,
+        "rated_torque_nm": 6,
+        "max_speed_rad_s": 42,
+        "weight_kg": 0.4,
+        "torque_density_nm_per_kg": 42.5
+      },
+      "electrical": {
+        "kv": 100,
+        "peak_current_a": 26,
+        "continuous_current_a": 8
+      },
+      "transmission": {
+        "ratio": 7.75
+      },
+      "application": {
+        "target_joints": [
+          "ankle",
+          "knee"
+        ]
+      }
+    },
+    {
+      "id": "robstride-rs03",
+      "model": "RS-03",
+      "year": 2024,
+      "datasheet_url": "https://robstride.com",
+      "price_usd": 369,
+      "mechanical": {
+        "peak_torque_nm": 60,
+        "rated_torque_nm": 17,
+        "max_speed_rad_s": 20,
+        "weight_kg": 0.85,
+        "torque_density_nm_per_kg": 70.6
+      },
+      "electrical": {
+        "voltage_v": 48,
+        "kv": 90,
+        "peak_current_a": 45,
+        "continuous_current_a": 15
+      },
+      "transmission": {
+        "ratio": 9
+      },
+      "application": {
+        "target_joints": [
+          "hip",
+          "knee"
+        ],
+        "used_in_robots": [
+          "small humanoids"
+        ]
+      }
+    },
+    {
+      "id": "robstride-rs04",
+      "model": "RS-04",
+      "year": 2024,
+      "datasheet_url": "https://robstride.com",
+      "price_usd": 459,
+      "mechanical": {
+        "peak_torque_nm": 120,
+        "rated_torque_nm": 35,
+        "max_speed_rad_s": 12,
+        "weight_kg": 1.2,
+        "torque_density_nm_per_kg": 100.0
+      },
+      "electrical": {
+        "voltage_v": 48,
+        "kv": 80,
+        "peak_current_a": 60,
+        "continuous_current_a": 20
+      },
+      "transmission": {
+        "ratio": 12
+      },
+      "application": {
+        "target_joints": [
+          "hip",
+          "shoulder"
+        ],
+        "used_in_robots": [
+          "humanoid hip"
+        ]
+      }
+    }
+  ]
+}

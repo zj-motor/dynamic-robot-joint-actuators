@@ -1,0 +1,50 @@
+{
+  "family_id": "myactuator-rmd-x6",
+  "family_name": "MyActuator RMD-X6",
+  "shared": {
+    "manufacturer": "MyActuator",
+    "electrical": {
+      "voltage_v": 36,
+      "motor_topology": "BLDC outrunner"
+    },
+    "transmission": {
+      "type": "planetary",
+      "backdrivable": true,
+      "efficiency_pct": 90
+    }
+  },
+  "variants": [
+    {
+      "id": "myactuator-rmd-x6-v3",
+      "model": "RMD-X6 V3",
+      "year": 2023,
+      "datasheet_url": "https://www.myactuator.com",
+      "price_usd": 219,
+      "mechanical": {
+        "peak_torque_nm": 24,
+        "rated_torque_nm": 8,
+        "max_speed_rad_s": 12,
+        "weight_kg": 0.48,
+        "torque_density_nm_per_kg": 50.0
+      },
+      "electrical": {
+        "kv": 70,
+        "peak_current_a": 30,
+        "continuous_current_a": 10
+      },
+      "transmission": {
+        "ratio": 6
+      },
+      "application": {
+        "target_joints": [
+          "wrist",
+          "shoulder"
+        ],
+        "used_in_robots": [
+          "humanoid wrists",
+          "arm research"
+        ]
+      }
+    }
+  ]
+}

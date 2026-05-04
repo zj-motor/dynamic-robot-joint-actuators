@@ -1,0 +1,39 @@
+{
+  "id": "robstride-rs03",
+  "curves": {
+    "torque_speed": [
+      {
+        "speed_rad_s": 0.0,
+        "torque_nm": 60.0
+      },
+      {
+        "speed_rad_s": 2.86,
+        "torque_nm": 58.78
+      },
+      {
+        "speed_rad_s": 5.71,
+        "torque_nm": 57.55
+      },
+      {
+        "speed_rad_s": 8.57,
+        "torque_nm": 47.59
+      },
+      {
+        "speed_rad_s": 11.43,
+        "torque_nm": 31.81
+      },
+      {
+        "speed_rad_s": 14.29,
+        "torque_nm": 18.03
+      },
+      {
+        "speed_rad_s": 17.14,
+        "torque_nm": 6.83
+      },
+      {
+        "speed_rad_s": 20.0,
+        "torque_nm": 0.0
+      }
+    ]
+  }
+}

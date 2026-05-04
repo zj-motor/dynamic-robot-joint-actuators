@@ -30,10 +30,16 @@
         "peak_current_a": 50,
         "continuous_current_a": 18
       },
-      "transmission": { "ratio": 11 },
+      "transmission": {
+        "ratio": 11
+      },
       "application": {
-        "target_joints": ["hip"],
-        "used_in_robots": ["research humanoid"],
+        "target_joints": [
+          "hip"
+        ],
+        "used_in_robots": [
+          "research humanoid"
+        ],
         "notes": "Synthetic concept entry; replace with measured data."
       }
     }

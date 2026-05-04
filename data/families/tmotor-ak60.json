@@ -32,11 +32,48 @@
         "peak_current_a": 24,
         "continuous_current_a": 8
       },
-      "transmission": { "ratio": 6 },
+      "transmission": {
+        "ratio": 6
+      },
       "application": {
-        "target_joints": ["ankle", "wrist"],
-        "used_in_robots": ["small quadrupeds", "biped ankles"],
+        "target_joints": [
+          "ankle",
+          "wrist"
+        ],
+        "used_in_robots": [
+          "small quadrupeds",
+          "biped ankles"
+        ],
         "notes": "Lightweight; good for distal joints."
+      }
+    },
+    {
+      "id": "tmotor-ak60-9",
+      "model": "AK60-9",
+      "year": 2021,
+      "datasheet_url": "https://store.tmotor.com/category/AK-Series.html",
+      "price_usd": 309,
+      "mechanical": {
+        "peak_torque_nm": 16,
+        "rated_torque_nm": 5,
+        "max_speed_rad_s": 30.4,
+        "weight_kg": 0.34,
+        "torque_density_nm_per_kg": 47.1
+      },
+      "electrical": {
+        "kv": 100,
+        "peak_current_a": 24,
+        "continuous_current_a": 8
+      },
+      "transmission": {
+        "ratio": 9
+      },
+      "application": {
+        "target_joints": [
+          "ankle",
+          "knee"
+        ],
+        "notes": "Higher-ratio AK60 for more torque at distal joints."
       }
     }
   ]

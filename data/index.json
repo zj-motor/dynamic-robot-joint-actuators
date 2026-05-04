@@ -2,12 +2,23 @@
   "families": [
     "cubemars-ak80.json",
     "tmotor-ak60.json",
+    "tmotor-ak70.json",
+    "tmotor-ak10.json",
     "mit-mini-cheetah.json",
     "unitree-go1.json",
+    "unitree-a1.json",
     "anybotics-anydrive.json",
+    "myactuator-rmd-x6.json",
     "myactuator-rmd-x8.json",
+    "myactuator-rmd-x10.json",
     "harmonic-drive-fha.json",
     "boston-dynamics-spot.json",
-    "honeybee-cycloidal.json"
+    "honeybee-cycloidal.json",
+    "robstride-rs.json",
+    "damiao-dm.json",
+    "maxon-ec-i.json",
+    "allied-megaflux.json",
+    "apptronik-apollo.json",
+    "agility-digit.json"
   ]
 }

@@ -1,0 +1,63 @@
+{
+  "family_id": "agility-digit",
+  "family_name": "Agility Digit (synthetic estimate)",
+  "shared": {
+    "manufacturer": "Agility Robotics",
+    "electrical": {
+      "voltage_v": 48,
+      "motor_topology": "BLDC"
+    },
+    "transmission": {
+      "type": "cycloidal",
+      "backdrivable": true,
+      "efficiency_pct": 86
+    },
+    "application": {
+      "used_in_robots": [
+        "Digit"
+      ]
+    }
+  },
+  "variants": [
+    {
+      "id": "agility-digit-hip",
+      "model": "Digit hip (est.)",
+      "year": 2023,
+      "mechanical": {
+        "peak_torque_nm": 130,
+        "rated_torque_nm": 45,
+        "max_speed_rad_s": 14,
+        "weight_kg": 1.55,
+        "torque_density_nm_per_kg": 83.9
+      },
+      "transmission": {
+        "ratio": 12
+      },
+      "application": {
+        "target_joints": [
+          "hip"
+        ]
+      }
+    },
+    {
+      "id": "agility-digit-knee",
+      "model": "Digit knee (est.)",
+      "year": 2023,
+      "mechanical": {
+        "peak_torque_nm": 110,
+        "rated_torque_nm": 38,
+        "max_speed_rad_s": 12,
+        "weight_kg": 1.45,
+        "torque_density_nm_per_kg": 75.9
+      },
+      "transmission": {
+        "ratio": 14
+      },
+      "application": {
+        "target_joints": [
+          "knee"
+        ]
+      }
+    }
+  ]
+}

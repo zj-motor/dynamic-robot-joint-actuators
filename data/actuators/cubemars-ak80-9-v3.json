@@ -1,17 +1,39 @@
 {
   "id": "cubemars-ak80-9-v3",
-  "_comment": "Variant-specific detail. The output torque-speed curve depends on gear ratio (9:1 here) so it lives at the variant level and overrides any family default.",
   "curves": {
     "torque_speed": [
-      { "speed_rad_s": 0,    "torque_nm": 22.0 },
-      { "speed_rad_s": 5,    "torque_nm": 22.0 },
-      { "speed_rad_s": 10,   "torque_nm": 21.0 },
-      { "speed_rad_s": 15,   "torque_nm": 19.0 },
-      { "speed_rad_s": 20,   "torque_nm": 16.5 },
-      { "speed_rad_s": 25,   "torque_nm": 13.5 },
-      { "speed_rad_s": 30,   "torque_nm": 10.0 },
-      { "speed_rad_s": 35,   "torque_nm": 5.5 },
-      { "speed_rad_s": 38.2, "torque_nm": 0.0 }
+      {
+        "speed_rad_s": 0.0,
+        "torque_nm": 22.0
+      },
+      {
+        "speed_rad_s": 5.46,
+        "torque_nm": 21.55
+      },
+      {
+        "speed_rad_s": 10.91,
+        "torque_nm": 21.1
+      },
+      {
+        "speed_rad_s": 16.37,
+        "torque_nm": 17.45
+      },
+      {
+        "speed_rad_s": 21.83,
+        "torque_nm": 11.67
+      },
+      {
+        "speed_rad_s": 27.29,
+        "torque_nm": 6.61
+      },
+      {
+        "speed_rad_s": 32.74,
+        "torque_nm": 2.51
+      },
+      {
+        "speed_rad_s": 38.2,
+        "torque_nm": 0.0
+      }
     ]
   }
 }

@@ -1,0 +1,39 @@
+{
+  "id": "damiao-dm8009",
+  "curves": {
+    "torque_speed": [
+      {
+        "speed_rad_s": 0.0,
+        "torque_nm": 35.0
+      },
+      {
+        "speed_rad_s": 3.57,
+        "torque_nm": 34.29
+      },
+      {
+        "speed_rad_s": 7.14,
+        "torque_nm": 33.57
+      },
+      {
+        "speed_rad_s": 10.71,
+        "torque_nm": 27.76
+      },
+      {
+        "speed_rad_s": 14.29,
+        "torque_nm": 18.56
+      },
+      {
+        "speed_rad_s": 17.86,
+        "torque_nm": 10.52
+      },
+      {
+        "speed_rad_s": 21.43,
+        "torque_nm": 3.99
+      },
+      {
+        "speed_rad_s": 25.0,
+        "torque_nm": 0.0
+      }
+    ]
+  }
+}

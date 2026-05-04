@@ -1,0 +1,49 @@
+{
+  "family_id": "myactuator-rmd-x10",
+  "family_name": "MyActuator RMD-X10",
+  "shared": {
+    "manufacturer": "MyActuator",
+    "electrical": {
+      "voltage_v": 48,
+      "motor_topology": "BLDC outrunner"
+    },
+    "transmission": {
+      "type": "planetary",
+      "backdrivable": true,
+      "efficiency_pct": 89
+    }
+  },
+  "variants": [
+    {
+      "id": "myactuator-rmd-x10-v3",
+      "model": "RMD-X10 V3",
+      "year": 2024,
+      "datasheet_url": "https://www.myactuator.com",
+      "price_usd": 549,
+      "mechanical": {
+        "peak_torque_nm": 150,
+        "rated_torque_nm": 50,
+        "max_speed_rad_s": 6,
+        "weight_kg": 1.6,
+        "torque_density_nm_per_kg": 93.8
+      },
+      "electrical": {
+        "kv": 50,
+        "peak_current_a": 60,
+        "continuous_current_a": 18
+      },
+      "transmission": {
+        "ratio": 10
+      },
+      "application": {
+        "target_joints": [
+          "hip",
+          "shoulder"
+        ],
+        "used_in_robots": [
+          "full-size humanoid hip"
+        ]
+      }
+    }
+  ]
+}

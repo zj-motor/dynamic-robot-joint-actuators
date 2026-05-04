@@ -1,0 +1,51 @@
+{
+  "family_id": "tmotor-ak10",
+  "family_name": "T-Motor AK10",
+  "shared": {
+    "manufacturer": "T-Motor",
+    "electrical": {
+      "voltage_v": 24,
+      "motor_topology": "BLDC outrunner"
+    },
+    "transmission": {
+      "type": "planetary",
+      "backdrivable": true,
+      "efficiency_pct": 92
+    }
+  },
+  "variants": [
+    {
+      "id": "tmotor-ak10-9",
+      "model": "AK10-9",
+      "year": 2022,
+      "datasheet_url": "https://store.tmotor.com/category/AK-Series.html",
+      "price_usd": 549,
+      "mechanical": {
+        "peak_torque_nm": 65,
+        "rated_torque_nm": 24,
+        "max_speed_rad_s": 31.4,
+        "weight_kg": 0.96,
+        "torque_density_nm_per_kg": 67.7
+      },
+      "electrical": {
+        "kv": 100,
+        "peak_current_a": 60,
+        "continuous_current_a": 22
+      },
+      "transmission": {
+        "ratio": 9
+      },
+      "application": {
+        "target_joints": [
+          "hip",
+          "shoulder"
+        ],
+        "used_in_robots": [
+          "full-size quadrupeds",
+          "humanoid arms"
+        ],
+        "notes": "Larger QDD for full-size legs."
+      }
+    }
+  ]
+}

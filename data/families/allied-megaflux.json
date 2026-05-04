@@ -1,0 +1,58 @@
+{
+  "family_id": "allied-megaflux",
+  "family_name": "Allied Motion Megaflux MF",
+  "shared": {
+    "manufacturer": "Allied Motion",
+    "electrical": {
+      "voltage_v": 48,
+      "motor_topology": "frameless BLDC"
+    },
+    "transmission": {
+      "type": "direct-drive",
+      "backdrivable": true,
+      "efficiency_pct": 95,
+      "ratio": 1
+    },
+    "application": {
+      "notes": "Frameless direct-drive \u2014 used as the basis for QDD designs."
+    }
+  },
+  "variants": [
+    {
+      "id": "allied-mf0127",
+      "model": "MF0127",
+      "year": 2020,
+      "datasheet_url": "https://www.alliedmotion.com",
+      "mechanical": {
+        "peak_torque_nm": 7,
+        "rated_torque_nm": 2.5,
+        "max_speed_rad_s": 700,
+        "weight_kg": 0.55,
+        "torque_density_nm_per_kg": 12.7
+      },
+      "application": {
+        "target_joints": [
+          "wrist"
+        ]
+      }
+    },
+    {
+      "id": "allied-mf0150",
+      "model": "MF0150",
+      "year": 2020,
+      "datasheet_url": "https://www.alliedmotion.com",
+      "mechanical": {
+        "peak_torque_nm": 18,
+        "rated_torque_nm": 6,
+        "max_speed_rad_s": 600,
+        "weight_kg": 1.2,
+        "torque_density_nm_per_kg": 15.0
+      },
+      "application": {
+        "target_joints": [
+          "arm"
+        ]
+      }
+    }
+  ]
+}

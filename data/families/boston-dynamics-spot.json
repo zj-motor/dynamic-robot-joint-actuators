@@ -13,10 +13,33 @@
       "efficiency_pct": 90
     },
     "application": {
-      "used_in_robots": ["Spot"]
+      "used_in_robots": [
+        "Spot"
+      ]
     }
   },
   "variants": [
+    {
+      "id": "boston-dynamics-spot-abad",
+      "model": "Spot abad actuator (est.)",
+      "year": 2019,
+      "mechanical": {
+        "peak_torque_nm": 45,
+        "rated_torque_nm": 15,
+        "max_speed_rad_s": 25,
+        "weight_kg": 0.92,
+        "torque_density_nm_per_kg": 48.9
+      },
+      "transmission": {
+        "ratio": 12
+      },
+      "application": {
+        "target_joints": [
+          "abad"
+        ],
+        "notes": "Public-source estimate."
+      }
+    },
     {
       "id": "boston-dynamics-spot-hip",
       "model": "Spot hip actuator (est.)",
@@ -28,10 +51,35 @@
         "weight_kg": 0.95,
         "torque_density_nm_per_kg": 47.4
       },
-      "transmission": { "ratio": 12 },
+      "transmission": {
+        "ratio": 12
+      },
       "application": {
-        "target_joints": ["hip"],
+        "target_joints": [
+          "hip"
+        ],
         "notes": "Estimated values from public sources; not an official spec."
+      }
+    },
+    {
+      "id": "boston-dynamics-spot-knee",
+      "model": "Spot knee actuator (est.)",
+      "year": 2019,
+      "mechanical": {
+        "peak_torque_nm": 60,
+        "rated_torque_nm": 22,
+        "max_speed_rad_s": 18,
+        "weight_kg": 0.95,
+        "torque_density_nm_per_kg": 63.2
+      },
+      "transmission": {
+        "ratio": 16
+      },
+      "application": {
+        "target_joints": [
+          "knee"
+        ],
+        "notes": "Public-source estimate."
       }
     }
   ]
