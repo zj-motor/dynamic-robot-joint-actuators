@@ -13,6 +13,7 @@ import {
   bindTableSort,
 } from "./charts.js";
 import { createCompareController } from "./compare.js";
+import { applyToDOM, mountToggle, onLangChange, t } from "./i18n.js";
 
 const state = {
   data: [],
@@ -29,6 +30,17 @@ init();
 async function init() {
   document.getElementById("year").textContent = new Date().getFullYear();
 
+  // i18n: mount the toggle, apply translations to static markup, and re-render
+  // dynamic content whenever the user switches languages.
+  const toggleSlot = document.getElementById("lang-toggle-slot");
+  if (toggleSlot) mountToggle(toggleSlot);
+  applyToDOM();
+  onLangChange(() => {
+    applyToDOM();
+    rerender();
+    if (compare) compare.render();
+  });
+
   try {
     state.data = await loadIndex();
   } catch (err) {
@@ -38,7 +50,7 @@ async function init() {
   }
 
   if (!state.data.length) {
-    showLoadError("Dataset is empty. Add entries to data/index.json.");
+    showLoadError(t("load.empty"));
     return;
   }
 
@@ -163,6 +175,6 @@ function showLoadError(msg) {
   if (!el) return;
   el.innerHTML =
     `<div style="padding:48px;text-align:center;color:#64748b;">` +
-    `<p style="font-size:15px;margin:0 0 8px;">Couldn’t load actuator data.</p>` +
+    `<p style="font-size:15px;margin:0 0 8px;">${t("load.error")}</p>` +
     `<code style="font-size:12px;">${msg}</code></div>`;
 }

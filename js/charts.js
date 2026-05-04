@@ -1,5 +1,7 @@
 // charts.js — Plotly renderers for scatter, radar, torque-speed curves; HTML for spec table
 
+import { t } from "./i18n.js";
+
 const TX_COLORS = {
   planetary:  "#0e7490",
   harmonic:   "#7c3aed",
@@ -97,13 +99,13 @@ export function renderScatter(elId, data, opts = {}) {
   const layout = {
     ...COMMON_LAYOUT,
     xaxis: {
-      title: { text: "Weight (kg)", font: { ...FONT, size: 13 } },
+      title: { text: t("chart.weight"), font: { ...FONT, size: 13 } },
       type: "log",
       gridcolor: "#eef2f6",
       zerolinecolor: "#dde3ea",
     },
     yaxis: {
-      title: { text: "Peak torque (Nm)", font: { ...FONT, size: 13 } },
+      title: { text: t("chart.peak_torque"), font: { ...FONT, size: 13 } },
       type: "log",
       gridcolor: "#eef2f6",
       zerolinecolor: "#dde3ea",
@@ -135,12 +137,12 @@ export function renderRadar(elId, allData, pinnedIds) {
   if (!el) return;
 
   const axes = [
-    { key: "peak_torque_nm",          label: "Peak τ" },
-    { key: "rated_torque_nm",         label: "Rated τ" },
-    { key: "max_speed_rad_s",         label: "Max ω" },
-    { key: "torque_density_nm_per_kg",label: "τ density" },
-    { key: "efficiency_pct",          label: "Efficiency" },
-    { key: "ratio",                   label: "Gear ratio" },
+    { key: "peak_torque_nm",          label: t("table.peak_torque") },
+    { key: "rated_torque_nm",         label: t("table.rated_torque") },
+    { key: "max_speed_rad_s",         label: t("table.max_speed") },
+    { key: "torque_density_nm_per_kg",label: t("table.density") },
+    { key: "efficiency_pct",          label: t("compare.row.efficiency") },
+    { key: "ratio",                   label: t("compare.row.ratio") },
   ];
 
   const maxes = {};
@@ -156,8 +158,8 @@ export function renderRadar(elId, allData, pinnedIds) {
   if (!items.length) {
     Plotly.purge(el);
     el.innerHTML =
-      '<div style="display:flex;align-items:center;justify-content:center;height:100%;color:#64748b;font-size:14px;">' +
-      "Pin 2–4 actuators (click on a scatter marker, or use the table) to compare profiles." +
+      '<div style="display:flex;align-items:center;justify-content:center;height:100%;color:#64748b;font-size:14px;text-align:center;padding:0 32px;">' +
+      escape(t("viz.radar_empty")) +
       "</div>";
     return;
   }
@@ -233,8 +235,8 @@ export function renderCurves(elId, detailsById) {
   if (!traces.length) {
     Plotly.purge(el);
     el.innerHTML =
-      '<div style="display:flex;align-items:center;justify-content:center;height:100%;color:#64748b;font-size:13px;">' +
-      "No torque-speed curves available for the pinned actuators." +
+      '<div style="display:flex;align-items:center;justify-content:center;height:100%;color:#64748b;font-size:13px;text-align:center;padding:0 32px;">' +
+      escape(t("compare.no_curves")) +
       "</div>";
     return;
   }
@@ -242,13 +244,13 @@ export function renderCurves(elId, detailsById) {
   const layout = {
     ...COMMON_LAYOUT,
     margin: { l: 60, r: 30, t: 24, b: 50 },
-    title: { text: "Torque-speed curves", font: { ...FONT, size: 13, color: "#0f172a" } },
+    title: { text: t("compare.curves_title"), font: { ...FONT, size: 13, color: "#0f172a" } },
     xaxis: {
-      title: { text: "Speed (rad/s)", font: { ...FONT, size: 12 } },
+      title: { text: t("chart.speed"), font: { ...FONT, size: 12 } },
       gridcolor: "#eef2f6",
     },
     yaxis: {
-      title: { text: "Torque (Nm)", font: { ...FONT, size: 12 } },
+      title: { text: t("chart.torque"), font: { ...FONT, size: 12 } },
       gridcolor: "#eef2f6",
     },
     legend: { orientation: "h", y: -0.22, font: { ...FONT, size: 11 } },
@@ -286,7 +288,7 @@ export function renderTable(tableId, data, opts = {}) {
     const tr = document.createElement("tr");
     if (pinned.has(d.id)) tr.classList.add("is-pinned");
     tr.innerHTML = `
-      <td><button class="pin-btn" title="Pin to compare">${pinned.has(d.id) ? "✓" : "+"}</button></td>
+      <td><button class="pin-btn" title="${escape(t("table.pin_tooltip"))}">${pinned.has(d.id) ? "✓" : "+"}</button></td>
       <td>${escape(d.manufacturer)}</td>
       <td>${escape(d.model)}</td>
       <td class="num">${formatVal(d.peak_torque_nm)}</td>
