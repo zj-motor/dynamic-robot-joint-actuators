@@ -26,6 +26,7 @@
         <div class="site-header__right">
           <nav class="site-nav">
             <a href="#explorer" data-i18n="nav.explorer">Explorer</a>
+            <a href="#glossary" data-i18n="nav.glossary">Parameter glossary</a>
             <a href="#about" data-i18n="nav.about">About</a>
             <a href="https://github.com/motognere/legged-robot-joint-actuators" target="_blank" rel="noopener" data-i18n="nav.github">Data on GitHub</a>
           </nav>
@@ -189,12 +190,30 @@
       </div>
     </aside>
 
+    <section id="glossary" class="glossary">
+      <div class="container glossary__inner">
+        <h2 data-i18n="glossary.title">Performance parameter definitions</h2>
+        <p class="glossary__intro" data-i18n="glossary.intro">Quick reference for every spec column in the dataset, with the conventions used here.</p>
+        <dl class="glossary__grid" id="glossary-grid"></dl>
+      </div>
+    </section>
+
     <section id="about" class="about">
       <div class="container about__inner">
         <h2 data-i18n="about.title">About this dataset</h2>
         <p>
           <span data-i18n="about.body_pre">The Dynamic Robot Joint Actuator Comparison Site is an open, continuously maintained collection of specifications for actuators used in dynamic robots — quadrupeds, bipeds, humanoids, manipulators, and exoskeletons. Entries are sourced from manufacturer datasheets and published research. Contributions are welcome on GitHub: add a family file under </span><code>data/families/</code><span data-i18n="about.body_mid"> following the schema in </span><code>data/schema.md</code><span data-i18n="about.body_post"> and open a pull request.</span>
         </p>
+
+        <h3 class="about__contact-title" data-i18n="about.contact_title">Contribute or contact</h3>
+        <p data-i18n="about.contact_body">Spotted incorrect specs or have an updated datasheet? Three ways to help:</p>
+        <ul class="about__contact-list">
+          <li data-i18n="about.contact_pr">Open a pull request on the GitHub repository to fix or extend the data — see the contribution guide in the repo README.</li>
+          <li data-i18n="about.contact_issue">File an issue on GitHub if you can point at the source but don't want to edit the JSON yourself.</li>
+          <li>
+            <span data-i18n="about.contact_email_pre">Email the maintainer directly at </span><a href="mailto:zijiano.li@foxmail.com" class="about__email">zijiano.li@foxmail.com</a><span data-i18n="about.contact_email_post"> — datasheets, scans, or measured curves all welcome.</span>
+          </li>
+        </ul>
       </div>
     </section>
 

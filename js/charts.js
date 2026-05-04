@@ -1,6 +1,6 @@
 // charts.js — Plotly renderers for scatter, radar, torque-speed curves; HTML for spec table
 
-import { t } from "./i18n.js";
+import { t, manufacturerDisplay } from "./i18n.js";
 
 const TX_COLORS = {
   planetary:  "#0e7490",
@@ -43,10 +43,6 @@ function colorFor(tx) {
   return TX_COLORS[String(tx).toLowerCase()] || "#0e7490";
 }
 
-// ---------------------------------------------------------------------------
-// Scatter: weight (x) vs peak torque (y), marker size = torque density,
-// color = transmission type. Click to pin.
-
 export function renderScatter(elId, data, opts = {}) {
   const el = document.getElementById(elId);
   if (!el) return;
@@ -66,7 +62,7 @@ export function renderScatter(elId, data, opts = {}) {
     const v = d.torque_density_nm_per_kg;
     if (v == null || dMax === dMin) return 14;
     const t = (v - dMin) / (dMax - dMin);
-    return 10 + t * 22; // 10–32 px
+    return 10 + t * 22;
   };
 
   const pinned = new Set(opts.pinnedIds || []);
@@ -77,7 +73,7 @@ export function renderScatter(elId, data, opts = {}) {
     name: tx,
     x: items.map((d) => d.weight_kg),
     y: items.map((d) => d.peak_torque_nm),
-    customdata: items.map((d) => [d.id, d.manufacturer, d.model, d.torque_density_nm_per_kg, d.max_speed_rad_s]),
+    customdata: items.map((d) => [d.id, manufacturerDisplay(d.manufacturer), d.model, d.torque_density_nm_per_kg, d.max_speed_rad_s]),
     marker: {
       size: items.map(sizeOf),
       color: items.map((d) => (pinned.has(d.id) ? "#ea580c" : colorFor(tx))),
@@ -129,9 +125,6 @@ export function renderScatter(elId, data, opts = {}) {
   }
 }
 
-// ---------------------------------------------------------------------------
-// Radar: normalized comparison across pinned actuators.
-
 export function renderRadar(elId, allData, pinnedIds) {
   const el = document.getElementById(elId);
   if (!el) return;
@@ -176,12 +169,12 @@ export function renderRadar(elId, allData, pinnedIds) {
       r: [...r, r[0]],
       theta: [...axes.map((a) => a.label), axes[0].label],
       fill: "toself",
-      name: `${d.manufacturer} ${d.model}`,
+      name: `${manufacturerDisplay(d.manufacturer)} ${d.model}`,
       line: { color: palette[i % palette.length], width: 2 },
       fillcolor: hexA(palette[i % palette.length], 0.18),
       hovertemplate: axes.map((ax) =>
         `${ax.label}: ${formatVal(d[ax.key])}`,
-      ).concat("<extra>" + d.manufacturer + " " + d.model + "</extra>").join("<br>"),
+      ).concat("<extra>" + manufacturerDisplay(d.manufacturer) + " " + d.model + "</extra>").join("<br>"),
     };
   });
 
@@ -207,9 +200,6 @@ export function renderRadar(elId, allData, pinnedIds) {
   Plotly.react(el, traces, layout, COMMON_CONFIG);
 }
 
-// ---------------------------------------------------------------------------
-// Torque-speed overlay (compare drawer)
-
 export function renderCurves(elId, detailsById) {
   const el = document.getElementById(elId);
   if (!el) return;
@@ -225,7 +215,7 @@ export function renderCurves(elId, detailsById) {
       mode: "lines+markers",
       x: pts.map((p) => p.speed_rad_s),
       y: pts.map((p) => p.torque_nm),
-      name: `${d.manufacturer} ${d.model}`,
+      name: `${manufacturerDisplay(d.manufacturer)} ${d.model}`,
       line: { color: palette[i % palette.length], width: 2 },
       marker: { size: 6, color: palette[i % palette.length] },
     });
@@ -259,9 +249,6 @@ export function renderCurves(elId, detailsById) {
   Plotly.react(el, traces, layout, COMMON_CONFIG);
 }
 
-// ---------------------------------------------------------------------------
-// Table
-
 export function renderTable(tableId, data, opts = {}) {
   const tbody = document.querySelector(`#${tableId} tbody`);
   if (!tbody) return;
@@ -289,7 +276,7 @@ export function renderTable(tableId, data, opts = {}) {
     if (pinned.has(d.id)) tr.classList.add("is-pinned");
     tr.innerHTML = `
       <td><button class="pin-btn" title="${escape(t("table.pin_tooltip"))}">${pinned.has(d.id) ? "✓" : "+"}</button></td>
-      <td>${escape(d.manufacturer)}</td>
+      <td>${escape(manufacturerDisplay(d.manufacturer))}</td>
       <td>${escape(d.model)}</td>
       <td class="num">${formatVal(d.peak_torque_nm)}</td>
       <td class="num">${formatVal(d.rated_torque_nm)}</td>
@@ -310,9 +297,6 @@ export function bindTableSort(tableId, onSort) {
     th.onclick = () => onSort(th.dataset.sort);
   });
 }
-
-// ---------------------------------------------------------------------------
-// Helpers
 
 function formatVal(v, digits) {
   if (v == null || !Number.isFinite(v)) return "—";

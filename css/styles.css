@@ -601,6 +601,58 @@ input, select, button { font-size: 14px; }
   border-radius: var(--radius);
 }
 
+/* ---------- Glossary ---------- */
+.glossary {
+  border-top: 1px solid var(--c-border);
+  background: white;
+  padding: 64px 0;
+}
+.glossary__inner { max-width: 1080px; margin: 0 auto; }
+.glossary h2 {
+  font-size: 26px;
+  letter-spacing: -0.01em;
+  margin: 0 0 8px;
+  color: var(--c-text);
+}
+.glossary__intro {
+  color: var(--c-text-muted);
+  font-size: 15px;
+  line-height: 1.55;
+  max-width: 720px;
+  margin: 0 0 28px;
+}
+.glossary__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin: 0;
+}
+.glossary__item {
+  background: var(--c-bg-alt);
+  border: 1px solid var(--c-border);
+  border-left: 3px solid var(--c-primary);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  transition: border-color 120ms, transform 120ms;
+}
+.glossary__item:hover {
+  border-left-color: var(--c-accent);
+  transform: translateY(-1px);
+}
+.glossary__term {
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--c-text);
+  margin: 0 0 6px;
+  line-height: 1.3;
+}
+.glossary__desc {
+  color: var(--c-text-muted);
+  font-size: 13.5px;
+  line-height: 1.55;
+  margin: 0;
+}
+
 /* ---------- About / Footer ---------- */
 .about {
   border-top: 1px solid var(--c-border);
@@ -612,6 +664,12 @@ input, select, button { font-size: 14px; }
   font-size: 24px;
   letter-spacing: -0.01em;
   margin: 0 0 12px;
+}
+.about h3 {
+  font-size: 16px;
+  letter-spacing: 0;
+  margin: 28px 0 8px;
+  color: var(--c-text);
 }
 .about p {
   color: var(--c-text-muted);
@@ -626,6 +684,23 @@ input, select, button { font-size: 14px; }
   border-radius: 4px;
   font-size: 14px;
 }
+.about__contact-list {
+  margin: 8px 0 0;
+  padding-left: 20px;
+  color: var(--c-text-muted);
+  font-size: 15px;
+  line-height: 1.7;
+}
+.about__contact-list li { margin: 6px 0; }
+.about__email {
+  font-family: var(--f-mono);
+  font-size: 14px;
+  background: white;
+  border: 1px solid var(--c-border);
+  padding: 1px 8px;
+  border-radius: 4px;
+}
+.about__email:hover { background: var(--c-primary-50); border-color: var(--c-primary); }
 
 .site-footer {
   border-top: 1px solid var(--c-border);
@@ -655,6 +730,9 @@ input, select, button { font-size: 14px; }
   }
   .filter-group__body { max-height: none; }
 }
+@media (max-width: 900px) {
+  .glossary__grid { grid-template-columns: 1fr; }
+}
 @media (max-width: 600px) {
   .site-header__right { gap: 12px; }
   .site-nav { gap: 14px; font-size: 13px; }
@@ -662,4 +740,6 @@ input, select, button { font-size: 14px; }
   .hero { padding: 40px 0 32px; }
   .stat__value { font-size: 20px; }
   .plot { height: 380px; }
+  .glossary { padding: 48px 0; }
+  .glossary h2 { font-size: 22px; }
 }
