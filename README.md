@@ -66,4 +66,5 @@ This is a pure static site — push to `main` (or any branch) and enable GitHub 
 
 ## License
 
-Code: MIT. Dataset: CC BY 4.0 — manufacturer/source attribution belongs in the entry's `notes` and `datasheet_url` fields.
+- **Code** (HTML/CSS/JS, docs, configuration): [MIT](LICENSE).
+- **Dataset** (`data/`): [CC BY 4.0](LICENSE-DATA). Manufacturer / source attribution belongs in each entry's `notes` and `datasheet_url` fields.
