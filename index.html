@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/styles.css" />
@@ -21,24 +21,27 @@
       <div class="container site-header__inner">
         <a class="brand" href="./">
           <span class="brand__mark" aria-hidden="true"></span>
-          <span class="brand__name">Dynamic Robot Joint Actuator Comparison</span>
+          <span class="brand__name" data-i18n="brand">Dynamic Robot Joint Actuator Comparison</span>
         </a>
-        <nav class="site-nav">
-          <a href="#explorer">Explorer</a>
-          <a href="#about">About</a>
-          <a href="https://github.com/motognere/legged-robot-joint-actuators" target="_blank" rel="noopener">Data on GitHub</a>
-        </nav>
+        <div class="site-header__right">
+          <nav class="site-nav">
+            <a href="#explorer" data-i18n="nav.explorer">Explorer</a>
+            <a href="#about" data-i18n="nav.about">About</a>
+            <a href="https://github.com/motognere/legged-robot-joint-actuators" target="_blank" rel="noopener" data-i18n="nav.github">Data on GitHub</a>
+          </nav>
+          <div id="lang-toggle-slot"></div>
+        </div>
       </div>
     </header>
 
     <section class="hero">
       <div class="container hero__inner">
         <div class="hero__copy">
-          <p class="eyebrow">Open dataset</p>
+          <p class="eyebrow" data-i18n="hero.eyebrow">Open dataset</p>
           <h1 class="hero__title">
-            Compare dynamic robot joint actuators by <span class="accent">torque, weight, and speed</span>.
+            <span data-i18n="hero.title.lead">Compare dynamic robot joint actuators by </span><span class="accent" data-i18n="hero.title.accent">torque, weight, and speed</span><span data-i18n="hero.title.tail">.</span>
           </h1>
-          <p class="hero__sub">
+          <p class="hero__sub" data-i18n="hero.sub">
             A curated, continuously maintained database of quasi-direct-drive,
             harmonic, cycloidal, and planetary actuators powering today's
             quadrupeds, humanoids, manipulators, and exoskeletons.
@@ -48,6 +51,7 @@
             <input
               id="search-input"
               type="search"
+              data-i18n-attr="placeholder:hero.search.placeholder"
               placeholder="Search manufacturer or model… (e.g. AK80, Unitree, harmonic)"
               autocomplete="off"
             />
@@ -56,19 +60,19 @@
         <aside class="hero__stats" aria-label="Dataset stats">
           <div class="stat">
             <div class="stat__value" id="stat-actuators">—</div>
-            <div class="stat__label">Actuators</div>
+            <div class="stat__label" data-i18n="stat.actuators">Actuators</div>
           </div>
           <div class="stat">
             <div class="stat__value" id="stat-manufacturers">—</div>
-            <div class="stat__label">Manufacturers</div>
+            <div class="stat__label" data-i18n="stat.manufacturers">Manufacturers</div>
           </div>
           <div class="stat">
             <div class="stat__value" id="stat-max-torque">—</div>
-            <div class="stat__label">Peak torque, max (Nm)</div>
+            <div class="stat__label" data-i18n="stat.peak_torque">Peak torque, max (Nm)</div>
           </div>
           <div class="stat">
             <div class="stat__value" id="stat-max-density">—</div>
-            <div class="stat__label">Torque density, max (Nm/kg)</div>
+            <div class="stat__label" data-i18n="stat.density">Torque density, max (Nm/kg)</div>
           </div>
         </aside>
       </div>
@@ -77,37 +81,37 @@
     <main id="explorer" class="explorer container">
       <aside class="filters" aria-label="Filters">
         <div class="filters__head">
-          <h2>Filters</h2>
-          <button id="filters-reset" class="link" type="button">Reset</button>
+          <h2 data-i18n="filters.title">Filters</h2>
+          <button id="filters-reset" class="link" type="button" data-i18n="filters.reset">Reset</button>
         </div>
 
         <section class="filter-group" data-group="manufacturer">
-          <h3>Manufacturer</h3>
+          <h3 data-i18n="filters.manufacturer">Manufacturer</h3>
           <div class="filter-group__body" id="filter-manufacturer"></div>
         </section>
 
         <section class="filter-group" data-group="transmission">
-          <h3>Transmission</h3>
+          <h3 data-i18n="filters.transmission">Transmission</h3>
           <div class="filter-group__body" id="filter-transmission"></div>
         </section>
 
         <section class="filter-group" data-group="joint">
-          <h3>Target joint</h3>
+          <h3 data-i18n="filters.joint">Target joint</h3>
           <div class="filter-group__body" id="filter-joint"></div>
         </section>
 
         <section class="filter-group">
-          <h3>Peak torque (Nm)</h3>
+          <h3 data-i18n="filters.peak_torque">Peak torque (Nm)</h3>
           <div class="range" id="range-torque"></div>
         </section>
 
         <section class="filter-group">
-          <h3>Weight (kg)</h3>
+          <h3 data-i18n="filters.weight">Weight (kg)</h3>
           <div class="range" id="range-weight"></div>
         </section>
 
         <section class="filter-group">
-          <h3>Torque density (Nm/kg)</h3>
+          <h3 data-i18n="filters.density">Torque density (Nm/kg)</h3>
           <div class="range" id="range-density"></div>
         </section>
       </aside>
@@ -115,19 +119,19 @@
       <section class="viz">
         <div class="viz__head">
           <div class="tabs" role="tablist">
-            <button class="tab is-active" role="tab" data-view="scatter">Scatter</button>
-            <button class="tab" role="tab" data-view="radar">Radar</button>
-            <button class="tab" role="tab" data-view="table">Table</button>
+            <button class="tab is-active" role="tab" data-view="scatter" data-i18n="tabs.scatter">Scatter</button>
+            <button class="tab" role="tab" data-view="radar" data-i18n="tabs.radar">Radar</button>
+            <button class="tab" role="tab" data-view="table" data-i18n="tabs.table">Table</button>
           </div>
           <div class="viz__meta">
-            <span id="result-count">0</span> actuators
+            <span id="result-count">0</span> <span data-i18n="viz.results_suffix">actuators</span>
           </div>
         </div>
 
         <div class="viz__body">
           <div class="view view--scatter is-active" data-view="scatter">
             <div id="chart-scatter" class="plot"></div>
-            <p class="viz__note">
+            <p class="viz__note" data-i18n="viz.scatter_note">
               Click a marker to pin an actuator into the comparison drawer.
               Marker size ∝ torque density.
             </p>
@@ -135,7 +139,7 @@
 
           <div class="view view--radar" data-view="radar">
             <div id="chart-radar" class="plot"></div>
-            <p class="viz__note">
+            <p class="viz__note" data-i18n="viz.radar_note">
               Showing pinned actuators. Pin 2–4 from the scatter or table to
               compare normalized profiles.
             </p>
@@ -147,15 +151,15 @@
                 <thead>
                   <tr>
                     <th></th>
-                    <th data-sort="manufacturer">Manufacturer</th>
-                    <th data-sort="model">Model</th>
-                    <th data-sort="peak_torque_nm" class="num">Peak τ (Nm)</th>
-                    <th data-sort="rated_torque_nm" class="num">Rated τ (Nm)</th>
-                    <th data-sort="max_speed_rad_s" class="num">Max ω (rad/s)</th>
-                    <th data-sort="weight_kg" class="num">Weight (kg)</th>
-                    <th data-sort="torque_density_nm_per_kg" class="num">τ density (Nm/kg)</th>
-                    <th data-sort="transmission_type">Transmission</th>
-                    <th data-sort="ratio" class="num">Ratio</th>
+                    <th data-sort="manufacturer" data-i18n="table.manufacturer">Manufacturer</th>
+                    <th data-sort="model" data-i18n="table.model">Model</th>
+                    <th data-sort="peak_torque_nm" class="num" data-i18n="table.peak_torque">Peak τ (Nm)</th>
+                    <th data-sort="rated_torque_nm" class="num" data-i18n="table.rated_torque">Rated τ (Nm)</th>
+                    <th data-sort="max_speed_rad_s" class="num" data-i18n="table.max_speed">Max ω (rad/s)</th>
+                    <th data-sort="weight_kg" class="num" data-i18n="table.weight">Weight (kg)</th>
+                    <th data-sort="torque_density_nm_per_kg" class="num" data-i18n="table.density">τ density (Nm/kg)</th>
+                    <th data-sort="transmission_type" data-i18n="table.transmission">Transmission</th>
+                    <th data-sort="ratio" class="num" data-i18n="table.ratio">Ratio</th>
                   </tr>
                 </thead>
                 <tbody></tbody>
@@ -169,13 +173,13 @@
     <aside id="compare-drawer" class="drawer" aria-label="Compare drawer" hidden>
       <header class="drawer__head">
         <div>
-          <h2>Compare</h2>
-          <p class="drawer__sub"><span id="pin-count">0</span> of 4 pinned</p>
+          <h2 data-i18n="compare.title">Compare</h2>
+          <p class="drawer__sub"><span id="pin-count">0</span> <span data-i18n="compare.pinned_suffix">of 4 pinned</span></p>
         </div>
         <div class="drawer__actions">
-          <button id="export-csv" class="btn btn--ghost" type="button">Export CSV</button>
-          <button id="clear-pins" class="btn btn--ghost" type="button">Clear</button>
-          <button id="toggle-drawer" class="btn btn--icon" type="button" aria-label="Collapse">▾</button>
+          <button id="export-csv" class="btn btn--ghost" type="button" data-i18n="compare.export">Export CSV</button>
+          <button id="clear-pins" class="btn btn--ghost" type="button" data-i18n="compare.clear">Clear</button>
+          <button id="toggle-drawer" class="btn btn--icon" type="button" data-i18n-attr="aria-label:compare.collapse" aria-label="Collapse">▾</button>
         </div>
       </header>
       <div class="drawer__body">
@@ -187,25 +191,19 @@
 
     <section id="about" class="about">
       <div class="container about__inner">
-        <h2>About this dataset</h2>
+        <h2 data-i18n="about.title">About this dataset</h2>
         <p>
-          The Dynamic Robot Joint Actuator Comparison Site is an open,
-          continuously maintained collection of specifications for actuators
-          used in dynamic robots — quadrupeds, bipeds, humanoids, manipulators,
-          and exoskeletons. Entries are sourced from manufacturer datasheets
-          and published research. Contributions are welcome on GitHub: add a
-          family file under <code>data/families/</code> following the schema
-          in <code>data/schema.md</code> and open a pull request.
+          <span data-i18n="about.body_pre">The Dynamic Robot Joint Actuator Comparison Site is an open, continuously maintained collection of specifications for actuators used in dynamic robots — quadrupeds, bipeds, humanoids, manipulators, and exoskeletons. Entries are sourced from manufacturer datasheets and published research. Contributions are welcome on GitHub: add a family file under </span><code>data/families/</code><span data-i18n="about.body_mid"> following the schema in </span><code>data/schema.md</code><span data-i18n="about.body_post"> and open a pull request.</span>
         </p>
       </div>
     </section>
 
     <footer class="site-footer">
       <div class="container site-footer__inner">
-        <span>© <span id="year"></span> Dynamic Robot Joint Actuator Comparison · Open data</span>
+        <span>© <span id="year"></span> <span data-i18n="brand">Dynamic Robot Joint Actuator Comparison</span> · <span data-i18n="footer.opendata">Open data</span></span>
         <span>
-          Inspired by the
-          <a href="https://www.batemo.com/products/batemo-cell-explorer" target="_blank" rel="noopener">Batemo Cell Explorer</a>
+          <span data-i18n="footer.inspired">Inspired by the</span>
+          <a href="https://www.batemo.com/products/batemo-cell-explorer" target="_blank" rel="noopener" data-i18n="footer.batemo">Batemo Cell Explorer</a>
         </span>
       </div>
     </footer>
