@@ -40,7 +40,7 @@ const MANUFACTURERS = {
   "清能德创":   "Tsino Dynatron",
   "灵足时代":   "Robstride Dynamics",
   "珞石":       "Rokae",
-  "璇玑动力":   "Astralldynamics",
+  "璇珑动力":   "Astralldynamics",
 };
 
 export function manufacturerDisplay(name) {
@@ -146,7 +146,10 @@ const TRANSLATIONS = {
     "compare.dash": "—",
 
     "chart.weight": "Weight (kg)",
+    "chart.rated_torque": "Rated torque (Nm)",
     "chart.peak_torque": "Peak torque (Nm)",
+    "chart.rated_title": "Rated torque vs weight",
+    "chart.peak_title": "Peak torque vs weight (start/stop peak)",
     "chart.speed": "Speed (rad/s)",
     "chart.torque": "Torque (Nm)",
 
@@ -180,9 +183,9 @@ const TRANSLATIONS = {
     "glossary.avg_load_torque.term": "Average load max torque",
     "glossary.avg_load_torque.desc": "Average load torque under varying torque/speed conditions. Larger than rated torque.",
     "glossary.start_stop_torque.term": "Start/stop peak torque",
-    "glossary.start_stop_torque.desc": "Maximum torque allowed during start and stop transients due to load inertia. Larger than the average-load max torque.",
+    "glossary.start_stop_torque.desc": "Maximum torque allowed during start and stop transients due to load inertia. Larger than the average-load max torque. This is what the dataset's peak_torque_nm field stores — the y-axis on the right-hand scatter.",
     "glossary.instantaneous_max_torque.term": "Instantaneous permissible max torque",
-    "glossary.instantaneous_max_torque.desc": "External instantaneous shock torque tolerated under any condition. Exceeding it can permanently damage the gearbox. Larger than start/stop peak torque.",
+    "glossary.instantaneous_max_torque.desc": "External instantaneous shock torque tolerated under any condition. Exceeding it can permanently damage the gearbox. Larger than start/stop peak torque. NOT tracked as peak_torque_nm in this dataset — that field holds the start/stop peak.",
     "glossary.torque_at_max_speed.term": "Output torque at maximum speed",
     "glossary.torque_at_max_speed.desc": "Output torque the joint can sustain at its maximum speed.",
     "glossary.rated_input_power.term": "Rated input power",
@@ -296,7 +299,10 @@ const TRANSLATIONS = {
     "compare.dash": "—",
 
     "chart.weight": "重量 (kg)",
+    "chart.rated_torque": "额定扭矩 (Nm)",
     "chart.peak_torque": "峰值扭矩 (Nm)",
+    "chart.rated_title": "额定扭矩 vs 重量",
+    "chart.peak_title": "峰值扭矩 vs 重量（启停峰值）",
     "chart.speed": "转速 (rad/s)",
     "chart.torque": "扭矩 (Nm)",
 
@@ -330,9 +336,9 @@ const TRANSLATIONS = {
     "glossary.avg_load_torque.term": "平均负载最大转矩",
     "glossary.avg_load_torque.desc": "转矩转速变化时，计算的负载转矩平均值，大于额定转矩。",
     "glossary.start_stop_torque.term": "启停峰值转矩",
-    "glossary.start_stop_torque.desc": "起动停止时，由于负载转动惯量作用，允许发生的最大转矩，大于平均负载最大转矩。",
+    "glossary.start_stop_torque.desc": "起动停止时，由于负载转动惯量作用，允许发生的最大转矩，大于平均负载最大转矩。本数据集 peak_torque_nm 字段即此值，对应右侧散点图的 Y 轴。",
     "glossary.instantaneous_max_torque.term": "瞬间容许最大转矩",
-    "glossary.instantaneous_max_torque.desc": "任何情况下的外部瞬间冲击转矩，可能导致减速机永久损伤，大于启停峰值转矩。",
+    "glossary.instantaneous_max_torque.desc": "任何情况下的外部瞬间冲击转矩，可能导致减速机永久损伤，大于启停峰值转矩。本数据集不以此字段统计，peak_torque_nm 存的是启停峰值。",
     "glossary.torque_at_max_speed.term": "最高转速下输出转矩",
     "glossary.torque_at_max_speed.desc": "关节在最高转速下的输出转矩。",
     "glossary.rated_input_power.term": "额定输入功率",
