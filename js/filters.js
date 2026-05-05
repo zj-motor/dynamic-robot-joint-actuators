@@ -1,6 +1,6 @@
 // filters.js — sidebar filter state, rendering, and apply pipeline
 
-import { manufacturerDisplay } from "./i18n.js";
+import { t, manufacturerDisplay } from "./i18n.js";
 
 const RANGE_FIELDS = {
   torque: { key: "peak_torque_nm",          label: "Nm",    container: "range-torque" },
@@ -12,8 +12,14 @@ export function createFilterState() {
   return {
     search: "",
     manufacturer: new Set(),
-    transmission: new Set(),
-    joint: new Set(),
+    transmission: new Set(), // a.k.a. reducer type (transmission_type field)
+    motorType:    new Set(),
+    busType:      new Set(),
+    voltage:      new Set(), // multi-select on voltage_v
+    joint:        new Set(),
+    brake:        false,     // single "available" toggle
+    dualEncoder:  false,
+    forceSensor:  false,
     ranges: {
       torque:  { min: null, max: null, lo: null, hi: null },
       weight:  { min: null, max: null, lo: null, hi: null },
@@ -32,10 +38,19 @@ export function applyFilters(data, state) {
     }
     if (state.manufacturer.size && !state.manufacturer.has(d.manufacturer)) return false;
     if (state.transmission.size && !state.transmission.has(d.transmission_type)) return false;
+    if (state.motorType.size && !state.motorType.has(d.motor_topology)) return false;
+    if (state.busType.size) {
+      const buses = d.bus_types || [];
+      if (!buses.some((b) => state.busType.has(b))) return false;
+    }
+    if (state.voltage.size && !state.voltage.has(d.voltage_v)) return false;
     if (state.joint.size) {
       const joints = d.target_joints || [];
       if (!joints.some((j) => state.joint.has(j))) return false;
     }
+    if (state.brake       && !d.has_brake_option)        return false;
+    if (state.dualEncoder && !d.has_dual_encoder_option) return false;
+    if (state.forceSensor && !d.has_force_sensor_option) return false;
     for (const [name, def] of Object.entries(RANGE_FIELDS)) {
       const v = d[def.key];
       const r = state.ranges[name];
@@ -55,10 +70,29 @@ export function renderFilterSidebar(data, state, onChange) {
     manufacturerDisplay,
   );
   renderCheckboxGroup(
-    "filter-transmission",
+    "filter-reducer-type",            // formerly "Transmission"; same field
     countBy(data, "transmission_type"),
     state.transmission,
     onChange,
+  );
+  renderCheckboxGroup(
+    "filter-motor-type",
+    countBy(data, "motor_topology"),
+    state.motorType,
+    onChange,
+  );
+  renderCheckboxGroup(
+    "filter-bus-type",
+    countByMulti(data, "bus_types"),
+    state.busType,
+    onChange,
+  );
+  renderCheckboxGroup(
+    "filter-voltage",
+    countBy(data, "voltage_v"),
+    state.voltage,
+    onChange,
+    (v) => `${v} V`,
   );
   renderCheckboxGroup(
     "filter-joint",
@@ -66,6 +100,11 @@ export function renderFilterSidebar(data, state, onChange) {
     state.joint,
     onChange,
   );
+
+  // Boolean "Available" toggles for option facets
+  renderToggle("filter-brake",        state, "brake",       onChange);
+  renderToggle("filter-dual-encoder", state, "dualEncoder", onChange);
+  renderToggle("filter-force-sensor", state, "forceSensor", onChange);
 
   for (const [name, def] of Object.entries(RANGE_FIELDS)) {
     const values = data.map((d) => d[def.key]).filter((v) => v != null);
@@ -82,8 +121,14 @@ export function renderFilterSidebar(data, state, onChange) {
     state.search = "";
     state.manufacturer.clear();
     state.transmission.clear();
+    state.motorType.clear();
+    state.busType.clear();
+    state.voltage.clear();
     state.joint.clear();
-    for (const [name, def] of Object.entries(RANGE_FIELDS)) {
+    state.brake = false;
+    state.dualEncoder = false;
+    state.forceSensor = false;
+    for (const name of Object.keys(RANGE_FIELDS)) {
       const r = state.ranges[name];
       r.lo = r.min;
       r.hi = r.max;
@@ -93,6 +138,25 @@ export function renderFilterSidebar(data, state, onChange) {
     renderFilterSidebar(data, state, onChange);
     onChange();
   };
+}
+
+function renderToggle(containerId, state, stateKey, onChange) {
+  const el = document.getElementById(containerId);
+  if (!el) return;
+  el.innerHTML = "";
+  const label = document.createElement("label");
+  label.className = "checkbox";
+  const input = document.createElement("input");
+  input.type = "checkbox";
+  input.checked = !!state[stateKey];
+  input.onchange = () => {
+    state[stateKey] = input.checked;
+    onChange();
+  };
+  const text = document.createElement("span");
+  text.textContent = t("filters.option_available");
+  label.append(input, text);
+  el.append(label);
 }
 
 function renderCheckboxGroup(containerId, counts, selectedSet, onChange, displayFn) {

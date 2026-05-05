@@ -112,12 +112,18 @@ export function normalize(entry) {
   const e = entry.electrical || {};
   const t = entry.transmission || {};
   const a = entry.application || {};
+  const o = entry.options || {};
 
   const peak = num(m.peak_torque_nm);
   const weight = num(m.weight_kg);
   const density =
     num(m.torque_density_nm_per_kg) ??
     (peak != null && weight != null && weight > 0 ? peak / weight : null);
+
+  // Option arrays carry per-variant configuration choices (e.g. a model
+  // sold both with and without brake stores [false, true]). We collapse
+  // them to a single boolean for the "Available" filter checkbox.
+  const includesTrue = (arr) => Array.isArray(arr) && arr.some((v) => v === true);
 
   return {
     ...entry,
@@ -137,6 +143,11 @@ export function normalize(entry) {
     ratio: num(t.ratio),
     backdrivable: t.backdrivable ?? null,
     efficiency_pct: num(t.efficiency_pct),
+
+    has_brake_option:        includesTrue(o.brake_options),
+    has_dual_encoder_option: includesTrue(o.dual_encoder_options),
+    has_force_sensor_option: includesTrue(o.force_sensor_options),
+    bus_types:               Array.isArray(o.bus_types) ? o.bus_types.slice() : [],
 
     target_joints: a.target_joints ?? [],
     used_in_robots: a.used_in_robots ?? [],
