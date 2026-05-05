@@ -40,7 +40,7 @@ const MANUFACTURERS = {
   "清能德创":   "Tsino Dynatron",
   "灵足时代":   "Robstride Dynamics",
   "珞石":       "Rokae",
-  "璇珑动力":   "Astralldynamics",
+  "璇玑动力":   "Astralldynamics",
 };
 
 export function manufacturerDisplay(name) {
