@@ -25,8 +25,6 @@ const state = {
 
 let compare;
 
-init();
-
 async function init() {
   document.getElementById("year").textContent = new Date().getFullYear();
 
@@ -222,3 +220,8 @@ function escapeHtml(s) {
     ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]),
   );
 }
+
+// Kick everything off after every const/function above is initialized.
+// Called from the bottom so the synchronous portion of init() can read
+// module-scope consts (e.g. GLOSSARY_KEYS) without a temporal-dead-zone error.
+init();
