@@ -47,9 +47,16 @@ export function renderScatter(elId, data, opts = {}) {
   const el = document.getElementById(elId);
   if (!el) return;
 
+  // The y-axis field is configurable so the page can show rated and peak
+  // side-by-side. `peak_torque_nm` in the dataset is the start/stop peak
+  // torque (启停峰值转矩) — NOT instantaneous-permissible torque.
+  const yField    = opts.yField    || "peak_torque_nm";
+  const yLabelKey = opts.yLabelKey || "chart.peak_torque";
+  const yLabel    = t(yLabelKey);
+
   const byTx = new Map();
   for (const d of data) {
-    if (d.weight_kg == null || d.peak_torque_nm == null) continue;
+    if (d.weight_kg == null || d[yField] == null) continue;
     const key = d.transmission_type || "unspecified";
     if (!byTx.has(key)) byTx.set(key, []);
     byTx.get(key).push(d);
@@ -60,9 +67,9 @@ export function renderScatter(elId, data, opts = {}) {
   const dMax = allDensities.length ? Math.max(...allDensities) : 1;
   const sizeOf = (d) => {
     const v = d.torque_density_nm_per_kg;
-    if (v == null || dMax === dMin) return 14;
-    const t = (v - dMin) / (dMax - dMin);
-    return 10 + t * 22;
+    if (v == null || dMax === dMin) return 12;
+    const tNorm = (v - dMin) / (dMax - dMin);
+    return 8 + tNorm * 18; // smaller range than before since two charts share the row
   };
 
   const pinned = new Set(opts.pinnedIds || []);
@@ -72,7 +79,7 @@ export function renderScatter(elId, data, opts = {}) {
     mode: "markers",
     name: tx,
     x: items.map((d) => d.weight_kg),
-    y: items.map((d) => d.peak_torque_nm),
+    y: items.map((d) => d[yField]),
     customdata: items.map((d) => [d.id, manufacturerDisplay(d.manufacturer), d.model, d.torque_density_nm_per_kg, d.max_speed_rad_s]),
     marker: {
       size: items.map(sizeOf),
@@ -85,7 +92,7 @@ export function renderScatter(elId, data, opts = {}) {
     },
     hovertemplate:
       "<b>%{customdata[1]} %{customdata[2]}</b><br>" +
-      "Peak torque: %{y:.1f} Nm<br>" +
+      yLabel + ": %{y:.1f} Nm<br>" +
       "Weight: %{x:.3f} kg<br>" +
       "τ density: %{customdata[3]:.1f} Nm/kg<br>" +
       "Max speed: %{customdata[4]:.1f} rad/s" +
@@ -94,21 +101,22 @@ export function renderScatter(elId, data, opts = {}) {
 
   const layout = {
     ...COMMON_LAYOUT,
+    margin: { l: 56, r: 18, t: 18, b: 70 },
     xaxis: {
-      title: { text: t("chart.weight"), font: { ...FONT, size: 13 } },
+      title: { text: t("chart.weight"), font: { ...FONT, size: 12 } },
       type: "log",
       gridcolor: "#eef2f6",
       zerolinecolor: "#dde3ea",
     },
     yaxis: {
-      title: { text: t("chart.peak_torque"), font: { ...FONT, size: 13 } },
+      title: { text: yLabel, font: { ...FONT, size: 12 } },
       type: "log",
       gridcolor: "#eef2f6",
       zerolinecolor: "#dde3ea",
     },
     legend: {
       orientation: "h",
-      y: -0.18,
+      y: -0.22,
       font: { ...FONT, size: 11 },
     },
     showlegend: true,
