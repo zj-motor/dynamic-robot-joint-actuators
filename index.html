@@ -28,7 +28,7 @@
             <a href="#explorer" data-i18n="nav.explorer">Explorer</a>
             <a href="#glossary" data-i18n="nav.glossary">Parameter glossary</a>
             <a href="#about" data-i18n="nav.about">About</a>
-            <a href="https://github.com/motognere/legged-robot-joint-actuators" target="_blank" rel="noopener" data-i18n="nav.github">Data on GitHub</a>
+            <a href="https://github.com/zj-motor/dynamic-robot-joint-actuators" target="_blank" rel="noopener" data-i18n="nav.github">Data on GitHub</a>
           </nav>
           <div id="lang-toggle-slot"></div>
         </div>
@@ -131,7 +131,16 @@
 
         <div class="viz__body">
           <div class="view view--scatter is-active" data-view="scatter">
-            <div id="chart-scatter" class="plot"></div>
+            <div class="scatter-grid">
+              <div class="scatter-card">
+                <h3 class="scatter-card__title" data-i18n="chart.rated_title">Rated torque vs weight</h3>
+                <div id="chart-rated" class="plot plot--small"></div>
+              </div>
+              <div class="scatter-card">
+                <h3 class="scatter-card__title" data-i18n="chart.peak_title">Peak torque vs weight (start/stop)</h3>
+                <div id="chart-peak" class="plot plot--small"></div>
+              </div>
+            </div>
             <p class="viz__note" data-i18n="viz.scatter_note">
               Click a marker to pin an actuator into the comparison drawer.
               Marker size ∝ torque density.

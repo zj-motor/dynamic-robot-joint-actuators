@@ -25,8 +25,6 @@ const state = {
 
 let compare;
 
-init();
-
 async function init() {
   document.getElementById("year").textContent = new Date().getFullYear();
 
@@ -89,9 +87,16 @@ function rerender() {
 
   const pinnedIds = compare ? compare.getPins() : [];
   if (state.view === "scatter") {
-    renderScatter("chart-scatter", state.filtered, {
-      pinnedIds,
-      onPick: (id) => compare.toggle(id),
+    const onPick = (id) => compare.toggle(id);
+    renderScatter("chart-rated", state.filtered, {
+      pinnedIds, onPick,
+      yField: "rated_torque_nm",
+      yLabelKey: "chart.rated_torque",
+    });
+    renderScatter("chart-peak", state.filtered, {
+      pinnedIds, onPick,
+      yField: "peak_torque_nm",
+      yLabelKey: "chart.peak_torque",
     });
   } else if (state.view === "radar") {
     renderRadar("chart-radar", state.data, pinnedIds);
@@ -222,3 +227,8 @@ function escapeHtml(s) {
     ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]),
   );
 }
+
+// Kick everything off after every const/function above is initialized.
+// Called from the bottom so the synchronous portion of init() can read
+// module-scope consts (e.g. GLOSSARY_KEYS) without a temporal-dead-zone error.
+init();
