@@ -8,31 +8,36 @@ const STORAGE_KEY = "jae.pinned";
 const MAX_PINS = 4;
 
 const ROWS = [
-  { section: "compare.section.identity", key: "manufacturer",  labelKey: "compare.row.manufacturer" },
-  { key: "model",                                              labelKey: "compare.row.model" },
-  { key: "year",                                               labelKey: "compare.row.year" },
+  { section: "compare.section.identity", key: "manufacturer",                labelKey: "compare.row.manufacturer" },
+  { key: "base_id",                                                          labelKey: "compare.row.db_model" },
+  { key: "model",                                                            labelKey: "compare.row.mfr_model" },
 
-  { section: "compare.section.mechanical", key: "peak_torque_nm",            labelKey: "compare.row.peak_torque",  num: true,  best: "max" },
-  { key: "rated_torque_nm",                                                  labelKey: "compare.row.rated_torque", num: true,  best: "max" },
-  { key: "max_speed_rad_s",                                                  labelKey: "compare.row.max_speed",    num: true,  best: "max" },
-  { key: "weight_kg",                                                        labelKey: "compare.row.weight",       num: true,  best: "min", digits: 3 },
-  { key: "torque_density_nm_per_kg",                                         labelKey: "compare.row.density",      num: true,  best: "max" },
+  { section: "compare.section.mechanical", key: "rated_torque_nm",           labelKey: "compare.row.rated_torque",           num: true, best: "max" },
+  { key: "peak_torque_nm",                                                   labelKey: "compare.row.peak_torque",            num: true, best: "max" },
+  { key: "start_stop_peak_torque_nm",                                        labelKey: "compare.row.start_stop_torque",      num: true, best: "max" },
+  { key: "rated_speed_rad_s",                                                labelKey: "compare.row.rated_speed",            num: true, best: "max" },
+  { key: "max_speed_rad_s",                                                  labelKey: "compare.row.max_speed",              num: true, best: "max" },
+  { key: "weight_kg",                                                        labelKey: "compare.row.weight",                 num: true, best: "min", digits: 3 },
+  { key: "outer_diameter_mm",                                                labelKey: "compare.row.outer_diameter",         num: true },
+  { key: "rated_torque_density_nm_per_kg",                                   labelKey: "compare.row.rated_density",          num: true, best: "max" },
+  { key: "peak_torque_density_nm_per_kg",                                    labelKey: "compare.row.peak_density",           num: true, best: "max" },
 
-  { section: "compare.section.electrical", key: "voltage_v",                 labelKey: "compare.row.voltage",            num: true },
-  { key: "peak_current_a",                                                   labelKey: "compare.row.peak_current",       num: true },
-  { key: "continuous_current_a",                                             labelKey: "compare.row.continuous_current", num: true },
+  { section: "compare.section.electrical", key: "voltage_v",                 labelKey: "compare.row.voltage",                num: true },
+  { key: "peak_current_a",                                                   labelKey: "compare.row.peak_current",           num: true },
+  { key: "continuous_current_a",                                             labelKey: "compare.row.continuous_current",     num: true },
+  { key: "rated_input_power_w",                                              labelKey: "compare.row.rated_input_power",      num: true },
   { key: "motor_topology",                                                   labelKey: "compare.row.motor_topology" },
-  { key: "kv",                                                               labelKey: "compare.row.kv",                 num: true },
 
   { section: "compare.section.transmission", key: "transmission_type",       labelKey: "compare.row.tx_type" },
-  { key: "ratio",                                                            labelKey: "compare.row.ratio",       num: true },
-  { key: "backdrivable",                                                     labelKey: "compare.row.backdrivable", fmt: bool },
-  { key: "efficiency_pct",                                                   labelKey: "compare.row.efficiency",  num: true,  best: "max" },
+  { key: "ratio",                                                            labelKey: "compare.row.ratio",                  num: true },
 
-  { section: "compare.section.application", key: "target_joints",            labelKey: "compare.row.target_joints",   fmt: list },
-  { key: "used_in_robots",                                                   labelKey: "compare.row.used_in_robots",  fmt: list },
-  { key: "price_usd",                                                        labelKey: "compare.row.price",           num: true,  best: "min" },
-  { key: "datasheet_url",                                                    labelKey: "compare.row.datasheet",       fmt: link },
+  { section: "compare.section.options", key: "bus_types",                    labelKey: "compare.row.bus_types",              fmt: list },
+  { key: "brake_options",                                                    labelKey: "compare.row.brake_options",          fmt: boolList },
+  { key: "dual_encoder_options",                                             labelKey: "compare.row.dual_encoder_options",   fmt: boolList },
+  { key: "force_sensor_options",                                             labelKey: "compare.row.force_sensor_options",   fmt: boolList },
+  { key: "length",                                                           labelKey: "compare.row.length",                 fmt: lengthRange, derive: lengthRangeValue },
+
+  { section: "compare.section.reference", key: "datasheet_url",              labelKey: "compare.row.datasheet",              fmt: link },
 ];
 
 export function createCompareController(getAllData) {
@@ -123,7 +128,7 @@ export function createCompareController(getAllData) {
       if (row.section) {
         html += `<tr class="meta-row"><th colspan="${items.length + 1}">${escape(t(row.section))}</th></tr>`;
       }
-      const values = items.map((it) => it[row.key]);
+      const values = items.map((it) => (row.derive ? row.derive(it) : it[row.key]));
       const winners = row.num && row.best ? bestIndices(values, row.best) : new Set();
       html += `<tr><th>${escape(t(row.labelKey))}</th>`;
       values.forEach((v, i) => {
@@ -161,8 +166,14 @@ export function createCompareController(getAllData) {
     for (const row of ROWS) {
       if (row.section) continue;
       const values = items.map((it) => {
-        const v = it[row.key];
-        if (Array.isArray(v)) return v.join("; ");
+        const v = row.derive ? row.derive(it) : it[row.key];
+        if (Array.isArray(v)) {
+          // boolList rows: render booleans as yes/no for CSV.
+          if (row.fmt === boolList) {
+            return v.map((b) => (b ? t("compare.bool.yes") : t("compare.bool.no"))).join("; ");
+          }
+          return v.join("; ");
+        }
         if (typeof v === "boolean") return v ? t("compare.bool.yes") : t("compare.bool.no");
         if (row.key === "manufacturer") return v == null ? "" : manufacturerDisplay(String(v));
         return v == null ? "" : String(v);
@@ -209,6 +220,24 @@ function formatNum(v, digits) {
 }
 function bool(v) { if (v == null) return "—"; return v ? t("compare.bool.yes") : t("compare.bool.no"); }
 function list(v) { return Array.isArray(v) && v.length ? v.map(escape).join(", ") : "—"; }
+function boolList(v) {
+  if (!Array.isArray(v) || !v.length) return "—";
+  return v.map((b) => (b ? t("compare.bool.yes") : t("compare.bool.no"))).join(", ");
+}
+function lengthRangeValue(it) {
+  const lo = it.length_mm_min, hi = it.length_mm_max;
+  if (lo == null && hi == null) return null;
+  return [lo, hi];
+}
+function lengthRange(v) {
+  if (!Array.isArray(v)) return "—";
+  const [lo, hi] = v;
+  if (lo == null && hi == null) return "—";
+  if (lo == null) return `≤${hi} mm`;
+  if (hi == null) return `≥${lo} mm`;
+  if (lo === hi) return `${lo} mm`;
+  return `${lo}–${hi} mm`;
+}
 function link(v) {
   if (!v) return "—";
   return `<a href="${escape(v)}" target="_blank" rel="noopener">${escape(t("compare.row.datasheet_link"))}</a>`;

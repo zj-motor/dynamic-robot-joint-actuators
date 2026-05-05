@@ -115,39 +115,54 @@ export function normalize(entry) {
   const o = entry.options || {};
 
   const peak = num(m.peak_torque_nm);
+  const rated = num(m.rated_torque_nm);
   const weight = num(m.weight_kg);
-  const density =
+  const ratedDensity =
+    rated != null && weight != null && weight > 0 ? rated / weight : null;
+  const peakDensity =
     num(m.torque_density_nm_per_kg) ??
     (peak != null && weight != null && weight > 0 ? peak / weight : null);
 
   // Option arrays carry per-variant configuration choices (e.g. a model
   // sold both with and without brake stores [false, true]). We collapse
-  // them to a single boolean for the "Available" filter checkbox.
+  // them to a single boolean for the "Available" filter checkbox, but also
+  // keep the raw arrays for the compare drawer's configuration rows.
   const includesTrue = (arr) => Array.isArray(arr) && arr.some((v) => v === true);
+  const arrCopy = (v) => (Array.isArray(v) ? v.slice() : []);
 
   return {
     ...entry,
     peak_torque_nm: peak,
-    rated_torque_nm: num(m.rated_torque_nm),
+    rated_torque_nm: rated,
+    start_stop_peak_torque_nm: num(m.start_stop_peak_torque_nm),
+    rated_speed_rad_s: num(m.rated_speed_rad_s),
     max_speed_rad_s: num(m.max_speed_rad_s),
     weight_kg: weight,
-    torque_density_nm_per_kg: density,
+    outer_diameter_mm: num(m.outer_diameter_mm),
+    rated_torque_density_nm_per_kg: ratedDensity,
+    peak_torque_density_nm_per_kg: peakDensity,
+    // Legacy alias: existing UI (table, scatter sizing) expects
+    // `torque_density_nm_per_kg`. Keep it pointing at the peak-based value.
+    torque_density_nm_per_kg: peakDensity,
 
     voltage_v: num(e.voltage_v),
     peak_current_a: num(e.peak_current_a),
     continuous_current_a: num(e.continuous_current_a),
+    rated_input_power_w: num(e.rated_input_power_w),
     motor_topology: e.motor_topology ?? null,
-    kv: num(e.kv),
 
     transmission_type: t.type ?? null,
     ratio: num(t.ratio),
-    backdrivable: t.backdrivable ?? null,
-    efficiency_pct: num(t.efficiency_pct),
 
     has_brake_option:        includesTrue(o.brake_options),
     has_dual_encoder_option: includesTrue(o.dual_encoder_options),
     has_force_sensor_option: includesTrue(o.force_sensor_options),
-    bus_types:               Array.isArray(o.bus_types) ? o.bus_types.slice() : [],
+    bus_types:               arrCopy(o.bus_types),
+    brake_options:           arrCopy(o.brake_options),
+    dual_encoder_options:    arrCopy(o.dual_encoder_options),
+    force_sensor_options:    arrCopy(o.force_sensor_options),
+    length_mm_min:           num(o.length_mm_min),
+    length_mm_max:           num(o.length_mm_max),
 
     target_joints: a.target_joints ?? [],
     used_in_robots: a.used_in_robots ?? [],
