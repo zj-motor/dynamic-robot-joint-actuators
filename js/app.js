@@ -154,10 +154,16 @@ function bindTabs() {
 function writeHash() {
   const f = state.filters;
   const parts = [];
-  if (f.search) parts.push(`q=${encodeURIComponent(f.search)}`);
+  if (f.search)            parts.push(`q=${encodeURIComponent(f.search)}`);
   if (f.manufacturer.size) parts.push(`mfr=${[...f.manufacturer].map(encodeURIComponent).join(",")}`);
   if (f.transmission.size) parts.push(`tx=${[...f.transmission].map(encodeURIComponent).join(",")}`);
+  if (f.motorType.size)    parts.push(`mot=${[...f.motorType].map(encodeURIComponent).join(",")}`);
+  if (f.busType.size)      parts.push(`bus=${[...f.busType].map(encodeURIComponent).join(",")}`);
+  if (f.voltage.size)      parts.push(`v=${[...f.voltage].join(",")}`);
   if (f.joint.size)        parts.push(`jt=${[...f.joint].map(encodeURIComponent).join(",")}`);
+  if (f.brake)             parts.push("brk=1");
+  if (f.dualEncoder)       parts.push("de=1");
+  if (f.forceSensor)       parts.push("fs=1");
   const hash = parts.join("&");
   if (hash) history.replaceState(null, "", `#${hash}`);
   else if (location.hash) history.replaceState(null, "", location.pathname + location.search);
@@ -170,10 +176,16 @@ function parseHashIntoState() {
     const [k, v] = part.split("=");
     if (!k || !v) continue;
     const value = decodeURIComponent(v);
-    if (k === "q") state.filters.search = value;
+    if (k === "q")   state.filters.search = value;
     if (k === "mfr") value.split(",").forEach((x) => state.filters.manufacturer.add(decodeURIComponent(x)));
     if (k === "tx")  value.split(",").forEach((x) => state.filters.transmission.add(decodeURIComponent(x)));
+    if (k === "mot") value.split(",").forEach((x) => state.filters.motorType.add(decodeURIComponent(x)));
+    if (k === "bus") value.split(",").forEach((x) => state.filters.busType.add(decodeURIComponent(x)));
+    if (k === "v")   value.split(",").forEach((x) => { const n = Number(x); if (Number.isFinite(n)) state.filters.voltage.add(n); });
     if (k === "jt")  value.split(",").forEach((x) => state.filters.joint.add(decodeURIComponent(x)));
+    if (k === "brk") state.filters.brake = (value === "1");
+    if (k === "de")  state.filters.dualEncoder = (value === "1");
+    if (k === "fs")  state.filters.forceSensor = (value === "1");
   }
 }
 
@@ -191,21 +203,20 @@ function showLoadError(msg) {
 // Driven from a list of i18n key prefixes; each prefix has matching
 // `${prefix}.term` and `${prefix}.desc` strings in both languages.
 const GLOSSARY_KEYS = [
-  "voltage",
-  "peak_current",
-  "continuous_current",
-  "rated_speed",
-  "half_torque_speed",
-  "max_speed",
   "rated_torque",
   "avg_load_torque",
   "start_stop_torque",
   "instantaneous_max_torque",
-  "torque_at_max_speed",
+  "voltage",
+  "peak_current",
+  "continuous_current",
+  "rated_speed",
   "rated_input_power",
-  "peak_power",
+  "peak_input_power",
+  "peak_output_power",
+  "max_speed",
   "encoder",
-  "torque_constant",
+  "half_torque_speed",
 ];
 
 function renderGlossary() {
