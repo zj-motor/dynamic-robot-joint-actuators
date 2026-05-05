@@ -3,6 +3,7 @@
   "family_name": "雷赛 HRV2",
   "shared": {
     "manufacturer": "雷赛",
+    "manufacturer_en": "LeadShine",
     "electrical": {
       "voltage_v": 48,
       "motor_topology": "radial flux"
@@ -22,7 +23,7 @@
       "base_id": "LS-HRV2-108-21-48",
       "electrical": {
         "continuous_current_a": 20,
-        "rated_power_w": 500
+        "rated_input_power_w": 500
       },
       "mechanical": {
         "rated_torque_nm": 90,
@@ -59,7 +60,7 @@
       "base_id": "LS-HRV2-108-31-48",
       "electrical": {
         "continuous_current_a": 20,
-        "rated_power_w": 600
+        "rated_input_power_w": 600
       },
       "mechanical": {
         "rated_torque_nm": 125,
@@ -96,7 +97,7 @@
       "base_id": "LS-HRV2-108-51-48",
       "electrical": {
         "continuous_current_a": 19,
-        "rated_power_w": 520
+        "rated_input_power_w": 520
       },
       "mechanical": {
         "rated_torque_nm": 180,
@@ -133,7 +134,7 @@
       "base_id": "LS-HRV2-123-15-48",
       "electrical": {
         "continuous_current_a": 20,
-        "rated_power_w": 500
+        "rated_input_power_w": 500
       },
       "mechanical": {
         "rated_torque_nm": 65,
@@ -170,7 +171,7 @@
       "base_id": "LS-HRV2-123-21-48",
       "electrical": {
         "continuous_current_a": 19,
-        "rated_power_w": 500
+        "rated_input_power_w": 500
       },
       "mechanical": {
         "rated_torque_nm": 90,
@@ -207,7 +208,7 @@
       "base_id": "LS-HRV2-123-31-48",
       "electrical": {
         "continuous_current_a": 20,
-        "rated_power_w": 500
+        "rated_input_power_w": 500
       },
       "mechanical": {
         "rated_torque_nm": 125,
@@ -244,7 +245,7 @@
       "base_id": "LS-HRV2-123-51-48",
       "electrical": {
         "continuous_current_a": 20,
-        "rated_power_w": 500
+        "rated_input_power_w": 500
       },
       "mechanical": {
         "rated_torque_nm": 180,
@@ -280,7 +281,7 @@
       "model": "HRV2-64FXD19",
       "base_id": "LS-HRV2-64-100-48",
       "electrical": {
-        "rated_power_w": 130
+        "rated_input_power_w": 130
       },
       "mechanical": {
         "rated_torque_nm": 6,
@@ -316,7 +317,7 @@
       "model": "HRV2-64FXD19",
       "base_id": "LS-HRV2-64-50-48",
       "electrical": {
-        "rated_power_w": 150
+        "rated_input_power_w": 150
       },
       "mechanical": {
         "rated_torque_nm": 4.6,
@@ -353,7 +354,7 @@
       "base_id": "LS-HRV2-70-15-48",
       "electrical": {
         "continuous_current_a": 14,
-        "rated_power_w": 230
+        "rated_input_power_w": 230
       },
       "mechanical": {
         "rated_torque_nm": 10,
@@ -390,7 +391,7 @@
       "base_id": "LS-HRV2-70-21-48",
       "electrical": {
         "continuous_current_a": 13,
-        "rated_power_w": 230
+        "rated_input_power_w": 230
       },
       "mechanical": {
         "rated_torque_nm": 20,
@@ -427,7 +428,7 @@
       "base_id": "LS-HRV2-70-41-48",
       "electrical": {
         "continuous_current_a": 12.5,
-        "rated_power_w": 230
+        "rated_input_power_w": 230
       },
       "mechanical": {
         "rated_torque_nm": 40,
@@ -464,7 +465,7 @@
       "base_id": "LS-HRV2-90-31-48",
       "electrical": {
         "continuous_current_a": 20,
-        "rated_power_w": 650
+        "rated_input_power_w": 650
       },
       "mechanical": {
         "rated_torque_nm": 50,
@@ -501,7 +502,7 @@
       "base_id": "LS-HRV2-90-51-48",
       "electrical": {
         "continuous_current_a": 19,
-        "rated_power_w": 520
+        "rated_input_power_w": 520
       },
       "mechanical": {
         "rated_torque_nm": 65,
@@ -538,7 +539,7 @@
       "base_id": "LS-HRV2-90-81-48",
       "electrical": {
         "continuous_current_a": 15,
-        "rated_power_w": 600
+        "rated_input_power_w": 600
       },
       "mechanical": {
         "rated_torque_nm": 80,

@@ -3,6 +3,7 @@
   "family_name": "动易 PhyArc",
   "shared": {
     "manufacturer": "动易",
+    "manufacturer_en": "PHYBOT",
     "electrical": {
       "voltage_v": 48,
       "motor_topology": "radial flux"
@@ -12,7 +13,6 @@
     },
     "transmission": {
       "type": "harmonic",
-      "ratio": 25,
       "backdrivable": false
     }
   },
@@ -24,20 +24,23 @@
       "electrical": {
         "peak_current_a": 80,
         "continuous_current_a": 15,
-        "rated_power_w": 1080,
-        "peak_power_w": 244,
-        "torque_constant_nm_per_a": 4
+        "rated_input_power_w": 1080,
+        "peak_input_power_w": 5760
       },
       "mechanical": {
         "rated_torque_nm": 60,
         "peak_torque_nm": 244,
         "instant_peak_torque_nm": 244,
-        "rated_speed_rad_s": 8.378,
-        "max_speed_rad_s": 113.097,
+        "peak_output_power_w": 484,
+        "rated_speed_rad_s": 10.472,
+        "max_speed_rad_s": 13.006,
         "weight_kg": 1,
         "outer_diameter_mm": 102,
         "output_encoder_bits": 27,
         "torque_density_nm_per_kg": 244.0
+      },
+      "transmission": {
+        "ratio": 25
       },
       "options": {
         "bus_types": [
@@ -66,20 +69,23 @@
       "electrical": {
         "peak_current_a": 200,
         "continuous_current_a": 30,
-        "rated_power_w": 2160,
-        "peak_power_w": 14400,
-        "torque_constant_nm_per_a": 6
+        "rated_input_power_w": 2160,
+        "peak_input_power_w": 14400
       },
       "mechanical": {
         "rated_torque_nm": 180,
         "peak_torque_nm": 590,
         "instant_peak_torque_nm": 590,
-        "rated_speed_rad_s": 10.472,
-        "max_speed_rad_s": 226.195,
+        "peak_output_power_w": 2508.1,
+        "rated_speed_rad_s": 8.378,
+        "max_speed_rad_s": 14.504,
         "weight_kg": 3.5,
         "outer_diameter_mm": 150,
         "output_encoder_bits": 27,
         "torque_density_nm_per_kg": 168.57
+      },
+      "transmission": {
+        "ratio": 25
       },
       "options": {
         "bus_types": [
@@ -108,19 +114,22 @@
       "electrical": {
         "peak_current_a": 12,
         "continuous_current_a": 3,
-        "rated_power_w": 216,
-        "peak_power_w": 864,
-        "torque_constant_nm_per_a": 1
+        "rated_input_power_w": 216,
+        "peak_input_power_w": 864
       },
       "mechanical": {
         "rated_torque_nm": 3,
         "peak_torque_nm": 12,
         "instant_peak_torque_nm": 12,
+        "peak_output_power_w": 31.8,
         "rated_speed_rad_s": 10.472,
         "max_speed_rad_s": 36.003,
         "weight_kg": 0.343,
         "outer_diameter_mm": 47,
         "torque_density_nm_per_kg": 34.99
+      },
+      "transmission": {
+        "ratio": 25
       },
       "options": {
         "bus_types": [
@@ -147,19 +156,22 @@
       "electrical": {
         "peak_current_a": 64,
         "continuous_current_a": 10,
-        "rated_power_w": 720,
-        "peak_power_w": 96,
-        "torque_constant_nm_per_a": 2.8
+        "rated_input_power_w": 720,
+        "peak_input_power_w": 4608
       },
       "mechanical": {
         "rated_torque_nm": 28,
         "peak_torque_nm": 96,
         "instant_peak_torque_nm": 96,
+        "peak_output_power_w": 874,
         "rated_speed_rad_s": 10.472,
-        "max_speed_rad_s": 75.398,
+        "max_speed_rad_s": 19.007,
         "weight_kg": 0.73,
         "outer_diameter_mm": 68,
         "torque_density_nm_per_kg": 131.51
+      },
+      "transmission": {
+        "ratio": 25
       },
       "options": {
         "bus_types": [
@@ -186,19 +198,22 @@
       "electrical": {
         "peak_current_a": 64,
         "continuous_current_a": 10,
-        "rated_power_w": 720,
-        "peak_power_w": 156,
-        "torque_constant_nm_per_a": 4
+        "rated_input_power_w": 720,
+        "peak_input_power_w": 4608
       },
       "mechanical": {
         "rated_torque_nm": 40,
-        "peak_torque_nm": 156,
-        "instant_peak_torque_nm": 156,
+        "peak_torque_nm": 136,
+        "instant_peak_torque_nm": 136,
+        "peak_output_power_w": 936,
         "rated_speed_rad_s": 10.472,
-        "max_speed_rad_s": 75.398,
+        "max_speed_rad_s": 12.566,
         "weight_kg": 0.98,
         "outer_diameter_mm": 78,
-        "torque_density_nm_per_kg": 159.18
+        "torque_density_nm_per_kg": 138.78
+      },
+      "transmission": {
+        "ratio": 25
       },
       "options": {
         "bus_types": [
@@ -219,26 +234,29 @@
       "datasheet_url": "datasheets/5_动易_PhyArc模组.png"
     },
     {
-      "id": "dy-phyarc-95-25-48",
+      "id": "dy-phyarc-95-21-48",
       "model": "PhyArc 95",
-      "base_id": "DY-PhyArc-95-25-48",
+      "base_id": "DY-PhyArc-95-21-48",
       "electrical": {
         "peak_current_a": 80,
         "continuous_current_a": 20,
-        "rated_power_w": 1440,
-        "peak_power_w": 5760,
-        "torque_constant_nm_per_a": 3.75
+        "rated_input_power_w": 1440,
+        "peak_input_power_w": 5760
       },
       "mechanical": {
         "rated_torque_nm": 75,
         "peak_torque_nm": 228,
         "instant_peak_torque_nm": 228,
+        "peak_output_power_w": 1416.1,
         "rated_speed_rad_s": 8.378,
-        "max_speed_rad_s": 150.796,
+        "max_speed_rad_s": 13.006,
         "weight_kg": 1.68,
         "outer_diameter_mm": 95,
         "output_encoder_bits": 27,
         "torque_density_nm_per_kg": 135.71
+      },
+      "transmission": {
+        "ratio": 21
       },
       "options": {
         "bus_types": [

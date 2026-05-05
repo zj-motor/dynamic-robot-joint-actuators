@@ -3,6 +3,7 @@
   "family_name": "珞石 HSA",
   "shared": {
     "manufacturer": "珞石",
+    "manufacturer_en": "ROKAE",
     "electrical": {
       "voltage_v": 48,
       "motor_topology": "radial flux"
@@ -22,7 +23,7 @@
       "model": "HSA-25",
       "base_id": "ROK-HSA-110-100-48",
       "electrical": {
-        "rated_power_w": 600
+        "rated_input_power_w": 600
       },
       "mechanical": {
         "rated_torque_nm": 140,
@@ -65,7 +66,7 @@
       "model": "HSA-32",
       "base_id": "ROK-HSA-142-120-48",
       "electrical": {
-        "rated_power_w": 950
+        "rated_input_power_w": 950
       },
       "mechanical": {
         "rated_torque_nm": 281,
@@ -108,7 +109,7 @@
       "model": "HSA-11",
       "base_id": "ROK-HSA-52-100-48",
       "electrical": {
-        "rated_power_w": 40
+        "rated_input_power_w": 40
       },
       "mechanical": {
         "rated_torque_nm": 8.9,
@@ -151,7 +152,7 @@
       "model": "HSA-14",
       "base_id": "ROK-HSA-60-100-48",
       "electrical": {
-        "rated_power_w": 120
+        "rated_input_power_w": 120
       },
       "mechanical": {
         "rated_torque_nm": 7.7,
@@ -194,7 +195,7 @@
       "model": "HSA-17",
       "base_id": "ROK-HSA-72-100-48",
       "electrical": {
-        "rated_power_w": 160
+        "rated_input_power_w": 160
       },
       "mechanical": {
         "rated_torque_nm": 51,
@@ -237,7 +238,7 @@
       "model": "HSA-20",
       "base_id": "ROK-HSA-82-120-48",
       "electrical": {
-        "rated_power_w": 250
+        "rated_input_power_w": 250
       },
       "mechanical": {
         "rated_torque_nm": 64,

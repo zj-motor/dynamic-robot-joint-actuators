@@ -3,6 +3,7 @@
   "family_name": "清能德创 RJM",
   "shared": {
     "manufacturer": "清能德创",
+    "manufacturer_en": "TSINO DYNATRON",
     "electrical": {
       "voltage_v": 48,
       "motor_topology": "radial flux"
@@ -34,7 +35,6 @@
         "peak_torque_nm": 29,
         "start_stop_peak_torque_nm": 29,
         "avg_load_max_torque_nm": 13.5,
-        "torque_at_max_speed_nm": 13.5,
         "rated_speed_rad_s": 3.665,
         "max_speed_rad_s": 4.294,
         "weight_kg": 1.7,
@@ -66,11 +66,10 @@
         "continuous_current_a": 4.5
       },
       "mechanical": {
-        "rated_torque_nm": 48.5,
+        "rated_torque_nm": 36,
         "peak_torque_nm": 66,
         "start_stop_peak_torque_nm": 66,
         "avg_load_max_torque_nm": 48.5,
-        "torque_at_max_speed_nm": 36,
         "rated_speed_rad_s": 2.827,
         "max_speed_rad_s": 3.351,
         "weight_kg": 2.4,
@@ -106,7 +105,6 @@
         "peak_torque_nm": 102,
         "start_stop_peak_torque_nm": 102,
         "avg_load_max_torque_nm": 61,
-        "torque_at_max_speed_nm": 61,
         "rated_speed_rad_s": 2.723,
         "max_speed_rad_s": 3.142,
         "weight_kg": 2.9,
@@ -138,11 +136,10 @@
         "continuous_current_a": 11.5
       },
       "mechanical": {
-        "rated_torque_nm": 133,
+        "rated_torque_nm": 81,
         "peak_torque_nm": 194,
         "start_stop_peak_torque_nm": 194,
         "avg_load_max_torque_nm": 133,
-        "torque_at_max_speed_nm": 81,
         "rated_speed_rad_s": 2.723,
         "max_speed_rad_s": 3.142,
         "weight_kg": 4.7,
@@ -174,11 +171,10 @@
         "continuous_current_a": 20
       },
       "mechanical": {
-        "rated_torque_nm": 267,
+        "rated_torque_nm": 180,
         "peak_torque_nm": 411,
         "start_stop_peak_torque_nm": 411,
         "avg_load_max_torque_nm": 267,
-        "torque_at_max_speed_nm": 180,
         "rated_speed_rad_s": 1.676,
         "max_speed_rad_s": 2.827,
         "weight_kg": 8.2,

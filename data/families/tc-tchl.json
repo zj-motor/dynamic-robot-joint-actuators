@@ -3,6 +3,7 @@
   "family_name": "同川精密 TCHL",
   "shared": {
     "manufacturer": "同川精密",
+    "manufacturer_en": "TC Drive",
     "electrical": {
       "voltage_v": 48,
       "motor_topology": "radial flux"
@@ -25,7 +26,7 @@
       "model": "TCHL-32-101-FL-DC48-X05-HISE-TH2",
       "base_id": "TC-TCHL-131-101-48",
       "electrical": {
-        "rated_power_w": 1000
+        "rated_input_power_w": 1000
       },
       "mechanical": {
         "rated_torque_nm": 169,
@@ -160,7 +161,7 @@
       "model": "TCHL-11-100-FL-DC48-X05-HISE",
       "base_id": "TC-TCHL-52-100-48",
       "electrical": {
-        "rated_power_w": 30
+        "rated_input_power_w": 30
       },
       "mechanical": {
         "rated_torque_nm": 5.3,
@@ -205,7 +206,7 @@
       "model": "TCHL-14-101-FL-DC48-X05-HISE-TM2",
       "base_id": "TC-TCHL-65-101-48",
       "electrical": {
-        "rated_power_w": 40
+        "rated_input_power_w": 40
       },
       "mechanical": {
         "rated_torque_nm": 6.5,
@@ -340,7 +341,7 @@
       "model": "TCHL-17-101-FL-DC48-X05-HISE-TH2",
       "base_id": "TC-TCHL-77-101-48",
       "electrical": {
-        "rated_power_w": 157
+        "rated_input_power_w": 157
       },
       "mechanical": {
         "rated_torque_nm": 29,
@@ -475,7 +476,7 @@
       "model": "TCHL-20-101-FL-DC48-X05-HISE-TH2",
       "base_id": "TC-TCHL-87-101-48",
       "electrical": {
-        "rated_power_w": 220
+        "rated_input_power_w": 220
       },
       "mechanical": {
         "rated_torque_nm": 49,
@@ -610,7 +611,7 @@
       "model": "TCHL-25-101-FL-DC48-X05-HISE-TH2",
       "base_id": "TC-TCHL-99-101-48",
       "electrical": {
-        "rated_power_w": 440
+        "rated_input_power_w": 440
       },
       "mechanical": {
         "rated_torque_nm": 83,

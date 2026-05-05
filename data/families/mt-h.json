@@ -3,6 +3,7 @@
   "family_name": "脉塔 H",
   "shared": {
     "manufacturer": "脉塔",
+    "manufacturer_en": "Myactuator",
     "electrical": {
       "motor_topology": "radial flux"
     },
@@ -25,8 +26,7 @@
         "voltage_v": 24,
         "peak_current_a": 4,
         "continuous_current_a": 1.2,
-        "rated_power_w": 15,
-        "torque_constant_nm_per_a": 0.03
+        "rated_input_power_w": 15
       },
       "mechanical": {
         "rated_torque_nm": 0.03,
@@ -63,8 +63,7 @@
         "voltage_v": 24,
         "peak_current_a": 12.8,
         "continuous_current_a": 5.1,
-        "rated_power_w": 47,
-        "torque_constant_nm_per_a": 0.03
+        "rated_input_power_w": 47
       },
       "mechanical": {
         "rated_torque_nm": 0.15,
@@ -103,8 +102,7 @@
         "voltage_v": 24,
         "peak_current_a": 12.4,
         "continuous_current_a": 4.9,
-        "rated_power_w": 91.6,
-        "torque_constant_nm_per_a": 0.07
+        "rated_input_power_w": 91.6
       },
       "mechanical": {
         "rated_torque_nm": 0.35,
@@ -143,8 +141,7 @@
         "voltage_v": 48,
         "peak_current_a": 13.2,
         "continuous_current_a": 4.4,
-        "rated_power_w": 200,
-        "torque_constant_nm_per_a": 0.18
+        "rated_input_power_w": 200
       },
       "mechanical": {
         "rated_torque_nm": 0.8,
@@ -183,8 +180,7 @@
         "voltage_v": 48,
         "peak_current_a": 19.8,
         "continuous_current_a": 6.6,
-        "rated_power_w": 252,
-        "torque_constant_nm_per_a": 0.23
+        "rated_input_power_w": 252
       },
       "mechanical": {
         "rated_torque_nm": 1.5,

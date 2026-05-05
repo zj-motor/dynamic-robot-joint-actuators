@@ -3,6 +3,7 @@
   "family_name": "钛虎 PRO2",
   "shared": {
     "manufacturer": "钛虎",
+    "manufacturer_en": "TiS",
     "electrical": {
       "voltage_v": 48,
       "motor_topology": "radial flux"

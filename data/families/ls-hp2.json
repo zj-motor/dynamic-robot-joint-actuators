@@ -3,6 +3,7 @@
   "family_name": "雷赛 HP2",
   "shared": {
     "manufacturer": "雷赛",
+    "manufacturer_en": "LeadShine",
     "electrical": {
       "motor_topology": "radial flux"
     },
@@ -22,7 +23,7 @@
       "base_id": "LS-HP2-105-18-48",
       "electrical": {
         "voltage_v": 48,
-        "rated_power_w": 576
+        "rated_input_power_w": 576
       },
       "mechanical": {
         "rated_torque_nm": 30,
@@ -60,7 +61,7 @@
       "base_id": "LS-HP2-56-36-24",
       "electrical": {
         "voltage_v": 24,
-        "rated_power_w": 146
+        "rated_input_power_w": 146
       },
       "mechanical": {
         "rated_torque_nm": 12,
@@ -98,7 +99,7 @@
       "base_id": "LS-HP2-88-25-48",
       "electrical": {
         "voltage_v": 48,
-        "rated_power_w": 365
+        "rated_input_power_w": 365
       },
       "mechanical": {
         "rated_torque_nm": 20,

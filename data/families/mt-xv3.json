@@ -3,6 +3,7 @@
   "family_name": "脉塔 XV3",
   "shared": {
     "manufacturer": "脉塔",
+    "manufacturer_en": "Myactuator",
     "electrical": {
       "voltage_v": 48,
       "motor_topology": "radial flux"
@@ -23,8 +24,8 @@
       "electrical": {
         "peak_current_a": 13.5,
         "continuous_current_a": 6.7,
-        "rated_power_w": 265,
-        "peak_power_w": 264.38
+        "rated_input_power_w": 265,
+        "peak_input_power_w": 264.38
       },
       "mechanical": {
         "rated_torque_nm": 50,
@@ -67,8 +68,8 @@
       "electrical": {
         "peak_current_a": 15,
         "continuous_current_a": 6.5,
-        "rated_power_w": 265,
-        "peak_power_w": 336.93
+        "rated_input_power_w": 265,
+        "peak_input_power_w": 336.93
       },
       "mechanical": {
         "rated_torque_nm": 15,
@@ -111,8 +112,8 @@
       "electrical": {
         "peak_current_a": 7.2,
         "continuous_current_a": 3.6,
-        "rated_power_w": 135,
-        "peak_power_w": 162.39
+        "rated_input_power_w": 135,
+        "peak_input_power_w": 162.39
       },
       "mechanical": {
         "rated_torque_nm": 4.5,
@@ -155,8 +156,8 @@
       "electrical": {
         "peak_current_a": 8,
         "continuous_current_a": 4,
-        "rated_power_w": 130,
-        "peak_power_w": 178.69
+        "rated_input_power_w": 130,
+        "peak_input_power_w": 178.69
       },
       "mechanical": {
         "rated_torque_nm": 30,
@@ -199,7 +200,7 @@
       "electrical": {
         "peak_current_a": 10.5,
         "continuous_current_a": 5.2,
-        "rated_power_w": 200
+        "rated_input_power_w": 200
       },
       "mechanical": {
         "rated_torque_nm": 10,

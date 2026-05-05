@@ -3,6 +3,7 @@
   "family_name": "脉塔 CEM",
   "shared": {
     "manufacturer": "脉塔",
+    "manufacturer_en": "Myactuator",
     "electrical": {
       "voltage_v": 48,
       "motor_topology": "radial flux"
@@ -29,8 +30,7 @@
       "electrical": {
         "peak_current_a": 6.5,
         "continuous_current_a": 2.3,
-        "rated_power_w": 132,
-        "torque_constant_nm_per_a": 2.4
+        "rated_input_power_w": 132
       },
       "mechanical": {
         "rated_torque_nm": 9,
@@ -67,8 +67,7 @@
       "electrical": {
         "peak_current_a": 7.2,
         "continuous_current_a": 2.6,
-        "rated_power_w": 157,
-        "torque_constant_nm_per_a": 3.6
+        "rated_input_power_w": 157
       },
       "mechanical": {
         "rated_torque_nm": 15,
@@ -105,8 +104,7 @@
       "electrical": {
         "peak_current_a": 16.8,
         "continuous_current_a": 5.7,
-        "rated_power_w": 210,
-        "torque_constant_nm_per_a": 4.2
+        "rated_input_power_w": 210
       },
       "mechanical": {
         "rated_torque_nm": 25,

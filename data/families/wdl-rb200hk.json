@@ -3,6 +3,7 @@
   "family_name": "伟达立 RB200HK",
   "shared": {
     "manufacturer": "伟达立",
+    "manufacturer_en": "WEDALI",
     "electrical": {
       "voltage_v": 48,
       "motor_topology": "radial flux"
@@ -23,7 +24,7 @@
       "base_id": "WDL-RB200HK-110-101-48",
       "electrical": {
         "continuous_current_a": 16,
-        "rated_power_w": 600
+        "rated_input_power_w": 600
       },
       "mechanical": {
         "rated_torque_nm": 84,
@@ -66,7 +67,7 @@
       "base_id": "WDL-RB200HK-142-121-48",
       "electrical": {
         "continuous_current_a": 22,
-        "rated_power_w": 1000
+        "rated_input_power_w": 1000
       },
       "mechanical": {
         "rated_torque_nm": 169,
@@ -107,7 +108,7 @@
       "base_id": "WDL-RB200HK-170-121-48",
       "electrical": {
         "continuous_current_a": 25,
-        "rated_power_w": 1200
+        "rated_input_power_w": 1200
       },
       "mechanical": {
         "rated_torque_nm": 363,
@@ -148,7 +149,7 @@
       "base_id": "WDL-RB200HK-40-101-48",
       "electrical": {
         "continuous_current_a": 1.2,
-        "rated_power_w": 37
+        "rated_input_power_w": 37
       },
       "mechanical": {
         "rated_torque_nm": 2.4,
@@ -189,7 +190,7 @@
       "base_id": "WDL-RB200HK-52-101-48",
       "electrical": {
         "continuous_current_a": 3.5,
-        "rated_power_w": 63
+        "rated_input_power_w": 63
       },
       "mechanical": {
         "rated_torque_nm": 5,
@@ -233,7 +234,7 @@
       "base_id": "WDL-RB200HK-70-101-48",
       "electrical": {
         "continuous_current_a": 2.3,
-        "rated_power_w": 100
+        "rated_input_power_w": 100
       },
       "mechanical": {
         "rated_torque_nm": 9.6,
@@ -277,7 +278,7 @@
       "base_id": "WDL-RB200HK-80-101-48",
       "electrical": {
         "continuous_current_a": 4,
-        "rated_power_w": 180
+        "rated_input_power_w": 180
       },
       "mechanical": {
         "rated_torque_nm": 30,
@@ -321,7 +322,7 @@
       "base_id": "WDL-RB200HK-90-101-48",
       "electrical": {
         "continuous_current_a": 7.6,
-        "rated_power_w": 300
+        "rated_input_power_w": 300
       },
       "mechanical": {
         "rated_torque_nm": 50,

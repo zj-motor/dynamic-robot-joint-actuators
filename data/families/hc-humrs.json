@@ -3,6 +3,7 @@
   "family_name": "禾川 HuMRS",
   "shared": {
     "manufacturer": "禾川",
+    "manufacturer_en": "HCFA",
     "electrical": {
       "voltage_v": 48,
       "motor_topology": "radial flux"
@@ -25,7 +26,7 @@
       "model": "Hu-MRS230N",
       "base_id": "HC-HuMRS-110-101-48",
       "electrical": {
-        "rated_power_w": 587
+        "rated_input_power_w": 587
       },
       "mechanical": {
         "rated_torque_nm": 120,
@@ -64,7 +65,7 @@
       "model": "Hu-MRS012N",
       "base_id": "HC-HuMRS-52-101-48",
       "electrical": {
-        "rated_power_w": 38
+        "rated_input_power_w": 38
       },
       "mechanical": {
         "rated_torque_nm": 8,
@@ -103,7 +104,7 @@
       "model": "Hu-MRS040N",
       "base_id": "HC-HuMRS-70-101-48",
       "electrical": {
-        "rated_power_w": 70
+        "rated_input_power_w": 70
       },
       "mechanical": {
         "rated_torque_nm": 15,
@@ -142,7 +143,7 @@
       "model": "Hu-MRS070N",
       "base_id": "HC-HuMRS-80-101-48",
       "electrical": {
-        "rated_power_w": 268
+        "rated_input_power_w": 268
       },
       "mechanical": {
         "rated_torque_nm": 40,
@@ -181,7 +182,7 @@
       "model": "Hu-MRS120N",
       "base_id": "HC-HuMRS-90-101-48",
       "electrical": {
-        "rated_power_w": 301
+        "rated_input_power_w": 301
       },
       "mechanical": {
         "rated_torque_nm": 60,

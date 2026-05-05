@@ -3,6 +3,7 @@
   "family_name": "达妙 JP",
   "shared": {
     "manufacturer": "达妙",
+    "manufacturer_en": "DAMIAO",
     "electrical": {
       "motor_topology": "radial flux"
     },
@@ -19,7 +20,7 @@
         "voltage_v": 24,
         "peak_current_a": 8,
         "continuous_current_a": 3,
-        "rated_power_w": 33
+        "rated_input_power_w": 33
       },
       "mechanical": {
         "rated_torque_nm": 9,
@@ -63,7 +64,7 @@
         "voltage_v": 48,
         "peak_current_a": 9,
         "continuous_current_a": 2.5,
-        "rated_power_w": 33
+        "rated_input_power_w": 33
       },
       "mechanical": {
         "rated_torque_nm": 9,
@@ -107,7 +108,7 @@
         "voltage_v": 24,
         "peak_current_a": 38.7,
         "continuous_current_a": 11.3,
-        "rated_power_w": 125
+        "rated_input_power_w": 125
       },
       "mechanical": {
         "rated_torque_nm": 30,
@@ -151,7 +152,7 @@
         "voltage_v": 48,
         "peak_current_a": 38.7,
         "continuous_current_a": 11.3,
-        "rated_power_w": 125
+        "rated_input_power_w": 125
       },
       "mechanical": {
         "rated_torque_nm": 30,
@@ -195,7 +196,7 @@
         "voltage_v": 24,
         "peak_current_a": 40,
         "continuous_current_a": 18.6,
-        "rated_power_w": 209
+        "rated_input_power_w": 209
       },
       "mechanical": {
         "rated_torque_nm": 20,
@@ -239,7 +240,7 @@
         "voltage_v": 48,
         "peak_current_a": 40,
         "continuous_current_a": 18.6,
-        "rated_power_w": 209
+        "rated_input_power_w": 209
       },
       "mechanical": {
         "rated_torque_nm": 20,

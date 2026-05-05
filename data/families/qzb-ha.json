@@ -3,6 +3,7 @@
   "family_name": "泉智博 HA",
   "shared": {
     "manufacturer": "泉智博",
+    "manufacturer_en": "MOTOREVO",
     "electrical": {
       "motor_topology": "radial flux"
     },
@@ -99,8 +100,7 @@
       "electrical": {
         "voltage_v": 24,
         "peak_current_a": 37,
-        "continuous_current_a": 12.5,
-        "torque_constant_nm_per_a": 0.04
+        "continuous_current_a": 12.5
       },
       "mechanical": {
         "rated_torque_nm": 16,
@@ -142,8 +142,7 @@
       "electrical": {
         "voltage_v": 48,
         "peak_current_a": 37,
-        "continuous_current_a": 12.5,
-        "torque_constant_nm_per_a": 0.04
+        "continuous_current_a": 12.5
       },
       "mechanical": {
         "rated_torque_nm": 16,
@@ -185,8 +184,7 @@
       "electrical": {
         "voltage_v": 24,
         "peak_current_a": 37,
-        "continuous_current_a": 12.5,
-        "torque_constant_nm_per_a": 0.04
+        "continuous_current_a": 12.5
       },
       "mechanical": {
         "rated_torque_nm": 16,
@@ -228,8 +226,7 @@
       "electrical": {
         "voltage_v": 48,
         "peak_current_a": 37,
-        "continuous_current_a": 12.5,
-        "torque_constant_nm_per_a": 0.04
+        "continuous_current_a": 12.5
       },
       "mechanical": {
         "rated_torque_nm": 16,
@@ -271,8 +268,7 @@
       "electrical": {
         "voltage_v": 24,
         "peak_current_a": 28,
-        "continuous_current_a": 9,
-        "torque_constant_nm_per_a": 0.083
+        "continuous_current_a": 9
       },
       "mechanical": {
         "rated_torque_nm": 28,
@@ -314,8 +310,7 @@
       "electrical": {
         "voltage_v": 48,
         "peak_current_a": 28,
-        "continuous_current_a": 9,
-        "torque_constant_nm_per_a": 0.083
+        "continuous_current_a": 9
       },
       "mechanical": {
         "rated_torque_nm": 28,
@@ -357,8 +352,7 @@
       "electrical": {
         "voltage_v": 24,
         "peak_current_a": 28,
-        "continuous_current_a": 9,
-        "torque_constant_nm_per_a": 0.083
+        "continuous_current_a": 9
       },
       "mechanical": {
         "rated_torque_nm": 28,
@@ -400,8 +394,7 @@
       "electrical": {
         "voltage_v": 48,
         "peak_current_a": 28,
-        "continuous_current_a": 9,
-        "torque_constant_nm_per_a": 0.083
+        "continuous_current_a": 9
       },
       "mechanical": {
         "rated_torque_nm": 28,
@@ -443,8 +436,7 @@
       "electrical": {
         "voltage_v": 24,
         "peak_current_a": 26.1,
-        "continuous_current_a": 10,
-        "torque_constant_nm_per_a": 0.095
+        "continuous_current_a": 10
       },
       "mechanical": {
         "rated_torque_nm": 40,
@@ -486,8 +478,7 @@
       "electrical": {
         "voltage_v": 48,
         "peak_current_a": 26.1,
-        "continuous_current_a": 10,
-        "torque_constant_nm_per_a": 0.095
+        "continuous_current_a": 10
       },
       "mechanical": {
         "rated_torque_nm": 40,
@@ -529,8 +520,7 @@
       "electrical": {
         "voltage_v": 24,
         "peak_current_a": 26.1,
-        "continuous_current_a": 10,
-        "torque_constant_nm_per_a": 0.095
+        "continuous_current_a": 10
       },
       "mechanical": {
         "rated_torque_nm": 25,
@@ -572,8 +562,7 @@
       "electrical": {
         "voltage_v": 48,
         "peak_current_a": 26.1,
-        "continuous_current_a": 10,
-        "torque_constant_nm_per_a": 0.095
+        "continuous_current_a": 10
       },
       "mechanical": {
         "rated_torque_nm": 25,
@@ -615,8 +604,7 @@
       "electrical": {
         "voltage_v": 24,
         "peak_current_a": 26.1,
-        "continuous_current_a": 8.8,
-        "torque_constant_nm_per_a": 0.095
+        "continuous_current_a": 8.8
       },
       "mechanical": {
         "rated_torque_nm": 34,
@@ -658,8 +646,7 @@
       "electrical": {
         "voltage_v": 48,
         "peak_current_a": 26.1,
-        "continuous_current_a": 8.8,
-        "torque_constant_nm_per_a": 0.095
+        "continuous_current_a": 8.8
       },
       "mechanical": {
         "rated_torque_nm": 34,
@@ -701,8 +688,7 @@
       "electrical": {
         "voltage_v": 24,
         "peak_current_a": 28,
-        "continuous_current_a": 10,
-        "torque_constant_nm_per_a": 0.1
+        "continuous_current_a": 10
       },
       "mechanical": {
         "rated_torque_nm": 67,
@@ -743,8 +729,7 @@
       "electrical": {
         "voltage_v": 48,
         "peak_current_a": 28,
-        "continuous_current_a": 10,
-        "torque_constant_nm_per_a": 0.1
+        "continuous_current_a": 10
       },
       "mechanical": {
         "rated_torque_nm": 67,

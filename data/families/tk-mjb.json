@@ -3,6 +3,7 @@
   "family_name": "泰科 MJB",
   "shared": {
     "manufacturer": "泰科",
+    "manufacturer_en": "Techrobots",
     "electrical": {
       "voltage_v": 48,
       "motor_topology": "radial flux"
@@ -28,7 +29,7 @@
       "electrical": {
         "peak_current_a": 25.8,
         "continuous_current_a": 10.5,
-        "rated_power_w": 500
+        "rated_input_power_w": 500
       },
       "mechanical": {
         "rated_torque_nm": 133,
@@ -74,7 +75,7 @@
       "electrical": {
         "peak_current_a": 11.6,
         "continuous_current_a": 3.8,
-        "rated_power_w": 100
+        "rated_input_power_w": 100
       },
       "mechanical": {
         "rated_torque_nm": 13.5,
@@ -120,7 +121,7 @@
       "electrical": {
         "peak_current_a": 14.5,
         "continuous_current_a": 5,
-        "rated_power_w": 180
+        "rated_input_power_w": 180
       },
       "mechanical": {
         "rated_torque_nm": 49,
@@ -166,7 +167,7 @@
       "electrical": {
         "peak_current_a": 15,
         "continuous_current_a": 8,
-        "rated_power_w": 250
+        "rated_input_power_w": 250
       },
       "mechanical": {
         "rated_torque_nm": 80,

@@ -3,6 +3,7 @@
   "family_name": "埃斯顿酷卓 SA",
   "shared": {
     "manufacturer": "埃斯顿酷卓",
+    "manufacturer_en": "Estun Codroid",
     "electrical": {
       "voltage_v": 48,
       "motor_topology": "radial flux"
@@ -25,7 +26,7 @@
       "electrical": {
         "peak_current_a": 13.6,
         "continuous_current_a": 4.4,
-        "rated_power_w": 159
+        "rated_input_power_w": 159
       },
       "mechanical": {
         "rated_torque_nm": 10,
@@ -69,7 +70,7 @@
       "electrical": {
         "peak_current_a": 15,
         "continuous_current_a": 5,
-        "rated_power_w": 183
+        "rated_input_power_w": 183
       },
       "mechanical": {
         "rated_torque_nm": 31,
@@ -113,7 +114,7 @@
       "electrical": {
         "peak_current_a": 29.1,
         "continuous_current_a": 9.7,
-        "rated_power_w": 366
+        "rated_input_power_w": 366
       },
       "mechanical": {
         "rated_torque_nm": 52,
@@ -157,7 +158,7 @@
       "electrical": {
         "peak_current_a": 48,
         "continuous_current_a": 16,
-        "rated_power_w": 732
+        "rated_input_power_w": 732
       },
       "mechanical": {
         "rated_torque_nm": 87,
@@ -201,7 +202,7 @@
       "electrical": {
         "peak_current_a": 89,
         "continuous_current_a": 27,
-        "rated_power_w": 1000
+        "rated_input_power_w": 1000
       },
       "mechanical": {
         "rated_torque_nm": 178,
@@ -245,7 +246,7 @@
       "electrical": {
         "peak_current_a": 72,
         "continuous_current_a": 27,
-        "rated_power_w": 1257
+        "rated_input_power_w": 1257
       },
       "mechanical": {
         "rated_torque_nm": 382,

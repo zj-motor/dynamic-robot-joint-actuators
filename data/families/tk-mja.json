@@ -3,6 +3,7 @@
   "family_name": "泰科 MJA",
   "shared": {
     "manufacturer": "泰科",
+    "manufacturer_en": "Techrobots",
     "electrical": {
       "motor_topology": "radial flux"
     },
@@ -27,7 +28,7 @@
         "voltage_v": 24,
         "peak_current_a": 13.5,
         "continuous_current_a": 6.5,
-        "rated_power_w": 115
+        "rated_input_power_w": 115
       },
       "mechanical": {
         "rated_torque_nm": 6.2,
@@ -73,7 +74,7 @@
         "voltage_v": 48,
         "peak_current_a": 11.6,
         "continuous_current_a": 3.8,
-        "rated_power_w": 100
+        "rated_input_power_w": 100
       },
       "mechanical": {
         "rated_torque_nm": 25,
@@ -119,7 +120,7 @@
         "voltage_v": 48,
         "peak_current_a": 14.5,
         "continuous_current_a": 5,
-        "rated_power_w": 180
+        "rated_input_power_w": 180
       },
       "mechanical": {
         "rated_torque_nm": 48,
@@ -165,7 +166,7 @@
         "voltage_v": 48,
         "peak_current_a": 14.5,
         "continuous_current_a": 5,
-        "rated_power_w": 180
+        "rated_input_power_w": 180
       },
       "mechanical": {
         "rated_torque_nm": 48,

@@ -3,6 +3,7 @@
   "family_name": "泉智博 PA",
   "shared": {
     "manufacturer": "泉智博",
+    "manufacturer_en": "MOTOREVO",
     "electrical": {
       "motor_topology": "radial flux"
     },
@@ -22,8 +23,7 @@
       "electrical": {
         "voltage_v": 24,
         "peak_current_a": 31,
-        "continuous_current_a": 10,
-        "torque_constant_nm_per_a": 0.115
+        "continuous_current_a": 10
       },
       "mechanical": {
         "rated_torque_nm": 20,
@@ -60,8 +60,7 @@
       "electrical": {
         "voltage_v": 48,
         "peak_current_a": 31,
-        "continuous_current_a": 10,
-        "torque_constant_nm_per_a": 0.115
+        "continuous_current_a": 10
       },
       "mechanical": {
         "rated_torque_nm": 20,
@@ -98,8 +97,7 @@
       "electrical": {
         "voltage_v": 24,
         "peak_current_a": 68,
-        "continuous_current_a": 20,
-        "torque_constant_nm_per_a": 0.111
+        "continuous_current_a": 20
       },
       "mechanical": {
         "rated_torque_nm": 48,
@@ -136,8 +134,7 @@
       "electrical": {
         "voltage_v": 48,
         "peak_current_a": 68,
-        "continuous_current_a": 20,
-        "torque_constant_nm_per_a": 0.111
+        "continuous_current_a": 20
       },
       "mechanical": {
         "rated_torque_nm": 48,
@@ -174,8 +171,7 @@
       "electrical": {
         "voltage_v": 24,
         "peak_current_a": 68,
-        "continuous_current_a": 20,
-        "torque_constant_nm_per_a": 0.111
+        "continuous_current_a": 20
       },
       "mechanical": {
         "rated_torque_nm": 80,
@@ -212,8 +208,7 @@
       "electrical": {
         "voltage_v": 48,
         "peak_current_a": 68,
-        "continuous_current_a": 20,
-        "torque_constant_nm_per_a": 0.111
+        "continuous_current_a": 20
       },
       "mechanical": {
         "rated_torque_nm": 80,
@@ -250,8 +245,7 @@
       "electrical": {
         "voltage_v": 24,
         "peak_current_a": 15,
-        "continuous_current_a": 2.2,
-        "torque_constant_nm_per_a": 0.082
+        "continuous_current_a": 2.2
       },
       "mechanical": {
         "rated_torque_nm": 12,
@@ -288,8 +282,7 @@
       "electrical": {
         "voltage_v": 48,
         "peak_current_a": 15,
-        "continuous_current_a": 2.2,
-        "torque_constant_nm_per_a": 0.082
+        "continuous_current_a": 2.2
       },
       "mechanical": {
         "rated_torque_nm": 12,
@@ -326,8 +319,7 @@
       "electrical": {
         "voltage_v": 24,
         "peak_current_a": 36,
-        "continuous_current_a": 10,
-        "torque_constant_nm_per_a": 0.125
+        "continuous_current_a": 10
       },
       "mechanical": {
         "rated_torque_nm": 70,
@@ -364,8 +356,7 @@
       "electrical": {
         "voltage_v": 48,
         "peak_current_a": 36,
-        "continuous_current_a": 10,
-        "torque_constant_nm_per_a": 0.125
+        "continuous_current_a": 10
       },
       "mechanical": {
         "rated_torque_nm": 70,
@@ -402,8 +393,7 @@
       "electrical": {
         "voltage_v": 24,
         "peak_current_a": 24,
-        "continuous_current_a": 5.4,
-        "torque_constant_nm_per_a": 0.102
+        "continuous_current_a": 5.4
       },
       "mechanical": {
         "rated_torque_nm": 10,
@@ -440,8 +430,7 @@
       "electrical": {
         "voltage_v": 24,
         "peak_current_a": 29,
-        "continuous_current_a": 5.5,
-        "torque_constant_nm_per_a": 0.109
+        "continuous_current_a": 5.5
       },
       "mechanical": {
         "rated_torque_nm": 12,
@@ -478,8 +467,7 @@
       "electrical": {
         "voltage_v": 48,
         "peak_current_a": 24,
-        "continuous_current_a": 5.4,
-        "torque_constant_nm_per_a": 0.102
+        "continuous_current_a": 5.4
       },
       "mechanical": {
         "rated_torque_nm": 10,
@@ -516,8 +504,7 @@
       "electrical": {
         "voltage_v": 48,
         "peak_current_a": 29,
-        "continuous_current_a": 5.5,
-        "torque_constant_nm_per_a": 0.109
+        "continuous_current_a": 5.5
       },
       "mechanical": {
         "rated_torque_nm": 12,

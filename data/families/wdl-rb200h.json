@@ -3,6 +3,7 @@
   "family_name": "伟达立 RB200H",
   "shared": {
     "manufacturer": "伟达立",
+    "manufacturer_en": "WEDALI",
     "electrical": {
       "motor_topology": "radial flux"
     },
@@ -23,7 +24,7 @@
       "electrical": {
         "voltage_v": 48,
         "continuous_current_a": 13.5,
-        "rated_power_w": 650
+        "rated_input_power_w": 650
       },
       "mechanical": {
         "rated_torque_nm": 84,
@@ -65,7 +66,7 @@
       "electrical": {
         "voltage_v": 48,
         "continuous_current_a": 22,
-        "rated_power_w": 1000
+        "rated_input_power_w": 1000
       },
       "mechanical": {
         "rated_torque_nm": 169,
@@ -107,7 +108,7 @@
       "electrical": {
         "voltage_v": 48,
         "continuous_current_a": 25,
-        "rated_power_w": 1200
+        "rated_input_power_w": 1200
       },
       "mechanical": {
         "rated_torque_nm": 363,
@@ -149,7 +150,7 @@
       "electrical": {
         "voltage_v": 24,
         "continuous_current_a": 0.64,
-        "rated_power_w": 15
+        "rated_input_power_w": 15
       },
       "mechanical": {
         "rated_torque_nm": 2.4,
@@ -191,7 +192,7 @@
       "electrical": {
         "voltage_v": 48,
         "continuous_current_a": 3.5,
-        "rated_power_w": 63
+        "rated_input_power_w": 63
       },
       "mechanical": {
         "rated_torque_nm": 5,
@@ -236,7 +237,7 @@
       "electrical": {
         "voltage_v": 48,
         "continuous_current_a": 2.55,
-        "rated_power_w": 100
+        "rated_input_power_w": 100
       },
       "mechanical": {
         "rated_torque_nm": 9.6,
@@ -278,7 +279,7 @@
       "electrical": {
         "voltage_v": 48,
         "continuous_current_a": 6.3,
-        "rated_power_w": 189
+        "rated_input_power_w": 189
       },
       "mechanical": {
         "rated_torque_nm": 30,
@@ -320,7 +321,7 @@
       "electrical": {
         "voltage_v": 48,
         "continuous_current_a": 13.5,
-        "rated_power_w": 650
+        "rated_input_power_w": 650
       },
       "mechanical": {
         "rated_torque_nm": 50,

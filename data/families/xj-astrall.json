@@ -3,6 +3,7 @@
   "family_name": "璇玑动力 Astrall",
   "shared": {
     "manufacturer": "璇玑动力",
+    "manufacturer_en": "ASTRALL",
     "electrical": {
       "peak_current_a": 106,
       "motor_topology": "axial flux"

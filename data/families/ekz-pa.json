@@ -3,6 +3,7 @@
   "family_name": "埃斯顿酷卓 PA",
   "shared": {
     "manufacturer": "埃斯顿酷卓",
+    "manufacturer_en": "Estun Codroid",
     "transmission": {
       "type": "planetary",
       "backdrivable": true

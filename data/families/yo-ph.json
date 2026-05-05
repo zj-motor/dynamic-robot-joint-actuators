@@ -3,6 +3,7 @@
   "family_name": "意优 PH",
   "shared": {
     "manufacturer": "意优",
+    "manufacturer_en": "EYOU",
     "electrical": {
       "voltage_v": 48,
       "motor_topology": "radial flux"
@@ -23,7 +24,7 @@
       "model": "PH25-101",
       "base_id": "YO-PH-110-101-48",
       "electrical": {
-        "rated_power_w": 270
+        "rated_input_power_w": 270
       },
       "mechanical": {
         "rated_torque_nm": 84,
@@ -64,7 +65,7 @@
       "model": "PH25-121",
       "base_id": "YO-PH-110-121-48",
       "electrical": {
-        "rated_power_w": 270
+        "rated_input_power_w": 270
       },
       "mechanical": {
         "rated_torque_nm": 84,
@@ -105,7 +106,7 @@
       "model": "PH25-81",
       "base_id": "YO-PH-110-81-48",
       "electrical": {
-        "rated_power_w": 270
+        "rated_input_power_w": 270
       },
       "mechanical": {
         "rated_torque_nm": 78,
@@ -146,7 +147,7 @@
       "model": "PH08-101",
       "base_id": "YO-PH-40-101-48",
       "electrical": {
-        "rated_power_w": 35
+        "rated_input_power_w": 35
       },
       "mechanical": {
         "rated_torque_nm": 2.4,
@@ -184,7 +185,7 @@
       "model": "PH08-51",
       "base_id": "YO-PH-40-51-48",
       "electrical": {
-        "rated_power_w": 38
+        "rated_input_power_w": 38
       },
       "mechanical": {
         "rated_torque_nm": 1.8,
@@ -222,7 +223,7 @@
       "model": "PH11-101",
       "base_id": "YO-PH-52-101-48",
       "electrical": {
-        "rated_power_w": 50
+        "rated_input_power_w": 50
       },
       "mechanical": {
         "rated_torque_nm": 5,
@@ -263,7 +264,7 @@
       "model": "PH11-51",
       "base_id": "YO-PH-52-51-48",
       "electrical": {
-        "rated_power_w": 50
+        "rated_input_power_w": 50
       },
       "mechanical": {
         "rated_torque_nm": 3.5,
@@ -304,7 +305,7 @@
       "model": "PH14-101",
       "base_id": "YO-PH-70-101-48",
       "electrical": {
-        "rated_power_w": 80
+        "rated_input_power_w": 80
       },
       "mechanical": {
         "rated_torque_nm": 9.6,
@@ -345,7 +346,7 @@
       "model": "PH14-51",
       "base_id": "YO-PH-70-51-48",
       "electrical": {
-        "rated_power_w": 80
+        "rated_input_power_w": 80
       },
       "mechanical": {
         "rated_torque_nm": 6.6,
@@ -386,7 +387,7 @@
       "model": "PH17-101",
       "base_id": "YO-PH-80-101-48",
       "electrical": {
-        "rated_power_w": 170
+        "rated_input_power_w": 170
       },
       "mechanical": {
         "rated_torque_nm": 30,
@@ -427,7 +428,7 @@
       "model": "PH17-51",
       "base_id": "YO-PH-80-51-48",
       "electrical": {
-        "rated_power_w": 170
+        "rated_input_power_w": 170
       },
       "mechanical": {
         "rated_torque_nm": 19.8,
@@ -468,7 +469,7 @@
       "model": "PH20-101",
       "base_id": "YO-PH-90-101-48",
       "electrical": {
-        "rated_power_w": 210
+        "rated_input_power_w": 210
       },
       "mechanical": {
         "rated_torque_nm": 50,
@@ -509,7 +510,7 @@
       "model": "PH20-121",
       "base_id": "YO-PH-90-121-48",
       "electrical": {
-        "rated_power_w": 210
+        "rated_input_power_w": 210
       },
       "mechanical": {
         "rated_torque_nm": 50,
@@ -550,7 +551,7 @@
       "model": "PH20-81",
       "base_id": "YO-PH-90-81-48",
       "electrical": {
-        "rated_power_w": 210
+        "rated_input_power_w": 210
       },
       "mechanical": {
         "rated_torque_nm": 42,

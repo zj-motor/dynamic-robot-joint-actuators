@@ -3,10 +3,11 @@
   "family_name": "达妙 JL",
   "shared": {
     "manufacturer": "达妙",
+    "manufacturer_en": "DAMIAO",
     "electrical": {
       "peak_current_a": 95,
       "continuous_current_a": 23.5,
-      "rated_power_w": 418,
+      "rated_input_power_w": 418,
       "motor_topology": "radial flux"
     },
     "mechanical": {

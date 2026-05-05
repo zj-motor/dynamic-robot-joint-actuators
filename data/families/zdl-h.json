@@ -3,6 +3,7 @@
   "family_name": "智动力 H",
   "shared": {
     "manufacturer": "智动力",
+    "manufacturer_en": "ZDL",
     "electrical": {
       "voltage_v": 48,
       "motor_topology": "radial flux"
@@ -26,7 +27,7 @@
       "electrical": {
         "peak_current_a": 37,
         "continuous_current_a": 18,
-        "rated_power_w": 680
+        "rated_input_power_w": 680
       },
       "mechanical": {
         "rated_torque_nm": 140,
@@ -68,7 +69,7 @@
       "electrical": {
         "peak_current_a": 53,
         "continuous_current_a": 23.2,
-        "rated_power_w": 1000
+        "rated_input_power_w": 1000
       },
       "mechanical": {
         "rated_torque_nm": 281,
@@ -110,7 +111,7 @@
       "electrical": {
         "peak_current_a": 8,
         "continuous_current_a": 2.5,
-        "rated_power_w": 90
+        "rated_input_power_w": 90
       },
       "mechanical": {
         "rated_torque_nm": 6.5,
@@ -152,7 +153,7 @@
       "electrical": {
         "peak_current_a": 5.5,
         "continuous_current_a": 3.7,
-        "rated_power_w": 120
+        "rated_input_power_w": 120
       },
       "mechanical": {
         "rated_torque_nm": 14,
@@ -194,7 +195,7 @@
       "electrical": {
         "peak_current_a": 14,
         "continuous_current_a": 6.5,
-        "rated_power_w": 240
+        "rated_input_power_w": 240
       },
       "mechanical": {
         "rated_torque_nm": 46,

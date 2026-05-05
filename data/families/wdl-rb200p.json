@@ -3,6 +3,7 @@
   "family_name": "伟达立 RB200P",
   "shared": {
     "manufacturer": "伟达立",
+    "manufacturer_en": "WEDALI",
     "electrical": {
       "motor_topology": "radial flux"
     },

@@ -3,6 +3,7 @@
   "family_name": "中大力德 ZD",
   "shared": {
     "manufacturer": "中大力德",
+    "manufacturer_en": "ZD Leader",
     "electrical": {
       "motor_topology": "radial flux"
     },
@@ -19,8 +20,7 @@
       "electrical": {
         "voltage_v": 60,
         "peak_current_a": 50.75,
-        "continuous_current_a": 17,
-        "torque_constant_nm_per_a": 3
+        "continuous_current_a": 17
       },
       "mechanical": {
         "rated_torque_nm": 32,
@@ -59,8 +59,7 @@
       "electrical": {
         "voltage_v": 60,
         "peak_current_a": 50.75,
-        "continuous_current_a": 17,
-        "torque_constant_nm_per_a": 3
+        "continuous_current_a": 17
       },
       "mechanical": {
         "rated_torque_nm": 57,
@@ -99,8 +98,7 @@
       "electrical": {
         "voltage_v": 60,
         "peak_current_a": 60,
-        "continuous_current_a": 25,
-        "torque_constant_nm_per_a": 6.4
+        "continuous_current_a": 25
       },
       "mechanical": {
         "rated_torque_nm": 160,
@@ -139,8 +137,7 @@
       "electrical": {
         "voltage_v": 24,
         "peak_current_a": 8.55,
-        "continuous_current_a": 2.85,
-        "torque_constant_nm_per_a": 1.49
+        "continuous_current_a": 2.85
       },
       "mechanical": {
         "rated_torque_nm": 4,
@@ -179,8 +176,7 @@
       "electrical": {
         "voltage_v": 24,
         "peak_current_a": 8.55,
-        "continuous_current_a": 2.85,
-        "torque_constant_nm_per_a": 4.29
+        "continuous_current_a": 2.85
       },
       "mechanical": {
         "rated_torque_nm": 12,
@@ -219,8 +215,7 @@
       "electrical": {
         "voltage_v": 60,
         "peak_current_a": 7.78,
-        "continuous_current_a": 3.7,
-        "torque_constant_nm_per_a": 0.13
+        "continuous_current_a": 3.7
       },
       "mechanical": {
         "rated_torque_nm": 25,
@@ -259,8 +254,7 @@
       "electrical": {
         "voltage_v": 48,
         "peak_current_a": 22.5,
-        "continuous_current_a": 7.5,
-        "torque_constant_nm_per_a": 1
+        "continuous_current_a": 7.5
       },
       "mechanical": {
         "rated_torque_nm": 7.5,
@@ -299,8 +293,7 @@
       "electrical": {
         "voltage_v": 48,
         "peak_current_a": 22.5,
-        "continuous_current_a": 7.5,
-        "torque_constant_nm_per_a": 3
+        "continuous_current_a": 7.5
       },
       "mechanical": {
         "rated_torque_nm": 23,
@@ -339,8 +332,7 @@
       "electrical": {
         "voltage_v": 60,
         "peak_current_a": 63,
-        "continuous_current_a": 21,
-        "torque_constant_nm_per_a": 0.4
+        "continuous_current_a": 21
       },
       "mechanical": {
         "rated_torque_nm": 8.5,
@@ -379,8 +371,7 @@
       "electrical": {
         "voltage_v": 60,
         "peak_current_a": 63,
-        "continuous_current_a": 21,
-        "torque_constant_nm_per_a": 1.45
+        "continuous_current_a": 21
       },
       "mechanical": {
         "rated_torque_nm": 30.5,
@@ -419,8 +410,7 @@
       "electrical": {
         "voltage_v": 60,
         "peak_current_a": 33.05,
-        "continuous_current_a": 17.5,
-        "torque_constant_nm_per_a": 0.06
+        "continuous_current_a": 17.5
       },
       "mechanical": {
         "rated_torque_nm": 104,
@@ -459,8 +449,7 @@
       "electrical": {
         "voltage_v": 60,
         "peak_current_a": 62,
-        "continuous_current_a": 19,
-        "torque_constant_nm_per_a": 1.05
+        "continuous_current_a": 19
       },
       "mechanical": {
         "rated_torque_nm": 20,
@@ -499,8 +488,7 @@
       "electrical": {
         "voltage_v": 60,
         "peak_current_a": 62,
-        "continuous_current_a": 19,
-        "torque_constant_nm_per_a": 1.89
+        "continuous_current_a": 19
       },
       "mechanical": {
         "rated_torque_nm": 35,

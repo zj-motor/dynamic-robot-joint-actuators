@@ -3,6 +3,7 @@
   "family_name": "脉塔 L",
   "shared": {
     "manufacturer": "脉塔",
+    "manufacturer_en": "Myactuator",
     "electrical": {
       "voltage_v": 24,
       "motor_topology": "radial flux"
@@ -24,8 +25,7 @@
       "electrical": {
         "peak_current_a": 5.8,
         "continuous_current_a": 1.44,
-        "rated_power_w": 100,
-        "torque_constant_nm_per_a": 0.05
+        "rated_input_power_w": 100
       },
       "mechanical": {
         "rated_torque_nm": 0.07,
@@ -64,8 +64,7 @@
       "electrical": {
         "peak_current_a": 3.2,
         "continuous_current_a": 1.43,
-        "rated_power_w": 100,
-        "torque_constant_nm_per_a": 0.1
+        "rated_input_power_w": 100
       },
       "mechanical": {
         "rated_torque_nm": 0.15,
@@ -104,8 +103,7 @@
       "electrical": {
         "peak_current_a": 4.3,
         "continuous_current_a": 1.88,
-        "rated_power_w": 100,
-        "torque_constant_nm_per_a": 0.12
+        "rated_input_power_w": 100
       },
       "mechanical": {
         "rated_torque_nm": 0.22,
@@ -144,8 +142,7 @@
       "electrical": {
         "peak_current_a": 5,
         "continuous_current_a": 1.67,
-        "rated_power_w": 100,
-        "torque_constant_nm_per_a": 0.08
+        "rated_input_power_w": 100
       },
       "mechanical": {
         "rated_torque_nm": 0.13,
@@ -184,8 +181,7 @@
       "electrical": {
         "peak_current_a": 4.8,
         "continuous_current_a": 1.65,
-        "rated_power_w": 100,
-        "torque_constant_nm_per_a": 0.16
+        "rated_input_power_w": 100
       },
       "mechanical": {
         "rated_torque_nm": 0.26,
@@ -224,8 +220,7 @@
       "electrical": {
         "peak_current_a": 3.62,
         "continuous_current_a": 1.57,
-        "rated_power_w": 100,
-        "torque_constant_nm_per_a": 0.23
+        "rated_input_power_w": 100
       },
       "mechanical": {
         "rated_torque_nm": 0.36,
@@ -264,8 +259,7 @@
       "electrical": {
         "peak_current_a": 15,
         "continuous_current_a": 3.62,
-        "rated_power_w": 200,
-        "torque_constant_nm_per_a": 0.28
+        "rated_input_power_w": 200
       },
       "mechanical": {
         "rated_torque_nm": 1,
@@ -304,8 +298,7 @@
       "electrical": {
         "peak_current_a": 8.5,
         "continuous_current_a": 3,
-        "rated_power_w": 200,
-        "torque_constant_nm_per_a": 0.53
+        "rated_input_power_w": 200
       },
       "mechanical": {
         "rated_torque_nm": 1.6,
@@ -344,8 +337,7 @@
       "electrical": {
         "peak_current_a": 11,
         "continuous_current_a": 3.34,
-        "rated_power_w": 200,
-        "torque_constant_nm_per_a": 0.45
+        "rated_input_power_w": 200
       },
       "mechanical": {
         "rated_torque_nm": 1.67,
@@ -384,8 +376,7 @@
       "electrical": {
         "peak_current_a": 7.6,
         "continuous_current_a": 3.46,
-        "rated_power_w": 200,
-        "torque_constant_nm_per_a": 0.76
+        "rated_input_power_w": 200
       },
       "mechanical": {
         "rated_torque_nm": 2.79,

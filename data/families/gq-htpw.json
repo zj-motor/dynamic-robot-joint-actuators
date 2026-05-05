@@ -3,12 +3,12 @@
   "family_name": "高擎 HTPW",
   "shared": {
     "manufacturer": "高擎",
+    "manufacturer_en": "HighTorque",
     "electrical": {
       "voltage_v": 24,
       "peak_current_a": 20,
       "continuous_current_a": 5.6,
-      "rated_power_w": 92,
-      "torque_constant_nm_per_a": 0.602,
+      "rated_input_power_w": 92,
       "motor_topology": "radial flux"
     },
     "mechanical": {

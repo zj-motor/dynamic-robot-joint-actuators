@@ -3,6 +3,7 @@
   "family_name": "雷赛 HJ2T",
   "shared": {
     "manufacturer": "雷赛",
+    "manufacturer_en": "LeadShine",
     "electrical": {
       "voltage_v": 48,
       "motor_topology": "radial flux"
@@ -23,8 +24,7 @@
       "electrical": {
         "peak_current_a": 10.4,
         "continuous_current_a": 9,
-        "rated_power_w": 750,
-        "torque_constant_nm_per_a": 0.143
+        "rated_input_power_w": 750
       },
       "mechanical": {
         "rated_torque_nm": 84,
@@ -71,8 +71,7 @@
       "electrical": {
         "peak_current_a": 10.4,
         "continuous_current_a": 9,
-        "rated_power_w": 750,
-        "torque_constant_nm_per_a": 0.143
+        "rated_input_power_w": 750
       },
       "mechanical": {
         "rated_torque_nm": 84,
@@ -119,8 +118,7 @@
       "electrical": {
         "peak_current_a": 10.4,
         "continuous_current_a": 9,
-        "rated_power_w": 750,
-        "torque_constant_nm_per_a": 0.143
+        "rated_input_power_w": 750
       },
       "mechanical": {
         "rated_torque_nm": 84,
@@ -167,8 +165,7 @@
       "electrical": {
         "peak_current_a": 10.4,
         "continuous_current_a": 9,
-        "rated_power_w": 750,
-        "torque_constant_nm_per_a": 0.143
+        "rated_input_power_w": 750
       },
       "mechanical": {
         "rated_torque_nm": 48,
@@ -215,8 +212,7 @@
       "electrical": {
         "peak_current_a": 10.4,
         "continuous_current_a": 9,
-        "rated_power_w": 750,
-        "torque_constant_nm_per_a": 0.143
+        "rated_input_power_w": 750
       },
       "mechanical": {
         "rated_torque_nm": 78,
@@ -263,8 +259,7 @@
       "electrical": {
         "peak_current_a": 16.9,
         "continuous_current_a": 15.8,
-        "rated_power_w": 1000,
-        "torque_constant_nm_per_a": 0.175
+        "rated_input_power_w": 1000
       },
       "mechanical": {
         "rated_torque_nm": 169,
@@ -311,8 +306,7 @@
       "electrical": {
         "peak_current_a": 16.9,
         "continuous_current_a": 15.8,
-        "rated_power_w": 1000,
-        "torque_constant_nm_per_a": 0.175
+        "rated_input_power_w": 1000
       },
       "mechanical": {
         "rated_torque_nm": 169,
@@ -359,8 +353,7 @@
       "electrical": {
         "peak_current_a": 16.9,
         "continuous_current_a": 15.8,
-        "rated_power_w": 1000,
-        "torque_constant_nm_per_a": 0.175
+        "rated_input_power_w": 1000
       },
       "mechanical": {
         "rated_torque_nm": 169,
@@ -407,8 +400,7 @@
       "electrical": {
         "peak_current_a": 16.9,
         "continuous_current_a": 15.8,
-        "rated_power_w": 1000,
-        "torque_constant_nm_per_a": 0.175
+        "rated_input_power_w": 1000
       },
       "mechanical": {
         "rated_torque_nm": 94,
@@ -455,8 +447,7 @@
       "electrical": {
         "peak_current_a": 16.9,
         "continuous_current_a": 15.8,
-        "rated_power_w": 1000,
-        "torque_constant_nm_per_a": 0.175
+        "rated_input_power_w": 1000
       },
       "mechanical": {
         "rated_torque_nm": 146,
@@ -503,8 +494,7 @@
       "electrical": {
         "peak_current_a": 30.2,
         "continuous_current_a": 14.1,
-        "rated_power_w": 1500,
-        "torque_constant_nm_per_a": 0.293
+        "rated_input_power_w": 1500
       },
       "mechanical": {
         "rated_torque_nm": 363,
@@ -551,8 +541,7 @@
       "electrical": {
         "peak_current_a": 30.2,
         "continuous_current_a": 14.1,
-        "rated_power_w": 1500,
-        "torque_constant_nm_per_a": 0.293
+        "rated_input_power_w": 1500
       },
       "mechanical": {
         "rated_torque_nm": 363,
@@ -599,8 +588,7 @@
       "electrical": {
         "peak_current_a": 30.2,
         "continuous_current_a": 14.1,
-        "rated_power_w": 1500,
-        "torque_constant_nm_per_a": 0.293
+        "rated_input_power_w": 1500
       },
       "mechanical": {
         "rated_torque_nm": 169,
@@ -647,8 +635,7 @@
       "electrical": {
         "peak_current_a": 2,
         "continuous_current_a": 1,
-        "rated_power_w": 36,
-        "torque_constant_nm_per_a": 0.024
+        "rated_input_power_w": 36
       },
       "mechanical": {
         "rated_torque_nm": 2.8,
@@ -695,8 +682,7 @@
       "electrical": {
         "peak_current_a": 2,
         "continuous_current_a": 1,
-        "rated_power_w": 36,
-        "torque_constant_nm_per_a": 0.024
+        "rated_input_power_w": 36
       },
       "mechanical": {
         "rated_torque_nm": 1.6,
@@ -743,8 +729,7 @@
       "electrical": {
         "peak_current_a": 3,
         "continuous_current_a": 2,
-        "rated_power_w": 90,
-        "torque_constant_nm_per_a": 0.05
+        "rated_input_power_w": 90
       },
       "mechanical": {
         "rated_torque_nm": 6.5,
@@ -791,8 +776,7 @@
       "electrical": {
         "peak_current_a": 3,
         "continuous_current_a": 2,
-        "rated_power_w": 90,
-        "torque_constant_nm_per_a": 0.05
+        "rated_input_power_w": 90
       },
       "mechanical": {
         "rated_torque_nm": 4,
@@ -839,8 +823,7 @@
       "electrical": {
         "peak_current_a": 5,
         "continuous_current_a": 3.6,
-        "rated_power_w": 150,
-        "torque_constant_nm_per_a": 0.089
+        "rated_input_power_w": 150
       },
       "mechanical": {
         "rated_torque_nm": 9.6,
@@ -887,8 +870,7 @@
       "electrical": {
         "peak_current_a": 5,
         "continuous_current_a": 3.6,
-        "rated_power_w": 150,
-        "torque_constant_nm_per_a": 0.089
+        "rated_input_power_w": 150
       },
       "mechanical": {
         "rated_torque_nm": 6.6,
@@ -935,8 +917,7 @@
       "electrical": {
         "peak_current_a": 5,
         "continuous_current_a": 3.6,
-        "rated_power_w": 150,
-        "torque_constant_nm_per_a": 0.089
+        "rated_input_power_w": 150
       },
       "mechanical": {
         "rated_torque_nm": 9.6,
@@ -983,8 +964,7 @@
       "electrical": {
         "peak_current_a": 6.7,
         "continuous_current_a": 5,
-        "rated_power_w": 300,
-        "torque_constant_nm_per_a": 0.096
+        "rated_input_power_w": 300
       },
       "mechanical": {
         "rated_torque_nm": 30,
@@ -1031,8 +1011,7 @@
       "electrical": {
         "peak_current_a": 6.7,
         "continuous_current_a": 5,
-        "rated_power_w": 300,
-        "torque_constant_nm_per_a": 0.096
+        "rated_input_power_w": 300
       },
       "mechanical": {
         "rated_torque_nm": 30,
@@ -1079,8 +1058,7 @@
       "electrical": {
         "peak_current_a": 6.7,
         "continuous_current_a": 5,
-        "rated_power_w": 300,
-        "torque_constant_nm_per_a": 0.096
+        "rated_input_power_w": 300
       },
       "mechanical": {
         "rated_torque_nm": 19.8,
@@ -1127,8 +1105,7 @@
       "electrical": {
         "peak_current_a": 6.7,
         "continuous_current_a": 5,
-        "rated_power_w": 300,
-        "torque_constant_nm_per_a": 0.096
+        "rated_input_power_w": 300
       },
       "mechanical": {
         "rated_torque_nm": 27.5,
@@ -1175,8 +1152,7 @@
       "electrical": {
         "peak_current_a": 8.4,
         "continuous_current_a": 6.1,
-        "rated_power_w": 500,
-        "torque_constant_nm_per_a": 0.118
+        "rated_input_power_w": 500
       },
       "mechanical": {
         "rated_torque_nm": 50,
@@ -1223,8 +1199,7 @@
       "electrical": {
         "peak_current_a": 8.4,
         "continuous_current_a": 6.1,
-        "rated_power_w": 500,
-        "torque_constant_nm_per_a": 0.118
+        "rated_input_power_w": 500
       },
       "mechanical": {
         "rated_torque_nm": 50,
@@ -1271,8 +1246,7 @@
       "electrical": {
         "peak_current_a": 8.4,
         "continuous_current_a": 6.1,
-        "rated_power_w": 500,
-        "torque_constant_nm_per_a": 0.118
+        "rated_input_power_w": 500
       },
       "mechanical": {
         "rated_torque_nm": 32,
@@ -1319,8 +1293,7 @@
       "electrical": {
         "peak_current_a": 8.4,
         "continuous_current_a": 6.1,
-        "rated_power_w": 500,
-        "torque_constant_nm_per_a": 0.118
+        "rated_input_power_w": 500
       },
       "mechanical": {
         "rated_torque_nm": 42,

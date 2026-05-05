@@ -3,6 +3,7 @@
   "family_name": "禾川 HuGRS",
   "shared": {
     "manufacturer": "禾川",
+    "manufacturer_en": "HCFA",
     "electrical": {
       "voltage_v": 48,
       "motor_topology": "radial flux"
@@ -21,7 +22,7 @@
       "model": "Hu-GRS090N",
       "base_id": "HC-HuGRS-105-13-48",
       "electrical": {
-        "rated_power_w": 565
+        "rated_input_power_w": 565
       },
       "mechanical": {
         "rated_torque_nm": 75,
@@ -61,7 +62,7 @@
       "model": "Hu-GRS150N",
       "base_id": "HC-HuGRS-124-12-48",
       "electrical": {
-        "rated_power_w": 880
+        "rated_input_power_w": 880
       },
       "mechanical": {
         "rated_torque_nm": 85,
@@ -101,7 +102,7 @@
       "model": "Hu-GRS036N",
       "base_id": "HC-HuGRS-56-36-48",
       "electrical": {
-        "rated_power_w": 138
+        "rated_input_power_w": 138
       },
       "mechanical": {
         "rated_torque_nm": 9,
@@ -141,7 +142,7 @@
       "model": "Hu-GRS060N",
       "base_id": "HC-HuGRS-88-19-48",
       "electrical": {
-        "rated_power_w": 366
+        "rated_input_power_w": 366
       },
       "mechanical": {
         "rated_torque_nm": 50,
