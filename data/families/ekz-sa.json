@@ -30,7 +30,7 @@
       },
       "mechanical": {
         "rated_torque_nm": 10,
-        "peak_torque_nm": 70,
+        "peak_torque_nm": 36,
         "instant_peak_torque_nm": 70,
         "start_stop_peak_torque_nm": 36,
         "avg_load_max_torque_nm": 14,
@@ -39,7 +39,7 @@
         "weight_kg": 1.24,
         "hollow_shaft_diameter_mm": 8,
         "weight_kg_max": 1.77,
-        "torque_density_nm_per_kg": 56.45
+        "torque_density_nm_per_kg": 29.03
       },
       "transmission": {
         "ratio": 101
@@ -74,7 +74,7 @@
       },
       "mechanical": {
         "rated_torque_nm": 31,
-        "peak_torque_nm": 143,
+        "peak_torque_nm": 70,
         "instant_peak_torque_nm": 143,
         "start_stop_peak_torque_nm": 70,
         "avg_load_max_torque_nm": 51,
@@ -83,7 +83,7 @@
         "weight_kg": 1.6,
         "hollow_shaft_diameter_mm": 11,
         "weight_kg_max": 2.35,
-        "torque_density_nm_per_kg": 89.38
+        "torque_density_nm_per_kg": 43.75
       },
       "transmission": {
         "ratio": 101
@@ -118,7 +118,7 @@
       },
       "mechanical": {
         "rated_torque_nm": 52,
-        "peak_torque_nm": 191,
+        "peak_torque_nm": 107,
         "instant_peak_torque_nm": 191,
         "start_stop_peak_torque_nm": 107,
         "avg_load_max_torque_nm": 64,
@@ -127,7 +127,7 @@
         "weight_kg": 2.06,
         "hollow_shaft_diameter_mm": 8,
         "weight_kg_max": 2.97,
-        "torque_density_nm_per_kg": 92.72
+        "torque_density_nm_per_kg": 51.94
       },
       "transmission": {
         "ratio": 101
@@ -162,7 +162,7 @@
       },
       "mechanical": {
         "rated_torque_nm": 87,
-        "peak_torque_nm": 395,
+        "peak_torque_nm": 217,
         "instant_peak_torque_nm": 395,
         "start_stop_peak_torque_nm": 217,
         "avg_load_max_torque_nm": 140,
@@ -171,7 +171,7 @@
         "weight_kg": 3.37,
         "hollow_shaft_diameter_mm": 12,
         "weight_kg_max": 4.48,
-        "torque_density_nm_per_kg": 117.21
+        "torque_density_nm_per_kg": 64.39
       },
       "transmission": {
         "ratio": 121
@@ -206,7 +206,7 @@
       },
       "mechanical": {
         "rated_torque_nm": 178,
-        "peak_torque_nm": 892,
+        "peak_torque_nm": 459,
         "instant_peak_torque_nm": 892,
         "start_stop_peak_torque_nm": 459,
         "avg_load_max_torque_nm": 281,
@@ -215,7 +215,7 @@
         "weight_kg": 6.16,
         "hollow_shaft_diameter_mm": 16,
         "weight_kg_max": 8.67,
-        "torque_density_nm_per_kg": 144.81
+        "torque_density_nm_per_kg": 74.51
       },
       "transmission": {
         "ratio": 121
@@ -250,7 +250,7 @@
       },
       "mechanical": {
         "rated_torque_nm": 382,
-        "peak_torque_nm": 1530,
+        "peak_torque_nm": 841,
         "instant_peak_torque_nm": 1530,
         "start_stop_peak_torque_nm": 841,
         "avg_load_max_torque_nm": 586,
@@ -259,7 +259,7 @@
         "weight_kg": 9.72,
         "hollow_shaft_diameter_mm": 16,
         "weight_kg_max": 13.55,
-        "torque_density_nm_per_kg": 157.41
+        "torque_density_nm_per_kg": 86.52
       },
       "transmission": {
         "ratio": 161

@@ -32,7 +32,7 @@
       },
       "mechanical": {
         "rated_torque_nm": 6.2,
-        "peak_torque_nm": 11.5,
+        "peak_torque_nm": 7.7,
         "instant_peak_torque_nm": 11.5,
         "start_stop_peak_torque_nm": 7.7,
         "avg_load_max_torque_nm": 6.2,
@@ -43,7 +43,7 @@
         "hollow_shaft_diameter_mm": 5,
         "motor_encoder_bits": 14.617,
         "bending_moment_nm": 16,
-        "torque_density_nm_per_kg": 37.1
+        "torque_density_nm_per_kg": 24.84
       },
       "transmission": {
         "ratio": 101
@@ -78,7 +78,7 @@
       },
       "mechanical": {
         "rated_torque_nm": 25,
-        "peak_torque_nm": 80,
+        "peak_torque_nm": 56,
         "instant_peak_torque_nm": 80,
         "start_stop_peak_torque_nm": 56,
         "avg_load_max_torque_nm": 25,
@@ -89,7 +89,7 @@
         "hollow_shaft_diameter_mm": 7,
         "motor_encoder_bits": 14.966,
         "bending_moment_nm": 30,
-        "torque_density_nm_per_kg": 106.67
+        "torque_density_nm_per_kg": 74.67
       },
       "transmission": {
         "ratio": 100
@@ -124,7 +124,7 @@
       },
       "mechanical": {
         "rated_torque_nm": 48,
-        "peak_torque_nm": 80,
+        "peak_torque_nm": 56,
         "instant_peak_torque_nm": 80,
         "start_stop_peak_torque_nm": 56,
         "avg_load_max_torque_nm": 48,
@@ -135,7 +135,7 @@
         "hollow_shaft_diameter_mm": 7,
         "motor_encoder_bits": 14.966,
         "bending_moment_nm": 30,
-        "torque_density_nm_per_kg": 98.77
+        "torque_density_nm_per_kg": 69.14
       },
       "transmission": {
         "ratio": 120
@@ -170,7 +170,7 @@
       },
       "mechanical": {
         "rated_torque_nm": 48,
-        "peak_torque_nm": 80,
+        "peak_torque_nm": 56,
         "instant_peak_torque_nm": 80,
         "start_stop_peak_torque_nm": 56,
         "avg_load_max_torque_nm": 48,
@@ -181,7 +181,7 @@
         "hollow_shaft_diameter_mm": 9.8,
         "motor_encoder_bits": 14.966,
         "bending_moment_nm": 30,
-        "torque_density_nm_per_kg": 98.77
+        "torque_density_nm_per_kg": 69.14
       },
       "transmission": {
         "ratio": 120

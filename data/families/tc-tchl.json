@@ -30,7 +30,7 @@
       },
       "mechanical": {
         "rated_torque_nm": 169,
-        "peak_torque_nm": 799,
+        "peak_torque_nm": 411,
         "instant_peak_torque_nm": 799,
         "start_stop_peak_torque_nm": 411,
         "avg_load_max_torque_nm": 267,
@@ -41,7 +41,7 @@
         "hollow_shaft_diameter_mm": 22,
         "bending_moment_nm": 210,
         "weight_kg_max": 3.6,
-        "torque_density_nm_per_kg": 242.12
+        "torque_density_nm_per_kg": 124.55
       },
       "transmission": {
         "ratio": 101
@@ -74,7 +74,7 @@
       "base_id": "TC-TCHL-131-121-48",
       "mechanical": {
         "rated_torque_nm": 169,
-        "peak_torque_nm": 847,
+        "peak_torque_nm": 436,
         "instant_peak_torque_nm": 847,
         "start_stop_peak_torque_nm": 436,
         "avg_load_max_torque_nm": 267,
@@ -85,7 +85,7 @@
         "hollow_shaft_diameter_mm": 22,
         "bending_moment_nm": 210,
         "weight_kg_max": 3.6,
-        "torque_density_nm_per_kg": 256.67
+        "torque_density_nm_per_kg": 132.12
       },
       "transmission": {
         "ratio": 121
@@ -118,7 +118,7 @@
       "base_id": "TC-TCHL-131-81-48",
       "mechanical": {
         "rated_torque_nm": 145,
-        "peak_torque_nm": 701,
+        "peak_torque_nm": 375,
         "instant_peak_torque_nm": 701,
         "start_stop_peak_torque_nm": 375,
         "avg_load_max_torque_nm": 206,
@@ -129,7 +129,7 @@
         "hollow_shaft_diameter_mm": 22,
         "bending_moment_nm": 210,
         "weight_kg_max": 3.6,
-        "torque_density_nm_per_kg": 212.42
+        "torque_density_nm_per_kg": 113.64
       },
       "transmission": {
         "ratio": 81
@@ -165,7 +165,7 @@
       },
       "mechanical": {
         "rated_torque_nm": 5.3,
-        "peak_torque_nm": 25,
+        "peak_torque_nm": 19,
         "instant_peak_torque_nm": 25,
         "start_stop_peak_torque_nm": 19,
         "avg_load_max_torque_nm": 7.7,
@@ -175,7 +175,7 @@
         "outer_diameter_mm": 52,
         "hollow_shaft_diameter_mm": 8,
         "bending_moment_nm": 25,
-        "torque_density_nm_per_kg": 67.57
+        "torque_density_nm_per_kg": 51.35
       },
       "transmission": {
         "ratio": 100
@@ -210,7 +210,7 @@
       },
       "mechanical": {
         "rated_torque_nm": 6.5,
-        "peak_torque_nm": 36,
+        "peak_torque_nm": 24,
         "instant_peak_torque_nm": 36,
         "start_stop_peak_torque_nm": 24,
         "avg_load_max_torque_nm": 9.5,
@@ -221,7 +221,7 @@
         "hollow_shaft_diameter_mm": 10,
         "bending_moment_nm": 30,
         "weight_kg_max": 0.55,
-        "torque_density_nm_per_kg": 80.0
+        "torque_density_nm_per_kg": 53.33
       },
       "transmission": {
         "ratio": 101
@@ -254,7 +254,7 @@
       "base_id": "TC-TCHL-65-51-48",
       "mechanical": {
         "rated_torque_nm": 4.5,
-        "peak_torque_nm": 19,
+        "peak_torque_nm": 15,
         "instant_peak_torque_nm": 19,
         "start_stop_peak_torque_nm": 15,
         "avg_load_max_torque_nm": 6,
@@ -265,7 +265,7 @@
         "hollow_shaft_diameter_mm": 10,
         "bending_moment_nm": 30,
         "weight_kg_max": 0.55,
-        "torque_density_nm_per_kg": 42.22
+        "torque_density_nm_per_kg": 33.33
       },
       "transmission": {
         "ratio": 51
@@ -298,7 +298,7 @@
       "base_id": "TC-TCHL-65-81-48",
       "mechanical": {
         "rated_torque_nm": 6.5,
-        "peak_torque_nm": 30,
+        "peak_torque_nm": 19,
         "instant_peak_torque_nm": 30,
         "start_stop_peak_torque_nm": 19,
         "avg_load_max_torque_nm": 8,
@@ -309,7 +309,7 @@
         "hollow_shaft_diameter_mm": 10,
         "bending_moment_nm": 30,
         "weight_kg_max": 0.55,
-        "torque_density_nm_per_kg": 66.67
+        "torque_density_nm_per_kg": 42.22
       },
       "transmission": {
         "ratio": 81
@@ -345,7 +345,7 @@
       },
       "mechanical": {
         "rated_torque_nm": 29,
-        "peak_torque_nm": 136,
+        "peak_torque_nm": 67,
         "instant_peak_torque_nm": 136,
         "start_stop_peak_torque_nm": 67,
         "avg_load_max_torque_nm": 48,
@@ -356,7 +356,7 @@
         "hollow_shaft_diameter_mm": 12,
         "bending_moment_nm": 93,
         "weight_kg_max": 1.05,
-        "torque_density_nm_per_kg": 146.24
+        "torque_density_nm_per_kg": 72.04
       },
       "transmission": {
         "ratio": 101
@@ -389,7 +389,7 @@
       "base_id": "TC-TCHL-77-51-48",
       "mechanical": {
         "rated_torque_nm": 20,
-        "peak_torque_nm": 86,
+        "peak_torque_nm": 42,
         "instant_peak_torque_nm": 86,
         "start_stop_peak_torque_nm": 42,
         "avg_load_max_torque_nm": 32,
@@ -400,7 +400,7 @@
         "hollow_shaft_diameter_mm": 12,
         "bending_moment_nm": 93,
         "weight_kg_max": 1.05,
-        "torque_density_nm_per_kg": 92.47
+        "torque_density_nm_per_kg": 45.16
       },
       "transmission": {
         "ratio": 51
@@ -433,7 +433,7 @@
       "base_id": "TC-TCHL-77-81-48",
       "mechanical": {
         "rated_torque_nm": 28,
-        "peak_torque_nm": 107,
+        "peak_torque_nm": 53,
         "instant_peak_torque_nm": 107,
         "start_stop_peak_torque_nm": 53,
         "avg_load_max_torque_nm": 33,
@@ -444,7 +444,7 @@
         "hollow_shaft_diameter_mm": 12,
         "bending_moment_nm": 93,
         "weight_kg_max": 1.05,
-        "torque_density_nm_per_kg": 115.05
+        "torque_density_nm_per_kg": 56.99
       },
       "transmission": {
         "ratio": 81
@@ -480,7 +480,7 @@
       },
       "mechanical": {
         "rated_torque_nm": 49,
-        "peak_torque_nm": 181,
+        "peak_torque_nm": 102,
         "instant_peak_torque_nm": 181,
         "start_stop_peak_torque_nm": 102,
         "avg_load_max_torque_nm": 61,
@@ -491,7 +491,7 @@
         "hollow_shaft_diameter_mm": 12,
         "bending_moment_nm": 120,
         "weight_kg_max": 1.45,
-        "torque_density_nm_per_kg": 141.41
+        "torque_density_nm_per_kg": 79.69
       },
       "transmission": {
         "ratio": 101
@@ -524,7 +524,7 @@
       "base_id": "TC-TCHL-87-51-48",
       "mechanical": {
         "rated_torque_nm": 31,
-        "peak_torque_nm": 105,
+        "peak_torque_nm": 69,
         "instant_peak_torque_nm": 105,
         "start_stop_peak_torque_nm": 69,
         "avg_load_max_torque_nm": 35,
@@ -535,7 +535,7 @@
         "hollow_shaft_diameter_mm": 12,
         "bending_moment_nm": 120,
         "weight_kg_max": 1.45,
-        "torque_density_nm_per_kg": 82.03
+        "torque_density_nm_per_kg": 53.91
       },
       "transmission": {
         "ratio": 51
@@ -568,7 +568,7 @@
       "base_id": "TC-TCHL-87-81-48",
       "mechanical": {
         "rated_torque_nm": 42,
-        "peak_torque_nm": 157,
+        "peak_torque_nm": 91,
         "instant_peak_torque_nm": 157,
         "start_stop_peak_torque_nm": 91,
         "avg_load_max_torque_nm": 56,
@@ -579,7 +579,7 @@
         "hollow_shaft_diameter_mm": 12,
         "bending_moment_nm": 120,
         "weight_kg_max": 1.45,
-        "torque_density_nm_per_kg": 122.66
+        "torque_density_nm_per_kg": 71.09
       },
       "transmission": {
         "ratio": 81
@@ -615,7 +615,7 @@
       },
       "mechanical": {
         "rated_torque_nm": 83,
-        "peak_torque_nm": 351,
+        "peak_torque_nm": 194,
         "instant_peak_torque_nm": 351,
         "start_stop_peak_torque_nm": 194,
         "avg_load_max_torque_nm": 133,
@@ -626,7 +626,7 @@
         "hollow_shaft_diameter_mm": 15,
         "bending_moment_nm": 150,
         "weight_kg_max": 2.1,
-        "torque_density_nm_per_kg": 189.73
+        "torque_density_nm_per_kg": 104.86
       },
       "transmission": {
         "ratio": 101
@@ -659,7 +659,7 @@
       "base_id": "TC-TCHL-99-121-48",
       "mechanical": {
         "rated_torque_nm": 83,
-        "peak_torque_nm": 375,
+        "peak_torque_nm": 206,
         "instant_peak_torque_nm": 375,
         "start_stop_peak_torque_nm": 206,
         "avg_load_max_torque_nm": 133,
@@ -670,7 +670,7 @@
         "hollow_shaft_diameter_mm": 15,
         "bending_moment_nm": 150,
         "weight_kg_max": 2.1,
-        "torque_density_nm_per_kg": 202.7
+        "torque_density_nm_per_kg": 111.35
       },
       "transmission": {
         "ratio": 121
@@ -703,7 +703,7 @@
       "base_id": "TC-TCHL-99-81-48",
       "mechanical": {
         "rated_torque_nm": 78,
-        "peak_torque_nm": 283,
+        "peak_torque_nm": 169,
         "instant_peak_torque_nm": 283,
         "start_stop_peak_torque_nm": 169,
         "avg_load_max_torque_nm": 107,
@@ -714,7 +714,7 @@
         "hollow_shaft_diameter_mm": 15,
         "bending_moment_nm": 150,
         "weight_kg_max": 2.1,
-        "torque_density_nm_per_kg": 152.97
+        "torque_density_nm_per_kg": 91.35
       },
       "transmission": {
         "ratio": 81

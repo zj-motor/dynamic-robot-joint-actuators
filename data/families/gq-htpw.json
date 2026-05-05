@@ -13,7 +13,6 @@
     },
     "mechanical": {
       "rated_torque_nm": 4,
-      "peak_torque_nm": 12,
       "instant_peak_torque_nm": 12,
       "rated_speed_rad_s": 26.18,
       "max_speed_rad_s": 28.274,
@@ -22,8 +21,7 @@
       "absolute_accuracy_deg": 0.25,
       "repeatability_deg": 0.2,
       "output_encoder_bits": 14,
-      "motor_encoder_bits": 14,
-      "torque_density_nm_per_kg": 30.77
+      "motor_encoder_bits": 14
     },
     "transmission": {
       "type": "planetary",

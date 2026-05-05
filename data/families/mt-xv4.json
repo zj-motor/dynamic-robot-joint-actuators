@@ -118,7 +118,7 @@
       },
       "mechanical": {
         "rated_torque_nm": 2.5,
-        "peak_torque_nm": 7.5,
+        "peak_torque_nm": 7,
         "instant_peak_torque_nm": 7.5,
         "start_stop_peak_torque_nm": 7,
         "rated_speed_rad_s": 14.954,
@@ -129,7 +129,7 @@
         "motor_encoder_bits": 17,
         "radial_load_kn": 0.25,
         "axial_load_kn": 0.25,
-        "torque_density_nm_per_kg": 25.0
+        "torque_density_nm_per_kg": 23.33
       },
       "transmission": {
         "ratio": 28,
@@ -209,7 +209,7 @@
       },
       "mechanical": {
         "rated_torque_nm": 10.5,
-        "peak_torque_nm": 34.5,
+        "peak_torque_nm": 34,
         "instant_peak_torque_nm": 34.5,
         "start_stop_peak_torque_nm": 34,
         "rated_speed_rad_s": 8.692,
@@ -220,7 +220,7 @@
         "motor_encoder_bits": 17,
         "radial_load_kn": 1.5,
         "axial_load_kn": 1.3,
-        "torque_density_nm_per_kg": 95.83
+        "torque_density_nm_per_kg": 94.44
       },
       "transmission": {
         "ratio": 36,
@@ -255,7 +255,7 @@
       },
       "mechanical": {
         "rated_torque_nm": 4.5,
-        "peak_torque_nm": 13.5,
+        "peak_torque_nm": 8,
         "instant_peak_torque_nm": 13.5,
         "start_stop_peak_torque_nm": 8,
         "rated_speed_rad_s": 32.463,
@@ -266,7 +266,7 @@
         "motor_encoder_bits": 17,
         "radial_load_kn": 1.04,
         "axial_load_kn": 0.85,
-        "torque_density_nm_per_kg": 27.55
+        "torque_density_nm_per_kg": 16.33
       },
       "transmission": {
         "ratio": 8,
@@ -392,7 +392,7 @@
       },
       "mechanical": {
         "rated_torque_nm": 43,
-        "peak_torque_nm": 129,
+        "peak_torque_nm": 120,
         "instant_peak_torque_nm": 129,
         "start_stop_peak_torque_nm": 120,
         "rated_speed_rad_s": 13.299,
@@ -403,7 +403,7 @@
         "motor_encoder_bits": 17,
         "radial_load_kn": 4.5,
         "axial_load_kn": 4,
-        "torque_density_nm_per_kg": 92.14
+        "torque_density_nm_per_kg": 85.71
       },
       "transmission": {
         "ratio": 19.612,

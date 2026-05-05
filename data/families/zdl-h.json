@@ -31,7 +31,7 @@
       },
       "mechanical": {
         "rated_torque_nm": 140,
-        "peak_torque_nm": 369,
+        "peak_torque_nm": 204,
         "instant_peak_torque_nm": 369,
         "start_stop_peak_torque_nm": 204,
         "rated_speed_rad_s": 3.56,
@@ -39,7 +39,7 @@
         "weight_kg": 2.9,
         "outer_diameter_mm": 110,
         "hollow_shaft_diameter_mm": 20,
-        "torque_density_nm_per_kg": 127.24
+        "torque_density_nm_per_kg": 70.34
       },
       "transmission": {
         "ratio": 101
@@ -73,7 +73,7 @@
       },
       "mechanical": {
         "rated_torque_nm": 281,
-        "peak_torque_nm": 841,
+        "peak_torque_nm": 433,
         "instant_peak_torque_nm": 841,
         "start_stop_peak_torque_nm": 433,
         "rated_speed_rad_s": 2.094,
@@ -81,7 +81,7 @@
         "weight_kg": 6.7,
         "outer_diameter_mm": 142,
         "hollow_shaft_diameter_mm": 22,
-        "torque_density_nm_per_kg": 125.52
+        "torque_density_nm_per_kg": 64.63
       },
       "transmission": {
         "ratio": 101
@@ -115,7 +115,7 @@
       },
       "mechanical": {
         "rated_torque_nm": 6.5,
-        "peak_torque_nm": 16,
+        "peak_torque_nm": 8.5,
         "instant_peak_torque_nm": 16,
         "start_stop_peak_torque_nm": 8.5,
         "rated_speed_rad_s": 3.56,
@@ -123,7 +123,7 @@
         "weight_kg": 0.4,
         "outer_diameter_mm": 52,
         "hollow_shaft_diameter_mm": 6,
-        "torque_density_nm_per_kg": 40.0
+        "torque_density_nm_per_kg": 21.25
       },
       "transmission": {
         "ratio": 101
@@ -157,7 +157,7 @@
       },
       "mechanical": {
         "rated_torque_nm": 14,
-        "peak_torque_nm": 61,
+        "peak_torque_nm": 30,
         "instant_peak_torque_nm": 61,
         "start_stop_peak_torque_nm": 30,
         "rated_speed_rad_s": 4.503,
@@ -165,7 +165,7 @@
         "weight_kg": 1.1,
         "outer_diameter_mm": 70,
         "hollow_shaft_diameter_mm": 9.8,
-        "torque_density_nm_per_kg": 55.45
+        "torque_density_nm_per_kg": 27.27
       },
       "transmission": {
         "ratio": 81
@@ -199,7 +199,7 @@
       },
       "mechanical": {
         "rated_torque_nm": 46,
-        "peak_torque_nm": 138,
+        "peak_torque_nm": 70,
         "instant_peak_torque_nm": 138,
         "start_stop_peak_torque_nm": 70,
         "rated_speed_rad_s": 3.56,
@@ -207,7 +207,7 @@
         "weight_kg": 1.4,
         "outer_diameter_mm": 80,
         "hollow_shaft_diameter_mm": 12,
-        "torque_density_nm_per_kg": 98.57
+        "torque_density_nm_per_kg": 50.0
       },
       "transmission": {
         "ratio": 101

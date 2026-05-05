@@ -4,6 +4,9 @@
   "shared": {
     "manufacturer": "埃斯顿酷卓",
     "manufacturer_en": "Estun Codroid",
+    "electrical": {
+      "motor_topology": "radial flux"
+    },
     "transmission": {
       "type": "planetary",
       "backdrivable": true
@@ -16,7 +19,7 @@
       "base_id": "EKZ-PA-116-10-48",
       "mechanical": {
         "rated_torque_nm": 40,
-        "peak_torque_nm": 120,
+        "peak_torque_nm": 80,
         "instant_peak_torque_nm": 120,
         "start_stop_peak_torque_nm": 80,
         "rated_speed_rad_s": 12.357,
@@ -33,7 +36,7 @@
       "base_id": "EKZ-PA-53-10-48",
       "mechanical": {
         "rated_torque_nm": 2,
-        "peak_torque_nm": 6,
+        "peak_torque_nm": 4,
         "instant_peak_torque_nm": 6,
         "start_stop_peak_torque_nm": 4,
         "rated_speed_rad_s": 6.283,
@@ -50,7 +53,7 @@
       "base_id": "EKZ-PA-76-6-48",
       "mechanical": {
         "rated_torque_nm": 3,
-        "peak_torque_nm": 9,
+        "peak_torque_nm": 6,
         "instant_peak_torque_nm": 9,
         "start_stop_peak_torque_nm": 6,
         "rated_speed_rad_s": 26.389,
@@ -67,7 +70,7 @@
       "base_id": "EKZ-PA-96-6-48",
       "mechanical": {
         "rated_torque_nm": 11,
-        "peak_torque_nm": 33,
+        "peak_torque_nm": 22,
         "instant_peak_torque_nm": 33,
         "start_stop_peak_torque_nm": 22,
         "rated_speed_rad_s": 14.661,

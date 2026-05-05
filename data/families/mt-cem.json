@@ -34,14 +34,14 @@
       },
       "mechanical": {
         "rated_torque_nm": 9,
-        "peak_torque_nm": 16.2,
+        "peak_torque_nm": 15,
         "instant_peak_torque_nm": 16.2,
         "start_stop_peak_torque_nm": 15,
         "rated_speed_rad_s": 14.661,
         "max_speed_rad_s": 17.802,
         "weight_kg": 0.81,
         "outer_diameter_mm": 53,
-        "torque_density_nm_per_kg": 20.0
+        "torque_density_nm_per_kg": 18.52
       },
       "options": {
         "bus_types": [
@@ -108,14 +108,14 @@
       },
       "mechanical": {
         "rated_torque_nm": 25,
-        "peak_torque_nm": 50,
+        "peak_torque_nm": 45,
         "instant_peak_torque_nm": 50,
         "start_stop_peak_torque_nm": 45,
         "rated_speed_rad_s": 8.378,
         "max_speed_rad_s": 10.472,
         "weight_kg": 1.09,
         "outer_diameter_mm": 87,
-        "torque_density_nm_per_kg": 45.87
+        "torque_density_nm_per_kg": 41.28
       },
       "options": {
         "bus_types": [

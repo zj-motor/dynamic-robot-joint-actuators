@@ -35,13 +35,11 @@
       },
       "mechanical": {
         "rated_torque_nm": 6.7,
-        "peak_torque_nm": 20,
         "instant_peak_torque_nm": 20,
         "weight_kg": 0.24,
         "outer_diameter_mm": 43,
         "radial_load_kn": 0.003,
-        "axial_load_kn": 0.0047,
-        "torque_density_nm_per_kg": 83.33
+        "axial_load_kn": 0.0047
       },
       "options": {
         "bus_types": [
@@ -74,13 +72,11 @@
       },
       "mechanical": {
         "rated_torque_nm": 36,
-        "peak_torque_nm": 110,
         "instant_peak_torque_nm": 110,
         "weight_kg": 0.64,
         "outer_diameter_mm": 64,
         "radial_load_kn": 0.006,
-        "axial_load_kn": 0.007,
-        "torque_density_nm_per_kg": 171.88
+        "axial_load_kn": 0.007
       },
       "options": {
         "bus_types": [
@@ -113,13 +109,11 @@
       },
       "mechanical": {
         "rated_torque_nm": 36,
-        "peak_torque_nm": 110,
         "instant_peak_torque_nm": 110,
         "weight_kg": 0.86,
         "outer_diameter_mm": 80,
         "radial_load_kn": 0.0075,
-        "axial_load_kn": 0.015,
-        "torque_density_nm_per_kg": 127.91
+        "axial_load_kn": 0.015
       },
       "options": {
         "bus_types": [

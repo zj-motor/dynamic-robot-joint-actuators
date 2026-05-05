@@ -29,15 +29,13 @@
       },
       "mechanical": {
         "rated_torque_nm": 60,
-        "peak_torque_nm": 244,
         "instant_peak_torque_nm": 244,
         "peak_output_power_w": 484,
         "rated_speed_rad_s": 10.472,
         "max_speed_rad_s": 13.006,
         "weight_kg": 1,
         "outer_diameter_mm": 102,
-        "output_encoder_bits": 27,
-        "torque_density_nm_per_kg": 244.0
+        "output_encoder_bits": 27
       },
       "transmission": {
         "ratio": 25
@@ -74,15 +72,13 @@
       },
       "mechanical": {
         "rated_torque_nm": 180,
-        "peak_torque_nm": 590,
         "instant_peak_torque_nm": 590,
         "peak_output_power_w": 2508.1,
         "rated_speed_rad_s": 8.378,
         "max_speed_rad_s": 14.504,
         "weight_kg": 3.5,
         "outer_diameter_mm": 150,
-        "output_encoder_bits": 27,
-        "torque_density_nm_per_kg": 168.57
+        "output_encoder_bits": 27
       },
       "transmission": {
         "ratio": 25
@@ -119,14 +115,12 @@
       },
       "mechanical": {
         "rated_torque_nm": 3,
-        "peak_torque_nm": 12,
         "instant_peak_torque_nm": 12,
         "peak_output_power_w": 31.8,
         "rated_speed_rad_s": 10.472,
         "max_speed_rad_s": 36.003,
         "weight_kg": 0.343,
-        "outer_diameter_mm": 47,
-        "torque_density_nm_per_kg": 34.99
+        "outer_diameter_mm": 47
       },
       "transmission": {
         "ratio": 25
@@ -161,14 +155,12 @@
       },
       "mechanical": {
         "rated_torque_nm": 28,
-        "peak_torque_nm": 96,
         "instant_peak_torque_nm": 96,
         "peak_output_power_w": 874,
         "rated_speed_rad_s": 10.472,
         "max_speed_rad_s": 19.007,
         "weight_kg": 0.73,
-        "outer_diameter_mm": 68,
-        "torque_density_nm_per_kg": 131.51
+        "outer_diameter_mm": 68
       },
       "transmission": {
         "ratio": 25
@@ -203,14 +195,12 @@
       },
       "mechanical": {
         "rated_torque_nm": 40,
-        "peak_torque_nm": 136,
         "instant_peak_torque_nm": 136,
         "peak_output_power_w": 936,
         "rated_speed_rad_s": 10.472,
         "max_speed_rad_s": 12.566,
         "weight_kg": 0.98,
-        "outer_diameter_mm": 78,
-        "torque_density_nm_per_kg": 138.78
+        "outer_diameter_mm": 78
       },
       "transmission": {
         "ratio": 25
@@ -245,15 +235,13 @@
       },
       "mechanical": {
         "rated_torque_nm": 75,
-        "peak_torque_nm": 228,
         "instant_peak_torque_nm": 228,
         "peak_output_power_w": 1416.1,
         "rated_speed_rad_s": 8.378,
         "max_speed_rad_s": 13.006,
         "weight_kg": 1.68,
         "outer_diameter_mm": 95,
-        "output_encoder_bits": 27,
-        "torque_density_nm_per_kg": 135.71
+        "output_encoder_bits": 27
       },
       "transmission": {
         "ratio": 21
