@@ -80,7 +80,7 @@ export function renderScatter(elId, data, opts = {}) {
     name: tx,
     x: items.map((d) => d.weight_kg),
     y: items.map((d) => d[yField]),
-    customdata: items.map((d) => [d.id, manufacturerDisplay(d.manufacturer), d.model, d.torque_density_nm_per_kg, d.max_speed_rad_s]),
+    customdata: items.map((d) => [d.id, manufacturerDisplay(d.manufacturer), d.model, d.torque_density_nm_per_kg, d.max_speed_rpm]),
     marker: {
       size: items.map(sizeOf),
       color: items.map((d) => (pinned.has(d.id) ? "#ea580c" : colorFor(tx))),
@@ -95,7 +95,7 @@ export function renderScatter(elId, data, opts = {}) {
       yLabel + ": %{y:.1f} Nm<br>" +
       "Weight: %{x:.3f} kg<br>" +
       "τ density: %{customdata[3]:.1f} Nm/kg<br>" +
-      "Max speed: %{customdata[4]:.1f} rad/s" +
+      "Max speed: %{customdata[4]:.0f} rpm" +
       "<extra></extra>",
   }));
 
@@ -140,7 +140,7 @@ export function renderRadar(elId, allData, pinnedIds) {
   const axes = [
     { key: "peak_torque_nm",          label: t("table.peak_torque") },
     { key: "rated_torque_nm",         label: t("table.rated_torque") },
-    { key: "max_speed_rad_s",         label: t("table.max_speed") },
+    { key: "max_speed_rpm",           label: t("table.max_speed") },
     { key: "torque_density_nm_per_kg",label: t("table.density") },
     { key: "efficiency_pct",          label: t("compare.row.efficiency") },
     { key: "ratio",                   label: t("compare.row.ratio") },
@@ -221,7 +221,7 @@ export function renderCurves(elId, detailsById) {
     traces.push({
       type: "scatter",
       mode: "lines+markers",
-      x: pts.map((p) => p.speed_rad_s),
+      x: pts.map((p) => p.speed_rpm),
       y: pts.map((p) => p.torque_nm),
       name: `${manufacturerDisplay(d.manufacturer)} ${d.model}`,
       line: { color: palette[i % palette.length], width: 2 },
@@ -288,7 +288,7 @@ export function renderTable(tableId, data, opts = {}) {
       <td>${escape(d.model)}</td>
       <td class="num">${formatVal(d.peak_torque_nm)}</td>
       <td class="num">${formatVal(d.rated_torque_nm)}</td>
-      <td class="num">${formatVal(d.max_speed_rad_s)}</td>
+      <td class="num">${formatVal(d.max_speed_rpm)}</td>
       <td class="num">${formatVal(d.weight_kg, 3)}</td>
       <td class="num">${formatVal(d.torque_density_nm_per_kg)}</td>
       <td>${escape(d.transmission_type)}</td>

@@ -9,14 +9,14 @@
       "motor_topology": "radial flux"
     },
     "mechanical": {
-      "rated_speed_rad_s": 3.142,
-      "max_speed_rad_s": 4.189,
+      "rated_speed_rpm": 30,
+      "max_speed_rpm": 40,
       "output_encoder_bits": 17,
       "motor_encoder_bits": 17
     },
     "transmission": {
       "type": "harmonic",
-      "ratio": 101,
+      "reduction_ratio": 101,
       "backdrivable": false
     }
   },

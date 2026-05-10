@@ -32,14 +32,14 @@
       },
       "mechanical": {
         "rated_torque_nm": 2,
-        "instant_peak_torque_nm": 10,
-        "rated_speed_rad_s": 4.189,
-        "max_speed_rad_s": 16.755,
+        "max_allow_instant_load_nm": 10,
+        "rated_speed_rpm": 40,
+        "max_speed_rpm": 160,
         "weight_kg": 0.237,
         "outer_diameter_mm": 44
       },
       "transmission": {
-        "ratio": 30
+        "reduction_ratio": 30
       },
       "options": {
         "bus_types": [
@@ -70,14 +70,14 @@
       },
       "mechanical": {
         "rated_torque_nm": 2,
-        "instant_peak_torque_nm": 10,
-        "rated_speed_rad_s": 4.189,
-        "max_speed_rad_s": 16.755,
+        "max_allow_instant_load_nm": 10,
+        "rated_speed_rpm": 40,
+        "max_speed_rpm": 160,
         "weight_kg": 0.237,
         "outer_diameter_mm": 44
       },
       "transmission": {
-        "ratio": 30
+        "reduction_ratio": 30
       },
       "options": {
         "bus_types": [
@@ -108,14 +108,14 @@
       },
       "mechanical": {
         "rated_torque_nm": 3.5,
-        "instant_peak_torque_nm": 13,
-        "rated_speed_rad_s": 8.587,
-        "max_speed_rad_s": 12.881,
+        "max_allow_instant_load_nm": 13,
+        "rated_speed_rpm": 82,
+        "max_speed_rpm": 123,
         "weight_kg": 0.322,
         "outer_diameter_mm": 50
       },
       "transmission": {
-        "ratio": 22
+        "reduction_ratio": 22
       },
       "options": {
         "bus_types": [
@@ -146,14 +146,14 @@
       },
       "mechanical": {
         "rated_torque_nm": 6,
-        "instant_peak_torque_nm": 21,
-        "rated_speed_rad_s": 5.236,
-        "max_speed_rad_s": 7.854,
+        "max_allow_instant_load_nm": 21,
+        "rated_speed_rpm": 50,
+        "max_speed_rpm": 75,
         "weight_kg": 0.323,
         "outer_diameter_mm": 50
       },
       "transmission": {
-        "ratio": 36
+        "reduction_ratio": 36
       },
       "options": {
         "bus_types": [
@@ -184,14 +184,14 @@
       },
       "mechanical": {
         "rated_torque_nm": 6,
-        "instant_peak_torque_nm": 21,
-        "rated_speed_rad_s": 5.236,
-        "max_speed_rad_s": 7.854,
+        "max_allow_instant_load_nm": 21,
+        "rated_speed_rpm": 50,
+        "max_speed_rpm": 75,
         "weight_kg": 0.345,
         "outer_diameter_mm": 50
       },
       "transmission": {
-        "ratio": 36
+        "reduction_ratio": 36
       },
       "options": {
         "bus_types": [
@@ -222,14 +222,14 @@
       },
       "mechanical": {
         "rated_torque_nm": 10,
-        "instant_peak_torque_nm": 36,
-        "rated_speed_rad_s": 5.236,
-        "max_speed_rad_s": 6.283,
+        "max_allow_instant_load_nm": 36,
+        "rated_speed_rpm": 50,
+        "max_speed_rpm": 60,
         "weight_kg": 0.565,
         "outer_diameter_mm": 60
       },
       "transmission": {
-        "ratio": 36
+        "reduction_ratio": 36
       },
       "options": {
         "bus_types": [
@@ -260,14 +260,14 @@
       },
       "mechanical": {
         "rated_torque_nm": 10,
-        "instant_peak_torque_nm": 36,
-        "rated_speed_rad_s": 5.236,
-        "max_speed_rad_s": 6.283,
+        "max_allow_instant_load_nm": 36,
+        "rated_speed_rpm": 50,
+        "max_speed_rpm": 60,
         "weight_kg": 0.57,
         "outer_diameter_mm": 60
       },
       "transmission": {
-        "ratio": 36
+        "reduction_ratio": 36
       },
       "options": {
         "bus_types": [
@@ -298,14 +298,14 @@
       },
       "mechanical": {
         "rated_torque_nm": 18,
-        "instant_peak_torque_nm": 60,
-        "rated_speed_rad_s": 5.236,
-        "max_speed_rad_s": 6.283,
+        "max_allow_instant_load_nm": 60,
+        "rated_speed_rpm": 50,
+        "max_speed_rpm": 60,
         "weight_kg": 0.85,
         "outer_diameter_mm": 75
       },
       "transmission": {
-        "ratio": 35
+        "reduction_ratio": 35
       },
       "options": {
         "bus_types": [

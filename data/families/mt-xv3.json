@@ -31,7 +31,7 @@
         "rated_torque_nm": 50,
         "peak_torque_nm": 100,
         "start_stop_peak_torque_nm": 100,
-        "rated_speed_rad_s": 5.236,
+        "rated_speed_rpm": 50,
         "weight_kg": 1.7,
         "outer_diameter_mm": 100,
         "radial_load_kn": 2.25,
@@ -39,7 +39,7 @@
         "torque_density_nm_per_kg": 58.82
       },
       "transmission": {
-        "ratio": 35,
+        "reduction_ratio": 35,
         "backdrivable": false,
         "backlash_arcsec": 900
       },
@@ -75,7 +75,7 @@
         "rated_torque_nm": 15,
         "peak_torque_nm": 40,
         "start_stop_peak_torque_nm": 40,
-        "rated_speed_rad_s": 17.279,
+        "rated_speed_rpm": 165,
         "weight_kg": 1.15,
         "outer_diameter_mm": 100,
         "radial_load_kn": 2.25,
@@ -83,7 +83,7 @@
         "torque_density_nm_per_kg": 34.78
       },
       "transmission": {
-        "ratio": 7,
+        "reduction_ratio": 7,
         "backdrivable": true,
         "backlash_arcsec": 600
       },
@@ -119,7 +119,7 @@
         "rated_torque_nm": 4.5,
         "peak_torque_nm": 8,
         "start_stop_peak_torque_nm": 8,
-        "rated_speed_rad_s": 32.463,
+        "rated_speed_rpm": 310,
         "weight_kg": 0.49,
         "outer_diameter_mm": 60,
         "radial_load_kn": 1.04,
@@ -127,7 +127,7 @@
         "torque_density_nm_per_kg": 16.33
       },
       "transmission": {
-        "ratio": 8,
+        "reduction_ratio": 8,
         "backdrivable": true,
         "backlash_arcsec": 600
       },
@@ -163,7 +163,7 @@
         "rated_torque_nm": 30,
         "peak_torque_nm": 60,
         "start_stop_peak_torque_nm": 60,
-        "rated_speed_rad_s": 4.189,
+        "rated_speed_rpm": 40,
         "weight_kg": 0.9,
         "outer_diameter_mm": 80,
         "radial_load_kn": 1.25,
@@ -171,7 +171,7 @@
         "torque_density_nm_per_kg": 66.67
       },
       "transmission": {
-        "ratio": 36,
+        "reduction_ratio": 36,
         "backdrivable": false,
         "backlash_arcsec": 900
       },
@@ -206,7 +206,7 @@
         "rated_torque_nm": 10,
         "peak_torque_nm": 20,
         "start_stop_peak_torque_nm": 20,
-        "rated_speed_rad_s": 19.897,
+        "rated_speed_rpm": 190,
         "weight_kg": 0.78,
         "outer_diameter_mm": 80,
         "radial_load_kn": 1.25,
@@ -214,7 +214,7 @@
         "torque_density_nm_per_kg": 25.64
       },
       "transmission": {
-        "ratio": 6,
+        "reduction_ratio": 6,
         "backdrivable": true,
         "backlash_arcsec": 600
       },

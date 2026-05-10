@@ -33,7 +33,7 @@
         "torque_density_nm_per_kg": 54.29
       },
       "transmission": {
-        "ratio": 100
+        "reduction_ratio": 100
       },
       "options": {
         "bus_types": [
@@ -73,7 +73,7 @@
         "torque_density_nm_per_kg": 54.29
       },
       "transmission": {
-        "ratio": 100
+        "reduction_ratio": 100
       },
       "options": {
         "bus_types": [
@@ -115,7 +115,7 @@
         "torque_density_nm_per_kg": 74.0
       },
       "transmission": {
-        "ratio": 100
+        "reduction_ratio": 100
       },
       "options": {
         "bus_types": [
@@ -157,7 +157,7 @@
         "torque_density_nm_per_kg": 74.0
       },
       "transmission": {
-        "ratio": 100
+        "reduction_ratio": 100
       },
       "options": {
         "bus_types": [
@@ -199,7 +199,7 @@
         "torque_density_nm_per_kg": 68.0
       },
       "transmission": {
-        "ratio": 80
+        "reduction_ratio": 80
       },
       "options": {
         "bus_types": [
@@ -241,7 +241,7 @@
         "torque_density_nm_per_kg": 68.0
       },
       "transmission": {
-        "ratio": 80
+        "reduction_ratio": 80
       },
       "options": {
         "bus_types": [
@@ -283,7 +283,7 @@
         "torque_density_nm_per_kg": 87.69
       },
       "transmission": {
-        "ratio": 100
+        "reduction_ratio": 100
       },
       "options": {
         "bus_types": [
@@ -325,7 +325,7 @@
         "torque_density_nm_per_kg": 87.69
       },
       "transmission": {
-        "ratio": 100
+        "reduction_ratio": 100
       },
       "options": {
         "bus_types": [
@@ -367,7 +367,7 @@
         "torque_density_nm_per_kg": 81.54
       },
       "transmission": {
-        "ratio": 80
+        "reduction_ratio": 80
       },
       "options": {
         "bus_types": [
@@ -409,7 +409,7 @@
         "torque_density_nm_per_kg": 81.54
       },
       "transmission": {
-        "ratio": 80
+        "reduction_ratio": 80
       },
       "options": {
         "bus_types": [
@@ -451,7 +451,7 @@
         "torque_density_nm_per_kg": 82.0
       },
       "transmission": {
-        "ratio": 100
+        "reduction_ratio": 100
       },
       "options": {
         "bus_types": [
@@ -493,7 +493,7 @@
         "torque_density_nm_per_kg": 82.0
       },
       "transmission": {
-        "ratio": 100
+        "reduction_ratio": 100
       },
       "options": {
         "bus_types": [
@@ -535,7 +535,7 @@
         "torque_density_nm_per_kg": 56.0
       },
       "transmission": {
-        "ratio": 50
+        "reduction_ratio": 50
       },
       "options": {
         "bus_types": [
@@ -577,7 +577,7 @@
         "torque_density_nm_per_kg": 56.0
       },
       "transmission": {
-        "ratio": 50
+        "reduction_ratio": 50
       },
       "options": {
         "bus_types": [
@@ -619,7 +619,7 @@
         "torque_density_nm_per_kg": 74.0
       },
       "transmission": {
-        "ratio": 80
+        "reduction_ratio": 80
       },
       "options": {
         "bus_types": [
@@ -661,7 +661,7 @@
         "torque_density_nm_per_kg": 74.0
       },
       "transmission": {
-        "ratio": 80
+        "reduction_ratio": 80
       },
       "options": {
         "bus_types": [
@@ -702,7 +702,7 @@
         "torque_density_nm_per_kg": 142.73
       },
       "transmission": {
-        "ratio": 100
+        "reduction_ratio": 100
       },
       "options": {
         "bus_types": [
@@ -743,7 +743,7 @@
         "torque_density_nm_per_kg": 142.73
       },
       "transmission": {
-        "ratio": 100
+        "reduction_ratio": 100
       },
       "options": {
         "bus_types": [

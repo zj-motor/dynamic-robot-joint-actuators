@@ -32,8 +32,8 @@
         "rated_torque_nm": 100,
         "peak_torque_nm": 320,
         "start_stop_peak_torque_nm": 320,
-        "rated_speed_rad_s": 10.472,
-        "max_speed_rad_s": 13.09,
+        "rated_speed_rpm": 100,
+        "max_speed_rpm": 125,
         "weight_kg": 2.6,
         "outer_diameter_mm": 124,
         "hollow_shaft_diameter_mm": 12.6,
@@ -42,7 +42,7 @@
         "torque_density_nm_per_kg": 123.08
       },
       "transmission": {
-        "ratio": 20,
+        "reduction_ratio": 20,
         "backlash_arcsec": 600
       },
       "options": {
@@ -79,8 +79,8 @@
         "rated_torque_nm": 145,
         "peak_torque_nm": 450,
         "start_stop_peak_torque_nm": 450,
-        "rated_speed_rad_s": 7.749,
-        "max_speed_rad_s": 9.739,
+        "rated_speed_rpm": 74,
+        "max_speed_rpm": 93,
         "weight_kg": 3.6,
         "outer_diameter_mm": 166,
         "hollow_shaft_diameter_mm": 21.5,
@@ -89,7 +89,7 @@
         "torque_density_nm_per_kg": 125.0
       },
       "transmission": {
-        "ratio": 20.25,
+        "reduction_ratio": 20.25,
         "backlash_arcsec": 600
       },
       "options": {
@@ -126,8 +126,8 @@
         "rated_torque_nm": 2.5,
         "peak_torque_nm": 7,
         "start_stop_peak_torque_nm": 7,
-        "rated_speed_rad_s": 14.87,
-        "max_speed_rad_s": 18.64,
+        "rated_speed_rpm": 142,
+        "max_speed_rpm": 178,
         "weight_kg": 0.25,
         "outer_diameter_mm": 44,
         "radial_load_kn": 1,
@@ -135,7 +135,7 @@
         "torque_density_nm_per_kg": 28.0
       },
       "transmission": {
-        "ratio": 28.17,
+        "reduction_ratio": 28.17,
         "backlash_arcsec": 720
       },
       "options": {
@@ -172,8 +172,8 @@
         "rated_torque_nm": 11.5,
         "peak_torque_nm": 34,
         "start_stop_peak_torque_nm": 34,
-        "rated_speed_rad_s": 8.692,
-        "max_speed_rad_s": 11.624,
+        "rated_speed_rpm": 83,
+        "max_speed_rpm": 111,
         "weight_kg": 0.36,
         "outer_diameter_mm": 55,
         "radial_load_kn": 1.5,
@@ -181,7 +181,7 @@
         "torque_density_nm_per_kg": 94.44
       },
       "transmission": {
-        "ratio": 36,
+        "reduction_ratio": 36,
         "backlash_arcsec": 600
       },
       "options": {
@@ -218,8 +218,8 @@
         "rated_torque_nm": 20,
         "peak_torque_nm": 60,
         "start_stop_peak_torque_nm": 60,
-        "rated_speed_rad_s": 16.022,
-        "max_speed_rad_s": 18.431,
+        "rated_speed_rpm": 153,
+        "max_speed_rpm": 176,
         "weight_kg": 0.82,
         "outer_diameter_mm": 80,
         "hollow_shaft_diameter_mm": 8.6,
@@ -228,7 +228,7 @@
         "torque_density_nm_per_kg": 73.17
       },
       "transmission": {
-        "ratio": 19.612,
+        "reduction_ratio": 19.612,
         "backlash_arcsec": 600
       },
       "options": {
@@ -265,8 +265,8 @@
         "rated_torque_nm": 43,
         "peak_torque_nm": 110,
         "start_stop_peak_torque_nm": 110,
-        "rated_speed_rad_s": 13.299,
-        "max_speed_rad_s": 16.546,
+        "rated_speed_rpm": 127,
+        "max_speed_rpm": 158,
         "weight_kg": 1.4,
         "outer_diameter_mm": 96,
         "hollow_shaft_diameter_mm": 12.6,
@@ -275,7 +275,7 @@
         "torque_density_nm_per_kg": 78.57
       },
       "transmission": {
-        "ratio": 19.612,
+        "reduction_ratio": 19.612,
         "backlash_arcsec": 600
       },
       "options": {

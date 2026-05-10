@@ -9,12 +9,12 @@
       "motor_topology": "radial flux"
     },
     "mechanical": {
-      "rated_speed_rad_s": 7.33,
+      "rated_speed_rpm": 70,
       "ip_rating": "IP40"
     },
     "transmission": {
       "type": "planetary",
-      "ratio": 50,
+      "reduction_ratio": 50,
       "backdrivable": false
     }
   },
@@ -32,7 +32,7 @@
         "rated_torque_nm": 88,
         "peak_torque_nm": 250,
         "start_stop_peak_torque_nm": 250,
-        "max_speed_rad_s": 9.425,
+        "max_speed_rpm": 90,
         "weight_kg": 2.1,
         "outer_diameter_mm": 110,
         "torque_density_nm_per_kg": 119.05
@@ -68,7 +68,7 @@
         "rated_torque_nm": 55,
         "peak_torque_nm": 150,
         "start_stop_peak_torque_nm": 150,
-        "max_speed_rad_s": 10.472,
+        "max_speed_rpm": 100,
         "weight_kg": 1.5,
         "outer_diameter_mm": 90,
         "torque_density_nm_per_kg": 100.0

@@ -13,9 +13,9 @@
     },
     "mechanical": {
       "rated_torque_nm": 4,
-      "instant_peak_torque_nm": 12,
-      "rated_speed_rad_s": 26.18,
-      "max_speed_rad_s": 28.274,
+      "max_allow_instant_load_nm": 12,
+      "rated_speed_rpm": 250,
+      "max_speed_rpm": 270,
       "weight_kg": 0.39,
       "outer_diameter_mm": 75,
       "absolute_accuracy_deg": 0.25,
@@ -25,7 +25,7 @@
     },
     "transmission": {
       "type": "planetary",
-      "ratio": 7,
+      "reduction_ratio": 7,
       "backdrivable": true,
       "backlash_arcsec": 600
     }

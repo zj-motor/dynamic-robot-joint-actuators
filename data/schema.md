@@ -94,7 +94,9 @@ These can appear in `shared` or in any variant.
 | `price_usd` | number \| null | |
 | `mechanical.peak_torque_nm` | number | |
 | `mechanical.rated_torque_nm` | number | |
-| `mechanical.max_speed_rad_s` | number | |
+| `mechanical.rated_speed_rpm` | number | |
+| `mechanical.max_speed_rpm` | number | |
+| `mechanical.max_speed_at_half_torque_rpm` | number | |
 | `mechanical.weight_kg` | number | |
 | `mechanical.torque_density_nm_per_kg` | number | computed if absent |
 | `electrical.voltage_v` | number | |
@@ -123,11 +125,11 @@ Curves shared by every variant in the family. The motor (rotor-side) torque-spee
   "family_id": "cubemars-ak80",
   "curves": {
     "motor_torque_speed": [
-      { "speed_rad_s": 0,   "torque_nm": 2.5 },
-      { "speed_rad_s": 460, "torque_nm": 0.0 }
+      { "speed_rpm": 0,    "torque_nm": 2.5 },
+      { "speed_rpm": 4393, "torque_nm": 0.0 }
     ],
     "efficiency_map": [
-      { "speed_rad_s": 200, "torque_nm": 1.5, "efficiency_pct": 92 }
+      { "speed_rpm": 1910, "torque_nm": 1.5, "efficiency_pct": 92 }
     ]
   }
 }
@@ -142,8 +144,8 @@ Curves that differ per variant. The output torque-speed curve depends on gear ra
   "id": "cubemars-ak80-9-v3",
   "curves": {
     "torque_speed": [
-      { "speed_rad_s": 0,    "torque_nm": 22.0 },
-      { "speed_rad_s": 38.2, "torque_nm": 0.0 }
+      { "speed_rpm": 0,   "torque_nm": 22.0 },
+      { "speed_rpm": 365, "torque_nm": 0.0 }
     ]
   }
 }

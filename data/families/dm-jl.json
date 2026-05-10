@@ -20,7 +20,7 @@
     },
     "transmission": {
       "type": "planetary",
-      "ratio": 10,
+      "reduction_ratio": 10,
       "backdrivable": true
     }
   },
@@ -33,8 +33,8 @@
         "voltage_v": 24
       },
       "mechanical": {
-        "rated_speed_rad_s": 7.33,
-        "max_speed_rad_s": 10.472
+        "rated_speed_rpm": 70,
+        "max_speed_rpm": 100
       },
       "options": {
         "bus_types": [
@@ -64,8 +64,8 @@
         "voltage_v": 48
       },
       "mechanical": {
-        "rated_speed_rad_s": 10.472,
-        "max_speed_rad_s": 20.944
+        "rated_speed_rpm": 100,
+        "max_speed_rpm": 200
       },
       "options": {
         "bus_types": [

@@ -20,13 +20,13 @@
       "mechanical": {
         "rated_torque_nm": 40,
         "peak_torque_nm": 80,
-        "instant_peak_torque_nm": 120,
         "start_stop_peak_torque_nm": 80,
-        "rated_speed_rad_s": 12.357,
-        "max_speed_rad_s": 16.546
+        "max_allow_instant_load_nm": 120,
+        "rated_speed_rpm": 118,
+        "max_speed_rpm": 158
       },
       "transmission": {
-        "ratio": 10
+        "reduction_ratio": 10
       },
       "datasheet_url": "datasheets/3_埃斯顿酷卓_准直驱关节PA系列_20241029.pdf"
     },
@@ -37,13 +37,13 @@
       "mechanical": {
         "rated_torque_nm": 2,
         "peak_torque_nm": 4,
-        "instant_peak_torque_nm": 6,
         "start_stop_peak_torque_nm": 4,
-        "rated_speed_rad_s": 6.283,
-        "max_speed_rad_s": 17.802
+        "max_allow_instant_load_nm": 6,
+        "rated_speed_rpm": 60,
+        "max_speed_rpm": 170
       },
       "transmission": {
-        "ratio": 10
+        "reduction_ratio": 10
       },
       "datasheet_url": "datasheets/3_埃斯顿酷卓_准直驱关节PA系列_20241029.pdf"
     },
@@ -54,13 +54,13 @@
       "mechanical": {
         "rated_torque_nm": 3,
         "peak_torque_nm": 6,
-        "instant_peak_torque_nm": 9,
         "start_stop_peak_torque_nm": 6,
-        "rated_speed_rad_s": 26.389,
-        "max_speed_rad_s": 41.888
+        "max_allow_instant_load_nm": 9,
+        "rated_speed_rpm": 252,
+        "max_speed_rpm": 400
       },
       "transmission": {
-        "ratio": 6
+        "reduction_ratio": 6
       },
       "datasheet_url": "datasheets/3_埃斯顿酷卓_准直驱关节PA系列_20241029.pdf"
     },
@@ -71,13 +71,13 @@
       "mechanical": {
         "rated_torque_nm": 11,
         "peak_torque_nm": 22,
-        "instant_peak_torque_nm": 33,
         "start_stop_peak_torque_nm": 22,
-        "rated_speed_rad_s": 14.661,
-        "max_speed_rad_s": 34.558
+        "max_allow_instant_load_nm": 33,
+        "rated_speed_rpm": 140,
+        "max_speed_rpm": 330
       },
       "transmission": {
-        "ratio": 6
+        "reduction_ratio": 6
       },
       "datasheet_url": "datasheets/3_埃斯顿酷卓_准直驱关节PA系列_20241029.pdf"
     }

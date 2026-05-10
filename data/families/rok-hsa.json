@@ -26,20 +26,19 @@
         "rated_input_power_w": 600
       },
       "mechanical": {
-        "rated_torque_nm": 140,
         "peak_torque_nm": 204,
-        "instant_peak_torque_nm": 630,
         "start_stop_peak_torque_nm": 204,
-        "avg_load_max_torque_nm": 140,
-        "rated_speed_rad_s": 3.142,
-        "max_speed_rad_s": 6.283,
+        "max_allow_avg_load_nm": 140,
+        "max_allow_instant_load_nm": 630,
+        "rated_speed_rpm": 30,
+        "max_speed_rpm": 60,
         "weight_kg": 2.95,
         "outer_diameter_mm": 110,
         "hollow_shaft_diameter_mm": 15,
         "torque_density_nm_per_kg": 69.15
       },
       "transmission": {
-        "ratio": 100
+        "reduction_ratio": 100
       },
       "options": {
         "bus_types": [
@@ -69,20 +68,19 @@
         "rated_input_power_w": 950
       },
       "mechanical": {
-        "rated_torque_nm": 281,
         "peak_torque_nm": 459,
-        "instant_peak_torque_nm": 1440,
         "start_stop_peak_torque_nm": 459,
-        "avg_load_max_torque_nm": 281,
-        "rated_speed_rad_s": 2.094,
-        "max_speed_rad_s": 5.236,
+        "max_allow_avg_load_nm": 281,
+        "max_allow_instant_load_nm": 1440,
+        "rated_speed_rpm": 20,
+        "max_speed_rpm": 50,
         "weight_kg": 6,
         "outer_diameter_mm": 142,
         "hollow_shaft_diameter_mm": 21,
         "torque_density_nm_per_kg": 76.5
       },
       "transmission": {
-        "ratio": 120
+        "reduction_ratio": 120
       },
       "options": {
         "bus_types": [
@@ -112,20 +110,19 @@
         "rated_input_power_w": 40
       },
       "mechanical": {
-        "rated_torque_nm": 8.9,
         "peak_torque_nm": 11,
-        "instant_peak_torque_nm": 36,
         "start_stop_peak_torque_nm": 11,
-        "avg_load_max_torque_nm": 8.9,
-        "rated_speed_rad_s": 3.142,
-        "max_speed_rad_s": 6.283,
+        "max_allow_avg_load_nm": 8.9,
+        "max_allow_instant_load_nm": 36,
+        "rated_speed_rpm": 30,
+        "max_speed_rpm": 60,
         "weight_kg": 0.45,
         "outer_diameter_mm": 52,
         "hollow_shaft_diameter_mm": 6,
         "torque_density_nm_per_kg": 24.44
       },
       "transmission": {
-        "ratio": 100
+        "reduction_ratio": 100
       },
       "options": {
         "bus_types": [
@@ -155,20 +152,19 @@
         "rated_input_power_w": 120
       },
       "mechanical": {
-        "rated_torque_nm": 7.7,
         "peak_torque_nm": 19,
-        "instant_peak_torque_nm": 75,
         "start_stop_peak_torque_nm": 19,
-        "avg_load_max_torque_nm": 7.7,
-        "rated_speed_rad_s": 3.142,
-        "max_speed_rad_s": 6.283,
+        "max_allow_avg_load_nm": 7.7,
+        "max_allow_instant_load_nm": 75,
+        "rated_speed_rpm": 30,
+        "max_speed_rpm": 60,
         "weight_kg": 0.6,
         "outer_diameter_mm": 60,
         "hollow_shaft_diameter_mm": 9,
         "torque_density_nm_per_kg": 31.67
       },
       "transmission": {
-        "ratio": 100
+        "reduction_ratio": 100
       },
       "options": {
         "bus_types": [
@@ -198,20 +194,19 @@
         "rated_input_power_w": 160
       },
       "mechanical": {
-        "rated_torque_nm": 51,
         "peak_torque_nm": 70,
-        "instant_peak_torque_nm": 210,
         "start_stop_peak_torque_nm": 70,
-        "avg_load_max_torque_nm": 51,
-        "rated_speed_rad_s": 3.142,
-        "max_speed_rad_s": 6.283,
+        "max_allow_avg_load_nm": 51,
+        "max_allow_instant_load_nm": 210,
+        "rated_speed_rpm": 30,
+        "max_speed_rpm": 60,
         "weight_kg": 1.1,
         "outer_diameter_mm": 72,
         "hollow_shaft_diameter_mm": 10,
         "torque_density_nm_per_kg": 63.64
       },
       "transmission": {
-        "ratio": 100
+        "reduction_ratio": 100
       },
       "options": {
         "bus_types": [
@@ -241,20 +236,19 @@
         "rated_input_power_w": 250
       },
       "mechanical": {
-        "rated_torque_nm": 64,
         "peak_torque_nm": 113,
-        "instant_peak_torque_nm": 330,
         "start_stop_peak_torque_nm": 113,
-        "avg_load_max_torque_nm": 64,
-        "rated_speed_rad_s": 3.142,
-        "max_speed_rad_s": 5.236,
+        "max_allow_avg_load_nm": 64,
+        "max_allow_instant_load_nm": 330,
+        "rated_speed_rpm": 30,
+        "max_speed_rpm": 50,
         "weight_kg": 1.7,
         "outer_diameter_mm": 82,
         "hollow_shaft_diameter_mm": 13,
         "torque_density_nm_per_kg": 66.47
       },
       "transmission": {
-        "ratio": 120
+        "reduction_ratio": 120
       },
       "options": {
         "bus_types": [

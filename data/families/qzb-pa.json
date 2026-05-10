@@ -34,7 +34,7 @@
         "torque_density_nm_per_kg": 70.0
       },
       "transmission": {
-        "ratio": 10,
+        "reduction_ratio": 10,
         "backdrivable": true
       },
       "options": {
@@ -71,7 +71,7 @@
         "torque_density_nm_per_kg": 70.0
       },
       "transmission": {
-        "ratio": 10,
+        "reduction_ratio": 10,
         "backdrivable": true
       },
       "options": {
@@ -108,7 +108,7 @@
         "torque_density_nm_per_kg": 119.84
       },
       "transmission": {
-        "ratio": 12,
+        "reduction_ratio": 12,
         "backdrivable": false
       },
       "options": {
@@ -145,7 +145,7 @@
         "torque_density_nm_per_kg": 119.84
       },
       "transmission": {
-        "ratio": 12,
+        "reduction_ratio": 12,
         "backdrivable": false
       },
       "options": {
@@ -182,7 +182,7 @@
         "torque_density_nm_per_kg": 128.21
       },
       "transmission": {
-        "ratio": 20,
+        "reduction_ratio": 20,
         "backdrivable": false
       },
       "options": {
@@ -219,7 +219,7 @@
         "torque_density_nm_per_kg": 128.21
       },
       "transmission": {
-        "ratio": 20,
+        "reduction_ratio": 20,
         "backdrivable": false
       },
       "options": {
@@ -256,7 +256,7 @@
         "torque_density_nm_per_kg": 69.23
       },
       "transmission": {
-        "ratio": 15,
+        "reduction_ratio": 15,
         "backdrivable": false
       },
       "options": {
@@ -293,7 +293,7 @@
         "torque_density_nm_per_kg": 69.23
       },
       "transmission": {
-        "ratio": 15,
+        "reduction_ratio": 15,
         "backdrivable": false
       },
       "options": {
@@ -330,7 +330,7 @@
         "torque_density_nm_per_kg": 178.95
       },
       "transmission": {
-        "ratio": 35,
+        "reduction_ratio": 35,
         "backdrivable": false
       },
       "options": {
@@ -367,7 +367,7 @@
         "torque_density_nm_per_kg": 178.95
       },
       "transmission": {
-        "ratio": 35,
+        "reduction_ratio": 35,
         "backdrivable": false
       },
       "options": {
@@ -404,7 +404,7 @@
         "torque_density_nm_per_kg": 55.71
       },
       "transmission": {
-        "ratio": 10,
+        "reduction_ratio": 10,
         "backdrivable": true
       },
       "options": {
@@ -441,7 +441,7 @@
         "torque_density_nm_per_kg": 60.0
       },
       "transmission": {
-        "ratio": 10,
+        "reduction_ratio": 10,
         "backdrivable": true
       },
       "options": {
@@ -478,7 +478,7 @@
         "torque_density_nm_per_kg": 55.71
       },
       "transmission": {
-        "ratio": 10,
+        "reduction_ratio": 10,
         "backdrivable": true
       },
       "options": {
@@ -515,7 +515,7 @@
         "torque_density_nm_per_kg": 60.0
       },
       "transmission": {
-        "ratio": 10,
+        "reduction_ratio": 10,
         "backdrivable": true
       },
       "options": {

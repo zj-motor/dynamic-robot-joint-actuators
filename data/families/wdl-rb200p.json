@@ -28,14 +28,14 @@
         "rated_torque_nm": 30,
         "peak_torque_nm": 94,
         "start_stop_peak_torque_nm": 94,
-        "rated_speed_rad_s": 14.87,
-        "max_speed_rad_s": 15.708,
+        "rated_speed_rpm": 142,
+        "max_speed_rpm": 150,
         "weight_kg": 0.83,
         "outer_diameter_mm": 105,
         "torque_density_nm_per_kg": 113.25
       },
       "transmission": {
-        "ratio": 18,
+        "reduction_ratio": 18,
         "backdrivable": false
       },
       "options": {
@@ -68,14 +68,14 @@
         "rated_torque_nm": 50,
         "peak_torque_nm": 150,
         "start_stop_peak_torque_nm": 150,
-        "rated_speed_rad_s": 13.614,
-        "max_speed_rad_s": 15.708,
+        "rated_speed_rpm": 130,
+        "max_speed_rpm": 150,
         "weight_kg": 1.4,
         "outer_diameter_mm": 124,
         "torque_density_nm_per_kg": 107.14
       },
       "transmission": {
-        "ratio": 12,
+        "reduction_ratio": 12,
         "backdrivable": false
       },
       "options": {
@@ -107,15 +107,15 @@
         "rated_torque_nm": 105.96,
         "peak_torque_nm": 310,
         "start_stop_peak_torque_nm": 310,
-        "rated_speed_rad_s": 9.912,
-        "max_speed_rad_s": 10.902,
+        "rated_speed_rpm": 94.65,
+        "max_speed_rpm": 104.11,
         "weight_kg": 2.3,
         "outer_diameter_mm": 124,
         "hollow_shaft_diameter_mm": 10,
         "torque_density_nm_per_kg": 134.78
       },
       "transmission": {
-        "ratio": 21.13,
+        "reduction_ratio": 21.13,
         "backdrivable": false
       },
       "options": {
@@ -148,14 +148,14 @@
         "rated_torque_nm": 100,
         "peak_torque_nm": 360,
         "start_stop_peak_torque_nm": 360,
-        "rated_speed_rad_s": 10.681,
-        "max_speed_rad_s": 15.708,
+        "rated_speed_rpm": 102,
+        "max_speed_rpm": 150,
         "weight_kg": 2.2,
         "outer_diameter_mm": 124,
         "torque_density_nm_per_kg": 163.64
       },
       "transmission": {
-        "ratio": 24,
+        "reduction_ratio": 24,
         "backdrivable": false
       },
       "options": {
@@ -188,14 +188,14 @@
         "rated_torque_nm": 0.6,
         "peak_torque_nm": 1.8,
         "start_stop_peak_torque_nm": 1.8,
-        "rated_speed_rad_s": 5.236,
-        "max_speed_rad_s": 10.472,
+        "rated_speed_rpm": 50,
+        "max_speed_rpm": 100,
         "weight_kg": 0.19,
         "outer_diameter_mm": 43,
         "torque_density_nm_per_kg": 9.47
       },
       "transmission": {
-        "ratio": 7.9,
+        "reduction_ratio": 7.9,
         "backdrivable": true
       },
       "options": {
@@ -228,14 +228,14 @@
         "rated_torque_nm": 12,
         "peak_torque_nm": 36,
         "start_stop_peak_torque_nm": 36,
-        "rated_speed_rad_s": 8.168,
-        "max_speed_rad_s": 8.901,
+        "rated_speed_rpm": 78,
+        "max_speed_rpm": 85,
         "weight_kg": 0.38,
         "outer_diameter_mm": 56,
         "torque_density_nm_per_kg": 94.74
       },
       "transmission": {
-        "ratio": 36,
+        "reduction_ratio": 36,
         "backdrivable": false
       },
       "options": {
@@ -267,15 +267,15 @@
         "rated_torque_nm": 12.89,
         "peak_torque_nm": 36,
         "start_stop_peak_torque_nm": 36,
-        "rated_speed_rad_s": 12.08,
-        "max_speed_rad_s": 13.047,
+        "rated_speed_rpm": 115.36,
+        "max_speed_rpm": 124.59,
         "weight_kg": 0.41,
         "outer_diameter_mm": 68,
         "hollow_shaft_diameter_mm": 6,
         "torque_density_nm_per_kg": 87.8
       },
       "transmission": {
-        "ratio": 21.67,
+        "reduction_ratio": 21.67,
         "backdrivable": false
       },
       "options": {
@@ -308,14 +308,14 @@
         "rated_torque_nm": 6,
         "peak_torque_nm": 17,
         "start_stop_peak_torque_nm": 17,
-        "rated_speed_rad_s": 37.699,
-        "max_speed_rad_s": 42.935,
+        "rated_speed_rpm": 360,
+        "max_speed_rpm": 410,
         "weight_kg": 0.4,
         "outer_diameter_mm": 78.5,
         "torque_density_nm_per_kg": 42.5
       },
       "transmission": {
-        "ratio": 7.75,
+        "reduction_ratio": 7.75,
         "backdrivable": true
       },
       "options": {
@@ -347,15 +347,15 @@
         "rated_torque_nm": 21,
         "peak_torque_nm": 63,
         "start_stop_peak_torque_nm": 63,
-        "rated_speed_rad_s": 13.553,
-        "max_speed_rad_s": 14.909,
+        "rated_speed_rpm": 129.42,
+        "max_speed_rpm": 142.37,
         "weight_kg": 0.81,
         "outer_diameter_mm": 80,
         "hollow_shaft_diameter_mm": 8,
         "torque_density_nm_per_kg": 77.78
       },
       "transmission": {
-        "ratio": 15.45,
+        "reduction_ratio": 15.45,
         "backdrivable": false
       },
       "options": {
@@ -388,14 +388,14 @@
         "rated_torque_nm": 20,
         "peak_torque_nm": 60,
         "start_stop_peak_torque_nm": 60,
-        "rated_speed_rad_s": 13.718,
-        "max_speed_rad_s": 14.137,
+        "rated_speed_rpm": 131,
+        "max_speed_rpm": 135,
         "weight_kg": 0.6,
         "outer_diameter_mm": 88,
         "torque_density_nm_per_kg": 100.0
       },
       "transmission": {
-        "ratio": 25,
+        "reduction_ratio": 25,
         "backdrivable": false
       },
       "options": {
@@ -427,15 +427,15 @@
         "rated_torque_nm": 45.17,
         "peak_torque_nm": 120,
         "start_stop_peak_torque_nm": 120,
-        "rated_speed_rad_s": 13.299,
-        "max_speed_rad_s": 14.363,
+        "rated_speed_rpm": 127,
+        "max_speed_rpm": 137.16,
         "weight_kg": 1.35,
         "outer_diameter_mm": 96,
         "hollow_shaft_diameter_mm": 10,
         "torque_density_nm_per_kg": 88.89
       },
       "transmission": {
-        "ratio": 19.68,
+        "reduction_ratio": 19.68,
         "backdrivable": false
       },
       "options": {

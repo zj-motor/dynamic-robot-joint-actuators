@@ -25,15 +25,16 @@
       "base_id": "Ti-PROS3-120-101-48",
       "electrical": {
         "peak_current_a": 20.2,
-        "continuous_current_a": 15.8
+        "continuous_current_a": 15.8,
+        "rated_input_power_w": 1000
       },
       "mechanical": {
         "rated_torque_nm": 169,
         "peak_torque_nm": 411,
         "start_stop_peak_torque_nm": 411,
-        "avg_load_max_torque_nm": 267,
-        "rated_speed_rad_s": 2.304,
-        "max_speed_rad_s": 3.037,
+        "max_allow_avg_load_nm": 267,
+        "rated_speed_rpm": 22,
+        "max_speed_rpm": 29,
         "weight_kg": 2.8,
         "outer_diameter_mm": 120,
         "hollow_shaft_diameter_mm": 32,
@@ -44,7 +45,7 @@
         "torque_density_nm_per_kg": 146.79
       },
       "transmission": {
-        "ratio": 101,
+        "reduction_ratio": 101,
         "backlash_arcsec": 10
       },
       "options": {
@@ -65,6 +66,7 @@
         "length_mm_min": 103.5,
         "length_mm_max": 126.5,
         "inertia_g_cm2": 6489.86,
+        "brake_torque_nm": 4,
         "variant_count": 4
       },
       "datasheet_url": "datasheets/2_钛虎_轻量化关节模组Pro3数据手册_20260104.pdf"
@@ -75,15 +77,16 @@
       "base_id": "Ti-PROS3-120-121-48",
       "electrical": {
         "peak_current_a": 20.2,
-        "continuous_current_a": 15.8
+        "continuous_current_a": 15.8,
+        "rated_input_power_w": 1000
       },
       "mechanical": {
         "rated_torque_nm": 169,
         "peak_torque_nm": 436,
         "start_stop_peak_torque_nm": 436,
-        "avg_load_max_torque_nm": 267,
-        "rated_speed_rad_s": 1.885,
-        "max_speed_rad_s": 2.513,
+        "max_allow_avg_load_nm": 267,
+        "rated_speed_rpm": 18,
+        "max_speed_rpm": 24,
         "weight_kg": 2.8,
         "outer_diameter_mm": 120,
         "hollow_shaft_diameter_mm": 32,
@@ -94,7 +97,7 @@
         "torque_density_nm_per_kg": 155.71
       },
       "transmission": {
-        "ratio": 121,
+        "reduction_ratio": 121,
         "backlash_arcsec": 10
       },
       "options": {
@@ -115,6 +118,7 @@
         "length_mm_min": 103.5,
         "length_mm_max": 126.5,
         "inertia_g_cm2": 6489.86,
+        "brake_torque_nm": 4,
         "variant_count": 4
       },
       "datasheet_url": "datasheets/2_钛虎_轻量化关节模组Pro3数据手册_20260104.pdf"
@@ -125,15 +129,16 @@
       "base_id": "Ti-PROS3-120-161-48",
       "electrical": {
         "peak_current_a": 20.2,
-        "continuous_current_a": 15.8
+        "continuous_current_a": 15.8,
+        "rated_input_power_w": 1000
       },
       "mechanical": {
         "rated_torque_nm": 169,
         "peak_torque_nm": 459,
         "start_stop_peak_torque_nm": 459,
-        "avg_load_max_torque_nm": 267,
-        "rated_speed_rad_s": 1.257,
-        "max_speed_rad_s": 1.885,
+        "max_allow_avg_load_nm": 267,
+        "rated_speed_rpm": 12,
+        "max_speed_rpm": 18,
         "weight_kg": 2.8,
         "outer_diameter_mm": 120,
         "hollow_shaft_diameter_mm": 32,
@@ -144,7 +149,7 @@
         "torque_density_nm_per_kg": 163.93
       },
       "transmission": {
-        "ratio": 161,
+        "reduction_ratio": 161,
         "backlash_arcsec": 10
       },
       "options": {
@@ -165,6 +170,7 @@
         "length_mm_min": 103.5,
         "length_mm_max": 126.5,
         "inertia_g_cm2": 6489.86,
+        "brake_torque_nm": 4,
         "variant_count": 4
       },
       "datasheet_url": "datasheets/2_钛虎_轻量化关节模组Pro3数据手册_20260104.pdf"
@@ -175,15 +181,16 @@
       "base_id": "Ti-PROS3-120-51-48",
       "electrical": {
         "peak_current_a": 20.2,
-        "continuous_current_a": 15.8
+        "continuous_current_a": 15.8,
+        "rated_input_power_w": 1000
       },
       "mechanical": {
         "rated_torque_nm": 94,
         "peak_torque_nm": 267,
         "start_stop_peak_torque_nm": 267,
-        "avg_load_max_torque_nm": 133,
-        "rated_speed_rad_s": 4.608,
-        "max_speed_rad_s": 5.76,
+        "max_allow_avg_load_nm": 133,
+        "rated_speed_rpm": 44,
+        "max_speed_rpm": 55,
         "weight_kg": 2.8,
         "outer_diameter_mm": 120,
         "hollow_shaft_diameter_mm": 32,
@@ -194,7 +201,7 @@
         "torque_density_nm_per_kg": 95.36
       },
       "transmission": {
-        "ratio": 51,
+        "reduction_ratio": 51,
         "backlash_arcsec": 20
       },
       "options": {
@@ -215,6 +222,7 @@
         "length_mm_min": 103.5,
         "length_mm_max": 126.5,
         "inertia_g_cm2": 6489.86,
+        "brake_torque_nm": 4,
         "variant_count": 4
       },
       "datasheet_url": "datasheets/2_钛虎_轻量化关节模组Pro3数据手册_20260104.pdf"
@@ -225,15 +233,16 @@
       "base_id": "Ti-PROS3-120-81-48",
       "electrical": {
         "peak_current_a": 20.2,
-        "continuous_current_a": 15.8
+        "continuous_current_a": 15.8,
+        "rated_input_power_w": 1000
       },
       "mechanical": {
         "rated_torque_nm": 146,
         "peak_torque_nm": 367,
         "start_stop_peak_torque_nm": 367,
-        "avg_load_max_torque_nm": 206,
-        "rated_speed_rad_s": 3.037,
-        "max_speed_rad_s": 3.875,
+        "max_allow_avg_load_nm": 206,
+        "rated_speed_rpm": 29,
+        "max_speed_rpm": 37,
         "weight_kg": 2.8,
         "outer_diameter_mm": 120,
         "hollow_shaft_diameter_mm": 32,
@@ -244,7 +253,7 @@
         "torque_density_nm_per_kg": 131.07
       },
       "transmission": {
-        "ratio": 81,
+        "reduction_ratio": 81,
         "backlash_arcsec": 20
       },
       "options": {
@@ -265,6 +274,7 @@
         "length_mm_min": 103.5,
         "length_mm_max": 126.5,
         "inertia_g_cm2": 6489.86,
+        "brake_torque_nm": 4,
         "variant_count": 4
       },
       "datasheet_url": "datasheets/2_钛虎_轻量化关节模组Pro3数据手册_20260104.pdf"
@@ -275,15 +285,16 @@
       "base_id": "Ti-PROS3-60-101-48",
       "electrical": {
         "peak_current_a": 5,
-        "continuous_current_a": 3.6
+        "continuous_current_a": 3.6,
+        "rated_input_power_w": 150
       },
       "mechanical": {
         "rated_torque_nm": 9.6,
         "peak_torque_nm": 34,
         "start_stop_peak_torque_nm": 34,
-        "avg_load_max_torque_nm": 13.5,
-        "rated_speed_rad_s": 3.875,
-        "max_speed_rad_s": 5.131,
+        "max_allow_avg_load_nm": 13.5,
+        "rated_speed_rpm": 37,
+        "max_speed_rpm": 49,
         "weight_kg": 0.48,
         "outer_diameter_mm": 60,
         "hollow_shaft_diameter_mm": 13,
@@ -294,7 +305,7 @@
         "torque_density_nm_per_kg": 70.83
       },
       "transmission": {
-        "ratio": 101,
+        "reduction_ratio": 101,
         "backlash_arcsec": 10
       },
       "options": {
@@ -315,6 +326,7 @@
         "length_mm_min": 66.5,
         "length_mm_max": 82,
         "inertia_g_cm2": 193.42,
+        "brake_torque_nm": 0.3,
         "variant_count": 4
       },
       "datasheet_url": "datasheets/2_钛虎_轻量化关节模组Pro3数据手册_20260104.pdf"
@@ -325,15 +337,16 @@
       "base_id": "Ti-PROS3-60-51-48",
       "electrical": {
         "peak_current_a": 5,
-        "continuous_current_a": 3.6
+        "continuous_current_a": 3.6,
+        "rated_input_power_w": 150
       },
       "mechanical": {
         "rated_torque_nm": 6.6,
         "peak_torque_nm": 23,
         "start_stop_peak_torque_nm": 23,
-        "avg_load_max_torque_nm": 8.6,
-        "rated_speed_rad_s": 7.854,
-        "max_speed_rad_s": 10.158,
+        "max_allow_avg_load_nm": 8.6,
+        "rated_speed_rpm": 75,
+        "max_speed_rpm": 97,
         "weight_kg": 0.48,
         "outer_diameter_mm": 60,
         "hollow_shaft_diameter_mm": 13,
@@ -344,7 +357,7 @@
         "torque_density_nm_per_kg": 47.92
       },
       "transmission": {
-        "ratio": 51,
+        "reduction_ratio": 51,
         "backlash_arcsec": 20
       },
       "options": {
@@ -365,6 +378,7 @@
         "length_mm_min": 66.5,
         "length_mm_max": 82,
         "inertia_g_cm2": 193.42,
+        "brake_torque_nm": 0.3,
         "variant_count": 4
       },
       "datasheet_url": "datasheets/2_钛虎_轻量化关节模组Pro3数据手册_20260104.pdf"
@@ -375,15 +389,16 @@
       "base_id": "Ti-PROS3-60-81-48",
       "electrical": {
         "peak_current_a": 5,
-        "continuous_current_a": 3.6
+        "continuous_current_a": 3.6,
+        "rated_input_power_w": 150
       },
       "mechanical": {
         "rated_torque_nm": 9.6,
         "peak_torque_nm": 29,
         "start_stop_peak_torque_nm": 29,
-        "avg_load_max_torque_nm": 13.5,
-        "rated_speed_rad_s": 4.817,
-        "max_speed_rad_s": 6.388,
+        "max_allow_avg_load_nm": 13.5,
+        "rated_speed_rpm": 46,
+        "max_speed_rpm": 61,
         "weight_kg": 0.48,
         "outer_diameter_mm": 60,
         "hollow_shaft_diameter_mm": 13,
@@ -394,7 +409,7 @@
         "torque_density_nm_per_kg": 60.42
       },
       "transmission": {
-        "ratio": 81,
+        "reduction_ratio": 81,
         "backlash_arcsec": 20
       },
       "options": {
@@ -415,6 +430,7 @@
         "length_mm_min": 66.5,
         "length_mm_max": 82,
         "inertia_g_cm2": 193.42,
+        "brake_torque_nm": 0.3,
         "variant_count": 4
       },
       "datasheet_url": "datasheets/2_钛虎_轻量化关节模组Pro3数据手册_20260104.pdf"
@@ -425,15 +441,16 @@
       "base_id": "Ti-PROS3-70-101-48",
       "electrical": {
         "peak_current_a": 6.7,
-        "continuous_current_a": 5
+        "continuous_current_a": 5,
+        "rated_input_power_w": 300
       },
       "mechanical": {
         "rated_torque_nm": 30,
         "peak_torque_nm": 66,
         "start_stop_peak_torque_nm": 66,
-        "avg_load_max_torque_nm": 49,
-        "rated_speed_rad_s": 3.56,
-        "max_speed_rad_s": 4.294,
+        "max_allow_avg_load_nm": 49,
+        "rated_speed_rpm": 34,
+        "max_speed_rpm": 41,
         "weight_kg": 0.8,
         "outer_diameter_mm": 70,
         "hollow_shaft_diameter_mm": 15,
@@ -444,7 +461,7 @@
         "torque_density_nm_per_kg": 82.5
       },
       "transmission": {
-        "ratio": 101,
+        "reduction_ratio": 101,
         "backlash_arcsec": 10
       },
       "options": {
@@ -465,6 +482,7 @@
         "length_mm_min": 73.5,
         "length_mm_max": 89.5,
         "inertia_g_cm2": 497.59,
+        "brake_torque_nm": 1,
         "variant_count": 4
       },
       "datasheet_url": "datasheets/2_钛虎_轻量化关节模组Pro3数据手册_20260104.pdf"
@@ -475,15 +493,16 @@
       "base_id": "Ti-PROS3-70-121-48",
       "electrical": {
         "peak_current_a": 6.7,
-        "continuous_current_a": 5
+        "continuous_current_a": 5,
+        "rated_input_power_w": 300
       },
       "mechanical": {
         "rated_torque_nm": 30,
         "peak_torque_nm": 66,
         "start_stop_peak_torque_nm": 66,
-        "avg_load_max_torque_nm": 49,
-        "rated_speed_rad_s": 2.513,
-        "max_speed_rad_s": 3.351,
+        "max_allow_avg_load_nm": 49,
+        "rated_speed_rpm": 24,
+        "max_speed_rpm": 32,
         "weight_kg": 0.8,
         "outer_diameter_mm": 70,
         "hollow_shaft_diameter_mm": 15,
@@ -494,7 +513,7 @@
         "torque_density_nm_per_kg": 82.5
       },
       "transmission": {
-        "ratio": 121,
+        "reduction_ratio": 121,
         "backlash_arcsec": 10
       },
       "options": {
@@ -515,6 +534,7 @@
         "length_mm_min": 73.5,
         "length_mm_max": 89.5,
         "inertia_g_cm2": 497.59,
+        "brake_torque_nm": 1,
         "variant_count": 4
       },
       "datasheet_url": "datasheets/2_钛虎_轻量化关节模组Pro3数据手册_20260104.pdf"
@@ -525,15 +545,16 @@
       "base_id": "Ti-PROS3-70-51-48",
       "electrical": {
         "peak_current_a": 6.7,
-        "continuous_current_a": 5
+        "continuous_current_a": 5,
+        "rated_input_power_w": 300
       },
       "mechanical": {
         "rated_torque_nm": 19.8,
         "peak_torque_nm": 42,
         "start_stop_peak_torque_nm": 42,
-        "avg_load_max_torque_nm": 32,
-        "rated_speed_rad_s": 7.121,
-        "max_speed_rad_s": 8.587,
+        "max_allow_avg_load_nm": 32,
+        "rated_speed_rpm": 68,
+        "max_speed_rpm": 82,
         "weight_kg": 0.8,
         "outer_diameter_mm": 70,
         "hollow_shaft_diameter_mm": 15,
@@ -544,7 +565,7 @@
         "torque_density_nm_per_kg": 52.5
       },
       "transmission": {
-        "ratio": 51,
+        "reduction_ratio": 51,
         "backlash_arcsec": 20
       },
       "options": {
@@ -565,6 +586,7 @@
         "length_mm_min": 73.5,
         "length_mm_max": 89.5,
         "inertia_g_cm2": 497.59,
+        "brake_torque_nm": 1,
         "variant_count": 4
       },
       "datasheet_url": "datasheets/2_钛虎_轻量化关节模组Pro3数据手册_20260104.pdf"
@@ -575,15 +597,16 @@
       "base_id": "Ti-PROS3-70-81-48",
       "electrical": {
         "peak_current_a": 6.7,
-        "continuous_current_a": 5
+        "continuous_current_a": 5,
+        "rated_input_power_w": 300
       },
       "mechanical": {
         "rated_torque_nm": 27.5,
         "peak_torque_nm": 53,
         "start_stop_peak_torque_nm": 53,
-        "avg_load_max_torque_nm": 33,
-        "rated_speed_rad_s": 4.503,
-        "max_speed_rad_s": 5.341,
+        "max_allow_avg_load_nm": 33,
+        "rated_speed_rpm": 43,
+        "max_speed_rpm": 51,
         "weight_kg": 0.8,
         "outer_diameter_mm": 70,
         "hollow_shaft_diameter_mm": 15,
@@ -594,7 +617,7 @@
         "torque_density_nm_per_kg": 66.25
       },
       "transmission": {
-        "ratio": 81,
+        "reduction_ratio": 81,
         "backlash_arcsec": 20
       },
       "options": {
@@ -615,6 +638,7 @@
         "length_mm_min": 73.5,
         "length_mm_max": 89.5,
         "inertia_g_cm2": 497.59,
+        "brake_torque_nm": 1,
         "variant_count": 4
       },
       "datasheet_url": "datasheets/2_钛虎_轻量化关节模组Pro3数据手册_20260104.pdf"
@@ -625,15 +649,16 @@
       "base_id": "Ti-PROS3-80-101-48",
       "electrical": {
         "peak_current_a": 8.4,
-        "continuous_current_a": 6.1
+        "continuous_current_a": 6.1,
+        "rated_input_power_w": 500
       },
       "mechanical": {
         "rated_torque_nm": 50,
         "peak_torque_nm": 102,
         "start_stop_peak_torque_nm": 102,
-        "avg_load_max_torque_nm": 61,
-        "rated_speed_rad_s": 3.142,
-        "max_speed_rad_s": 4.189,
+        "max_allow_avg_load_nm": 61,
+        "rated_speed_rpm": 30,
+        "max_speed_rpm": 40,
         "weight_kg": 1.03,
         "outer_diameter_mm": 80,
         "hollow_shaft_diameter_mm": 15,
@@ -644,7 +669,7 @@
         "torque_density_nm_per_kg": 99.03
       },
       "transmission": {
-        "ratio": 101,
+        "reduction_ratio": 101,
         "backlash_arcsec": 10
       },
       "options": {
@@ -665,6 +690,7 @@
         "length_mm_min": 73,
         "length_mm_max": 89,
         "inertia_g_cm2": 704.35,
+        "brake_torque_nm": 1,
         "variant_count": 4
       },
       "datasheet_url": "datasheets/2_钛虎_轻量化关节模组Pro3数据手册_20260104.pdf"
@@ -675,15 +701,16 @@
       "base_id": "Ti-PROS3-80-121-48",
       "electrical": {
         "peak_current_a": 8.4,
-        "continuous_current_a": 6.1
+        "continuous_current_a": 6.1,
+        "rated_input_power_w": 500
       },
       "mechanical": {
         "rated_torque_nm": 50,
         "peak_torque_nm": 108,
         "start_stop_peak_torque_nm": 108,
-        "avg_load_max_torque_nm": 61,
-        "rated_speed_rad_s": 2.618,
-        "max_speed_rad_s": 3.142,
+        "max_allow_avg_load_nm": 61,
+        "rated_speed_rpm": 25,
+        "max_speed_rpm": 30,
         "weight_kg": 1.03,
         "outer_diameter_mm": 80,
         "hollow_shaft_diameter_mm": 15,
@@ -694,7 +721,7 @@
         "torque_density_nm_per_kg": 104.85
       },
       "transmission": {
-        "ratio": 121,
+        "reduction_ratio": 121,
         "backlash_arcsec": 10
       },
       "options": {
@@ -715,6 +742,7 @@
         "length_mm_min": 73,
         "length_mm_max": 89,
         "inertia_g_cm2": 704.35,
+        "brake_torque_nm": 1,
         "variant_count": 4
       },
       "datasheet_url": "datasheets/2_钛虎_轻量化关节模组Pro3数据手册_20260104.pdf"
@@ -725,15 +753,16 @@
       "base_id": "Ti-PROS3-80-51-48",
       "electrical": {
         "peak_current_a": 8.4,
-        "continuous_current_a": 6.1
+        "continuous_current_a": 6.1,
+        "rated_input_power_w": 500
       },
       "mechanical": {
         "rated_torque_nm": 32,
         "peak_torque_nm": 69,
         "start_stop_peak_torque_nm": 69,
-        "avg_load_max_torque_nm": 42,
-        "rated_speed_rad_s": 6.388,
-        "max_speed_rad_s": 8.063,
+        "max_allow_avg_load_nm": 42,
+        "rated_speed_rpm": 61,
+        "max_speed_rpm": 77,
         "weight_kg": 1.03,
         "outer_diameter_mm": 80,
         "hollow_shaft_diameter_mm": 15,
@@ -744,7 +773,7 @@
         "torque_density_nm_per_kg": 66.99
       },
       "transmission": {
-        "ratio": 51,
+        "reduction_ratio": 51,
         "backlash_arcsec": 20
       },
       "options": {
@@ -765,6 +794,7 @@
         "length_mm_min": 73,
         "length_mm_max": 89,
         "inertia_g_cm2": 704.35,
+        "brake_torque_nm": 1,
         "variant_count": 4
       },
       "datasheet_url": "datasheets/2_钛虎_轻量化关节模组Pro3数据手册_20260104.pdf"
@@ -775,15 +805,16 @@
       "base_id": "Ti-PROS3-80-81-48",
       "electrical": {
         "peak_current_a": 8.4,
-        "continuous_current_a": 6.1
+        "continuous_current_a": 6.1,
+        "rated_input_power_w": 500
       },
       "mechanical": {
         "rated_torque_nm": 42,
         "peak_torque_nm": 91,
         "start_stop_peak_torque_nm": 91,
-        "avg_load_max_torque_nm": 58,
-        "rated_speed_rad_s": 3.979,
-        "max_speed_rad_s": 5.027,
+        "max_allow_avg_load_nm": 58,
+        "rated_speed_rpm": 38,
+        "max_speed_rpm": 48,
         "weight_kg": 1.03,
         "outer_diameter_mm": 80,
         "hollow_shaft_diameter_mm": 15,
@@ -794,7 +825,7 @@
         "torque_density_nm_per_kg": 88.35
       },
       "transmission": {
-        "ratio": 81,
+        "reduction_ratio": 81,
         "backlash_arcsec": 20
       },
       "options": {
@@ -815,6 +846,7 @@
         "length_mm_min": 73,
         "length_mm_max": 89,
         "inertia_g_cm2": 704.35,
+        "brake_torque_nm": 1,
         "variant_count": 4
       },
       "datasheet_url": "datasheets/2_钛虎_轻量化关节模组Pro3数据手册_20260104.pdf"
@@ -825,15 +857,16 @@
       "base_id": "Ti-PROS3-97-101-48",
       "electrical": {
         "peak_current_a": 11.1,
-        "continuous_current_a": 9.6
+        "continuous_current_a": 9.6,
+        "rated_input_power_w": 750
       },
       "mechanical": {
         "rated_torque_nm": 84,
         "peak_torque_nm": 194,
         "start_stop_peak_torque_nm": 194,
-        "avg_load_max_torque_nm": 133,
-        "rated_speed_rad_s": 2.827,
-        "max_speed_rad_s": 3.77,
+        "max_allow_avg_load_nm": 133,
+        "rated_speed_rpm": 27,
+        "max_speed_rpm": 36,
         "weight_kg": 1.55,
         "outer_diameter_mm": 97,
         "hollow_shaft_diameter_mm": 27,
@@ -844,7 +877,7 @@
         "torque_density_nm_per_kg": 125.16
       },
       "transmission": {
-        "ratio": 101,
+        "reduction_ratio": 101,
         "backlash_arcsec": 10
       },
       "options": {
@@ -865,6 +898,7 @@
         "length_mm_min": 86,
         "length_mm_max": 104,
         "inertia_g_cm2": 1616.07,
+        "brake_torque_nm": 2,
         "variant_count": 4
       },
       "datasheet_url": "datasheets/2_钛虎_轻量化关节模组Pro3数据手册_20260104.pdf"
@@ -875,15 +909,16 @@
       "base_id": "Ti-PROS3-97-121-48",
       "electrical": {
         "peak_current_a": 11.1,
-        "continuous_current_a": 9.6
+        "continuous_current_a": 9.6,
+        "rated_input_power_w": 750
       },
       "mechanical": {
         "rated_torque_nm": 84,
         "peak_torque_nm": 207,
         "start_stop_peak_torque_nm": 207,
-        "avg_load_max_torque_nm": 133,
-        "rated_speed_rad_s": 2.409,
-        "max_speed_rad_s": 3.142,
+        "max_allow_avg_load_nm": 133,
+        "rated_speed_rpm": 23,
+        "max_speed_rpm": 30,
         "weight_kg": 1.55,
         "outer_diameter_mm": 97,
         "hollow_shaft_diameter_mm": 27,
@@ -894,7 +929,7 @@
         "torque_density_nm_per_kg": 133.55
       },
       "transmission": {
-        "ratio": 121,
+        "reduction_ratio": 121,
         "backlash_arcsec": 10
       },
       "options": {
@@ -915,6 +950,7 @@
         "length_mm_min": 86,
         "length_mm_max": 104,
         "inertia_g_cm2": 1616.07,
+        "brake_torque_nm": 2,
         "variant_count": 4
       },
       "datasheet_url": "datasheets/2_钛虎_轻量化关节模组Pro3数据手册_20260104.pdf"
@@ -925,15 +961,16 @@
       "base_id": "Ti-PROS3-97-161-48",
       "electrical": {
         "peak_current_a": 11.1,
-        "continuous_current_a": 9.6
+        "continuous_current_a": 9.6,
+        "rated_input_power_w": 750
       },
       "mechanical": {
         "rated_torque_nm": 84,
         "peak_torque_nm": 217,
         "start_stop_peak_torque_nm": 217,
-        "avg_load_max_torque_nm": 133,
-        "rated_speed_rad_s": 1.78,
-        "max_speed_rad_s": 2.304,
+        "max_allow_avg_load_nm": 133,
+        "rated_speed_rpm": 17,
+        "max_speed_rpm": 22,
         "weight_kg": 1.55,
         "outer_diameter_mm": 97,
         "hollow_shaft_diameter_mm": 27,
@@ -944,7 +981,7 @@
         "torque_density_nm_per_kg": 140.0
       },
       "transmission": {
-        "ratio": 161,
+        "reduction_ratio": 161,
         "backlash_arcsec": 10
       },
       "options": {
@@ -965,6 +1002,7 @@
         "length_mm_min": 86,
         "length_mm_max": 104,
         "inertia_g_cm2": 1616.07,
+        "brake_torque_nm": 2,
         "variant_count": 4
       },
       "datasheet_url": "datasheets/2_钛虎_轻量化关节模组Pro3数据手册_20260104.pdf"
@@ -975,15 +1013,16 @@
       "base_id": "Ti-PROS3-97-51-48",
       "electrical": {
         "peak_current_a": 11.1,
-        "continuous_current_a": 9.6
+        "continuous_current_a": 9.6,
+        "rated_input_power_w": 750
       },
       "mechanical": {
         "rated_torque_nm": 48,
         "peak_torque_nm": 121,
         "start_stop_peak_torque_nm": 121,
-        "avg_load_max_torque_nm": 68.5,
-        "rated_speed_rad_s": 5.655,
-        "max_speed_rad_s": 6.807,
+        "max_allow_avg_load_nm": 68.5,
+        "rated_speed_rpm": 54,
+        "max_speed_rpm": 65,
         "weight_kg": 1.55,
         "outer_diameter_mm": 97,
         "hollow_shaft_diameter_mm": 27,
@@ -994,7 +1033,7 @@
         "torque_density_nm_per_kg": 78.06
       },
       "transmission": {
-        "ratio": 51,
+        "reduction_ratio": 51,
         "backlash_arcsec": 20
       },
       "options": {
@@ -1015,6 +1054,7 @@
         "length_mm_min": 86,
         "length_mm_max": 104,
         "inertia_g_cm2": 1616.07,
+        "brake_torque_nm": 2,
         "variant_count": 4
       },
       "datasheet_url": "datasheets/2_钛虎_轻量化关节模组Pro3数据手册_20260104.pdf"
@@ -1025,15 +1065,16 @@
       "base_id": "Ti-PROS3-97-81-48",
       "electrical": {
         "peak_current_a": 11.1,
-        "continuous_current_a": 9.6
+        "continuous_current_a": 9.6,
+        "rated_input_power_w": 750
       },
       "mechanical": {
         "rated_torque_nm": 78,
         "peak_torque_nm": 169,
         "start_stop_peak_torque_nm": 169,
-        "avg_load_max_torque_nm": 107,
-        "rated_speed_rad_s": 3.665,
-        "max_speed_rad_s": 4.503,
+        "max_allow_avg_load_nm": 107,
+        "rated_speed_rpm": 35,
+        "max_speed_rpm": 43,
         "weight_kg": 1.55,
         "outer_diameter_mm": 97,
         "hollow_shaft_diameter_mm": 27,
@@ -1044,7 +1085,7 @@
         "torque_density_nm_per_kg": 109.03
       },
       "transmission": {
-        "ratio": 81,
+        "reduction_ratio": 81,
         "backlash_arcsec": 20
       },
       "options": {
@@ -1065,6 +1106,7 @@
         "length_mm_min": 86,
         "length_mm_max": 104,
         "inertia_g_cm2": 1616.07,
+        "brake_torque_nm": 2,
         "variant_count": 4
       },
       "datasheet_url": "datasheets/2_钛虎_轻量化关节模组Pro3数据手册_20260104.pdf"

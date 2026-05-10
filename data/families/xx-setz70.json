@@ -1,0 +1,217 @@
+{
+  "family_id": "xx-setz70",
+  "family_name": "小象 SETZ70",
+  "shared": {
+    "manufacturer": "小象",
+    "manufacturer_en": "SEmotor",
+    "electrical": {
+      "voltage_v": 48,
+      "peak_current_a": 9,
+      "continuous_current_a": 6.5,
+      "rated_input_power_w": 300,
+      "peak_input_power_w": 1250,
+      "motor_topology": "radial flux"
+    },
+    "mechanical": {
+      "outer_diameter_mm": 78
+    }
+  },
+  "variants": [
+    {
+      "id": "xx-setz70-1-48",
+      "model": "SETZ70-1CB",
+      "base_id": "XX-SETZ70-1-48",
+      "mechanical": {
+        "rated_torque_nm": 0.45,
+        "peak_torque_nm": 1.25,
+        "start_stop_peak_torque_nm": 1.25,
+        "rated_speed_rpm": 2250,
+        "max_speed_rpm": 4000,
+        "weight_kg": 0.45,
+        "torque_density_nm_per_kg": 2.78
+      },
+      "transmission": {
+        "reduction_ratio": 1
+      },
+      "options": {
+        "brake_options": [
+          false
+        ],
+        "dual_encoder_options": [
+          false
+        ],
+        "force_sensor_options": [
+          false
+        ],
+        "length_mm_min": 42,
+        "length_mm_max": 42
+      },
+      "datasheet_url": "datasheets/24_小象SEmotor.pdf"
+    },
+    {
+      "id": "xx-setz70-16-48",
+      "model": "SEAF70A16G01",
+      "base_id": "XX-SETZ70-16-48",
+      "mechanical": {
+        "rated_torque_nm": 20,
+        "peak_torque_nm": 112,
+        "start_stop_peak_torque_nm": 112,
+        "rated_speed_rpm": 140,
+        "max_speed_rpm": 250,
+        "weight_kg": 0.75,
+        "weight_kg_max": 0.8,
+        "torque_density_nm_per_kg": 149.33
+      },
+      "transmission": {
+        "reduction_ratio": 16
+      },
+      "options": {
+        "bus_types": [
+          "CAN"
+        ],
+        "brake_options": [
+          false
+        ],
+        "dual_encoder_options": [
+          false
+        ],
+        "force_sensor_options": [
+          false
+        ],
+        "length_mm_min": 65,
+        "length_mm_max": 65,
+        "variant_count": 2
+      },
+      "datasheet_url": "datasheets/24_小象SEmotor.pdf"
+    },
+    {
+      "id": "xx-setz70-24-48",
+      "model": "SETZ70-1GB",
+      "base_id": "XX-SETZ70-24-48",
+      "mechanical": {
+        "rated_torque_nm": 30,
+        "peak_torque_nm": 168,
+        "start_stop_peak_torque_nm": 168,
+        "rated_speed_rpm": 93.5,
+        "max_speed_rpm": 166.5,
+        "weight_kg": 0.85,
+        "torque_density_nm_per_kg": 197.65
+      },
+      "transmission": {
+        "reduction_ratio": 24
+      },
+      "options": {
+        "brake_options": [
+          false
+        ],
+        "dual_encoder_options": [
+          false
+        ],
+        "force_sensor_options": [
+          false
+        ],
+        "length_mm_min": 67,
+        "length_mm_max": 67
+      },
+      "datasheet_url": "datasheets/24_小象SEmotor.pdf"
+    },
+    {
+      "id": "xx-setz70-35-48",
+      "model": "SETZ70-1HB",
+      "base_id": "XX-SETZ70-35-48",
+      "mechanical": {
+        "rated_torque_nm": 43.75,
+        "peak_torque_nm": 245,
+        "start_stop_peak_torque_nm": 245,
+        "rated_speed_rpm": 64,
+        "max_speed_rpm": 114,
+        "weight_kg": 1,
+        "torque_density_nm_per_kg": 245.0
+      },
+      "transmission": {
+        "reduction_ratio": 35
+      },
+      "options": {
+        "brake_options": [
+          false
+        ],
+        "dual_encoder_options": [
+          false
+        ],
+        "force_sensor_options": [
+          false
+        ],
+        "length_mm_min": 85,
+        "length_mm_max": 85
+      },
+      "datasheet_url": "datasheets/24_小象SEmotor.pdf"
+    },
+    {
+      "id": "xx-setz70-4-48",
+      "model": "SETZ70-1FB",
+      "base_id": "XX-SETZ70-4-48",
+      "mechanical": {
+        "rated_torque_nm": 5,
+        "peak_torque_nm": 28,
+        "start_stop_peak_torque_nm": 28,
+        "rated_speed_rpm": 562.5,
+        "max_speed_rpm": 1000,
+        "weight_kg": 0.55,
+        "torque_density_nm_per_kg": 50.91
+      },
+      "transmission": {
+        "reduction_ratio": 4
+      },
+      "options": {
+        "brake_options": [
+          false
+        ],
+        "dual_encoder_options": [
+          false
+        ],
+        "force_sensor_options": [
+          false
+        ],
+        "length_mm_min": 55,
+        "length_mm_max": 55
+      },
+      "datasheet_url": "datasheets/24_小象SEmotor.pdf"
+    },
+    {
+      "id": "xx-setz70-9-48",
+      "model": "SETZ70-1DB",
+      "base_id": "XX-SETZ70-9-48",
+      "mechanical": {
+        "rated_torque_nm": 11.25,
+        "peak_torque_nm": 63,
+        "start_stop_peak_torque_nm": 63,
+        "rated_speed_rpm": 250,
+        "max_speed_rpm": 444,
+        "weight_kg": 0.65,
+        "weight_kg_max": 0.7,
+        "torque_density_nm_per_kg": 96.92
+      },
+      "transmission": {
+        "reduction_ratio": 9
+      },
+      "options": {
+        "bus_types": [
+          "CAN"
+        ],
+        "brake_options": [
+          false
+        ],
+        "dual_encoder_options": [
+          false
+        ],
+        "force_sensor_options": [
+          false
+        ],
+        "length_mm_min": 65,
+        "length_mm_max": 65,
+        "variant_count": 2
+      },
+      "datasheet_url": "datasheets/24_小象SEmotor.pdf"
+    }
+  ]
+}

@@ -28,15 +28,15 @@
         "rated_torque_nm": 75,
         "peak_torque_nm": 90,
         "start_stop_peak_torque_nm": 90,
-        "rated_speed_rad_s": 15.08,
-        "max_speed_rad_s": 16.755,
+        "rated_speed_rpm": 144,
+        "max_speed_rpm": 160,
         "weight_kg": 0.93,
         "outer_diameter_mm": 105,
         "hollow_shaft_diameter_mm": 6,
         "torque_density_nm_per_kg": 96.77
       },
       "transmission": {
-        "ratio": 13.19,
+        "reduction_ratio": 13.19,
         "backlash_arcsec": 900
       },
       "options": {
@@ -68,15 +68,15 @@
         "rated_torque_nm": 85,
         "peak_torque_nm": 150,
         "start_stop_peak_torque_nm": 150,
-        "rated_speed_rad_s": 13.09,
-        "max_speed_rad_s": 14.451,
+        "rated_speed_rpm": 125,
+        "max_speed_rpm": 138,
         "weight_kg": 1.66,
         "outer_diameter_mm": 124,
         "hollow_shaft_diameter_mm": 11.5,
         "torque_density_nm_per_kg": 90.36
       },
       "transmission": {
-        "ratio": 12.25,
+        "reduction_ratio": 12.25,
         "backlash_arcsec": 900
       },
       "options": {
@@ -108,15 +108,15 @@
         "rated_torque_nm": 9,
         "peak_torque_nm": 37.6,
         "start_stop_peak_torque_nm": 37.6,
-        "rated_speed_rad_s": 8.063,
-        "max_speed_rad_s": 10.472,
+        "rated_speed_rpm": 77,
+        "max_speed_rpm": 100,
         "weight_kg": 0.385,
         "outer_diameter_mm": 56,
         "hollow_shaft_diameter_mm": 0,
         "torque_density_nm_per_kg": 97.66
       },
       "transmission": {
-        "ratio": 36,
+        "reduction_ratio": 36,
         "backlash_arcsec": 720
       },
       "options": {
@@ -148,15 +148,15 @@
         "rated_torque_nm": 50,
         "peak_torque_nm": 60,
         "start_stop_peak_torque_nm": 60,
-        "rated_speed_rad_s": 13.195,
-        "max_speed_rad_s": 16.755,
+        "rated_speed_rpm": 126,
+        "max_speed_rpm": 160,
         "weight_kg": 0.604,
         "outer_diameter_mm": 88,
         "hollow_shaft_diameter_mm": 7,
         "torque_density_nm_per_kg": 99.34
       },
       "transmission": {
-        "ratio": 18.8,
+        "reduction_ratio": 18.8,
         "backlash_arcsec": 600
       },
       "options": {

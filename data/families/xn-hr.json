@@ -9,8 +9,8 @@
       "motor_topology": "radial flux"
     },
     "mechanical": {
-      "rated_speed_rad_s": 4.712,
-      "max_speed_rad_s": 4.712,
+      "rated_speed_rpm": 45,
+      "max_speed_rpm": 45,
       "repeatability_deg": 0.1,
       "output_encoder_bits": 14,
       "motor_encoder_bits": 14,
@@ -18,7 +18,7 @@
     },
     "transmission": {
       "type": "harmonic",
-      "ratio": 100,
+      "reduction_ratio": 100,
       "backdrivable": false,
       "backlash_arcsec": 600
     }
@@ -35,7 +35,7 @@
       },
       "mechanical": {
         "rated_torque_nm": 6.7,
-        "instant_peak_torque_nm": 20,
+        "max_allow_instant_load_nm": 20,
         "weight_kg": 0.24,
         "outer_diameter_mm": 43,
         "radial_load_kn": 0.003,
@@ -72,7 +72,7 @@
       },
       "mechanical": {
         "rated_torque_nm": 36,
-        "instant_peak_torque_nm": 110,
+        "max_allow_instant_load_nm": 110,
         "weight_kg": 0.64,
         "outer_diameter_mm": 64,
         "radial_load_kn": 0.006,
@@ -109,7 +109,7 @@
       },
       "mechanical": {
         "rated_torque_nm": 36,
-        "instant_peak_torque_nm": 110,
+        "max_allow_instant_load_nm": 110,
         "weight_kg": 0.86,
         "outer_diameter_mm": 80,
         "radial_load_kn": 0.0075,

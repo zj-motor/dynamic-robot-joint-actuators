@@ -1,0 +1,49 @@
+{
+  "family_id": "xx-setz220",
+  "family_name": "小象 SETZ220",
+  "shared": {
+    "manufacturer": "小象",
+    "manufacturer_en": "SEmotor",
+    "electrical": {
+      "voltage_v": 48,
+      "peak_current_a": 20,
+      "rated_input_power_w": 5000,
+      "peak_input_power_w": 11500,
+      "motor_topology": "radial flux"
+    },
+    "mechanical": {
+      "rated_torque_nm": 96,
+      "peak_torque_nm": 1800,
+      "start_stop_peak_torque_nm": 1800,
+      "rated_speed_rpm": 75,
+      "max_speed_rpm": 92.5,
+      "weight_kg": 13.5,
+      "outer_diameter_mm": 220,
+      "torque_density_nm_per_kg": 133.33
+    },
+    "transmission": {
+      "reduction_ratio": 96
+    }
+  },
+  "variants": [
+    {
+      "id": "xx-setz220-96-48",
+      "model": "SETZ220-11CC",
+      "base_id": "XX-SETZ220-96-48",
+      "options": {
+        "brake_options": [
+          false
+        ],
+        "dual_encoder_options": [
+          false
+        ],
+        "force_sensor_options": [
+          false
+        ],
+        "length_mm_min": 135,
+        "length_mm_max": 135
+      },
+      "datasheet_url": "datasheets/24_小象SEmotor.pdf"
+    }
+  ]
+}

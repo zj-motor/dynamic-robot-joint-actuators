@@ -27,12 +27,12 @@
         "rated_torque_nm": 40,
         "peak_torque_nm": 120,
         "start_stop_peak_torque_nm": 120,
-        "rated_speed_rad_s": 10.472,
-        "max_speed_rad_s": 20.944,
+        "rated_speed_rpm": 100,
+        "max_speed_rpm": 200,
         "outer_diameter_mm": 120
       },
       "transmission": {
-        "ratio": 9
+        "reduction_ratio": 9
       },
       "datasheet_url": "datasheets/10_灵足时代_准直驱模组_20250626.pdf"
     },
@@ -50,12 +50,12 @@
         "rated_torque_nm": 1.6,
         "peak_torque_nm": 5.5,
         "start_stop_peak_torque_nm": 5.5,
-        "rated_speed_rad_s": 10.472,
-        "max_speed_rad_s": 50.265,
+        "rated_speed_rpm": 100,
+        "max_speed_rpm": 480,
         "outer_diameter_mm": 46
       },
       "transmission": {
-        "ratio": 7.75
+        "reduction_ratio": 7.75
       },
       "datasheet_url": "datasheets/10_灵足时代_准直驱模组_20250626.pdf"
     },
@@ -73,12 +73,12 @@
         "rated_torque_nm": 5,
         "peak_torque_nm": 14,
         "start_stop_peak_torque_nm": 14,
-        "rated_speed_rad_s": 10.472,
-        "max_speed_rad_s": 32.987,
+        "rated_speed_rpm": 100,
+        "max_speed_rpm": 315,
         "outer_diameter_mm": 57
       },
       "transmission": {
-        "ratio": 10
+        "reduction_ratio": 10
       },
       "datasheet_url": "datasheets/10_灵足时代_准直驱模组_20250626.pdf"
     },
@@ -96,12 +96,12 @@
         "rated_torque_nm": 6,
         "peak_torque_nm": 17,
         "start_stop_peak_torque_nm": 17,
-        "rated_speed_rad_s": 28.798,
-        "max_speed_rad_s": 32.987,
+        "rated_speed_rpm": 275,
+        "max_speed_rpm": 315,
         "outer_diameter_mm": 78.5
       },
       "transmission": {
-        "ratio": 7.75
+        "reduction_ratio": 7.75
       },
       "datasheet_url": "datasheets/10_灵足时代_准直驱模组_20250626.pdf"
     },
@@ -119,12 +119,12 @@
         "rated_torque_nm": 6,
         "peak_torque_nm": 17,
         "start_stop_peak_torque_nm": 17,
-        "rated_speed_rad_s": 10.472,
-        "max_speed_rad_s": 42.935,
+        "rated_speed_rpm": 100,
+        "max_speed_rpm": 410,
         "outer_diameter_mm": 78.5
       },
       "transmission": {
-        "ratio": 7.75
+        "reduction_ratio": 7.75
       },
       "datasheet_url": "datasheets/10_灵足时代_准直驱模组_20250626.pdf"
     },
@@ -142,12 +142,12 @@
         "rated_torque_nm": 11,
         "peak_torque_nm": 36,
         "start_stop_peak_torque_nm": 36,
-        "rated_speed_rad_s": 10.472,
-        "max_speed_rad_s": 50.265,
+        "rated_speed_rpm": 100,
+        "max_speed_rpm": 480,
         "outer_diameter_mm": 88
       },
       "transmission": {
-        "ratio": 9
+        "reduction_ratio": 9
       },
       "datasheet_url": "datasheets/10_灵足时代_准直驱模组_20250626.pdf"
     },
@@ -165,12 +165,12 @@
         "rated_torque_nm": 20,
         "peak_torque_nm": 60,
         "start_stop_peak_torque_nm": 60,
-        "rated_speed_rad_s": 10.472,
-        "max_speed_rad_s": 20.42,
+        "rated_speed_rpm": 100,
+        "max_speed_rpm": 195,
         "outer_diameter_mm": 98
       },
       "transmission": {
-        "ratio": 9
+        "reduction_ratio": 9
       },
       "datasheet_url": "datasheets/10_灵足时代_准直驱模组_20250626.pdf"
     }
