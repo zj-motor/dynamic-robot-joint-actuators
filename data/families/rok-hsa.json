@@ -52,7 +52,7 @@
           true
         ],
         "force_sensor_options": [
-          false
+          true
         ],
         "length_mm_min": 115,
         "length_mm_max": 115,
@@ -94,7 +94,7 @@
           true
         ],
         "force_sensor_options": [
-          false
+          true
         ],
         "length_mm_min": 135,
         "length_mm_max": 135,
@@ -136,7 +136,7 @@
           true
         ],
         "force_sensor_options": [
-          false
+          true
         ],
         "length_mm_min": 68,
         "length_mm_max": 68,
@@ -178,7 +178,7 @@
           true
         ],
         "force_sensor_options": [
-          false
+          true
         ],
         "length_mm_min": 74,
         "length_mm_max": 74,
@@ -220,7 +220,7 @@
           true
         ],
         "force_sensor_options": [
-          false
+          true
         ],
         "length_mm_min": 98,
         "length_mm_max": 98,
@@ -262,7 +262,7 @@
           true
         ],
         "force_sensor_options": [
-          false
+          true
         ],
         "length_mm_min": 107,
         "length_mm_max": 107,

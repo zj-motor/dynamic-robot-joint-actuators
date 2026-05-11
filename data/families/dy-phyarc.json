@@ -5,7 +5,7 @@
     "manufacturer": "动易",
     "manufacturer_en": "PHYBOT",
     "electrical": {
-      "voltage_v": 48,
+      "voltage_v": 72,
       "motor_topology": "radial flux"
     },
     "mechanical": {

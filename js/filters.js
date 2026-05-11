@@ -16,7 +16,6 @@ export function createFilterState() {
     motorType:    new Set(),
     busType:      new Set(),
     voltage:      new Set(), // multi-select on voltage_v
-    joint:        new Set(),
     brake:        false,     // single "available" toggle
     dualEncoder:  false,
     forceSensor:  false,
@@ -43,11 +42,7 @@ export function applyFilters(data, state) {
       const buses = d.bus_types || [];
       if (!buses.some((b) => state.busType.has(b))) return false;
     }
-    if (state.voltage.size && !state.voltage.has(d.voltage_v)) return false;
-    if (state.joint.size) {
-      const joints = d.target_joints || [];
-      if (!joints.some((j) => state.joint.has(j))) return false;
-    }
+    if (state.voltage.size && !state.voltage.has(String(d.voltage_v))) return false;
     if (state.brake       && !d.has_brake_option)        return false;
     if (state.dualEncoder && !d.has_dual_encoder_option) return false;
     if (state.forceSensor && !d.has_force_sensor_option) return false;
@@ -94,12 +89,6 @@ export function renderFilterSidebar(data, state, onChange) {
     onChange,
     (v) => `${v} V`,
   );
-  renderCheckboxGroup(
-    "filter-joint",
-    countByMulti(data, "target_joints"),
-    state.joint,
-    onChange,
-  );
 
   // Boolean "Available" toggles for option facets
   renderToggle("filter-brake",        state, "brake",       onChange);
@@ -124,7 +113,6 @@ export function renderFilterSidebar(data, state, onChange) {
     state.motorType.clear();
     state.busType.clear();
     state.voltage.clear();
-    state.joint.clear();
     state.brake = false;
     state.dualEncoder = false;
     state.forceSensor = false;

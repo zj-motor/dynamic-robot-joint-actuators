@@ -25,7 +25,7 @@
         "rated_input_power_w": 565
       },
       "mechanical": {
-        "rated_torque_nm": 75,
+        "rated_torque_nm": 25,
         "peak_torque_nm": 90,
         "start_stop_peak_torque_nm": 90,
         "rated_speed_rpm": 144,
@@ -65,7 +65,7 @@
         "rated_input_power_w": 880
       },
       "mechanical": {
-        "rated_torque_nm": 85,
+        "rated_torque_nm": 40,
         "peak_torque_nm": 150,
         "start_stop_peak_torque_nm": 150,
         "rated_speed_rpm": 125,
@@ -145,7 +145,7 @@
         "rated_input_power_w": 366
       },
       "mechanical": {
-        "rated_torque_nm": 50,
+        "rated_torque_nm": 20,
         "peak_torque_nm": 60,
         "start_stop_peak_torque_nm": 60,
         "rated_speed_rpm": 126,

@@ -32,11 +32,13 @@
       },
       "mechanical": {
         "rated_torque_nm": 2,
-        "max_allow_instant_load_nm": 10,
+        "peak_torque_nm": 10,
+        "start_stop_peak_torque_nm": 10,
         "rated_speed_rpm": 40,
         "max_speed_rpm": 160,
         "weight_kg": 0.237,
-        "outer_diameter_mm": 44
+        "outer_diameter_mm": 44,
+        "torque_density_nm_per_kg": 42.19
       },
       "transmission": {
         "reduction_ratio": 30
@@ -70,11 +72,13 @@
       },
       "mechanical": {
         "rated_torque_nm": 2,
-        "max_allow_instant_load_nm": 10,
+        "peak_torque_nm": 10,
+        "start_stop_peak_torque_nm": 10,
         "rated_speed_rpm": 40,
         "max_speed_rpm": 160,
         "weight_kg": 0.237,
-        "outer_diameter_mm": 44
+        "outer_diameter_mm": 44,
+        "torque_density_nm_per_kg": 42.19
       },
       "transmission": {
         "reduction_ratio": 30
@@ -108,11 +112,13 @@
       },
       "mechanical": {
         "rated_torque_nm": 3.5,
-        "max_allow_instant_load_nm": 13,
+        "peak_torque_nm": 13,
+        "start_stop_peak_torque_nm": 13,
         "rated_speed_rpm": 82,
         "max_speed_rpm": 123,
         "weight_kg": 0.322,
-        "outer_diameter_mm": 50
+        "outer_diameter_mm": 50,
+        "torque_density_nm_per_kg": 40.37
       },
       "transmission": {
         "reduction_ratio": 22
@@ -146,11 +152,13 @@
       },
       "mechanical": {
         "rated_torque_nm": 6,
-        "max_allow_instant_load_nm": 21,
+        "peak_torque_nm": 21,
+        "start_stop_peak_torque_nm": 21,
         "rated_speed_rpm": 50,
         "max_speed_rpm": 75,
         "weight_kg": 0.323,
-        "outer_diameter_mm": 50
+        "outer_diameter_mm": 50,
+        "torque_density_nm_per_kg": 65.02
       },
       "transmission": {
         "reduction_ratio": 36
@@ -184,11 +192,13 @@
       },
       "mechanical": {
         "rated_torque_nm": 6,
-        "max_allow_instant_load_nm": 21,
+        "peak_torque_nm": 21,
+        "start_stop_peak_torque_nm": 21,
         "rated_speed_rpm": 50,
         "max_speed_rpm": 75,
         "weight_kg": 0.345,
-        "outer_diameter_mm": 50
+        "outer_diameter_mm": 50,
+        "torque_density_nm_per_kg": 60.87
       },
       "transmission": {
         "reduction_ratio": 36
@@ -222,11 +232,13 @@
       },
       "mechanical": {
         "rated_torque_nm": 10,
-        "max_allow_instant_load_nm": 36,
+        "peak_torque_nm": 36,
+        "start_stop_peak_torque_nm": 36,
         "rated_speed_rpm": 50,
         "max_speed_rpm": 60,
         "weight_kg": 0.565,
-        "outer_diameter_mm": 60
+        "outer_diameter_mm": 60,
+        "torque_density_nm_per_kg": 63.72
       },
       "transmission": {
         "reduction_ratio": 36
@@ -260,11 +272,13 @@
       },
       "mechanical": {
         "rated_torque_nm": 10,
-        "max_allow_instant_load_nm": 36,
+        "peak_torque_nm": 36,
+        "start_stop_peak_torque_nm": 36,
         "rated_speed_rpm": 50,
         "max_speed_rpm": 60,
         "weight_kg": 0.57,
-        "outer_diameter_mm": 60
+        "outer_diameter_mm": 60,
+        "torque_density_nm_per_kg": 63.16
       },
       "transmission": {
         "reduction_ratio": 36
@@ -298,11 +312,13 @@
       },
       "mechanical": {
         "rated_torque_nm": 18,
-        "max_allow_instant_load_nm": 60,
+        "peak_torque_nm": 60,
+        "start_stop_peak_torque_nm": 60,
         "rated_speed_rpm": 50,
         "max_speed_rpm": 60,
         "weight_kg": 0.85,
-        "outer_diameter_mm": 75
+        "outer_diameter_mm": 75,
+        "torque_density_nm_per_kg": 70.59
       },
       "transmission": {
         "reduction_ratio": 35

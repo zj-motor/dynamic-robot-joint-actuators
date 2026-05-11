@@ -29,8 +29,7 @@
       "base_id": "MT-CEM-53-30-48",
       "electrical": {
         "peak_current_a": 6.5,
-        "continuous_current_a": 2.3,
-        "rated_input_power_w": 132
+        "continuous_current_a": 2.3
       },
       "mechanical": {
         "rated_torque_nm": 9,
@@ -66,8 +65,7 @@
       "base_id": "MT-CEM-82-30-48",
       "electrical": {
         "peak_current_a": 7.2,
-        "continuous_current_a": 2.6,
-        "rated_input_power_w": 157
+        "continuous_current_a": 2.6
       },
       "mechanical": {
         "rated_torque_nm": 15,
@@ -103,8 +101,7 @@
       "base_id": "MT-CEM-87-30-48",
       "electrical": {
         "peak_current_a": 16.8,
-        "continuous_current_a": 5.7,
-        "rated_input_power_w": 210
+        "continuous_current_a": 5.7
       },
       "mechanical": {
         "rated_torque_nm": 25,

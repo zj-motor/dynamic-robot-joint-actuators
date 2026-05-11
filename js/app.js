@@ -160,7 +160,6 @@ function writeHash() {
   if (f.motorType.size)    parts.push(`mot=${[...f.motorType].map(encodeURIComponent).join(",")}`);
   if (f.busType.size)      parts.push(`bus=${[...f.busType].map(encodeURIComponent).join(",")}`);
   if (f.voltage.size)      parts.push(`v=${[...f.voltage].join(",")}`);
-  if (f.joint.size)        parts.push(`jt=${[...f.joint].map(encodeURIComponent).join(",")}`);
   if (f.brake)             parts.push("brk=1");
   if (f.dualEncoder)       parts.push("de=1");
   if (f.forceSensor)       parts.push("fs=1");
@@ -181,8 +180,7 @@ function parseHashIntoState() {
     if (k === "tx")  value.split(",").forEach((x) => state.filters.transmission.add(decodeURIComponent(x)));
     if (k === "mot") value.split(",").forEach((x) => state.filters.motorType.add(decodeURIComponent(x)));
     if (k === "bus") value.split(",").forEach((x) => state.filters.busType.add(decodeURIComponent(x)));
-    if (k === "v")   value.split(",").forEach((x) => { const n = Number(x); if (Number.isFinite(n)) state.filters.voltage.add(n); });
-    if (k === "jt")  value.split(",").forEach((x) => state.filters.joint.add(decodeURIComponent(x)));
+    if (k === "v")   value.split(",").forEach((x) => { if (Number.isFinite(Number(x))) state.filters.voltage.add(x); });
     if (k === "brk") state.filters.brake = (value === "1");
     if (k === "de")  state.filters.dualEncoder = (value === "1");
     if (k === "fs")  state.filters.forceSensor = (value === "1");
