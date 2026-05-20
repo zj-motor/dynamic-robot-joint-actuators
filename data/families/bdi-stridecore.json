@@ -16,7 +16,9 @@
       "torque_density_nm_per_kg": 156.52
     },
     "transmission": {
-      "reduction_ratio": 24
+      "type": "planetary",
+      "reduction_ratio": 24,
+      "backdrivable": false
     }
   },
   "variants": [
