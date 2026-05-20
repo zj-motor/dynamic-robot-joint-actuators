@@ -54,9 +54,19 @@ export function renderScatter(elId, data, opts = {}) {
   const yLabelKey = opts.yLabelKey || "chart.peak_torque";
   const yLabel    = t(yLabelKey);
 
+  const pinned = new Set(opts.pinnedIds || []);
+
+  // Bucket points by transmission type for the base layer, but keep pinned
+  // points OUT of those buckets — they'll get their own trace drawn on top
+  // so they're not occluded by later-drawn transmission groups.
   const byTx = new Map();
+  const pinnedItems = [];
   for (const d of data) {
     if (d.weight_kg == null || d[yField] == null) continue;
+    if (pinned.has(d.id)) {
+      pinnedItems.push(d);
+      continue;
+    }
     const key = d.transmission_type || "unspecified";
     if (!byTx.has(key)) byTx.set(key, []);
     byTx.get(key).push(d);
@@ -72,32 +82,75 @@ export function renderScatter(elId, data, opts = {}) {
     return 8 + tNorm * 18; // smaller range than before since two charts share the row
   };
 
-  const pinned = new Set(opts.pinnedIds || []);
+  const hoverTpl =
+    "<b>%{customdata[1]} %{customdata[2]}</b><br>" +
+    yLabel + ": %{y:.1f} Nm<br>" +
+    "Weight: %{x:.3f} kg<br>" +
+    "τ density: %{customdata[3]:.1f} Nm/kg<br>" +
+    "Max speed: %{customdata[4]:.0f} rpm" +
+    "<extra></extra>";
+  const cdOf = (items) => items.map((d) =>
+    [d.id, manufacturerDisplay(d.manufacturer), d.model, d.torque_density_nm_per_kg, d.max_speed_rpm]);
 
+  // We deliberately use SVG `scatter` (not `scattergl`) for the whole chart.
+  // The dataset is small (~hundreds of points), SVG is well within perf
+  // budget, and trace order strictly determines z-order — which lets the
+  // highlight trace below sit reliably on top.
   const traces = [...byTx.entries()].map(([tx, items]) => ({
-    type: "scattergl",
+    type: "scatter",
     mode: "markers",
     name: tx,
     x: items.map((d) => d.weight_kg),
     y: items.map((d) => d[yField]),
-    customdata: items.map((d) => [d.id, manufacturerDisplay(d.manufacturer), d.model, d.torque_density_nm_per_kg, d.max_speed_rpm]),
+    customdata: cdOf(items),
     marker: {
       size: items.map(sizeOf),
-      color: items.map((d) => (pinned.has(d.id) ? "#ea580c" : colorFor(tx))),
-      line: {
-        color: items.map((d) => (pinned.has(d.id) ? "#9a3412" : "#ffffff")),
-        width: items.map((d) => (pinned.has(d.id) ? 2 : 1)),
-      },
-      opacity: 0.85,
+      color: colorFor(tx),
+      line: { color: "#ffffff", width: 1 },
+      opacity: 0.6,
     },
-    hovertemplate:
-      "<b>%{customdata[1]} %{customdata[2]}</b><br>" +
-      yLabel + ": %{y:.1f} Nm<br>" +
-      "Weight: %{x:.3f} kg<br>" +
-      "τ density: %{customdata[3]:.1f} Nm/kg<br>" +
-      "Max speed: %{customdata[4]:.0f} rpm" +
-      "<extra></extra>",
+    hovertemplate: hoverTpl,
   }));
+
+  // Top layer: every pinned/highlighted point in one trace, rendered last.
+  // Because every trace in this chart is SVG (`scatter`), trace order maps
+  // directly to z-order — this trace will be drawn last and therefore sit
+  // above every base-layer marker no matter the transmission category.
+  if (pinnedItems.length) {
+    // Outer halo — slightly larger, low-opacity orange ring.
+    traces.push({
+      type: "scatter",
+      mode: "markers",
+      name: "",
+      x: pinnedItems.map((d) => d.weight_kg),
+      y: pinnedItems.map((d) => d[yField]),
+      marker: {
+        size: pinnedItems.map((d) => sizeOf(d) + 14),
+        color: "rgba(234, 88, 12, 0.18)",
+        line: { color: "rgba(234, 88, 12, 0.45)", width: 1 },
+      },
+      hoverinfo: "skip",
+      showlegend: false,
+    });
+    // Solid orange marker on top with hover/click handlers attached.
+    traces.push({
+      type: "scatter",
+      mode: "markers",
+      name: t("chart.highlighted"),
+      x: pinnedItems.map((d) => d.weight_kg),
+      y: pinnedItems.map((d) => d[yField]),
+      customdata: cdOf(pinnedItems),
+      marker: {
+        size: pinnedItems.map((d) => sizeOf(d) + 4),
+        color: "#ea580c",
+        line: { color: "#9a3412", width: 2 },
+        opacity: 1,
+      },
+      hovertemplate: hoverTpl,
+      showlegend: false, // visual emphasis, not a data category
+      hoverlabel: { bgcolor: "#fff7ed", bordercolor: "#ea580c" },
+    });
+  }
 
   const layout = {
     ...COMMON_LAYOUT,

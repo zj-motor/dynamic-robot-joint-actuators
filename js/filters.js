@@ -11,7 +11,10 @@ const RANGE_FIELDS = {
 export function createFilterState() {
   return {
     search: "",
-    manufacturer: new Set(),
+    // NOTE: manufacturer has been removed from filtering and repurposed as a
+    // *highlight* selection (managed in app.js, not here). All actuators are
+    // shown regardless of manufacturer; the selected ones are visually
+    // emphasized via compare.setHighlightIds().
     transmission: new Set(), // a.k.a. reducer type (transmission_type field)
     motorType:    new Set(),
     busType:      new Set(),
@@ -35,7 +38,6 @@ export function applyFilters(data, state) {
       const hay = `${d.manufacturer ?? ""} ${mEn} ${d.model ?? ""} ${d.transmission_type ?? ""} ${(d.used_in_robots || []).join(" ")}`.toLowerCase();
       if (!hay.includes(q)) return false;
     }
-    if (state.manufacturer.size && !state.manufacturer.has(d.manufacturer)) return false;
     if (state.transmission.size && !state.transmission.has(d.transmission_type)) return false;
     if (state.motorType.size && !state.motorType.has(d.motor_topology)) return false;
     if (state.busType.size) {
@@ -57,13 +59,6 @@ export function applyFilters(data, state) {
 }
 
 export function renderFilterSidebar(data, state, onChange) {
-  renderCheckboxGroup(
-    "filter-manufacturer",
-    countBy(data, "manufacturer"),
-    state.manufacturer,
-    onChange,
-    manufacturerDisplay,
-  );
   renderCheckboxGroup(
     "filter-reducer-type",            // formerly "Transmission"; same field
     countBy(data, "transmission_type"),
@@ -108,7 +103,6 @@ export function renderFilterSidebar(data, state, onChange) {
 
   document.getElementById("filters-reset").onclick = () => {
     state.search = "";
-    state.manufacturer.clear();
     state.transmission.clear();
     state.motorType.clear();
     state.busType.clear();
@@ -147,7 +141,7 @@ function renderToggle(containerId, state, stateKey, onChange) {
   el.append(label);
 }
 
-function renderCheckboxGroup(containerId, counts, selectedSet, onChange, displayFn) {
+export function renderCheckboxGroup(containerId, counts, selectedSet, onChange, displayFn) {
   const el = document.getElementById(containerId);
   if (!el) return;
   el.innerHTML = "";
@@ -223,7 +217,7 @@ function renderRange(containerId, r, unit, onChange) {
   });
 }
 
-function countBy(data, key) {
+export function countBy(data, key) {
   const out = {};
   for (const d of data) {
     const v = d[key];

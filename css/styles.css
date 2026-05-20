@@ -290,51 +290,44 @@ input, select, button { font-size: 14px; }
   padding-right: 0;
 }
 
-/* Highlight preset toggle (e.g., 蓝门开物 / BDI) */
+/* Highlight section: same checkbox list as other filter groups, but tinted
+   so the user understands it doesn't filter — it visually emphasises. */
+.filter-group--highlight {
+  background: #fff7ed;
+  border-radius: var(--radius-sm);
+  padding: 12px 12px 14px;
+  margin-bottom: 8px;
+  border-top: 0;
+}
+.filter-group--highlight + .filter-group {
+  border-top: 1px solid var(--c-border);
+}
 .filter-group--highlight h3 {
   color: #9a3412;
+  margin: 0;
 }
-.highlight-toggle {
+.filter-group__head {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 8px;
-  width: 100%;
-  padding: 8px 10px;
-  border: 1px solid var(--c-border);
-  border-radius: var(--radius-sm);
-  background: #fff;
-  color: var(--c-text);
-  font-size: 13px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: background 120ms ease, border-color 120ms ease, color 120ms ease, box-shadow 120ms ease;
+  margin-bottom: 6px;
 }
-.highlight-toggle:hover {
-  border-color: #fdba74;
-  background: #fff7ed;
-}
-.highlight-toggle__dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: #cbd5e1;
-  border: 2px solid #ffffff;
-  box-shadow: 0 0 0 1px #cbd5e1;
-  flex-shrink: 0;
-}
-.highlight-toggle[aria-pressed="true"] {
-  background: #fff7ed;
-  border-color: #ea580c;
+.filter-group__head .link {
+  font-size: 11px;
   color: #9a3412;
-  box-shadow: 0 0 0 2px rgba(234, 88, 12, 0.18);
 }
-.highlight-toggle[aria-pressed="true"] .highlight-toggle__dot {
-  background: #ea580c;
-  box-shadow: 0 0 0 1px #9a3412;
+.filter-group__hint {
+  font-size: 11px;
+  color: var(--c-text-subtle);
+  margin: 0 0 10px;
+  line-height: 1.4;
 }
-.highlight-toggle__label {
-  flex: 1;
-  text-align: left;
+.filter-group--highlight .checkbox input[type="checkbox"] {
+  accent-color: #ea580c;
+}
+.filter-group--highlight .checkbox:hover {
+  background: #fef3e7;
 }
 .checkbox {
   display: flex;

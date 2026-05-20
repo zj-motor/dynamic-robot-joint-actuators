@@ -87,24 +87,19 @@
         </div>
 
         <section class="filter-group filter-group--highlight" data-group="highlight">
-          <h3 data-i18n="filters.highlight">Highlight</h3>
-          <div class="filter-group__body filter-group__body--toggle">
+          <div class="filter-group__head">
+            <h3 data-i18n="filters.highlight">Highlight manufacturers</h3>
             <button
-              id="highlight-bdi"
+              id="highlight-clear"
               type="button"
-              class="highlight-toggle"
-              aria-pressed="false"
-              data-i18n-attr="title:filters.highlight_bdi_hint"
-            >
-              <span class="highlight-toggle__dot" aria-hidden="true"></span>
-              <span class="highlight-toggle__label" data-i18n="filters.highlight_bdi">蓝门开物 BDI</span>
-            </button>
+              class="link"
+              data-i18n="filters.highlight_clear"
+            >Clear</button>
           </div>
-        </section>
-
-        <section class="filter-group" data-group="manufacturer">
-          <h3 data-i18n="filters.manufacturer">Manufacturer</h3>
-          <div class="filter-group__body" id="filter-manufacturer"></div>
+          <p class="filter-group__hint" data-i18n="filters.highlight_hint">
+            Selected manufacturers' actuators are highlighted across scatter, radar, table, and the compare drawer.
+          </p>
+          <div class="filter-group__body" id="filter-highlight-manufacturer"></div>
         </section>
 
         <section class="filter-group" data-group="reducer-type">

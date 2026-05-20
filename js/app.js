@@ -5,6 +5,8 @@ import {
   createFilterState,
   applyFilters,
   renderFilterSidebar,
+  renderCheckboxGroup,
+  countBy,
 } from "./filters.js";
 import {
   renderScatter,
@@ -13,7 +15,15 @@ import {
   bindTableSort,
 } from "./charts.js";
 import { createCompareController } from "./compare.js";
-import { applyToDOM, mountToggle, onLangChange, t } from "./i18n.js";
+import { applyToDOM, manufacturerDisplay, mountToggle, onLangChange, t } from "./i18n.js";
+
+// Highlight defaults / persistence.
+// Selected manufacturers (Chinese canonical names) drive which actuators get
+// the orange "highlighted" treatment in every view. We persist the selected
+// set so refresh keeps the user's choice, and seed first-time visitors with
+// "蓝门开物" so the BDI actuator stands out by default.
+const HIGHLIGHT_STORAGE_KEY = "jae.highlight_manufacturers";
+const DEFAULT_HIGHLIGHT_MANUFACTURERS = ["蓝门开物"];
 
 const state = {
   data: [],
@@ -21,6 +31,7 @@ const state = {
   filters: createFilterState(),
   view: "scatter",
   sort: { key: "manufacturer", dir: "asc" },
+  highlightManufacturers: loadHighlightManufacturers(),
 };
 
 let compare;
@@ -55,10 +66,7 @@ async function init() {
   }
 
   compare = createCompareController(() => state.data);
-  compare.subscribe(() => {
-    rerender();
-    syncHighlightToggleUI();
-  });
+  compare.subscribe(() => rerender());
 
   renderHeroStats();
   parseHashIntoState();
@@ -67,6 +75,10 @@ async function init() {
     rerender();
     writeHash();
   });
+
+  renderHighlightSidebar();
+  bindHighlightClear();
+  applyHighlight(); // seed compare with whichever manufacturers are selected
 
   bindSearch();
   bindTabs();
@@ -80,55 +92,73 @@ async function init() {
     rerender();
   });
 
-  bindHighlightToggle();
-  syncHighlightToggleUI();
-
   rerender();
   compare.render();
 }
 
-// ---------- Highlight preset (蓝门开物 / BDI) ----------
+// ---------- Highlight by manufacturer ----------
 //
-// The toggle in the filters sidebar drives compare.setHighlightIds() with the
-// full list of BDI variant ids. Highlighted items are visually emphasised the
-// same way as user-pinned items (orange marker, drawer row, radar trace) but
-// don't count against MAX_PINS and survive a "Clear pins" action.
-const HIGHLIGHT_BDI_KEYS = ["蓝门开物", "BDI"]; // matches manufacturer or manufacturer_en
-function getBDIIds() {
-  return state.data
-    .filter((d) =>
-      HIGHLIGHT_BDI_KEYS.includes(d.manufacturer) ||
-      HIGHLIGHT_BDI_KEYS.includes(d.manufacturer_en),
-    )
-    .map((d) => d.id);
+// The sidebar shows a checkbox per manufacturer (same UI as the old filter,
+// but it never removes anyone from the chart — it only marks rows for the
+// orange "highlight" treatment). Selecting nothing means no highlights;
+// selecting one or more means every variant from those manufacturers gets
+// added to compare.setHighlightIds(), which the renderers consume to draw
+// the top-layer trace in scatter and emphasize rows in radar / table /
+// compare drawer.
+
+function loadHighlightManufacturers() {
+  try {
+    const raw = localStorage.getItem(HIGHLIGHT_STORAGE_KEY);
+    if (raw == null) return new Set(DEFAULT_HIGHLIGHT_MANUFACTURERS);
+    const arr = JSON.parse(raw);
+    return new Set(Array.isArray(arr) ? arr.filter((x) => typeof x === "string") : []);
+  } catch {
+    return new Set(DEFAULT_HIGHLIGHT_MANUFACTURERS);
+  }
 }
-function bindHighlightToggle() {
-  const btn = document.getElementById("highlight-bdi");
+function persistHighlightManufacturers() {
+  try {
+    localStorage.setItem(HIGHLIGHT_STORAGE_KEY, JSON.stringify([...state.highlightManufacturers]));
+  } catch { /* storage full or disabled; not fatal */ }
+}
+
+function renderHighlightSidebar() {
+  const counts = countBy(state.data, "manufacturer");
+  // Drop selections that no longer match any manufacturer in the data (the
+  // dataset can shift between releases). Avoids stale ids leaking into the
+  // highlight set and confusing the UI.
+  for (const m of [...state.highlightManufacturers]) {
+    if (!(m in counts)) state.highlightManufacturers.delete(m);
+  }
+  renderCheckboxGroup(
+    "filter-highlight-manufacturer",
+    counts,
+    state.highlightManufacturers,
+    () => {
+      persistHighlightManufacturers();
+      applyHighlight();
+    },
+    manufacturerDisplay,
+  );
+}
+
+function bindHighlightClear() {
+  const btn = document.getElementById("highlight-clear");
   if (!btn) return;
   btn.addEventListener("click", () => {
-    const bdiIds = getBDIIds();
-    const current = new Set(compare.getHighlightIds());
-    const allOn = bdiIds.length > 0 && bdiIds.every((id) => current.has(id));
-    if (allOn) {
-      // Toggle OFF: drop any BDI ids from the highlight set but keep other
-      // highlight presets intact (future-proof for additional toggles).
-      const next = [...current].filter((id) => !bdiIds.includes(id));
-      compare.setHighlightIds(next);
-    } else {
-      // Toggle ON: union the BDI ids into whatever is already highlighted.
-      const next = new Set(current);
-      for (const id of bdiIds) next.add(id);
-      compare.setHighlightIds([...next]);
-    }
+    state.highlightManufacturers.clear();
+    persistHighlightManufacturers();
+    renderHighlightSidebar();
+    applyHighlight();
   });
 }
-function syncHighlightToggleUI() {
-  const btn = document.getElementById("highlight-bdi");
-  if (!btn) return;
-  const bdiIds = getBDIIds();
-  const highlighted = new Set(compare.getHighlightIds());
-  const allOn = bdiIds.length > 0 && bdiIds.every((id) => highlighted.has(id));
-  btn.setAttribute("aria-pressed", allOn ? "true" : "false");
+
+function applyHighlight() {
+  const sel = state.highlightManufacturers;
+  const ids = sel.size
+    ? state.data.filter((d) => sel.has(d.manufacturer)).map((d) => d.id)
+    : [];
+  compare.setHighlightIds(ids); // triggers compare's emit -> rerender()
 }
 
 function rerender() {
@@ -201,11 +231,13 @@ function bindTabs() {
 }
 
 // ---------- URL hash sync ----------
+// `mfr=` was removed when the manufacturer filter was repurposed into the
+// (sidebar-driven, localStorage-persisted) highlight selection. Hash keeps
+// only the actual filter state.
 function writeHash() {
   const f = state.filters;
   const parts = [];
   if (f.search)            parts.push(`q=${encodeURIComponent(f.search)}`);
-  if (f.manufacturer.size) parts.push(`mfr=${[...f.manufacturer].map(encodeURIComponent).join(",")}`);
   if (f.transmission.size) parts.push(`tx=${[...f.transmission].map(encodeURIComponent).join(",")}`);
   if (f.motorType.size)    parts.push(`mot=${[...f.motorType].map(encodeURIComponent).join(",")}`);
   if (f.busType.size)      parts.push(`bus=${[...f.busType].map(encodeURIComponent).join(",")}`);
@@ -226,7 +258,6 @@ function parseHashIntoState() {
     if (!k || !v) continue;
     const value = decodeURIComponent(v);
     if (k === "q")   state.filters.search = value;
-    if (k === "mfr") value.split(",").forEach((x) => state.filters.manufacturer.add(decodeURIComponent(x)));
     if (k === "tx")  value.split(",").forEach((x) => state.filters.transmission.add(decodeURIComponent(x)));
     if (k === "mot") value.split(",").forEach((x) => state.filters.motorType.add(decodeURIComponent(x)));
     if (k === "bus") value.split(",").forEach((x) => state.filters.busType.add(decodeURIComponent(x)));
