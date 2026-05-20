@@ -55,7 +55,10 @@ async function init() {
   }
 
   compare = createCompareController(() => state.data);
-  compare.subscribe(() => rerender());
+  compare.subscribe(() => {
+    rerender();
+    syncHighlightToggleUI();
+  });
 
   renderHeroStats();
   parseHashIntoState();
@@ -77,8 +80,55 @@ async function init() {
     rerender();
   });
 
+  bindHighlightToggle();
+  syncHighlightToggleUI();
+
   rerender();
   compare.render();
+}
+
+// ---------- Highlight preset (蓝门开物 / BDI) ----------
+//
+// The toggle in the filters sidebar drives compare.setHighlightIds() with the
+// full list of BDI variant ids. Highlighted items are visually emphasised the
+// same way as user-pinned items (orange marker, drawer row, radar trace) but
+// don't count against MAX_PINS and survive a "Clear pins" action.
+const HIGHLIGHT_BDI_KEYS = ["蓝门开物", "BDI"]; // matches manufacturer or manufacturer_en
+function getBDIIds() {
+  return state.data
+    .filter((d) =>
+      HIGHLIGHT_BDI_KEYS.includes(d.manufacturer) ||
+      HIGHLIGHT_BDI_KEYS.includes(d.manufacturer_en),
+    )
+    .map((d) => d.id);
+}
+function bindHighlightToggle() {
+  const btn = document.getElementById("highlight-bdi");
+  if (!btn) return;
+  btn.addEventListener("click", () => {
+    const bdiIds = getBDIIds();
+    const current = new Set(compare.getHighlightIds());
+    const allOn = bdiIds.length > 0 && bdiIds.every((id) => current.has(id));
+    if (allOn) {
+      // Toggle OFF: drop any BDI ids from the highlight set but keep other
+      // highlight presets intact (future-proof for additional toggles).
+      const next = [...current].filter((id) => !bdiIds.includes(id));
+      compare.setHighlightIds(next);
+    } else {
+      // Toggle ON: union the BDI ids into whatever is already highlighted.
+      const next = new Set(current);
+      for (const id of bdiIds) next.add(id);
+      compare.setHighlightIds([...next]);
+    }
+  });
+}
+function syncHighlightToggleUI() {
+  const btn = document.getElementById("highlight-bdi");
+  if (!btn) return;
+  const bdiIds = getBDIIds();
+  const highlighted = new Set(compare.getHighlightIds());
+  const allOn = bdiIds.length > 0 && bdiIds.every((id) => highlighted.has(id));
+  btn.setAttribute("aria-pressed", allOn ? "true" : "false");
 }
 
 function rerender() {

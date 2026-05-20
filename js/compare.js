@@ -5,6 +5,7 @@ import { renderCurves } from "./charts.js";
 import { t, manufacturerDisplay } from "./i18n.js";
 
 const STORAGE_KEY = "jae.pinned";
+const HIGHLIGHT_STORAGE_KEY = "jae.highlighted";
 const MAX_PINS = 4;
 
 const ROWS = [
@@ -43,6 +44,11 @@ const ROWS = [
 export function createCompareController(getAllData) {
   const state = {
     pinned: loadPins(),
+    // Highlight is a separate channel from user-driven pinning. IDs in
+    // `highlighted` are not counted against MAX_PINS, are not removed by the
+    // user clicking pin/unpin, and survive a "Clear" of the pinned set.
+    // The toggle UI in the sidebar is the only owner of this state.
+    highlighted: loadHighlighted(),
     detailsById: new Map(),
   };
   let listeners = [];
@@ -53,8 +59,21 @@ export function createCompareController(getAllData) {
   }
   function subscribe(fn) { listeners.push(fn); }
 
-  function getPins() { return [...state.pinned]; }
-  function isPinned(id) { return state.pinned.includes(id); }
+  // Returns the union of user-pinned + highlight-set IDs, preserving the
+  // user's pin order first, then appending any highlighted ids that aren't
+  // already pinned. This is what every renderer reads to decide which
+  // markers / rows / radar traces are visually emphasized.
+  function getPins() {
+    const seen = new Set(state.pinned);
+    const out = [...state.pinned];
+    for (const id of state.highlighted) {
+      if (!seen.has(id)) { out.push(id); seen.add(id); }
+    }
+    return out;
+  }
+  function isPinned(id) {
+    return state.pinned.includes(id) || state.highlighted.includes(id);
+  }
   function toggle(id) {
     const i = state.pinned.indexOf(id);
     if (i >= 0) {
@@ -75,8 +94,40 @@ export function createCompareController(getAllData) {
     emit();
   }
 
+  // Used by the drawer ✗ button — strips the id from both channels so the
+  // row disappears cleanly. The highlight toggle's own aria-pressed state
+  // is recomputed by listeners in app.js after the emit.
+  function removeFromAll(id) {
+    let changed = false;
+    const i = state.pinned.indexOf(id);
+    if (i >= 0) { state.pinned.splice(i, 1); changed = true; }
+    const j = state.highlighted.indexOf(id);
+    if (j >= 0) { state.highlighted.splice(j, 1); changed = true; }
+    if (!changed) return;
+    persist();
+    persistHighlighted();
+    render();
+    emit();
+  }
+
+  // Replace the entire highlight set in one call (the toggle UI passes the
+  // full set of BDI variant IDs when ON, an empty array when OFF). We don't
+  // touch state.pinned here.
+  function setHighlightIds(ids) {
+    const next = Array.isArray(ids) ? [...new Set(ids)] : [];
+    state.highlighted = next;
+    for (const id of next) hydrateDetail(id);
+    persistHighlighted();
+    render();
+    emit();
+  }
+  function getHighlightIds() { return [...state.highlighted]; }
+
   function persist() {
     try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state.pinned)); } catch {}
+  }
+  function persistHighlighted() {
+    try { localStorage.setItem(HIGHLIGHT_STORAGE_KEY, JSON.stringify(state.highlighted)); } catch {}
   }
 
   function hydrateDetail(id) {
@@ -90,7 +141,10 @@ export function createCompareController(getAllData) {
 
   function render() {
     const all = getAllData();
-    const items = state.pinned.map((id) => all.find((d) => d.id === id)).filter(Boolean);
+    // The drawer shows the union of user-pinned + highlighted IDs so that
+    // a highlight preset (e.g. BDI) populates the radar / curves / compare
+    // table without forcing the user to also manually pin those items.
+    const items = getPins().map((id) => all.find((d) => d.id === id)).filter(Boolean);
     document.getElementById("pin-count").textContent = items.length;
 
     if (!items.length) {
@@ -101,8 +155,10 @@ export function createCompareController(getAllData) {
 
     const table = document.getElementById("compare-table");
     table.innerHTML = buildTableHTML(items);
+    // The drawer ✗ button removes the row regardless of whether the id came
+    // from the user-pinned set or the highlight preset; it strips from both.
     table.querySelectorAll(".col-remove").forEach((btn) => {
-      btn.onclick = () => toggle(btn.dataset.id);
+      btn.onclick = () => removeFromAll(btn.dataset.id);
     });
 
     let curveEl = document.getElementById("curve-chart");
@@ -200,8 +256,9 @@ export function createCompareController(getAllData) {
   };
 
   for (const id of state.pinned) hydrateDetail(id);
+  for (const id of state.highlighted) hydrateDetail(id);
 
-  return { toggle, clear, getPins, isPinned, render, subscribe };
+  return { toggle, clear, getPins, isPinned, render, subscribe, setHighlightIds, getHighlightIds };
 }
 
 function loadPins() {
@@ -210,6 +267,15 @@ function loadPins() {
     if (!raw) return [];
     const arr = JSON.parse(raw);
     return Array.isArray(arr) ? arr.slice(0, MAX_PINS) : [];
+  } catch { return []; }
+}
+
+function loadHighlighted() {
+  try {
+    const raw = localStorage.getItem(HIGHLIGHT_STORAGE_KEY);
+    if (!raw) return [];
+    const arr = JSON.parse(raw);
+    return Array.isArray(arr) ? arr.filter((x) => typeof x === "string") : [];
   } catch { return []; }
 }
 

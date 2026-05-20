@@ -289,6 +289,53 @@ input, select, button { font-size: 14px; }
   overflow: visible;
   padding-right: 0;
 }
+
+/* Highlight preset toggle (e.g., 蓝门开物 / BDI) */
+.filter-group--highlight h3 {
+  color: #9a3412;
+}
+.highlight-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-sm);
+  background: #fff;
+  color: var(--c-text);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 120ms ease, border-color 120ms ease, color 120ms ease, box-shadow 120ms ease;
+}
+.highlight-toggle:hover {
+  border-color: #fdba74;
+  background: #fff7ed;
+}
+.highlight-toggle__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #cbd5e1;
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 0 1px #cbd5e1;
+  flex-shrink: 0;
+}
+.highlight-toggle[aria-pressed="true"] {
+  background: #fff7ed;
+  border-color: #ea580c;
+  color: #9a3412;
+  box-shadow: 0 0 0 2px rgba(234, 88, 12, 0.18);
+}
+.highlight-toggle[aria-pressed="true"] .highlight-toggle__dot {
+  background: #ea580c;
+  box-shadow: 0 0 0 1px #9a3412;
+}
+.highlight-toggle__label {
+  flex: 1;
+  text-align: left;
+}
 .checkbox {
   display: flex;
   align-items: center;

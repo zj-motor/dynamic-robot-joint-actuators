@@ -90,6 +90,11 @@ const TRANSLATIONS = {
     "filters.peak_torque": "Peak torque (Nm)",
     "filters.weight": "Weight (kg)",
     "filters.density": "Torque density (Nm/kg)",
+    "filters.highlight": "Highlight",
+    "filters.highlight_bdi": "BDI (蓝门开物)",
+    "filters.highlight_bdi_hint": "Pin all BDI (蓝门开物) actuators to highlight them across scatter, radar, table, and the compare drawer.",
+    "filters.highlight_on": "On",
+    "filters.highlight_off": "Off",
 
     "tabs.scatter": "Scatter",
     "tabs.radar": "Radar",
@@ -268,6 +273,11 @@ const TRANSLATIONS = {
     "filters.peak_torque": "峰值扭矩 (Nm)",
     "filters.weight": "重量 (kg)",
     "filters.density": "扭矩密度 (Nm/kg)",
+    "filters.highlight": "聚焦",
+    "filters.highlight_bdi": "蓝门开物 BDI",
+    "filters.highlight_bdi_hint": "将蓝门开物全部型号自动钉选，在散点图、雷达图、表格与对比抽屉中突出显示。",
+    "filters.highlight_on": "开",
+    "filters.highlight_off": "关",
 
     "tabs.scatter": "散点图",
     "tabs.radar": "雷达图",

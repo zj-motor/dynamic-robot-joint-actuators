@@ -86,6 +86,22 @@
           <button id="filters-reset" class="link" type="button" data-i18n="filters.reset">Reset</button>
         </div>
 
+        <section class="filter-group filter-group--highlight" data-group="highlight">
+          <h3 data-i18n="filters.highlight">Highlight</h3>
+          <div class="filter-group__body filter-group__body--toggle">
+            <button
+              id="highlight-bdi"
+              type="button"
+              class="highlight-toggle"
+              aria-pressed="false"
+              data-i18n-attr="title:filters.highlight_bdi_hint"
+            >
+              <span class="highlight-toggle__dot" aria-hidden="true"></span>
+              <span class="highlight-toggle__label" data-i18n="filters.highlight_bdi">蓝门开物 BDI</span>
+            </button>
+          </div>
+        </section>
+
         <section class="filter-group" data-group="manufacturer">
           <h3 data-i18n="filters.manufacturer">Manufacturer</h3>
           <div class="filter-group__body" id="filter-manufacturer"></div>
