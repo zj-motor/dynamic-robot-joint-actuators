@@ -49,6 +49,52 @@ export function manufacturerDisplay(name) {
   return MANUFACTURERS[name] || name;
 }
 
+// ---------- enum value display ----------
+//
+// The data stores transmission type and motor topology as canonical English
+// strings (e.g. "harmonic", "axial flux"). The UI shows them via these
+// helpers so the same value renders in either language without changing the
+// underlying field. Unknown values pass through unchanged.
+
+const TRANSMISSION_TYPE_LABELS = {
+  en: {
+    "harmonic":      "Harmonic",
+    "planetary":     "Planetary",
+    "cycloidal":     "Cycloidal",
+    "direct-drive":  "Direct drive",
+    "unspecified":   "Unspecified",
+  },
+  zh: {
+    "harmonic":      "谐波",
+    "planetary":     "行星",
+    "cycloidal":     "摆线",
+    "direct-drive":  "直驱",
+    "unspecified":   "未指定",
+  },
+};
+
+const MOTOR_TOPOLOGY_LABELS = {
+  en: {
+    "radial flux":  "Radial flux",
+    "axial flux":   "Axial flux",
+  },
+  zh: {
+    "radial flux":  "径向磁通",
+    "axial flux":   "轴向磁通",
+  },
+};
+
+export function transmissionTypeDisplay(value) {
+  if (value == null) return value;
+  const dict = TRANSMISSION_TYPE_LABELS[currentLang] || TRANSMISSION_TYPE_LABELS.en;
+  return dict[value] || value;
+}
+export function motorTopologyDisplay(value) {
+  if (value == null) return value;
+  const dict = MOTOR_TOPOLOGY_LABELS[currentLang] || MOTOR_TOPOLOGY_LABELS.en;
+  return dict[value] || value;
+}
+
 // ---------- main translation dictionary ----------
 
 const TRANSLATIONS = {
@@ -268,7 +314,7 @@ const TRANSLATIONS = {
     "filters.brake": "抱闸",
     "filters.dual_encoder": "双编码器",
     "filters.force_sensor": "力传感器",
-    "filters.option_available": "可选",
+    "filters.option_available": "包含",
     "filters.peak_torque": "峰值扭矩 (Nm)",
     "filters.weight": "重量 (kg)",
     "filters.density": "扭矩密度 (Nm/kg)",

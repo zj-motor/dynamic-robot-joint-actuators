@@ -48,6 +48,16 @@ async function init() {
   onLangChange(() => {
     applyToDOM();
     renderGlossary();
+    // Re-render the dynamic sidebar lists too — checkbox labels for
+    // manufacturer (highlight), transmission, motor topology, etc. are
+    // built from data and need fresh display() calls in the new language.
+    if (state.data.length) {
+      renderFilterSidebar(state.data, state.filters, () => {
+        rerender();
+        writeHash();
+      });
+      renderHighlightSidebar();
+    }
     rerender();
     if (compare) compare.render();
   });

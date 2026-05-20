@@ -2,7 +2,12 @@
 
 import { loadDetail } from "./data.js";
 import { renderCurves } from "./charts.js";
-import { t, manufacturerDisplay } from "./i18n.js";
+import {
+  t,
+  manufacturerDisplay,
+  transmissionTypeDisplay,
+  motorTopologyDisplay,
+} from "./i18n.js";
 
 const STORAGE_KEY = "jae.pinned";
 const HIGHLIGHT_STORAGE_KEY = "jae.highlighted";
@@ -27,9 +32,9 @@ const ROWS = [
   { key: "peak_current_a",                                                   labelKey: "compare.row.peak_current",           num: true },
   { key: "continuous_current_a",                                             labelKey: "compare.row.continuous_current",     num: true },
   { key: "rated_input_power_w",                                              labelKey: "compare.row.rated_input_power",      num: true },
-  { key: "motor_topology",                                                   labelKey: "compare.row.motor_topology" },
+  { key: "motor_topology",                                                   labelKey: "compare.row.motor_topology",         fmt: (v) => v == null || v === "" ? "—" : escape(motorTopologyDisplay(v)) },
 
-  { section: "compare.section.transmission", key: "transmission_type",       labelKey: "compare.row.tx_type" },
+  { section: "compare.section.transmission", key: "transmission_type",       labelKey: "compare.row.tx_type",                fmt: (v) => v == null || v === "" ? "—" : escape(transmissionTypeDisplay(v)) },
   { key: "ratio",                                                            labelKey: "compare.row.ratio",                  num: true },
 
   { section: "compare.section.options", key: "bus_types",                    labelKey: "compare.row.bus_types",              fmt: list },

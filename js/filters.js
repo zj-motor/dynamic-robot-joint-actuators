@@ -1,6 +1,6 @@
 // filters.js — sidebar filter state, rendering, and apply pipeline
 
-import { t, manufacturerDisplay } from "./i18n.js";
+import { t, manufacturerDisplay, transmissionTypeDisplay, motorTopologyDisplay } from "./i18n.js";
 
 const RANGE_FIELDS = {
   torque: { key: "peak_torque_nm",          label: "Nm",    container: "range-torque" },
@@ -64,12 +64,14 @@ export function renderFilterSidebar(data, state, onChange) {
     countBy(data, "transmission_type"),
     state.transmission,
     onChange,
+    transmissionTypeDisplay,
   );
   renderCheckboxGroup(
     "filter-motor-type",
     countBy(data, "motor_topology"),
     state.motorType,
     onChange,
+    motorTopologyDisplay,
   );
   renderCheckboxGroup(
     "filter-bus-type",

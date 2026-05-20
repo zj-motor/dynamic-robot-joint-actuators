@@ -1,6 +1,6 @@
 // charts.js — Plotly renderers for scatter, radar, torque-speed curves; HTML for spec table
 
-import { t, manufacturerDisplay } from "./i18n.js";
+import { t, manufacturerDisplay, transmissionTypeDisplay } from "./i18n.js";
 
 const TX_COLORS = {
   planetary:  "#0e7490",
@@ -99,7 +99,9 @@ export function renderScatter(elId, data, opts = {}) {
   const traces = [...byTx.entries()].map(([tx, items]) => ({
     type: "scatter",
     mode: "markers",
-    name: tx,
+    // Legend label follows the active language; the canonical `tx` value
+    // still drives marker color so trace identity is stable across re-renders.
+    name: transmissionTypeDisplay(tx),
     x: items.map((d) => d.weight_kg),
     y: items.map((d) => d[yField]),
     customdata: cdOf(items),
@@ -344,7 +346,7 @@ export function renderTable(tableId, data, opts = {}) {
       <td class="num">${formatVal(d.max_speed_rpm)}</td>
       <td class="num">${formatVal(d.weight_kg, 3)}</td>
       <td class="num">${formatVal(d.torque_density_nm_per_kg)}</td>
-      <td>${escape(d.transmission_type)}</td>
+      <td>${escape(transmissionTypeDisplay(d.transmission_type))}</td>
       <td class="num">${formatVal(d.ratio)}</td>
     `;
     tr.querySelector(".pin-btn").onclick = () => opts.onPick && opts.onPick(d.id);
