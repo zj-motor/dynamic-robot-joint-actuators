@@ -9,10 +9,13 @@
       "motor_topology": "radial flux"
     },
     "mechanical": {
+      "peak_torque_nm": 140,
+      "start_stop_peak_torque_nm": 140,
       "max_allow_instant_load_nm": 140,
       "weight_kg": 1.74,
       "output_encoder_bits": 15,
-      "ip_rating": "IP68"
+      "ip_rating": "IP68",
+      "torque_density_nm_per_kg": 80.46
     },
     "transmission": {
       "type": "planetary",

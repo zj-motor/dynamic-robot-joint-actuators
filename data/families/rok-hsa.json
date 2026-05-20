@@ -26,6 +26,7 @@
         "rated_input_power_w": 600
       },
       "mechanical": {
+        "rated_torque_nm": 140,
         "peak_torque_nm": 204,
         "start_stop_peak_torque_nm": 204,
         "max_allow_avg_load_nm": 140,
@@ -68,6 +69,7 @@
         "rated_input_power_w": 950
       },
       "mechanical": {
+        "rated_torque_nm": 281,
         "peak_torque_nm": 459,
         "start_stop_peak_torque_nm": 459,
         "max_allow_avg_load_nm": 281,
@@ -110,6 +112,7 @@
         "rated_input_power_w": 40
       },
       "mechanical": {
+        "rated_torque_nm": 8.9,
         "peak_torque_nm": 11,
         "start_stop_peak_torque_nm": 11,
         "max_allow_avg_load_nm": 8.9,
@@ -152,6 +155,7 @@
         "rated_input_power_w": 120
       },
       "mechanical": {
+        "rated_torque_nm": 14,
         "peak_torque_nm": 19,
         "start_stop_peak_torque_nm": 19,
         "max_allow_avg_load_nm": 7.7,
@@ -194,6 +198,7 @@
         "rated_input_power_w": 160
       },
       "mechanical": {
+        "rated_torque_nm": 51,
         "peak_torque_nm": 70,
         "start_stop_peak_torque_nm": 70,
         "max_allow_avg_load_nm": 51,
@@ -236,6 +241,7 @@
         "rated_input_power_w": 250
       },
       "mechanical": {
+        "rated_torque_nm": 64,
         "peak_torque_nm": 113,
         "start_stop_peak_torque_nm": 113,
         "max_allow_avg_load_nm": 64,

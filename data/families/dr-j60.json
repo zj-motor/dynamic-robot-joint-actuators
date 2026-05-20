@@ -24,9 +24,12 @@
       "model": "J60-10",
       "base_id": "DR-J60-10-24",
       "mechanical": {
+        "peak_torque_nm": 30.5,
+        "start_stop_peak_torque_nm": 30.5,
         "max_allow_instant_load_nm": 30.5,
         "max_speed_rpm": 148,
-        "weight_kg": 0.54
+        "weight_kg": 0.54,
+        "torque_density_nm_per_kg": 56.48
       },
       "transmission": {
         "reduction_ratio": 10
@@ -54,9 +57,12 @@
       "model": "J60-6",
       "base_id": "DR-J60-6-24",
       "mechanical": {
+        "peak_torque_nm": 19.94,
+        "start_stop_peak_torque_nm": 19.94,
         "max_allow_instant_load_nm": 19.94,
         "max_speed_rpm": 231,
-        "weight_kg": 0.48
+        "weight_kg": 0.48,
+        "torque_density_nm_per_kg": 41.54
       },
       "transmission": {
         "reduction_ratio": 6

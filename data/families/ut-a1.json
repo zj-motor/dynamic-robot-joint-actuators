@@ -9,10 +9,13 @@
       "motor_topology": "radial flux"
     },
     "mechanical": {
+      "peak_torque_nm": 33.5,
+      "start_stop_peak_torque_nm": 33.5,
       "max_allow_instant_load_nm": 33.5,
       "max_speed_rpm": 200.6,
       "weight_kg": 0.605,
-      "output_encoder_bits": 15
+      "output_encoder_bits": 15,
+      "torque_density_nm_per_kg": 55.37
     },
     "transmission": {
       "type": "planetary",

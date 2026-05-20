@@ -7,10 +7,14 @@
     "electrical": {
       "voltage_v": 48,
       "peak_current_a": 16,
-      "motor_topology": "radial flux"
+      "motor_topology": "axial flux"
     },
     "mechanical": {
       "outer_diameter_mm": 131
+    },
+    "transmission": {
+      "type": "planetary",
+      "backdrivable": false
     }
   },
   "variants": [

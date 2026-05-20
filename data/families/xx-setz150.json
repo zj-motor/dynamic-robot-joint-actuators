@@ -9,7 +9,7 @@
       "peak_current_a": 27,
       "rated_input_power_w": 1150,
       "peak_input_power_w": 5000,
-      "motor_topology": "radial flux"
+      "motor_topology": "axial flux"
     },
     "mechanical": {
       "rated_torque_nm": 30,
@@ -22,7 +22,9 @@
       "torque_density_nm_per_kg": 233.33
     },
     "transmission": {
-      "reduction_ratio": 30
+      "type": "planetary",
+      "reduction_ratio": 30,
+      "backdrivable": false
     }
   },
   "variants": [

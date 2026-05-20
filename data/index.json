@@ -1,5 +1,6 @@
 {
   "families": [
+    "bdi-stridecore.json",
     "cm-ak10.json",
     "cm-ak40.json",
     "cm-ak45.json",

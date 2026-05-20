@@ -31,6 +31,7 @@
         "rated_input_power_w": 115
       },
       "mechanical": {
+        "rated_torque_nm": 6.2,
         "peak_torque_nm": 7.7,
         "start_stop_peak_torque_nm": 7.7,
         "max_allow_avg_load_nm": 6.2,
@@ -76,6 +77,7 @@
         "rated_input_power_w": 100
       },
       "mechanical": {
+        "rated_torque_nm": 25,
         "peak_torque_nm": 56,
         "start_stop_peak_torque_nm": 56,
         "max_allow_avg_load_nm": 25,
@@ -121,6 +123,7 @@
         "rated_input_power_w": 180
       },
       "mechanical": {
+        "rated_torque_nm": 48,
         "peak_torque_nm": 56,
         "start_stop_peak_torque_nm": 56,
         "max_allow_avg_load_nm": 48,
@@ -166,6 +169,7 @@
         "rated_input_power_w": 180
       },
       "mechanical": {
+        "rated_torque_nm": 48,
         "peak_torque_nm": 56,
         "start_stop_peak_torque_nm": 56,
         "max_allow_avg_load_nm": 48,

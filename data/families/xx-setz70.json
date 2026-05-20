@@ -10,10 +10,13 @@
       "continuous_current_a": 6.5,
       "rated_input_power_w": 300,
       "peak_input_power_w": 1250,
-      "motor_topology": "radial flux"
+      "motor_topology": "axial flux"
     },
     "mechanical": {
       "outer_diameter_mm": 78
+    },
+    "transmission": {
+      "type": "planetary"
     }
   },
   "variants": [
@@ -31,7 +34,8 @@
         "torque_density_nm_per_kg": 2.78
       },
       "transmission": {
-        "reduction_ratio": 1
+        "reduction_ratio": 1,
+        "backdrivable": true
       },
       "options": {
         "brake_options": [
@@ -63,7 +67,8 @@
         "torque_density_nm_per_kg": 149.33
       },
       "transmission": {
-        "reduction_ratio": 16
+        "reduction_ratio": 16,
+        "backdrivable": false
       },
       "options": {
         "bus_types": [
@@ -98,7 +103,8 @@
         "torque_density_nm_per_kg": 197.65
       },
       "transmission": {
-        "reduction_ratio": 24
+        "reduction_ratio": 24,
+        "backdrivable": false
       },
       "options": {
         "brake_options": [
@@ -129,7 +135,8 @@
         "torque_density_nm_per_kg": 245.0
       },
       "transmission": {
-        "reduction_ratio": 35
+        "reduction_ratio": 35,
+        "backdrivable": false
       },
       "options": {
         "brake_options": [
@@ -160,7 +167,8 @@
         "torque_density_nm_per_kg": 50.91
       },
       "transmission": {
-        "reduction_ratio": 4
+        "reduction_ratio": 4,
+        "backdrivable": true
       },
       "options": {
         "brake_options": [
@@ -192,7 +200,8 @@
         "torque_density_nm_per_kg": 96.92
       },
       "transmission": {
-        "reduction_ratio": 9
+        "reduction_ratio": 9,
+        "backdrivable": true
       },
       "options": {
         "bus_types": [

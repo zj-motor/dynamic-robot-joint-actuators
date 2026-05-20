@@ -13,6 +13,10 @@
       "output_encoder_bits": 17,
       "motor_encoder_bits": 17,
       "ip_rating": "IP55"
+    },
+    "transmission": {
+      "type": "planetary",
+      "backdrivable": false
     }
   },
   "variants": [

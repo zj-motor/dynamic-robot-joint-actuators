@@ -75,12 +75,18 @@
         "rated_input_power_w": 282
       },
       "mechanical": {
+        "rated_torque_nm": 54,
+        "peak_torque_nm": 78.5,
+        "start_stop_peak_torque_nm": 78.5,
+        "rated_speed_rpm": 50,
+        "max_speed_rpm": 60,
         "weight_kg": 2.42,
         "outer_diameter_mm": 105.2,
         "hollow_shaft_diameter_mm": 22,
         "motor_encoder_bits": 17,
         "radial_load_kn": 21.8,
-        "axial_load_kn": 49.1
+        "axial_load_kn": 49.1,
+        "torque_density_nm_per_kg": 32.44
       },
       "transmission": {
         "reduction_ratio": 50
@@ -160,12 +166,18 @@
         "rated_input_power_w": 282
       },
       "mechanical": {
+        "rated_torque_nm": 75,
+        "peak_torque_nm": 114.5,
+        "start_stop_peak_torque_nm": 114.5,
+        "rated_speed_rpm": 50,
+        "max_speed_rpm": 60,
         "weight_kg": 4.32,
         "outer_diameter_mm": 125.3,
         "hollow_shaft_diameter_mm": 20,
         "motor_encoder_bits": 17,
         "radial_load_kn": 38.2,
-        "axial_load_kn": 81.8
+        "axial_load_kn": 81.8,
+        "torque_density_nm_per_kg": 26.5
       },
       "transmission": {
         "reduction_ratio": 50
@@ -285,11 +297,17 @@
         "rated_input_power_w": 28
       },
       "mechanical": {
+        "rated_torque_nm": 5.5,
+        "peak_torque_nm": 14,
+        "start_stop_peak_torque_nm": 14,
+        "rated_speed_rpm": 50,
+        "max_speed_rpm": 60,
         "weight_kg": 0.78,
         "outer_diameter_mm": 80,
         "motor_encoder_bits": 17,
         "radial_load_kn": 5.8,
-        "axial_load_kn": 16.2
+        "axial_load_kn": 16.2,
+        "torque_density_nm_per_kg": 17.95
       },
       "transmission": {
         "reduction_ratio": 50
@@ -409,12 +427,18 @@
         "rated_input_power_w": 91
       },
       "mechanical": {
+        "rated_torque_nm": 17.5,
+        "peak_torque_nm": 27,
+        "start_stop_peak_torque_nm": 27,
+        "rated_speed_rpm": 50,
+        "max_speed_rpm": 60,
         "weight_kg": 1.11,
         "outer_diameter_mm": 90.2,
         "hollow_shaft_diameter_mm": 12,
         "motor_encoder_bits": 17,
         "radial_load_kn": 10.4,
-        "axial_load_kn": 20.8
+        "axial_load_kn": 20.8,
+        "torque_density_nm_per_kg": 24.32
       },
       "transmission": {
         "reduction_ratio": 50
@@ -494,12 +518,18 @@
         "rated_input_power_w": 130
       },
       "mechanical": {
+        "rated_torque_nm": 25,
+        "peak_torque_nm": 40,
+        "start_stop_peak_torque_nm": 40,
+        "rated_speed_rpm": 50,
+        "max_speed_rpm": 60,
         "weight_kg": 1.45,
         "outer_diameter_mm": 97.4,
         "hollow_shaft_diameter_mm": 12,
         "motor_encoder_bits": 17,
         "radial_load_kn": 14.6,
-        "axial_load_kn": 34
+        "axial_load_kn": 34,
+        "torque_density_nm_per_kg": 27.59
       },
       "transmission": {
         "reduction_ratio": 50
